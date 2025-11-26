@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+import "BandMask.proto";
+import "ChannelParams.proto";
+import "DebugLevel.proto";
+import "HwModeParams.proto";
+import "IHostapdCallback.proto";
+import "Ieee80211ReasonCode.proto";
+import "IfaceParams.proto";
+import "NetworkParams.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IHostapd
+{
+    message AddAccessPointReq
+    {
+        IfaceParams ifaceParams = 1;
+        NetworkParams nwParams = 2;
+    }
+
+    message AddAccessPointCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ForceClientDisconnectReq
+    {
+        string ifaceName = 1;
+        bytes clientAddress = 2;
+        Ieee80211ReasonCode reasonCode = 3;
+    }
+
+    message ForceClientDisconnectCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RegisterCallbackReq
+    {
+        optional IHostapdCallback callback = 1;
+    }
+
+    message RegisterCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RemoveAccessPointReq
+    {
+        string ifaceName = 1;
+    }
+
+    message RemoveAccessPointCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetDebugParamsReq
+    {
+        DebugLevel level = 1;
+    }
+
+    message SetDebugParamsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message TerminateReq
+    {
+    }
+
+    message TerminateCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

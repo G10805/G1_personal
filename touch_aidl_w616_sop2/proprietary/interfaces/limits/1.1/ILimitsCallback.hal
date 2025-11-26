@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.limits@1.1;
+
+import vendor.qti.hardware.limits@1.1::Mitigation;
+
+/**
+ * ILimitsCallback to notify the clients about the new mitigation.
+ */
+interface ILimitsCallback {
+    /**
+     * Send a cooling device level change notification to clients.
+     *
+     * @param Mitigation The Mitigation level information
+     */
+    oneway mitigationLevel(Mitigation level);
+};

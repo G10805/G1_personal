@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+*/
+
+package vendor.qti.hardware.power.powermodule@1.0;
+
+interface IPowerModule {
+    /*
+    * send hints to powermodule to perform optimizations
+    * based on events/actions
+    *
+    * @param hintId is unique hint id
+    * @param userData is hint name/app name
+    * @param userData_1, @param userData_2, @param spaceholder can be used to send feature specific information
+    */
+    oneway powerSendEvents(int32_t hintId, string userData, int32_t userData_1, int32_t userData_2, vec<int32_t> spaceholder);
+};

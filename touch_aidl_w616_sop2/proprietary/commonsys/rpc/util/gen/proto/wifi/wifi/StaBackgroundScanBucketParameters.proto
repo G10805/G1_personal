@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiBand.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message StaBackgroundScanBucketParameters
+{
+    int32 bucketIdx = 1;
+    WifiBand band = 2;
+    repeated int32 frequencies = 3;
+    int32 periodInMs = 4;
+    int32 eventReportScheme = 5;
+    int32 exponentialMaxPeriodInMs = 6;
+    int32 exponentialBase = 7;
+    int32 exponentialStepCount = 8;
+}

@@ -1,0 +1,11 @@
+TargetName=SDM855
+ISPName=Spectra380
+CurrentProjectScenarioName=Default
+SensorType=Bayer
+MFNREnable=1
+MFNRNumFrames=3
+VideoNumFrames=1
+UseCustomTriggers=False
+GenerateMeta=True
+DisablePresetWarning=False
+DisableParameterOutOfSyncWarning=False

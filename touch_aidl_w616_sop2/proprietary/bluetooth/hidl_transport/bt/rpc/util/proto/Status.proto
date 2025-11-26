@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+syntax = "proto3";
+
+package BluetoothHci;
+
+enum Status
+{
+    SUCCESS = 0x0;
+    ALREADY_INITIALIZED = 0x1;
+    UNABLE_TO_OPEN_INTERFACE = 0x2;
+    HARDWARE_INITIALIZATION_ERROR = 0x3;
+    UNKNOWN = 0x4;
+}

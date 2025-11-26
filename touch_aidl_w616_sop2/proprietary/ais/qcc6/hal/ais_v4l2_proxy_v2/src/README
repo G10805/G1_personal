@@ -1,0 +1,14 @@
+Usage: ais_v4l2_proxy &
+
+ais_v4l2_proxy is background server which feeds camera data into v4l2loopback
+node. Each camera sets up and feed to v4l2 node in its own thread.
+
+  Example:
+    o Launch with xml config file (default it expects is qcarcam_config.xml)
+           "qcarcam_test"
+    o to specify config file
+           "ais_v4l2_proxy -config=ais_v4l2loopback_config.xml &"
+    o to dump frame after "x" frames:
+           "ais_v4l2_proxy -dumpFrame=100 &"
+    o to display FPS:
+           "ais_v4l2_proxy -fps &"

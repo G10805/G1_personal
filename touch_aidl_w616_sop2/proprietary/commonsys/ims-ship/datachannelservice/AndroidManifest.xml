@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*********************************************************************
+ Copyright (c) 2022 Qualcomm Technologies, Inc.
+ All Rights Reserved.
+ Confidential and Proprietary - Qualcomm Technologies, Inc.
+**********************************************************************/
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="vendor.qti.imsdatachannel"
+    android:sharedUserId="android.uid.phone"
+    versionCode="1"
+    versionName="1.0" >
+
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+<permission android:name="vendor.qti.permission.USE_IMS_DATA_CHANNEL_SERVICE"
+            android:protectionLevel="signatureOrSystem"
+            android:label="ImsDataChannelService"/>
+
+    <application
+        android:persistent="true"
+        android:allowBackup="false"
+        android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true"
+        android:process = ".dataservices" >
+       <uses-library android:name="vendor.qti.ims.datachannelservice-V1-java" />
+       <service
+            android:name=".ImsDataChannelService"
+            android:singleUser="true"
+            android:exported="true"
+            android:persistent="true"
+            android:enabled="true"
+            android:permission="vendor.qti.permission.USE_IMS_DATA_CHANNEL_SERVICE">
+        </service>
+
+        </application>
+
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="33"/>
+
+</manifest>

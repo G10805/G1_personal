@@ -1,0 +1,12 @@
+&soc {
+	virtio_kms1: qcom,virtio_kms@1 {
+		compatible = "qcom,virtio-kms";
+		qcom,client-id = "7815";
+	};
+
+	sde_kms_hyp: qcom,sde_kms_hyp@ae00000 {
+		compatible = "qcom,sde-kms-hyp";
+		qcom,dev-name = "msm_drm";
+		qcom,kms = <&virtio_kms1>;
+	};
+};

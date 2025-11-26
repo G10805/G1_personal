@@ -1,0 +1,5 @@
+/* Generate Diag system header library */
+cc_library_headers {
+	name: "libdiag_headers_system",
+	export_include_dirs: ["include"],
+}

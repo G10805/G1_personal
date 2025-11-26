@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package supplicant.vendor;
+
+option optimize_for = LITE_RUNTIME;
+
+enum SupplicantVendorStatusCode
+{
+    SUCCESS = 0;
+    FAILURE_UNKNOWN = 1;
+    FAILURE_ARGS_INVALID = 2;
+    FAILURE_IFACE_INVALID = 3;
+    FAILURE_UNSUPPORTED = 4;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message FreqRange
+{
+    int32 min = 1;
+    int32 max = 2;
+}

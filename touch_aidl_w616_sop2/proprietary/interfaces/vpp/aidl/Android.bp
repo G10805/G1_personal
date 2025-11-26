@@ -1,0 +1,28 @@
+aidl_interface {
+    name: "vendor.qti.hardware.vpp",
+    vendor_available: true,
+    srcs: ["vendor/qti/hardware/vpp/*.aidl"],
+    stability: "vintf",
+    owner: "qti",
+    system_ext_specific: true,
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+    ],
+}

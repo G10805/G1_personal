@@ -1,0 +1,17 @@
+cc_library_headers {
+    name: "libacdb_headers",
+    vendor: true,
+    export_include_dirs: ["acdbdata"],
+}
+
+cc_library_headers {
+    name: "libqtiflacdec_csim_headers",
+    vendor: true,
+    export_include_dirs: ["audio-codecs/flac"],
+}
+
+cc_library_headers {
+    name: "liblisten_headers",
+    vendor: true,
+    export_include_dirs: ["audio-listen"],
+}

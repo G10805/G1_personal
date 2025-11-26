@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.limits@1.1;
+
+import android.hardware.thermal@1.0::ThermalStatus;
+import vendor.qti.hardware.limits@1.0::ILimits;
+import ILimitsCallback;
+
+interface ILimits extends @1.0::ILimits {
+	/*
+	* Register a mitigation notification callback, ILimitsCallback
+	* to receive notification about the mitigation action. Clients
+	* should expect a callback getting generated as a part of the
+	* registration. Also, if there are multiple cooling devices for
+	* the same type, clients should differentiate them based on the
+	* name parameter in the MitigationType.
+	*
+	* @param MitigationType Mitigation type for which a notification
+		callback is requested for.
+	* @param ILimitsCallback callback to use to send any mitigation
+	*	change notification.
+	*/
+	registerMitigationCallback(MitigationType type,
+					ILimitsCallback callback)
+		generates (ThermalStatus status);
+
+	/*
+	* UnRegister a mitigation notification callback.
+	*
+	* @param ILimitsCallback callback used for receiving any mitigation
+	*	change notification.
+	*/
+	unregisterMitigationCallback(ILimitsCallback callback)
+		generates (ThermalStatus status);
+};

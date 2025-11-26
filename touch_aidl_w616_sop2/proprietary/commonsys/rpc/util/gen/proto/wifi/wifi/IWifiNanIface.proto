@@ -1,0 +1,276 @@
+syntax = "proto3";
+
+package wifi;
+
+import "IWifiNanIfaceEventCallback.proto";
+import "NanBootstrappingRequest.proto";
+import "NanBootstrappingResponse.proto";
+import "NanConfigRequest.proto";
+import "NanConfigRequestSupplemental.proto";
+import "NanEnableRequest.proto";
+import "NanInitiateDataPathRequest.proto";
+import "NanPairingRequest.proto";
+import "NanPublishRequest.proto";
+import "NanRespondToDataPathIndicationRequest.proto";
+import "NanRespondToPairingIndicationRequest.proto";
+import "NanSubscribeRequest.proto";
+import "NanTransmitFollowupRequest.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifiNanIface
+{
+    message GetNameReq
+    {
+    }
+
+    message GetNameCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message ConfigRequestReq
+    {
+        int32 cmdId = 1;
+        NanConfigRequest msg1 = 2;
+        NanConfigRequestSupplemental msg2 = 3;
+    }
+
+    message ConfigRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message CreateDataInterfaceRequestReq
+    {
+        int32 cmdId = 1;
+        string ifaceName = 2;
+    }
+
+    message CreateDataInterfaceRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message DeleteDataInterfaceRequestReq
+    {
+        int32 cmdId = 1;
+        string ifaceName = 2;
+    }
+
+    message DeleteDataInterfaceRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message DisableRequestReq
+    {
+        int32 cmdId = 1;
+    }
+
+    message DisableRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableRequestReq
+    {
+        int32 cmdId = 1;
+        NanEnableRequest msg1 = 2;
+        NanConfigRequestSupplemental msg2 = 3;
+    }
+
+    message EnableRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message GetCapabilitiesRequestReq
+    {
+        int32 cmdId = 1;
+    }
+
+    message GetCapabilitiesRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message InitiateDataPathRequestReq
+    {
+        int32 cmdId = 1;
+        NanInitiateDataPathRequest msg = 2;
+    }
+
+    message InitiateDataPathRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RegisterEventCallbackReq
+    {
+        optional IWifiNanIfaceEventCallback callback = 1;
+    }
+
+    message RegisterEventCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RespondToDataPathIndicationRequestReq
+    {
+        int32 cmdId = 1;
+        NanRespondToDataPathIndicationRequest msg = 2;
+    }
+
+    message RespondToDataPathIndicationRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartPublishRequestReq
+    {
+        int32 cmdId = 1;
+        NanPublishRequest msg = 2;
+    }
+
+    message StartPublishRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartSubscribeRequestReq
+    {
+        int32 cmdId = 1;
+        NanSubscribeRequest msg = 2;
+    }
+
+    message StartSubscribeRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopPublishRequestReq
+    {
+        int32 cmdId = 1;
+        uint32 sessionId = 2;
+    }
+
+    message StopPublishRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopSubscribeRequestReq
+    {
+        int32 cmdId = 1;
+        uint32 sessionId = 2;
+    }
+
+    message StopSubscribeRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message TerminateDataPathRequestReq
+    {
+        int32 cmdId = 1;
+        int32 ndpInstanceId = 2;
+    }
+
+    message TerminateDataPathRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SuspendRequestReq
+    {
+        int32 cmdId = 1;
+        uint32 sessionId = 2;
+    }
+
+    message SuspendRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ResumeRequestReq
+    {
+        int32 cmdId = 1;
+        uint32 sessionId = 2;
+    }
+
+    message ResumeRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message TransmitFollowupRequestReq
+    {
+        int32 cmdId = 1;
+        NanTransmitFollowupRequest msg = 2;
+    }
+
+    message TransmitFollowupRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message InitiatePairingRequestReq
+    {
+        int32 cmdId = 1;
+        NanPairingRequest msg = 2;
+    }
+
+    message InitiatePairingRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RespondToPairingIndicationRequestReq
+    {
+        int32 cmdId = 1;
+        NanRespondToPairingIndicationRequest msg = 2;
+    }
+
+    message RespondToPairingIndicationRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message InitiateBootstrappingRequestReq
+    {
+        int32 cmdId = 1;
+        NanBootstrappingRequest msg = 2;
+    }
+
+    message InitiateBootstrappingRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RespondToBootstrappingIndicationRequestReq
+    {
+        int32 cmdId = 1;
+        NanBootstrappingResponse msg = 2;
+    }
+
+    message RespondToBootstrappingIndicationRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message TerminatePairingRequestReq
+    {
+        int32 cmdId = 1;
+        int32 pairingInstanceId = 2;
+    }
+
+    message TerminatePairingRequestCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

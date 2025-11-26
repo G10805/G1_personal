@@ -1,0 +1,12 @@
+#Copyright (c) 2021 Qualcomm Technologies, Inc.
+#All Rights Reserved.
+#Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+#declaring AIS v4l2 proxy service to be started after boot complete
+service ais_v4l2_proxy /vendor/bin/ais_v4l2_proxy
+    user system
+    group camera input graphics system
+    disabled
+on fs
+    insmod /vendor/lib/modules/v4l2loopback.ko devices=2 video_nr=51,52
+    start ais_v4l2_proxy

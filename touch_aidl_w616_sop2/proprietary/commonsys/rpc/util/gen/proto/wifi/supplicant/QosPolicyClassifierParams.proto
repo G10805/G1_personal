@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "IpVersion.proto";
+import "PortRange.proto";
+import "ProtocolNextHeader.proto";
+import "QosPolicyClassifierParamsMask.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message QosPolicyClassifierParams
+{
+    IpVersion ipVersion = 1;
+    wifi.supplicant.qpcpm.QosPolicyClassifierParamsMask classifierParamMask = 2;
+    bytes srcIp = 3;
+    bytes dstIp = 4;
+    int32 srcPort = 5;
+    PortRange dstPortRange = 6;
+    ProtocolNextHeader protocolNextHdr = 7;
+    bytes flowLabelIpv6 = 8;
+    string domainName = 9;
+    uint32 dscp = 10;
+}

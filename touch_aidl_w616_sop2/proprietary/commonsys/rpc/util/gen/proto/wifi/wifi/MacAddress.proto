@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message MacAddress
+{
+    bytes data = 1;
+}

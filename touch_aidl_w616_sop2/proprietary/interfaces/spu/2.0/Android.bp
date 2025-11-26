@@ -1,0 +1,16 @@
+hidl_interface {
+    name: "vendor.qti.spu@2.0",
+    root: "vendor.qti",
+    system_ext_specific: true,
+    srcs: [
+        "ISPUManager.hal",
+        "ISPUNotifier.hal",
+        "ISPComServer.hal",
+        "ISPComClient.hal",
+        "ISPComSharedBuffer.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    gen_java: false,
+}

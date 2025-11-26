@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--========================================================================-->
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.                    -->
+<!-- All Rights Reserved.                                                   -->
+<!-- Confidential and Proprietary - Qualcomm Technologies, Inc.             -->
+<!--========================================================================-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="..\..\common\globalelements.xsd"/>
+  <xs:include schemaLocation="aecglobalelements.xsd"/>
+
+    <xs:element name="aecShdr" type="AECShdrType" />
+    <xs:complexType name="AECShdrType">
+        <xs:sequence>
+            <xs:element name="module_version">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="major_revision" type="xs:int" fixed="1" />
+                        <xs:element name="minor_revision" type="xs:int" fixed="0" />
+                        <xs:element name="incr_revision" type="xs:int" fixed="0" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="shdrMtr" type="ShdrMeteringType" />
+            <xs:element name="shdrConv" type="ShdrConvergenceType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ShdrMeteringType">
+        <xs:sequence>
+            <xs:element name="enableShdr" default="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:unsignedInt">
+                            <xs:attribute name="type" default="uint" />
+                            <xs:attribute name="description" default="Flag to enable SHDR AEC" type="xs:string" />
+                            <xs:attribute name="default_value" default="0" type="xs:string" />
+                            <xs:attribute name="range" default="[0, 1]" type="xs:string" />
+                            <xs:attribute name="bit_depth" default="1u" type="xs:string" />
+                            <xs:attribute name="length" fixed="1" type="xs:int" />
+                            <xs:attribute name="conversion" default="No conversion needed" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="never_tune" type="tuning_level" />
+                            <xs:attribute name="additional_notes" default="none" type="xs:string" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="enableHistTarget" default="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:boolean">
+                            <xs:attribute name="type" default="bool" />
+                            <xs:attribute name="description" default="Flag to enable histogram luma target calculation" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="minLumaForDR" default="1.0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Min Luma value for calculating dynamic ratio" type="xs:string" />
+                            <xs:attribute name="range" default="[0,30]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="preBhistInverseMap" default="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:boolean">
+                            <xs:attribute name="type" default="bool" />
+                            <xs:attribute name="description" default="" type="xs:string" />
+                            <xs:attribute name="default_value" default="0" type="xs:string" />
+                            <xs:attribute name="bit_depth" default="1u" type="xs:string" />
+                            <xs:attribute name="length" fixed="1" type="xs:int" />
+                            <xs:attribute name="conversion" default="No conversion needed" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                            <xs:attribute name="additional_notes" default="none" type="xs:string" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="enableAntiBandingPrioOverADRC">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:boolean">
+                            <xs:attribute name="type" default="bool"/>
+                            <xs:attribute name="description" type="xs:string" default="Setting this flag makes sure antibanding range is not reduced with ADRC enabled. "/>
+                            <xs:attribute name="tuning_parameter_level" type="tuning_level" default="rarely_tune"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="antiBandingPrioTriggerRange">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float"/>
+                            <xs:attribute name="description" type="xs:string" default="The index range to gradually allow ADRC to regain full allowance when antibanding becomes unavailable due to scene brightness."/>
+                            <xs:attribute name="range" type="xs:string" default="[0,30]"/>
+                            <xs:attribute name="tuning_parameter_level" type="tuning_level" default="rarely_tune"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="temporalFilter1" default="0.00">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="TF for exp_ratio" type="xs:string" />
+                            <xs:attribute name="default_value" default="0.02" type="xs:string" />
+                            <xs:attribute name="range" default="[0.0, 1.0]" type="xs:string" />
+                            <xs:attribute name="bit_depth" default="float" type="xs:string" />
+                            <xs:attribute name="length" fixed="1" type="xs:int" />
+                            <xs:attribute name="conversion" default="No Conversion needed" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                            <xs:attribute name="additional_notes" default="Temporal filter for the exp_ratio inside AEC algorithm. It is to get a smooth transaction of exposure ratio. For a dynamically changing scene, the current exposure ratio will be averaged with previous exposure ratio. Example: Current exp_ratio = 0.98*prev_exp_ratio + 0.02*exp_ratio." type="xs:string" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="reserved" minOccurs="10" maxOccurs="10">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float"/>
+                            <xs:attribute name="description" type="xs:string" default="reserved Parameters"/>
+                            <xs:attribute name="range" type="xs:string" default="[0,10]"/>
+                            <xs:attribute name="tuning_parameter_level" type="tuning_level" default="rarely_tune"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ratioTrigZone" type="RatioTrigZoneType" maxOccurs="unbounded" />
+            <xs:element name="luxTrigZone" type="LuxTrigZoneType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RatioTrigZoneType">
+        <xs:sequence>
+            <xs:element name="zoneTrigger" type="TriggerPointType" />
+            <xs:element name="zoneData" type="RatioTrigZoneDataType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RatioTrigZoneDataType">
+        <xs:sequence>
+            <xs:element name="expRatioUpLimit" default="1">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Upper limit for changing exposure_ratio" type="xs:string" />
+                            <xs:attribute name="range" default="[1, 4]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="expRatioLowLimit" default="1">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Lower limit for changing exposure_ratio." type="xs:string" />
+                            <xs:attribute name="range" default="[0.25, 1]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nonLinearLowTh" default="5">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:unsignedInt">
+                            <xs:attribute name="type" default="uint" />
+                            <xs:attribute name="description" default="Low pixel_level clamp to nonLinearLowTh while frame luma calculation" type="xs:string" />
+                            <xs:attribute name="range" default="[0, 255]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nonLinearHighTh" default="240">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:unsignedInt">
+                            <xs:attribute name="type" default="uint" />
+                            <xs:attribute name="description" default="High pixel_level clamp to nonLinearHighTh while frame luma calculation" type="xs:string" />
+                            <xs:attribute name="range" default="[0, 255]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="reserved" minOccurs="5" maxOccurs="5">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float"/>
+                            <xs:attribute name="description" type="xs:string" default="reserved Parameters"/>
+                            <xs:attribute name="range" type="xs:string" default="[0,10]"/>
+                            <xs:attribute name="tuning_parameter_level" type="tuning_level" default="rarely_tune"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LuxTrigZoneType">
+        <xs:sequence>
+            <xs:element name="zoneTrigger" type="TriggerPointType" />
+            <xs:element name="zoneData" type="LuxTrigZoneDataType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LuxTrigZoneDataType">
+        <xs:sequence>
+            <xs:element name="minTargetAdjRatio">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Minimal target adjust ratio for safe exposure. " type="xs:string" />
+                            <xs:attribute name="range" default="[0.6, 1.0]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="maxTargetAdjRatio">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Maximal target adjust ratio for safe exposure. " type="xs:string" />
+                            <xs:attribute name="range" default="[1.0, 2.0]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="satRefLow">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Saturation low reference point, which sets the minimal brightness for saturation position." type="xs:string" />
+                            <xs:attribute name="range" default="[0,255]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="satRefHigh">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Saturation high reference point, which sets the maximal brightness for saturation position." type="xs:string" />
+                            <xs:attribute name="range" default="[0,255]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="darkRefLow">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Dark low reference point, which sets the minimal brightness for dark position." type="xs:string" />
+                            <xs:attribute name="range" default="[0,255]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="darkRefHigh">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="This one is not recommended to be used." type="xs:string" />
+                            <xs:attribute name="range" default="[0,255]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="never_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="histSatPushupRange" minOccurs="3" maxOccurs="3">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="StartEndType">
+                            <xs:attribute name="description" default="The percentage range of pixels to be used to calculate saturation position for push up (flat scene compensation). R/G/B channels get to specify independent ranges." type="xs:string" />
+                            <xs:attribute name="range" default="[0.0,0.5]" type="xs:string" />
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="histSatPushdownRange" minOccurs="3" maxOccurs="3">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="StartEndType">
+                            <xs:attribute name="description" default="The percentage range of pixels to be used to calculate saturation position for push down (saturation prevention). R/G/B channels get to specify independent ranges." type="xs:string" />
+                            <xs:attribute name="range" default="[0.0,0.5]" type="xs:string" />
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="histDarkRange" minOccurs="3" maxOccurs="3">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="StartEndType">
+                            <xs:attribute name="description" default="The percentage range of pixels to be used to calculate dark position. R/G/B channels get to specify independent ranges." type="xs:string" />
+                            <xs:attribute name="range" default="[0.0,0.5]" type="xs:string" />
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="minRatio" default="2.0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="This parameter determines the min ratio between long and short exposure. " type="xs:string" />
+                            <xs:attribute name="range" default="[1.0,64.0]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="maxRatio" default="64.0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="This parameter determines the max ratio between long and short exposure" type="xs:string" />
+                            <xs:attribute name="range" default="[1.0,256.0]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="hist_k" default="1.0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="This parameter determines sensitivity of ratio calculation" type="xs:string" />
+                            <xs:attribute name="range" default="[1,64]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="rarely_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="reserved" minOccurs="5" maxOccurs="5">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float"/>
+                            <xs:attribute name="description" type="xs:string" default="reserved Parameters"/>
+                            <xs:attribute name="range" type="xs:string" default="[0,10]"/>
+                            <xs:attribute name="tuning_parameter_level" type="tuning_level" default="rarely_tune"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ShdrConvergenceType">
+        <xs:sequence>
+            <xs:element name="sHDRConvType">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="AECAlgoSHDRConvType">
+                            <xs:attribute name="description" type="xs:string" default="Exposure/gain decision for multi-frame sHDR sensor"/>
+                            <xs:attribute name="range" type="xs:string" default="[0,5]"/>
+                            <xs:attribute name="tuning_parameter_level" type="tuning_level" default="must_tune"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="convSpeedAdjRatio" default="1.0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:float">
+                            <xs:attribute name="type" default="float" />
+                            <xs:attribute name="description" default="Specify the adjustment of convergence speed during shdr AEC convergence" type="xs:string" />
+                            <xs:attribute name="range" default="[0.0, 1.0]" type="xs:string" />
+                            <xs:attribute name="tuning_parameter_level" default="often_tune" type="tuning_level" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

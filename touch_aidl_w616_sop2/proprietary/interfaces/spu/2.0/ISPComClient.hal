@@ -1,0 +1,78 @@
+/*!
+ *
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.spu@2.0;
+
+import ISPComSharedBuffer;
+import ISPUNotifier;
+
+interface ISPComClient {
+
+    /**
+     * SPCom client register
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    registerClient() generates(int32_t error);
+
+     /**
+     * SPCom client unregister
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    unregisterClient() generates(int32_t error);
+
+    /**
+     * Check remote edge connectivity
+     *
+     * @return  status  True if connected false otherwise
+     */
+    isConnected() generates(bool status);
+
+    /**
+     * Send request to SPU server and wait for response
+     *
+     * @param   request    Request buffer
+     * @param   timeoutMs  Timeout in milliseconds, zero means no timeout
+     *
+     * @return  status     Number of response bytes on success or non-zero
+     *                     error code on failure
+     * @return  response   Response buffer
+     */
+    sendMessage(vec<uint8_t> request, uint32_t timeoutMs)
+        generates(int32_t status, vec<uint8_t> response);
+
+    /**
+     * Get an instance of SPU shared buffer object with direct access to shared
+     * buffer
+     *
+     * @param   sharedMemory  hidl_memory allocated and mapped by the caller
+     *
+     * @return  buffer        Pointer to a buffer on success and null pointer
+     *                        on failure
+     */
+    getSPComSharedBuffer(memory sharedMemory)
+        generates(ISPComSharedBuffer buffer);
+
+    /**
+     * Send request to SPU server with shared buffer info and wait for response
+     *
+     * @param  request    Request buffer
+     * @param  buffer     Shared buffer to share with SPCom client
+     * @param  offset     Offset in response buffer to store shared buffer
+     * @param  timeoutMs  Timeout in milliseconds, zero means no timeout
+     *
+     * @return  status    Number of response bytes on success or non-zero
+     *                    error code on failure
+     * @return  response  Response buffer
+     */
+    sendModifiedMessage
+        (vec<uint8_t> request, ISPComSharedBuffer buffer,
+        uint32_t offset, uint32_t timeoutMs)
+        generates(int32_t status, vec<uint8_t> response);
+};

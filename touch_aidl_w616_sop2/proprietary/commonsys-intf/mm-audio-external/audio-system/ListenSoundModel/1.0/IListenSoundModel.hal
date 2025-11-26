@@ -1,0 +1,97 @@
+/*============================================================================
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ * ===========================================================================*/
+
+
+/*======================================================================
+DESCRIPTION : ListenSoundModelLibrary Version 1
+====================================================================*/
+
+package vendor.qti.hardware.ListenSoundModel@1.0;
+
+interface IListenSoundModel
+{
+    ipc_lsm_findKeywordEndPosition(memory pKeywordModel, int32_t modelSize, keywordId_t_s keywordId,
+        memory pUserRecording, int32_t recSize)
+        generates (uint32_t status, uint32_t pKendPosition);
+    ipc_lsm_verifyUserRecording(memory pKeywordModel, int32_t modelSize, keywordId_t_s keywordId,
+        vec<ListenEpdParams> pEpdParameter, memory pUserRecording, int32_t recSize)
+        generates (uint32_t status, int16_t pConfidenceLevel);
+    ipc_lsm_checkUserRecording(memory pLanguageModel, int32_t langModelSize, vec<ListenEpdParams> pEpdParameter,
+        memory pUserRecording, int32_t recSize, uint32_t maxPhonemeLength)
+        generates (uint32_t status, float pOutSnr);
+    ipc_lsm_checkRecordingsQuality(memory pLanguageModel, int32_t langModelSize, vec<ListenEpdParams> pEpdParameter,
+        uint32_t numUserRecording, vec<memory> pUserRecordings, vec<int32_t> recSizes)
+        generates (uint32_t status, float pOutSnr);
+    ipc_lsm_tuneUserDefinedKeywordModelThreshold(memory pUserDefinedKeyword, int32_t modelSize, keywordId_t_s keywordId,
+        memory pUserRecording, int32_t recSize)
+        generates (uint32_t status, memory pOutputUserDefinedKeyword, int32_t outModelSize);
+    ipc_lsm_getUserDefinedKeywordSize(memory pUserDefinedKeyword, int32_t modelSize, keywordId_t_s keywordId,
+        userId_t_s userId, vec<ListenEpdParams> pEpdParameter, uint32_t numUserRecording,
+        vec<memory> pUserRecordings, vec<int32_t> recSizes, memory pLanguageModel, int32_t langModelSize)
+        generates (uint32_t status, uint32_t pOutputSize);
+    ipc_lsm_getUserDefinedKeywordApproxSize(keywordId_t_s keywordId, userId_t_s userId,
+        memory pLanguageModel, int32_t langModelSize, uint32_t maxPhonemeLength)
+        generates (uint32_t status, uint32_t pOutputSize);
+    ipc_lsm_createUserDefinedKeywordModel(memory pUserDefinedKeyword, int32_t modelSize, keywordId_t_s keywordId,
+        userId_t_s userId, vec<ListenEpdParams> pEpdParameter, uint32_t numUserRecording,
+        vec<memory> pUserRecordings, vec<int32_t> recSizes, memory pLanguageModel, int32_t langModelSize, int32_t outModelSize)
+        generates (uint32_t status, memory pOutputUserDefinedKeyword, int16_t pMatchingScore);
+    ipc_lsm_getStrippedUserKeywordModelSize(memory pModel, int32_t modelSize)
+        generates (uint32_t status, uint32_t nStrippedModelSize);
+    ipc_lsm_stripUserKeywordModel(memory pModel, int32_t modelSize)
+        generates (uint32_t status, memory pStrippedModel, int32_t strippedModelSize);
+    ipc_lsm_getUserKeywordModelSize(memory pKeywordModel, int32_t modelSize, keywordId_t_s keywordId, userId_t_s userId)
+        generates (uint32_t status, uint32_t nUserKeywordModelSize);
+    ipc_lsm_createUserKeywordModel(memory pUserDefinedKeyword, int32_t modelSize, keywordId_t_s keywordId,
+        userId_t_s userId, vec<ListenEpdParams> pEpdParameter, uint32_t numUserRecording,
+        vec<memory> pUserRecordings, vec<int32_t> recSizes, int32_t outModelSize)
+        generates (uint32_t status, memory pUserKeywordModel, int16_t pUserMatchingScore);
+    ipc_lsm_getSizeAfterDeleting(memory pInputModel, int32_t modelSize, keywordId_t_s keywordId, userId_t_s userId)
+        generates (uint32_t status, uint32_t nOutputModelSize);
+    ipc_lsm_deleteFromModel(memory pInputModel, int32_t modelSize, keywordId_t_s keywordId, userId_t_s userId, int32_t resModelSize)
+        generates (uint32_t status, memory pResultModel);
+    ipc_lsm_getMergedModelSize(uint16_t numModels, vec<memory> pModels, vec<int32_t> modelSizes)
+        generates (uint32_t status, uint32_t nOutputModelSize);
+    ipc_lsm_mergeModels(uint16_t numModels, vec<memory> pModels, vec<int32_t> modelSizes, int32_t mergedModelSize)
+        generates (uint32_t status, memory pMergedModel);
+    ipc_lsm_parseFromBigSoundModel(memory pSM3p0Model, int32_t bigModelSize)
+        generates (uint32_t status, memory p1stStageModel, int32_t i1stStgModelSize, memory p2ndStageKWModel,
+        int32_t i2ndStgKWModelSize, memory p2stStageVoPModel, int32_t i2ndStgVOPModelSize, uint16_t indicator);
+    ipc_lsm_parseDetectionEventData(memory pUserKeywordModel, int32_t modelSize, vec<ListenEventPayload> pEventPayload)
+        generates (uint32_t status, vec<ListenDetectionEventType> pDetectionEvent);
+    ipc_lsm_querySoundModel(memory pSoundModel, int32_t modelSize)
+        generates (uint32_t status, vec<ListenSoundModelInfo> pListenSoundModelInfo);
+    ipc_lsm_getSoundModelHeader(memory pSoundModel, int32_t modelSize)
+        generates (uint32_t status, vec<ListenSoundModelHeader> pListenSoundModelHeader);
+    ipc_lsm_releaseSoundModelHeader(vec<ListenSoundModelHeader> pListenSoundModelHeader)
+        generates (uint32_t status);
+    ipc_lsm_getKeywordPhrases(memory pSoundModel, int32_t modelSize, uint16_t numInpKeywords)
+        generates (uint32_t status, uint16_t numKeywords, vec<keywordId_t_s> keywords);
+    ipc_lsm_getUserNames(memory pSoundModel, int32_t modelSize, uint16_t numInpUsers)
+        generates (uint32_t status, uint16_t numUsers, vec<userId_t_s> users);
+    ipc_lsm_loadConfParams(vec<uint8_t> pConfData, uint32_t confDataSize)
+        generates (uint32_t status);
+    ipc_lsm_getBinaryModelSize(memory pListenModel, int32_t modelSize)
+        generates (uint32_t status, uint32_t nBinaryModelSize);
+    ipc_lsm_getSortedKeywordStatesUserKeywordModelSize(memory pListenModel, int32_t modelSize)
+        generates (uint32_t status, uint32_t nSortedModelSize);
+    ipc_lsm_sortKeywordStatesOfUserKeywordModel(memory pInputModel, int32_t inpModelSize, int32_t sortedModelSize)
+        generates (uint32_t status, memory pSortedModel);
+    ipc_lsm_verifyUserRecordingExt(memory pKeywordModel, int32_t modelSize, keywordId_t_s keywordId,
+        vec<ListenEpdParams> pEpdParameter, memory pUserRecording, int32_t recSize, uint32_t isNoisySample)
+        generates (uint32_t status, vec<ListenQualityCheckResult> pQualityCheckResult);
+    ipc_lsm_smlInit(uint32_t configId, vec<int8_t> pConfig, uint32_t configSize,
+        vec<int8_t> pStaticMemory, uint32_t staticMemorySize)
+        generates (uint32_t status, vec<ListenSmlModel> pSmlModel);
+    ipc_lsm_smlSet(vec<ListenSmlModel> pSmlModel, uint32_t configId, vec<int8_t> pConfig, uint32_t configSize)
+        generates(uint32_t status);
+    ipc_lsm_smlGet(vec<ListenSmlModel> pSmlModel, uint32_t configId, vec<int8_t> pConfig, uint32_t configSize)
+        generates(uint32_t status, vec<int8_t> pOutConfig, uint32_t configFilledSize);
+    ipc_lsm_smlProcess(vec<ListenSmlModel> pSmlModel, vec<int8_t> pInputData,
+        uint32_t inputDataSize, uint32_t inputDataId)
+        generates (uint32_t status, vec<int8_t> pOutputData, uint32_t outputDataSize, uint32_t outputDataId);
+};
+

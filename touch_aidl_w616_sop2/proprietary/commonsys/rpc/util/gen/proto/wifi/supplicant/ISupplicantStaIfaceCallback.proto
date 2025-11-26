@@ -1,0 +1,244 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "AnqpData.proto";
+import "AssociationRejectionData.proto";
+import "AuxiliarySupplicantEventCode.proto";
+import "BssTmData.proto";
+import "BssidChangeReason.proto";
+import "DppAkm.proto";
+import "DppConfigurationData.proto";
+import "DppConnectionKeys.proto";
+import "DppEventType.proto";
+import "DppFailureCode.proto";
+import "DppProgressCode.proto";
+import "DppStatusErrorCode.proto";
+import "Hs20AnqpData.proto";
+import "OsuMethod.proto";
+import "PmkSaCacheData.proto";
+import "QosPolicyData.proto";
+import "QosPolicyScsResponseStatus.proto";
+import "StaIfaceCallbackState.proto";
+import "StaIfaceReasonCode.proto";
+import "SupplicantStateChangeData.proto";
+import "WpsConfigError.proto";
+import "WpsErrorIndication.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ISupplicantStaIfaceCallback
+{
+    message OnAnqpQueryDoneInd
+    {
+        bytes bssid = 1;
+        AnqpData data = 2;
+        Hs20AnqpData hs20Data = 3;
+    }
+
+    message OnAssociationRejectedInd
+    {
+        AssociationRejectionData assocRejectData = 1;
+    }
+
+    message OnAuthenticationTimeoutInd
+    {
+        bytes bssid = 1;
+    }
+
+    message OnAuxiliarySupplicantEventInd
+    {
+        AuxiliarySupplicantEventCode eventCode = 1;
+        bytes bssid = 2;
+        string reasonString = 3;
+    }
+
+    message OnBssTmHandlingDoneInd
+    {
+        BssTmData tmData = 1;
+    }
+
+    message OnBssidChangedInd
+    {
+        BssidChangeReason reason = 1;
+        bytes bssid = 2;
+    }
+
+    message OnDisconnectedInd
+    {
+        bytes bssid = 1;
+        bool locallyGenerated = 2;
+        wifi.supplicant.sirc.StaIfaceReasonCode reasonCode = 3;
+    }
+
+    message OnDppFailureInd
+    {
+        wifi.supplicant.dfc.DppFailureCode code = 1;
+        string ssid = 2;
+        string channelList = 3;
+        repeated int32 bandList = 4;
+    }
+
+    message OnDppProgressInd
+    {
+        wifi.supplicant.dpc.DppProgressCode code = 1;
+    }
+
+    message OnDppSuccessInd
+    {
+        DppEventType event = 1;
+    }
+
+    message OnDppSuccessConfigReceivedInd
+    {
+        bytes ssid = 1;
+        string password = 2;
+        bytes psk = 3;
+        wifi.supplicant.da.DppAkm securityAkm = 4;
+        DppConnectionKeys dppConnectionKeys = 5;
+    }
+
+    message OnDppSuccessConfigSentInd
+    {
+    }
+
+    message OnEapFailureInd
+    {
+        bytes bssid = 1;
+        int32 errorCode = 2;
+    }
+
+    message OnExtRadioWorkStartInd
+    {
+        int32 id = 1;
+    }
+
+    message OnExtRadioWorkTimeoutInd
+    {
+        int32 id = 1;
+    }
+
+    message OnHs20DeauthImminentNoticeInd
+    {
+        bytes bssid = 1;
+        int32 reasonCode = 2;
+        int32 reAuthDelayInSec = 3;
+        string url = 4;
+    }
+
+    message OnHs20IconQueryDoneInd
+    {
+        bytes bssid = 1;
+        string fileName = 2;
+        bytes data = 3;
+    }
+
+    message OnHs20SubscriptionRemediationInd
+    {
+        bytes bssid = 1;
+        OsuMethod osuMethod = 2;
+        string url = 3;
+    }
+
+    message OnHs20TermsAndConditionsAcceptanceRequestedNotificationInd
+    {
+        bytes bssid = 1;
+        string url = 2;
+    }
+
+    message OnNetworkAddedInd
+    {
+        int32 id = 1;
+    }
+
+    message OnNetworkNotFoundInd
+    {
+        bytes ssid = 1;
+    }
+
+    message OnNetworkRemovedInd
+    {
+        int32 id = 1;
+    }
+
+    message OnPmkCacheAddedInd
+    {
+        int64 expirationTimeInSec = 1;
+        bytes serializedEntry = 2;
+    }
+
+    message OnStateChangedInd
+    {
+        StaIfaceCallbackState newState = 1;
+        bytes bssid = 2;
+        int32 id = 3;
+        bytes ssid = 4;
+        bool filsHlpSent = 5;
+    }
+
+    message OnWpsEventFailInd
+    {
+        bytes bssid = 1;
+        wifi.supplicant.wce.WpsConfigError configError = 2;
+        wifi.supplicant.wei.WpsErrorIndication errorInd = 3;
+    }
+
+    message OnWpsEventPbcOverlapInd
+    {
+    }
+
+    message OnWpsEventSuccessInd
+    {
+    }
+
+    message OnQosPolicyResetInd
+    {
+    }
+
+    message OnQosPolicyRequestInd
+    {
+        int32 qosPolicyRequestId = 1;
+        repeated QosPolicyData qosPolicyData = 2;
+    }
+
+    enum MloLinkInfoChangeReason
+    {
+        TID_TO_LINK_MAP = 0;
+        MULTI_LINK_RECONFIG_AP_REMOVAL = 1;
+    }
+
+    message OnMloLinksInfoChangedInd
+    {
+        MloLinkInfoChangeReason reason = 1;
+    }
+
+    message OnDppConfigReceivedInd
+    {
+        DppConfigurationData configData = 1;
+    }
+
+    message OnDppConnectionStatusResultSentInd
+    {
+        wifi.supplicant.dsec.DppStatusErrorCode code = 1;
+    }
+
+    message OnBssFrequencyChangedInd
+    {
+        int32 frequencyMhz = 1;
+    }
+
+    message OnSupplicantStateChangedInd
+    {
+        SupplicantStateChangeData stateChangeData = 1;
+    }
+
+    message OnQosPolicyResponseForScsInd
+    {
+        repeated QosPolicyScsResponseStatus qosPolicyScsResponseStatus = 1;
+    }
+
+    message OnPmkSaCacheAddedInd
+    {
+        PmkSaCacheData pmkSaData = 1;
+    }
+}

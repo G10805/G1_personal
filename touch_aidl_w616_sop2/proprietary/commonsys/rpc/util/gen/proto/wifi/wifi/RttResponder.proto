@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wifi;
+
+import "RttPreamble.proto";
+import "WifiChannelInfo.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message RttResponder
+{
+    WifiChannelInfo channel = 1;
+    wifi.rp.RttPreamble preamble = 2;
+}

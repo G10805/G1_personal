@@ -1,0 +1,27 @@
+# Copyright (c) 2021 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+SectionVerb {
+    EnableSequence [
+        cdev "agm"
+        cset "name='PCM0p control' TDM-LPAIF_SDR-RX-TERTIARY"
+        cset-tlv "name='PCM0p setParam' /etc/audio-pp-blob/gain_2000.bin"
+    ]
+    DisableSequence [
+    ]
+    value {
+        playbackPCM "agm:100,0"
+    }
+}
+
+SectionDevice."Speaker" {
+    EnableSequence [
+
+    ]
+    DisableSequence [
+
+    ]
+    value {
+    }
+}

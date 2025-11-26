@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum P2pGroupCapabilityMask
+{
+    PGCM_RESERVED = 0;
+    GROUP_OWNER = 1;
+    PERSISTENT_GROUP = 2;
+    GROUP_LIMIT = 4;
+    INTRA_BSS_DIST = 8;
+    CROSS_CONN = 16;
+    PERSISTENT_RECONN = 32;
+    GROUP_FORMATION = 64;
+}

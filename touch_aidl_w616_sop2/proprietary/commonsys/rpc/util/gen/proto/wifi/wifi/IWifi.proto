@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package wifi;
+
+import "IWifiChip.proto";
+import "IWifiEventCallback.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifi
+{
+    message GetChipReq
+    {
+        int32 chipId = 1;
+    }
+
+    message GetChipCfm
+    {
+        HalStatus status = 1;
+        optional IWifiChip result = 2;
+    }
+
+    message GetChipIdsReq
+    {
+    }
+
+    message GetChipIdsCfm
+    {
+        HalStatus status = 1;
+        repeated int32 result = 2;
+    }
+
+    message IsStartedReq
+    {
+    }
+
+    message IsStartedCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message RegisterEventCallbackReq
+    {
+        optional IWifiEventCallback callback = 1;
+    }
+
+    message RegisterEventCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartReq
+    {
+    }
+
+    message StartCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopReq
+    {
+    }
+
+    message StopCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

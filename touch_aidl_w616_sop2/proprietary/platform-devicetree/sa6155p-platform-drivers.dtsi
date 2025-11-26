@@ -1,0 +1,33 @@
+&pm6155_1_poweron {
+	mode-silent = <0xa>;
+	mode-nonsilent = <0xb>;
+	mode-forcedsilent = <0xc>;
+	mode-forcednonsilent = <0xd>;
+};
+
+&qcom_smp2p_adsp {
+	hlos_sleep_state_out: hlos_sleep_state-out {
+		qcom,entry-name = "hlos_sleep_state";
+		#qcom,smem-state-cells = <1>;
+	};
+};
+
+&soc {
+	qcom,hlos_sleep_state {
+		compatible = "qcom,smp2p-hlos_sleep_state";
+		qcom,smem-states = <&hlos_sleep_state_out 0>;
+	};
+
+	aop-set-ddr-freq {
+		compatible = "qcom,aop-set-ddr-freq";
+		mboxes = <&qmp_aop 0>;
+		mbox-names = "aop";
+	};
+};
+
+&reserved_memory {
+        uefi_log: uefi_log@0x93900000 {
+                reg = <0x0 0x93900000 0x0 0x10000>;
+                label = "uefi_log";
+        };
+};

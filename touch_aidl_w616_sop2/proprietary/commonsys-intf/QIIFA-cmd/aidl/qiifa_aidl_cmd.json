@@ -1,0 +1,3926 @@
+[
+    {
+        "hashes": [],
+        "name": "AppOpsUserServiceAidlNative",
+        "stability": "",
+        "types": [
+            "android.app.appops.cts.IAppOpsUserClient",
+            "android.app.appops.cts.IAppOpsUserService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "IBinderNdkUnitTest",
+        "stability": "",
+        "types": [
+            "IBinderNdkUnitTest",
+            "IEmpty"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "IBinderRustNdkInteropTest",
+        "stability": "",
+        "types": [
+            "IBinderRustNdkInteropTest",
+            "IBinderRustNdkInteropTestOther"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "IBinderVendorDoubleLoadTest",
+        "stability": "",
+        "types": [
+            "IBinderVendorDoubleLoadTest"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "aaudio-aidl",
+        "stability": "",
+        "types": [
+            "aaudio.Endpoint",
+            "aaudio.RingBuffer",
+            "aaudio.SharedRegion",
+            "aaudio.StreamParameters",
+            "aaudio.StreamRequest",
+            "aaudio.IAAudioClient",
+            "aaudio.IAAudioService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "aidl-test-interface",
+        "stability": "",
+        "types": [
+            "android.aidl.tests.BackendType",
+            "android.aidl.tests.ByteEnum",
+            "android.aidl.tests.ConstantExpressionEnum",
+            "android.aidl.tests.GenericStructuredParcelable",
+            "android.aidl.tests.INamedCallback",
+            "android.aidl.tests.INewName",
+            "android.aidl.tests.IntEnum",
+            "android.aidl.tests.IOldName",
+            "android.aidl.tests.ITestService",
+            "android.aidl.tests.LongEnum",
+            "android.aidl.tests.OtherParcelableForToString",
+            "android.aidl.tests.ParcelableForToString",
+            "android.aidl.tests.StructuredParcelable",
+            "android.aidl.tests.Union",
+            "android.aidl.tests.UnionWithFd",
+            "android.aidl.tests.unions.EnumUnion",
+            "android.aidl.tests.unions.UnionInUnion"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "9e7be1859820c59d9d55dd133e71a3687b5d2e5b",
+            "da8c4bc94ca7feff0e0a65563a466787698b5891"
+        ],
+        "name": "aidl-test-versioned-interface",
+        "stability": "",
+        "types": [
+            "android.aidl.versioned.tests.BazUnion",
+            "android.aidl.versioned.tests.Foo",
+            "android.aidl.versioned.tests.IFooInterface"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "aidl_test_loggable_interface",
+        "stability": "",
+        "types": [
+            "android.aidl.loggable.ILoggableInterface",
+            "android.aidl.loggable.Data",
+            "android.aidl.loggable.Enum",
+            "android.aidl.loggable.Union"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "873769e09e3ac6d71f380fd36df9e15526d250e5"
+        ],
+        "name": "aidl_test_nonvintf_parcelable",
+        "stability": "",
+        "types": [
+            "android.aidl.tests.nonvintf.NonVintfExtendableParcelable",
+            "android.aidl.tests.nonvintf.NonVintfParcelable"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "aidl_test_unstable_parcelable",
+        "stability": "",
+        "types": [
+            "android.aidl.tests.unstable.UnstableExtendableParcelable",
+            "android.aidl.tests.unstable.UnstableParcelable"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "10def8b50cda5b371cb022d66b5f7425da9eec4f"
+        ],
+        "name": "aidl_test_vintf_parcelable",
+        "stability": "vintf",
+        "types": [
+            "android.aidl.tests.vintf.VintfExtendableParcelable",
+            "android.aidl.tests.vintf.VintfParcelable"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "9d1bf5f9568165514a5f8777ce77155ba87dc3f0"
+        ],
+        "name": "android.automotive.computepipe.registry",
+        "stability": "vintf",
+        "types": [
+            "android.automotive.computepipe.registry.IClientInfo",
+            "android.automotive.computepipe.registry.IPipeQuery",
+            "android.automotive.computepipe.registry.IPipeRegistration"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "693de9d1b1839f3c90076d78c8f2380b93bafe41"
+        ],
+        "name": "android.automotive.computepipe.runner",
+        "stability": "vintf",
+        "types": [
+            "android.automotive.computepipe.runner.IPipeDebugger",
+            "android.automotive.computepipe.runner.IPipeRunner",
+            "android.automotive.computepipe.runner.IPipeStateCallback",
+            "android.automotive.computepipe.runner.IPipeStream",
+            "android.automotive.computepipe.runner.PacketDescriptor",
+            "android.automotive.computepipe.runner.PacketDescriptorPacketType",
+            "android.automotive.computepipe.runner.PipeDescriptor",
+            "android.automotive.computepipe.runner.PipeInputConfig",
+            "android.automotive.computepipe.runner.PipeInputConfigCameraDesc",
+            "android.automotive.computepipe.runner.PipeInputConfigCameraType",
+            "android.automotive.computepipe.runner.PipeInputConfigFormatType",
+            "android.automotive.computepipe.runner.PipeInputConfigImageFileDesc",
+            "android.automotive.computepipe.runner.PipeInputConfigImageFileType",
+            "android.automotive.computepipe.runner.PipeInputConfigInputSourceDesc",
+            "android.automotive.computepipe.runner.PipeInputConfigInputType",
+            "android.automotive.computepipe.runner.PipeInputConfigVideoFileDesc",
+            "android.automotive.computepipe.runner.PipeInputConfigVideoFileType",
+            "android.automotive.computepipe.runner.PipeOffloadConfig",
+            "android.automotive.computepipe.runner.PipeOffloadConfigOffloadDesc",
+            "android.automotive.computepipe.runner.PipeOffloadConfigOffloadType",
+            "android.automotive.computepipe.runner.PipeOutputConfig",
+            "android.automotive.computepipe.runner.PipeOutputConfigOutputDesc",
+            "android.automotive.computepipe.runner.PipeOutputConfigPacketType",
+            "android.automotive.computepipe.runner.PipeProfilingType",
+            "android.automotive.computepipe.runner.PipeState",
+            "android.automotive.computepipe.runner.PipeTerminationConfig",
+            "android.automotive.computepipe.runner.PipeTerminationConfigTerminationDesc",
+            "android.automotive.computepipe.runner.PipeTerminationConfigTerminationType",
+            "android.automotive.computepipe.runner.ProfilingData"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.automotive.telemetry.internal",
+        "stability": "",
+        "types": [
+            "android.automotive.telemetry.internal.CarDataInternal",
+            "android.automotive.telemetry.internal.ICarDataListener",
+            "android.automotive.telemetry.internal.ICarTelemetryInternal"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "f7adf2ef96b380c7fde3919f565eb764986bdcdd"
+        ],
+        "name": "android.automotive.watchdog",
+        "stability": "vintf",
+        "types": [
+            "android.automotive.watchdog.BootPhase",
+            "android.automotive.watchdog.ICarWatchdog",
+            "android.automotive.watchdog.ICarWatchdogClient",
+            "android.automotive.watchdog.ICarWatchdogMonitor",
+            "android.automotive.watchdog.IResourceOveruseListener",
+            "android.automotive.watchdog.IoOveruseStats",
+            "android.automotive.watchdog.PerStateBytes",
+            "android.automotive.watchdog.PowerCycle",
+            "android.automotive.watchdog.ResourceOveruseStats",
+            "android.automotive.watchdog.ResourceType",
+            "android.automotive.watchdog.StateType",
+            "android.automotive.watchdog.TimeoutLength",
+            "android.automotive.watchdog.UserState"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.automotive.watchdog.internal",
+        "stability": "",
+        "types": [
+            "android.automotive.watchdog.internal.ApplicationCategoryType",
+            "android.automotive.watchdog.internal.BootPhase",
+            "android.automotive.watchdog.internal.ComponentType",
+            "android.automotive.watchdog.internal.ICarWatchdog",
+            "android.automotive.watchdog.internal.ICarWatchdogMonitor",
+            "android.automotive.watchdog.internal.ICarWatchdogServiceForSystem",
+            "android.automotive.watchdog.internal.IoOveruseAlertThreshold",
+            "android.automotive.watchdog.internal.IoOveruseConfiguration",
+            "android.automotive.watchdog.internal.PackageIdentifier",
+            "android.automotive.watchdog.internal.PackageInfo",
+            "android.automotive.watchdog.internal.PackageIoOveruseStats",
+            "android.automotive.watchdog.internal.PackageMetadata",
+            "android.automotive.watchdog.internal.PackageResourceOveruseAction",
+            "android.automotive.watchdog.internal.PerStateIoOveruseThreshold",
+            "android.automotive.watchdog.internal.PowerCycle",
+            "android.automotive.watchdog.internal.ResourceOveruseActionType",
+            "android.automotive.watchdog.internal.ResourceOveruseConfiguration",
+            "android.automotive.watchdog.internal.ResourceSpecificConfiguration",
+            "android.automotive.watchdog.internal.StateType",
+            "android.automotive.watchdog.internal.TimeoutLength",
+            "android.automotive.watchdog.internal.UidType",
+            "android.automotive.watchdog.internal.UserState"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.fmq.test",
+        "stability": "",
+        "types": [
+            "android.fmq.test.EventFlagBits",
+            "android.fmq.test.FixedParcelable",
+            "android.fmq.test.ITestAidlMsgQ"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.frameworks.automotive.powerpolicy",
+        "stability": "vintf",
+        "types": [
+            "android.frameworks.automotive.powerpolicy.CarPowerPolicy",
+            "android.frameworks.automotive.powerpolicy.CarPowerPolicyFilter",
+            "android.frameworks.automotive.powerpolicy.ICarPowerPolicyChangeCallback",
+            "android.frameworks.automotive.powerpolicy.ICarPowerPolicyServer",
+            "android.frameworks.automotive.powerpolicy.PowerComponent"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.frameworks.automotive.powerpolicy.internal",
+        "stability": "",
+        "types": [
+            "android.frameworks.automotive.powerpolicy.internal.ICarPowerPolicySystemNotification",
+            "android.frameworks.automotive.powerpolicy.internal.PolicyState"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.frameworks.automotive.telemetry",
+        "stability": "vintf",
+        "types": [
+            "android.frameworks.automotive.telemetry.CarData",
+            "android.frameworks.automotive.telemetry.ICarTelemetry"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.frameworks.stats",
+        "stability": "vintf",
+        "types": [
+            "android.frameworks.stats.IStats",
+            "android.frameworks.stats.VendorAtom",
+            "android.frameworks.stats.VendorAtomValue"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.authsecret",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.authsecret.IAuthSecret"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.automotive.audiocontrol",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.automotive.audiocontrol.AudioFocusChange",
+            "android.hardware.automotive.audiocontrol.DuckingInfo",
+            "android.hardware.automotive.audiocontrol.IAudioControl",
+            "android.hardware.automotive.audiocontrol.IFocusListener",
+            "android.hardware.automotive.audiocontrol.MutingInfo"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "3614b1c47ed7be85c1e77554e7f04966cf35b465"
+        ],
+        "name": "android.hardware.automotive.occupant_awareness",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.automotive.occupant_awareness.ConfidenceLevel",
+            "android.hardware.automotive.occupant_awareness.DriverMonitoringDetection",
+            "android.hardware.automotive.occupant_awareness.GazeDetection",
+            "android.hardware.automotive.occupant_awareness.IOccupantAwareness",
+            "android.hardware.automotive.occupant_awareness.IOccupantAwarenessClientCallback",
+            "android.hardware.automotive.occupant_awareness.OccupantAwarenessStatus",
+            "android.hardware.automotive.occupant_awareness.OccupantDetection",
+            "android.hardware.automotive.occupant_awareness.OccupantDetections",
+            "android.hardware.automotive.occupant_awareness.PresenceDetection",
+            "android.hardware.automotive.occupant_awareness.Role",
+            "android.hardware.automotive.occupant_awareness.VehicleRegion"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.biometrics.common",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.biometrics.common.CommonProps",
+            "android.hardware.biometrics.common.ComponentInfo",
+            "android.hardware.biometrics.common.ICancellationSignal",
+            "android.hardware.biometrics.common.SensorStrength"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.biometrics.face",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.biometrics.face.AcquiredInfo",
+            "android.hardware.biometrics.face.AuthenticationFrame",
+            "android.hardware.biometrics.face.BaseFrame",
+            "android.hardware.biometrics.face.Cell",
+            "android.hardware.biometrics.face.EnrollmentFrame",
+            "android.hardware.biometrics.face.EnrollmentStage",
+            "android.hardware.biometrics.face.EnrollmentStageConfig",
+            "android.hardware.biometrics.face.EnrollmentType",
+            "android.hardware.biometrics.face.Error",
+            "android.hardware.biometrics.face.FaceSensorType",
+            "android.hardware.biometrics.face.Feature",
+            "android.hardware.biometrics.face.IFace",
+            "android.hardware.biometrics.face.ISession",
+            "android.hardware.biometrics.face.ISessionCallback",
+            "android.hardware.biometrics.face.SensorProps"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.biometrics.fingerprint",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.biometrics.fingerprint.AcquiredInfo",
+            "android.hardware.biometrics.fingerprint.Error",
+            "android.hardware.biometrics.fingerprint.FingerprintSensorType",
+            "android.hardware.biometrics.fingerprint.IFingerprint",
+            "android.hardware.biometrics.fingerprint.ISession",
+            "android.hardware.biometrics.fingerprint.ISessionCallback",
+            "android.hardware.biometrics.fingerprint.SensorLocation",
+            "android.hardware.biometrics.fingerprint.SensorProps"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "development_hash": "78309758ed7f1a3054b31349b93492fc1f41d70d",
+        "has_development": true,
+        "hashes": [],
+        "name": "android.hardware.boot",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.boot.IBootControl",
+            "android.hardware.boot.MergeStatus"
+        ],
+        "vendor_available": "true",
+        "versions": []
+    },
+    {
+        "hashes": [
+            "59e782d6ed4c2aed3744d37fb751ee23797835dd"
+        ],
+        "name": "android.hardware.common",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.common.Ashmem",
+            "android.hardware.common.MappableFile",
+            "android.hardware.common.NativeHandle"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.common.fmq",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.common.fmq.GrantorDescriptor",
+            "android.hardware.common.fmq.MQDescriptor",
+            "android.hardware.common.fmq.SynchronizedReadWrite",
+            "android.hardware.common.fmq.UnsynchronizedWrite"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.gnss",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.gnss.BlocklistedSource",
+            "android.hardware.gnss.CorrelationVector",
+            "android.hardware.gnss.ElapsedRealtime",
+            "android.hardware.gnss.GnssClock",
+            "android.hardware.gnss.GnssConstellationType",
+            "android.hardware.gnss.GnssData",
+            "android.hardware.gnss.GnssMeasurement",
+            "android.hardware.gnss.GnssMultipathIndicator",
+            "android.hardware.gnss.GnssPowerStats",
+            "android.hardware.gnss.GnssSignalType",
+            "android.hardware.gnss.IGnss",
+            "android.hardware.gnss.IGnssCallback",
+            "android.hardware.gnss.IGnssConfiguration",
+            "android.hardware.gnss.IGnssMeasurementCallback",
+            "android.hardware.gnss.IGnssMeasurementInterface",
+            "android.hardware.gnss.IGnssPowerIndication",
+            "android.hardware.gnss.IGnssPowerIndicationCallback",
+            "android.hardware.gnss.IGnssPsds",
+            "android.hardware.gnss.IGnssPsdsCallback",
+            "android.hardware.gnss.PsdsType",
+            "android.hardware.gnss.SatelliteClockInfo",
+            "android.hardware.gnss.SatellitePositionEcef",
+            "android.hardware.gnss.SatellitePvt",
+            "android.hardware.gnss.SatelliteVelocityEcef"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "f5bdf5724a941dc7e5e7d0ebe9dfe028f7bcc25f"
+        ],
+        "name": "android.hardware.graphics.common",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.graphics.common.BlendMode",
+            "android.hardware.graphics.common.BufferUsage",
+            "android.hardware.graphics.common.ChromaSiting",
+            "android.hardware.graphics.common.Compression",
+            "android.hardware.graphics.common.Cta861_3",
+            "android.hardware.graphics.common.Dataspace",
+            "android.hardware.graphics.common.ExtendableType",
+            "android.hardware.graphics.common.HardwareBuffer",
+            "android.hardware.graphics.common.HardwareBufferDescription",
+            "android.hardware.graphics.common.Interlaced",
+            "android.hardware.graphics.common.PixelFormat",
+            "android.hardware.graphics.common.PlaneLayout",
+            "android.hardware.graphics.common.PlaneLayoutComponent",
+            "android.hardware.graphics.common.PlaneLayoutComponentType",
+            "android.hardware.graphics.common.Rect",
+            "android.hardware.graphics.common.Smpte2086",
+            "android.hardware.graphics.common.StandardMetadataType",
+            "android.hardware.graphics.common.XyColor"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "3828640730cbf161d79e54dafce9470fdafcca1e"
+        ],
+        "name": "android.hardware.health.storage",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.health.storage.IGarbageCollectCallback",
+            "android.hardware.health.storage.IStorage",
+            "android.hardware.health.storage.Result"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "hashes": [
+            "5f61a54bc37f935e7eb8d1fb624347f68c03c6ca",
+            "194e04be642728623d65ec8321a3764fdea52ae0"
+        ],
+        "name": "android.hardware.identity",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.identity.Certificate",
+            "android.hardware.identity.CipherSuite",
+            "android.hardware.identity.HardwareInformation",
+            "android.hardware.identity.IIdentityCredential",
+            "android.hardware.identity.IIdentityCredentialStore",
+            "android.hardware.identity.IWritableIdentityCredential",
+            "android.hardware.identity.RequestDataItem",
+            "android.hardware.identity.RequestNamespace",
+            "android.hardware.identity.SecureAccessControlProfile"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "584fcb51e6025741fa62e16227c0158bf26a9195",
+            "91ab0be1887410935f564e3938ff12c5f5f8c59d"
+        ],
+        "name": "android.hardware.keymaster",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.keymaster.HardwareAuthToken",
+            "android.hardware.keymaster.HardwareAuthenticatorType",
+            "android.hardware.keymaster.SecurityLevel",
+            "android.hardware.keymaster.Timestamp",
+            "android.hardware.keymaster.VerificationToken"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "33fec8401b6e66bddaeff251e1a2a0f4fa0d3bee"
+        ],
+        "name": "android.hardware.light",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.light.BrightnessMode",
+            "android.hardware.light.FlashMode",
+            "android.hardware.light.HwLight",
+            "android.hardware.light.HwLightState",
+            "android.hardware.light.ILights",
+            "android.hardware.light.LightType"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.memtrack",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.memtrack.DeviceInfo",
+            "android.hardware.memtrack.IMemtrack",
+            "android.hardware.memtrack.MemtrackRecord",
+            "android.hardware.memtrack.MemtrackType"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.neuralnetworks",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.neuralnetworks.BufferDesc",
+            "android.hardware.neuralnetworks.BufferRole",
+            "android.hardware.neuralnetworks.Capabilities",
+            "android.hardware.neuralnetworks.DataLocation",
+            "android.hardware.neuralnetworks.DeviceBuffer",
+            "android.hardware.neuralnetworks.DeviceType",
+            "android.hardware.neuralnetworks.ErrorStatus",
+            "android.hardware.neuralnetworks.ExecutionPreference",
+            "android.hardware.neuralnetworks.ExecutionResult",
+            "android.hardware.neuralnetworks.Extension",
+            "android.hardware.neuralnetworks.ExtensionNameAndPrefix",
+            "android.hardware.neuralnetworks.ExtensionOperandTypeInformation",
+            "android.hardware.neuralnetworks.FencedExecutionResult",
+            "android.hardware.neuralnetworks.FusedActivationFunc",
+            "android.hardware.neuralnetworks.IBuffer",
+            "android.hardware.neuralnetworks.IBurst",
+            "android.hardware.neuralnetworks.IDevice",
+            "android.hardware.neuralnetworks.IFencedExecutionCallback",
+            "android.hardware.neuralnetworks.IPreparedModel",
+            "android.hardware.neuralnetworks.IPreparedModelCallback",
+            "android.hardware.neuralnetworks.IPreparedModelParcel",
+            "android.hardware.neuralnetworks.Memory",
+            "android.hardware.neuralnetworks.Model",
+            "android.hardware.neuralnetworks.NumberOfCacheFiles",
+            "android.hardware.neuralnetworks.Operand",
+            "android.hardware.neuralnetworks.OperandExtraParams",
+            "android.hardware.neuralnetworks.OperandLifeTime",
+            "android.hardware.neuralnetworks.OperandPerformance",
+            "android.hardware.neuralnetworks.OperandType",
+            "android.hardware.neuralnetworks.Operation",
+            "android.hardware.neuralnetworks.OperationType",
+            "android.hardware.neuralnetworks.OutputShape",
+            "android.hardware.neuralnetworks.PerformanceInfo",
+            "android.hardware.neuralnetworks.Priority",
+            "android.hardware.neuralnetworks.Request",
+            "android.hardware.neuralnetworks.RequestArgument",
+            "android.hardware.neuralnetworks.RequestMemoryPool",
+            "android.hardware.neuralnetworks.Subgraph",
+            "android.hardware.neuralnetworks.SymmPerChannelQuantParams",
+            "android.hardware.neuralnetworks.Timing"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.oemlock",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.oemlock.IOemLock",
+            "android.hardware.oemlock.OemLockSecureStatus"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "d5bbe80a8c4df49931e8453f3138820e82dc525c"
+        ],
+        "name": "android.hardware.power",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.power.Boost",
+            "android.hardware.power.IPower",
+            "android.hardware.power.IPowerHintSession",
+            "android.hardware.power.Mode",
+            "android.hardware.power.WorkDuration"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.power.stats",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.power.stats.Channel",
+            "android.hardware.power.stats.EnergyConsumer",
+            "android.hardware.power.stats.EnergyConsumerAttribution",
+            "android.hardware.power.stats.EnergyConsumerResult",
+            "android.hardware.power.stats.EnergyConsumerType",
+            "android.hardware.power.stats.EnergyMeasurement",
+            "android.hardware.power.stats.IPowerStats",
+            "android.hardware.power.stats.PowerEntity",
+            "android.hardware.power.stats.State",
+            "android.hardware.power.stats.StateResidency",
+            "android.hardware.power.stats.StateResidencyResult"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "ba450432e0dab8ee7bbc30013819ea8aef12054b"
+        ],
+        "name": "android.hardware.rebootescrow",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.rebootescrow.IRebootEscrow"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "has_development": true,
+        "hashes": [],
+        "name": "android.hardware.secure_element",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.secure_element.ISecureElement",
+            "android.hardware.secure_element.ISecureElementCallback",
+            "android.hardware.secure_element.LogicalChannelResponse"
+        ],
+        "vendor_available": "true",
+        "versions": []
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.security.keymint",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.security.keymint.Algorithm",
+            "android.hardware.security.keymint.AttestationKey",
+            "android.hardware.security.keymint.BeginResult",
+            "android.hardware.security.keymint.BlockMode",
+            "android.hardware.security.keymint.Certificate",
+            "android.hardware.security.keymint.DeviceInfo",
+            "android.hardware.security.keymint.Digest",
+            "android.hardware.security.keymint.EcCurve",
+            "android.hardware.security.keymint.ErrorCode",
+            "android.hardware.security.keymint.HardwareAuthToken",
+            "android.hardware.security.keymint.HardwareAuthenticatorType",
+            "android.hardware.security.keymint.IKeyMintDevice",
+            "android.hardware.security.keymint.IKeyMintOperation",
+            "android.hardware.security.keymint.IRemotelyProvisionedComponent",
+            "android.hardware.security.keymint.KeyCharacteristics",
+            "android.hardware.security.keymint.KeyCreationResult",
+            "android.hardware.security.keymint.KeyFormat",
+            "android.hardware.security.keymint.KeyMintHardwareInfo",
+            "android.hardware.security.keymint.KeyOrigin",
+            "android.hardware.security.keymint.KeyParameter",
+            "android.hardware.security.keymint.KeyParameterValue",
+            "android.hardware.security.keymint.KeyPurpose",
+            "android.hardware.security.keymint.MacedPublicKey",
+            "android.hardware.security.keymint.PaddingMode",
+            "android.hardware.security.keymint.ProtectedData",
+            "android.hardware.security.keymint.RpcHardwareInfo",
+            "android.hardware.security.keymint.SecurityLevel",
+            "android.hardware.security.keymint.Tag",
+            "android.hardware.security.keymint.TagType"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.security.secureclock",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.security.secureclock.ISecureClock",
+            "android.hardware.security.secureclock.TimeStampToken",
+            "android.hardware.security.secureclock.Timestamp"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.security.sharedsecret",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.security.sharedsecret.ISharedSecret",
+            "android.hardware.security.sharedsecret.SharedSecretParameters"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "86dfe4cf135ed1bf501e7e8408bcee3b590e8a53"
+        ],
+        "name": "android.hardware.tests.extension.vibrator",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.tests.extension.vibrator.Directionality",
+            "android.hardware.tests.extension.vibrator.ICustomVibrator",
+            "android.hardware.tests.extension.vibrator.VendorEffect"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "eeab78b6096b029f424ab5ce9c2c4ef1249a5cb0"
+        ],
+        "name": "android.hardware.vibrator",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.vibrator.ActivePwle",
+            "android.hardware.vibrator.Braking",
+            "android.hardware.vibrator.BrakingPwle",
+            "android.hardware.vibrator.CompositeEffect",
+            "android.hardware.vibrator.CompositePrimitive",
+            "android.hardware.vibrator.Effect",
+            "android.hardware.vibrator.EffectStrength",
+            "android.hardware.vibrator.IVibrator",
+            "android.hardware.vibrator.IVibratorCallback",
+            "android.hardware.vibrator.IVibratorManager",
+            "android.hardware.vibrator.PrimitivePwle"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.hardware.weaver",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.weaver.IWeaver",
+            "android.hardware.weaver.WeaverConfig",
+            "android.hardware.weaver.WeaverReadResponse"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.os.permissions_aidl",
+        "stability": "",
+        "types": [
+            "android.os.IPermissionController"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.apc",
+        "stability": "",
+        "types": [
+            "android.security.apc.IConfirmationCallback",
+            "android.security.apc.IProtectedConfirmation",
+            "android.security.apc.ResponseCode"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.attestationmanager",
+        "stability": "",
+        "types": [
+            "android.security.attestationmanager.ByteArray",
+            "android.security.attestationmanager.IAttestationManager"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.authorization",
+        "stability": "",
+        "types": [
+            "android.security.authorization.AuthorizationTokens",
+            "android.security.authorization.IKeystoreAuthorization",
+            "android.security.authorization.LockScreenEvent",
+            "android.security.authorization.ResponseCode"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.compat",
+        "stability": "",
+        "types": [
+            "android.security.compat.IKeystoreCompatService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.maintenance",
+        "stability": "",
+        "types": [
+            "android.security.maintenance.IKeystoreMaintenance",
+            "android.security.maintenance.UserState"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.provisioner",
+        "stability": "",
+        "types": [
+            "android.security.provisioner.IProvisionerService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.remoteprovisioning",
+        "stability": "",
+        "types": [
+            "android.security.remoteprovisioning.AttestationPoolStatus",
+            "android.security.remoteprovisioning.IRemoteProvisioning",
+            "android.security.remoteprovisioning.ResponseCode"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.security.vpnprofilestore",
+        "stability": "",
+        "types": [
+            "android.security.vpnprofilestore.IVpnProfileStore"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.system.keystore2",
+        "stability": "vintf",
+        "types": [
+            "android.system.keystore2.AuthenticatorSpec",
+            "android.system.keystore2.Authorization",
+            "android.system.keystore2.CreateOperationResponse",
+            "android.system.keystore2.Domain",
+            "android.system.keystore2.EphemeralStorageKeyResponse",
+            "android.system.keystore2.IKeystoreOperation",
+            "android.system.keystore2.IKeystoreSecurityLevel",
+            "android.system.keystore2.IKeystoreService",
+            "android.system.keystore2.KeyDescriptor",
+            "android.system.keystore2.KeyEntryResponse",
+            "android.system.keystore2.KeyMetadata",
+            "android.system.keystore2.KeyParameters",
+            "android.system.keystore2.KeyPermission",
+            "android.system.keystore2.OperationChallenge",
+            "android.system.keystore2.ResponseCode"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "android.system.suspend.control",
+        "stability": "",
+        "types": [
+            "android.system.suspend.ISuspendCallback",
+            "android.system.suspend.ISuspendControlService",
+            "android.system.suspend.IWakelockCallback"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.system.suspend.control.internal",
+        "stability": "",
+        "types": [
+            "android.system.suspend.internal.ISuspendControlServiceInternal",
+            "android.system.suspend.internal.SuspendInfo",
+            "android.system.suspend.internal.WakeLockInfo",
+            "android.system.suspend.internal.WakeupInfo"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "android.system.virtmanager",
+        "stability": "",
+        "types": [
+            "android.system.virtmanager.IVirtManager",
+            "android.system.virtmanager.IVirtualMachine",
+            "android.system.virtmanager.IVirtualMachineCallback",
+            "android.system.virtmanager.VirtualMachineDebugInfo"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "apex_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.apex.ApexInfo",
+            "android.apex.ApexInfoList",
+            "android.apex.ApexSessionInfo",
+            "android.apex.ApexSessionParams",
+            "android.apex.CompressedApexInfo",
+            "android.apex.CompressedApexInfoList",
+            "android.apex.IApexService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "audio_common-aidl",
+        "stability": "",
+        "types": [
+            "android.media.audio.common.AudioChannelMask",
+            "android.media.audio.common.AudioConfig",
+            "android.media.audio.common.AudioFormat",
+            "android.media.audio.common.AudioOffloadInfo",
+            "android.media.audio.common.AudioStreamType",
+            "android.media.audio.common.AudioUsage"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "audioclient-types-aidl",
+        "stability": "",
+        "types": [
+            "android.media.AudioAttributesInternal",
+            "android.media.AudioClient",
+            "android.media.AudioConfig",
+            "android.media.AudioConfigBase",
+            "android.media.AudioContentType",
+            "android.media.AudioDevice",
+            "android.media.AudioDualMonoMode",
+            "android.media.AudioEncapsulationMode",
+            "android.media.AudioEncapsulationMetadataType",
+            "android.media.AudioEncapsulationType",
+            "android.media.AudioFlag",
+            "android.media.AudioGain",
+            "android.media.AudioGainConfig",
+            "android.media.AudioGainMode",
+            "android.media.AudioInputFlags",
+            "android.media.AudioIoConfigEvent",
+            "android.media.AudioIoDescriptor",
+            "android.media.AudioIoFlags",
+            "android.media.AudioMixLatencyClass",
+            "android.media.AudioMode",
+            "android.media.AudioOffloadInfo",
+            "android.media.AudioOutputFlags",
+            "android.media.AudioPatch",
+            "android.media.AudioPlaybackRate",
+            "android.media.AudioPort",
+            "android.media.AudioPortConfig",
+            "android.media.AudioPortConfigType",
+            "android.media.AudioPortConfigDeviceExt",
+            "android.media.AudioPortConfigExt",
+            "android.media.AudioPortConfigMixExt",
+            "android.media.AudioPortConfigMixExtUseCase",
+            "android.media.AudioPortConfigSessionExt",
+            "android.media.AudioPortDeviceExt",
+            "android.media.AudioPortExt",
+            "android.media.AudioPortMixExt",
+            "android.media.AudioPortRole",
+            "android.media.AudioPortSessionExt",
+            "android.media.AudioPortType",
+            "android.media.AudioProfile",
+            "android.media.AudioSourceType",
+            "android.media.AudioStandard",
+            "android.media.AudioStreamType",
+            "android.media.AudioTimestampInternal",
+            "android.media.AudioUniqueIdUse",
+            "android.media.AudioUsage",
+            "android.media.AudioUuid",
+            "android.media.AudioVibratorInfo",
+            "android.media.EffectDescriptor",
+            "android.media.ExtraAudioDescriptor"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "audioflinger-aidl",
+        "stability": "",
+        "types": [
+            "android.media.CreateEffectRequest",
+            "android.media.CreateEffectResponse",
+            "android.media.CreateRecordRequest",
+            "android.media.CreateRecordResponse",
+            "android.media.CreateTrackRequest",
+            "android.media.CreateTrackResponse",
+            "android.media.OpenInputRequest",
+            "android.media.OpenInputResponse",
+            "android.media.OpenOutputRequest",
+            "android.media.OpenOutputResponse",
+            "android.media.RenderPosition",
+            "android.media.IAudioFlingerService",
+            "android.media.IAudioFlingerClient",
+            "android.media.IAudioRecord",
+            "android.media.IAudioTrack",
+            "android.media.IAudioTrackCallback"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "audiopolicy-aidl",
+        "stability": "",
+        "types": [
+            "android.media.GetInputForAttrResponse",
+            "android.media.GetOutputForAttrResponse",
+            "android.media.Int",
+            "android.media.RecordClientInfo",
+            "android.media.IAudioPolicyService",
+            "android.media.IAudioPolicyServiceClient"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "audiopolicy-types-aidl",
+        "stability": "",
+        "types": [
+            "android.media.AudioAttributesEx",
+            "android.media.AudioMix",
+            "android.media.AudioMixCallbackFlag",
+            "android.media.AudioMixMatchCriterion",
+            "android.media.AudioMixMatchCriterionValue",
+            "android.media.AudioMixRouteFlag",
+            "android.media.AudioMixType",
+            "android.media.AudioOffloadMode",
+            "android.media.AudioPolicyDeviceState",
+            "android.media.AudioPolicyForceUse",
+            "android.media.AudioPolicyForcedConfig",
+            "android.media.AudioProductStrategy",
+            "android.media.AudioVolumeGroup",
+            "android.media.DeviceRole",
+            "android.media.SoundTriggerSession"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "authfs_aidl_interface",
+        "stability": "",
+        "types": [
+            "com.android.virt.fs.IVirtFdService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "av-types-aidl",
+        "stability": "",
+        "types": [
+            "android.media.InterpolatorConfig",
+            "android.media.InterpolatorType",
+            "android.media.MicrophoneInfoData",
+            "android.media.VolumeShaperConfiguration",
+            "android.media.VolumeShaperConfigurationOptionFlag",
+            "android.media.VolumeShaperConfigurationType",
+            "android.media.VolumeShaperOperation",
+            "android.media.VolumeShaperOperationFlag",
+            "android.media.VolumeShaperState"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "binderRpcTestIface",
+        "stability": "",
+        "types": [
+            "IBinderRpcSession",
+            "IBinderRpcTest"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "binderStabilityTestIface",
+        "stability": "",
+        "types": [
+            "IBinderStabilityTest"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "binderthreadstateutilstest.aidl",
+        "stability": "",
+        "types": [
+            "IAidlStuff"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "capture_state_listener-aidl",
+        "stability": "",
+        "types": [
+            "android.media.ICaptureStateListener"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "b8ea6e2c79ac4b3f458cb195c70420250eea6614"
+        ],
+        "name": "com.google.hardware.pixel.display",
+        "stability": "vintf",
+        "types": [
+            "com.google.hardware.pixel.display.HbmState",
+            "com.google.hardware.pixel.display.IDisplay",
+            "com.google.hardware.pixel.display.LbeState"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "6476b2d86877b861449c4ba9a0898a0916223b3f",
+            "3d9f8db62d1a79a247a9da91abce4bab41b90a99",
+            "1271d6ab46cd0b0efb08890607738c1e44484d67",
+            "012d220dd2a6736ed40b8653351386cece8458f7",
+            "60b7d2932bdde866ff864fdb924a7a41ecfd9036",
+            "5bc773534ffa9d7614ccd27d5de6daefdeeee2b8",
+            "a1dc9394598357ccaa74e96f564e7f248b72bad2",
+            "e6ef3246f1613151e9196c283abe55a544514c21"
+        ],
+        "name": "dnsresolver_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.net.IDnsResolver",
+            "android.net.ResolverHostsParcel",
+            "android.net.ResolverOptionsParcel",
+            "android.net.ResolverParamsParcel",
+            "android.net.resolv.aidl.DnsHealthEventParcel",
+            "android.net.resolv.aidl.IDnsResolverUnsolicitedEventListener",
+            "android.net.resolv.aidl.Nat64PrefixEventParcel",
+            "android.net.resolv.aidl.PrivateDnsValidationEventParcel"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "effect-aidl",
+        "stability": "",
+        "types": [
+            "android.media.IEffect",
+            "android.media.IEffectClient"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "framework-permission-aidl",
+        "stability": "",
+        "types": [
+            "android.content.AttributionSourceState",
+            "android.permission.IPermissionChecker"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "gsi_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.gsi.AvbPublicKey",
+            "android.gsi.GsiProgress",
+            "android.gsi.IGsiService",
+            "android.gsi.IGsiServiceCallback",
+            "android.gsi.IImageService",
+            "android.gsi.IProgressCallback",
+            "android.gsi.MappedImage"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "hidl2aidl_test_gen",
+        "stability": "vintf",
+        "types": [
+            "hidl2aidl.test.ArrayFoo",
+            "hidl2aidl.test.VectorFoo",
+            "hidl2aidl.test.FooFlag",
+            "hidl2aidl.test.IBar",
+            "hidl2aidl.test.IBarInner",
+            "hidl2aidl.test.IFoo",
+            "hidl2aidl.test.IFooBigStruct",
+            "hidl2aidl.test.NameCollision",
+            "hidl2aidl.test.OnlyIn10",
+            "hidl2aidl.test.OnlyIn11",
+            "hidl2aidl.test.Outer",
+            "hidl2aidl.test.OuterInner",
+            "hidl2aidl.test.OverrideMe",
+            "hidl2aidl.test.SafeUnionBar",
+            "hidl2aidl.test.SafeUnionBarInnerStructBar",
+            "hidl2aidl.test.UnionFoo",
+            "hidl2aidl.test.Value",
+            "hidl2aidl.test2.IFoo",
+            "hidl2aidl.test.extension.IFoo",
+            "hidl2aidl.test.extension.FooFlag",
+            "hidl2aidl.test.extension.ArrayFoo"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "6746d9d25ede3846456a8b04fb656f87bb0e86ce",
+            "d5ea5eb3ddbdaa9a986ce6ba70b0804ca3e39b0c",
+            "a907768c6d4a4d9c61531d914dec836816a6098a",
+            "b45a7fefdb5bd3c8197851baf1297f204a903821",
+            "f4f8438676aabfa40bbe32be629103b0d71c0255",
+            "fe904c00f5d461ae76192343175b733928081280",
+            "995043fb16c363208cbdb99c48bb775040d1f169",
+            "31826566143ef882d67fac9f24566f73df4907b4",
+            "70cbb9e5b4009a86a81aa2a9bdf25e21442224be",
+            "c34b6b37db3616fac1c4e705a04c6899772cc428"
+        ],
+        "name": "ipmemorystore-aidl-interfaces",
+        "stability": "",
+        "types": [
+            "android.net.IIpMemoryStore",
+            "android.net.IIpMemoryStoreCallbacks",
+            "android.net.ipmemorystore.Blob",
+            "android.net.ipmemorystore.IOnBlobRetrievedListener",
+            "android.net.ipmemorystore.IOnL2KeyResponseListener",
+            "android.net.ipmemorystore.IOnNetworkAttributesRetrievedListener",
+            "android.net.ipmemorystore.IOnSameL3NetworkResponseListener",
+            "android.net.ipmemorystore.IOnStatusAndCountListener",
+            "android.net.ipmemorystore.IOnStatusListener",
+            "android.net.ipmemorystore.NetworkAttributesParcelable",
+            "android.net.ipmemorystore.SameL3NetworkResponseParcelable",
+            "android.net.ipmemorystore.StatusParcelable",
+            "android.net.networkstack.aidl.quirks.IPv6ProvisioningLossQuirkParcelable"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "lazy_test_service_aidl",
+        "stability": "",
+        "types": [
+            "ILazyTestService"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "libbinder_aidl_test_stub",
+        "stability": "",
+        "types": [
+            "android.os.IClientCallback",
+            "android.os.IServiceCallback",
+            "android.os.IServiceManager",
+            "android.os.ServiceDebugInfo"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "b663b681b3e0d66f9b5428c2f23365031b7d4ba0",
+            "2740afaf3b5a0e739c44165c49633a0af87369f2"
+        ],
+        "name": "libbinder_ndk_compat_test_interface",
+        "stability": "",
+        "types": [
+            "test_package.Baz",
+            "test_package.ICompatTest"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "b663b681b3e0d66f9b5428c2f23365031b7d4ba0"
+        ],
+        "name": "libbinder_ndk_compat_test_interface_dup",
+        "stability": "",
+        "types": [
+            "test_package.Baz",
+            "test_package.ICompatTest"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "libbinder_ndk_test_interface",
+        "stability": "",
+        "types": [
+            "test_package.Bar",
+            "test_package.Foo",
+            "test_package.ByteEnum",
+            "test_package.FixedSize",
+            "test_package.IEmpty",
+            "test_package.ITest",
+            "test_package.IntEnum",
+            "test_package.LongEnum",
+            "test_package.RegularPolygon",
+            "test_package.GenericFoo",
+            "test_package.GenericBar",
+            "test_package.ExtendableParcelable",
+            "test_package.MyExt",
+            "test_package.SimpleUnion"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "liblpdump_interface",
+        "stability": "",
+        "types": [
+            "android.lpdump.ILpdump"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "libupdate_engine_stable",
+        "stability": "",
+        "types": [
+            "android.os.IUpdateEngineStable",
+            "android.os.IUpdateEngineStableCallback"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "media_permission-aidl",
+        "stability": "",
+        "types": [
+            "android.media.permission.Identity"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "mediametricsservice-aidl",
+        "stability": "",
+        "types": [
+            "android.media.IMediaMetricsService"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "mediatranscoding_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.media.IMediaTranscodingService",
+            "android.media.ITranscodingClient",
+            "android.media.ITranscodingClientCallback",
+            "android.media.TranscodingErrorCode",
+            "android.media.TranscodingSessionPriority",
+            "android.media.TranscodingSessionStats",
+            "android.media.TranscodingType",
+            "android.media.TranscodingVideoCodecType",
+            "android.media.TranscodingVideoTrackFormat",
+            "android.media.TranscodingSessionParcel",
+            "android.media.TranscodingRequestParcel",
+            "android.media.TranscodingResultParcel",
+            "android.media.TranscodingTestConfig"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "69c2ac134efbb31e9591d7e5c3640fb839e23bdb",
+            "e395d63302c47e7d2dac0d503045779029ff598b",
+            "e17c1f9b2068b539b22e3a4a447edea3c80aee4b",
+            "63adaa5098e4d8621e90c5a84f7cb93505c79311",
+            "d97c56dd789cee9eeb5cdcec43a99df0a01873a5"
+        ],
+        "name": "netd_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.net.INetd",
+            "android.net.INetdUnsolicitedEventListener",
+            "android.net.InterfaceConfigurationParcel",
+            "android.net.MarkMaskParcel",
+            "android.net.RouteInfoParcel",
+            "android.net.TetherConfigParcel",
+            "android.net.TetherOffloadRuleParcel",
+            "android.net.TetherStatsParcel",
+            "android.net.UidRangeParcel"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "8e27594d285ca7c567d87e8cf74766c27647e02b"
+        ],
+        "name": "netd_event_listener_interface",
+        "stability": "",
+        "types": [
+            "android.net.metrics.INetdEventListener"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "cfbc62065c1a5bbc3073d87f47626da495b7ec3a",
+            "4925f4fdbb270e4f35cc5519a15ed8dd8c69a549",
+            "6c84024622b7326cc5d4aadc82f363866419bdf7",
+            "f9a424d1734a13bc109782ed236685acfe6452e4",
+            "b0bf284079f15d4ecbc77a635779a2e521438ae8",
+            "099a14cb7685d1d188d745882729e95d9a43d51b",
+            "a3d1d41c172015deec4d05d66926b90fd8b38b64",
+            "02cd6fd07d5c04eca0c35a350f7b0be576242883",
+            "f6e2137b5033902774f78726d429399db3b18cab",
+            "5c69ca9edf1e0f21e3c7c54ef40f9802d5011bec"
+        ],
+        "name": "networkstack-aidl-interfaces",
+        "stability": "",
+        "types": [
+            "android.net.DataStallReportParcelable",
+            "android.net.DhcpResultsParcelable",
+            "android.net.INetworkMonitor",
+            "android.net.INetworkMonitorCallbacks",
+            "android.net.INetworkStackConnector",
+            "android.net.INetworkStackStatusCallback",
+            "android.net.InitialConfigurationParcelable",
+            "android.net.InformationElementParcelable",
+            "android.net.Layer2InformationParcelable",
+            "android.net.Layer2PacketParcelable",
+            "android.net.NattKeepalivePacketDataParcelable",
+            "android.net.NetworkTestResultParcelable",
+            "android.net.PrivateDnsConfigParcel",
+            "android.net.ProvisioningConfigurationParcelable",
+            "android.net.ScanResultInfoParcelable",
+            "android.net.TcpKeepalivePacketDataParcelable",
+            "android.net.dhcp.DhcpLeaseParcelable",
+            "android.net.dhcp.DhcpServingParamsParcel",
+            "android.net.dhcp.IDhcpEventCallbacks",
+            "android.net.dhcp.IDhcpServer",
+            "android.net.dhcp.IDhcpServerCallbacks",
+            "android.net.ip.IIpClient",
+            "android.net.ip.IIpClientCallbacks",
+            "android.net.networkstack.aidl.dhcp.DhcpOption"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "oemnetd_aidl_interface",
+        "stability": "",
+        "types": [
+            "com.android.internal.net.IOemNetd",
+            "com.android.internal.net.IOemNetdUnsolicitedEventListener"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "overlayable_policy_aidl",
+        "stability": "",
+        "types": [
+            "android.os.OverlayablePolicy"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "3ce8c3ba6e332074ed51fa88088ac4af5d6c08a5"
+        ],
+        "name": "pixel-power-ext",
+        "stability": "vintf",
+        "types": [
+            "google.hardware.power.extension.pixel.IPowerExt"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "profcollectd_aidl_interface",
+        "stability": "",
+        "types": [
+            "com.android.server.profcollect.IProfCollectd"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "resourcemanager_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.media.IResourceManagerClient",
+            "android.media.IResourceManagerService",
+            "android.media.MediaResourceType",
+            "android.media.MediaResourceSubType",
+            "android.media.MediaResourceParcel",
+            "android.media.MediaResourcePolicyParcel"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "resourceobserver_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.media.IResourceObserver",
+            "android.media.IResourceObserverService",
+            "android.media.MediaObservableEvent",
+            "android.media.MediaObservableFilter",
+            "android.media.MediaObservableType",
+            "android.media.MediaObservableParcel"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "shared-file-region-aidl",
+        "stability": "",
+        "types": [
+            "android.media.SharedFileRegion"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [],
+        "name": "soundtrigger_middleware-aidl",
+        "stability": "",
+        "types": [
+            "android.media.soundtrigger_middleware.AudioCapabilities",
+            "android.media.soundtrigger_middleware.ConfidenceLevel",
+            "android.media.soundtrigger_middleware.ISoundTriggerCallback",
+            "android.media.soundtrigger_middleware.ISoundTriggerMiddlewareService",
+            "android.media.soundtrigger_middleware.ISoundTriggerModule",
+            "android.media.soundtrigger_middleware.ModelParameter",
+            "android.media.soundtrigger_middleware.ModelParameterRange",
+            "android.media.soundtrigger_middleware.Phrase",
+            "android.media.soundtrigger_middleware.PhraseRecognitionEvent",
+            "android.media.soundtrigger_middleware.PhraseRecognitionExtra",
+            "android.media.soundtrigger_middleware.PhraseSoundModel",
+            "android.media.soundtrigger_middleware.RecognitionConfig",
+            "android.media.soundtrigger_middleware.RecognitionEvent",
+            "android.media.soundtrigger_middleware.RecognitionMode",
+            "android.media.soundtrigger_middleware.RecognitionStatus",
+            "android.media.soundtrigger_middleware.SoundModel",
+            "android.media.soundtrigger_middleware.SoundModelType",
+            "android.media.soundtrigger_middleware.SoundTriggerModuleDescriptor",
+            "android.media.soundtrigger_middleware.SoundTriggerModuleProperties",
+            "android.media.soundtrigger_middleware.Status"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "statsd-aidl",
+        "stability": "",
+        "types": [
+            "android.os.IPendingIntentRef",
+            "android.os.IPullAtomCallback",
+            "android.os.IPullAtomResultReceiver",
+            "android.os.IStatsCompanionService",
+            "android.os.IStatsd",
+            "android.os.StatsDimensionsValueParcel",
+            "android.util.StatsEventParcel"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "13e24b2fac6a979971819fba2ab0d6d7c4182122",
+            "dc2a9292847e43b4360bb183f7491f0e9895eaa9",
+            "54f935920ab0934c242145cf00f9852ae3f5a63e"
+        ],
+        "name": "test-piece-1",
+        "stability": "",
+        "types": [
+            "some_package.IFoo",
+            "some_package.Thing",
+            "some_package.sub_package.IFoo",
+            "some_package.sub_package.SubThing"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "fcd36db451cdbeeb049833fd7f499a987acf3930"
+        ],
+        "name": "test-piece-2",
+        "stability": "",
+        "types": [
+            "INoPackage",
+            "some_package.IBar"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "f630cb120fa36f9f2507d730513a03b0cd4fbc0e"
+        ],
+        "name": "test-piece-3",
+        "stability": "",
+        "types": [
+            "other_package.IBaz"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "29d4015ee2a4171396aecd925156aa2e47a42013"
+        ],
+        "name": "test-piece-4",
+        "stability": "",
+        "types": [
+            "another_package.IFaz"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "test-piece-5",
+        "stability": "",
+        "types": [
+            "EmptyParcelable",
+            "IEmptyInterface"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [
+            "1f59d8099e05dcc6ac47a9a12a1f2660dd60cfef",
+            "7025642541e73177f105c6d5b62a980fa5b4ace3"
+        ],
+        "name": "test-root-package",
+        "stability": "",
+        "types": [
+            "test_package.IBaz"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "tests_transitive_parcel.a",
+        "stability": "",
+        "types": [
+            "tests_transitive_parcel.a.IA"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "tests_transitive_parcel.b",
+        "stability": "",
+        "types": [
+            "tests_transitive_parcel.b.B"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "tests_transitive_parcel.c",
+        "stability": "",
+        "types": [
+            "tests_transitive_parcel.c.C"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "tv_tuner_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.media.tv.tuner.ITunerDemux",
+            "android.media.tv.tuner.ITunerDescrambler",
+            "android.media.tv.tuner.ITunerDvr",
+            "android.media.tv.tuner.ITunerDvrCallback",
+            "android.media.tv.tuner.ITunerFilter",
+            "android.media.tv.tuner.ITunerFilterCallback",
+            "android.media.tv.tuner.ITunerFrontend",
+            "android.media.tv.tuner.ITunerFrontendCallback",
+            "android.media.tv.tuner.ITunerLnb",
+            "android.media.tv.tuner.ITunerLnbCallback",
+            "android.media.tv.tuner.ITunerService",
+            "android.media.tv.tuner.ITunerTimeFilter",
+            "android.media.tv.tuner.TunerAudioExtraMetaData",
+            "android.media.tv.tuner.TunerDemuxCapabilities",
+            "android.media.tv.tuner.TunerDemuxIpAddress",
+            "android.media.tv.tuner.TunerDemuxIpAddressSettings",
+            "android.media.tv.tuner.TunerDemuxPid",
+            "android.media.tv.tuner.TunerDvrSettings",
+            "android.media.tv.tuner.TunerFilterAlpConfiguration",
+            "android.media.tv.tuner.TunerFilterAvSettings",
+            "android.media.tv.tuner.TunerFilterConfiguration",
+            "android.media.tv.tuner.TunerFilterDownloadEvent",
+            "android.media.tv.tuner.TunerFilterDownloadSettings",
+            "android.media.tv.tuner.TunerFilterEvent",
+            "android.media.tv.tuner.TunerFilterIpConfiguration",
+            "android.media.tv.tuner.TunerFilterIpPayloadEvent",
+            "android.media.tv.tuner.TunerFilterMediaEvent",
+            "android.media.tv.tuner.TunerFilterMmtpConfiguration",
+            "android.media.tv.tuner.TunerFilterMmtpRecordEvent",
+            "android.media.tv.tuner.TunerFilterMonitorEvent",
+            "android.media.tv.tuner.TunerFilterPesDataSettings",
+            "android.media.tv.tuner.TunerFilterPesEvent",
+            "android.media.tv.tuner.TunerFilterRecordSettings",
+            "android.media.tv.tuner.TunerFilterScIndexMask",
+            "android.media.tv.tuner.TunerFilterSectionBits",
+            "android.media.tv.tuner.TunerFilterSectionCondition",
+            "android.media.tv.tuner.TunerFilterSectionEvent",
+            "android.media.tv.tuner.TunerFilterSectionSettings",
+            "android.media.tv.tuner.TunerFilterSectionTableInfo",
+            "android.media.tv.tuner.TunerFilterSettings",
+            "android.media.tv.tuner.TunerFilterSharedHandleInfo",
+            "android.media.tv.tuner.TunerFilterTemiEvent",
+            "android.media.tv.tuner.TunerFilterTlvConfiguration",
+            "android.media.tv.tuner.TunerFilterTsConfiguration",
+            "android.media.tv.tuner.TunerFilterTsRecordEvent",
+            "android.media.tv.tuner.TunerFrontendAnalogCapabilities",
+            "android.media.tv.tuner.TunerFrontendAnalogSettings",
+            "android.media.tv.tuner.TunerFrontendAtsc3Capabilities",
+            "android.media.tv.tuner.TunerFrontendAtsc3PlpSettings",
+            "android.media.tv.tuner.TunerFrontendAtsc3Settings",
+            "android.media.tv.tuner.TunerFrontendAtscCapabilities",
+            "android.media.tv.tuner.TunerFrontendAtscSettings",
+            "android.media.tv.tuner.TunerFrontendCableCapabilities",
+            "android.media.tv.tuner.TunerFrontendCableSettings",
+            "android.media.tv.tuner.TunerFrontendCapabilities",
+            "android.media.tv.tuner.TunerFrontendDtmbCapabilities",
+            "android.media.tv.tuner.TunerFrontendDtmbSettings",
+            "android.media.tv.tuner.TunerFrontendDvbsCapabilities",
+            "android.media.tv.tuner.TunerFrontendDvbsCodeRate",
+            "android.media.tv.tuner.TunerFrontendDvbsSettings",
+            "android.media.tv.tuner.TunerFrontendDvbtCapabilities",
+            "android.media.tv.tuner.TunerFrontendDvbtSettings",
+            "android.media.tv.tuner.TunerFrontendInfo",
+            "android.media.tv.tuner.TunerFrontendIsdbs3Capabilities",
+            "android.media.tv.tuner.TunerFrontendIsdbs3Settings",
+            "android.media.tv.tuner.TunerFrontendIsdbsCapabilities",
+            "android.media.tv.tuner.TunerFrontendIsdbsSettings",
+            "android.media.tv.tuner.TunerFrontendIsdbtCapabilities",
+            "android.media.tv.tuner.TunerFrontendIsdbtSettings",
+            "android.media.tv.tuner.TunerFrontendScanAtsc3PlpInfo",
+            "android.media.tv.tuner.TunerFrontendScanMessage",
+            "android.media.tv.tuner.TunerFrontendSettings",
+            "android.media.tv.tuner.TunerFrontendStatus",
+            "android.media.tv.tuner.TunerFrontendStatusAtsc3PlpInfo",
+            "android.media.tv.tuner.TunerFrontendUnionSettings"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "tv_tuner_frontend_info_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.media.tv.tuner.TunerFrontendInfo",
+            "android.media.tv.tuner.TunerFrontendAnalogCapabilities",
+            "android.media.tv.tuner.TunerFrontendAtsc3Capabilities",
+            "android.media.tv.tuner.TunerFrontendAtscCapabilities",
+            "android.media.tv.tuner.TunerFrontendCableCapabilities",
+            "android.media.tv.tuner.TunerFrontendCapabilities",
+            "android.media.tv.tuner.TunerFrontendDtmbCapabilities",
+            "android.media.tv.tuner.TunerFrontendDvbsCapabilities",
+            "android.media.tv.tuner.TunerFrontendDvbtCapabilities",
+            "android.media.tv.tuner.TunerFrontendIsdbs3Capabilities",
+            "android.media.tv.tuner.TunerFrontendIsdbsCapabilities",
+            "android.media.tv.tuner.TunerFrontendIsdbtCapabilities"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "hashes": [],
+        "name": "tv_tuner_resource_manager_aidl_interface",
+        "stability": "",
+        "types": [
+            "android.media.tv.tunerresourcemanager.CasSessionRequest",
+            "android.media.tv.tunerresourcemanager.IResourcesReclaimListener",
+            "android.media.tv.tunerresourcemanager.ITunerResourceManager",
+            "android.media.tv.tunerresourcemanager.ResourceClientProfile",
+            "android.media.tv.tunerresourcemanager.TunerCiCamRequest",
+            "android.media.tv.tunerresourcemanager.TunerDemuxRequest",
+            "android.media.tv.tunerresourcemanager.TunerDescramblerRequest",
+            "android.media.tv.tunerresourcemanager.TunerFrontendRequest",
+            "android.media.tv.tunerresourcemanager.TunerLnbRequest"
+        ],
+        "vendor_available": "false"
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "49ad110fc8f1fdd7f6ba451fb49e0a268590c701"
+        ],
+        "name": "vendor.qti.ImsRtpService",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.ImsRtpService.IImsMediaServiceCallBacks",
+            "vendor.qti.ImsRtpService.IRTPService",
+            "vendor.qti.ImsRtpService.ImsAVCProfile",
+            "vendor.qti.ImsRtpService.ImsAVCProfileLevel",
+            "vendor.qti.ImsRtpService.ImsH263Profile",
+            "vendor.qti.ImsRtpService.ImsH263ProfileLevel",
+            "vendor.qti.ImsRtpService.ImsH265Profile",
+            "vendor.qti.ImsRtpService.ImsH265ProfileLevel",
+            "vendor.qti.ImsRtpService.ImsPacketizationMode",
+            "vendor.qti.ImsRtpService.ImsVideoCodec",
+            "vendor.qti.ImsRtpService.ImsVideoCodecParam",
+            "vendor.qti.ImsRtpService.ImsVideoCommonCodec",
+            "vendor.qti.ImsRtpService.ImsVideoDevice",
+            "vendor.qti.ImsRtpService.ImsVideoH263Config",
+            "vendor.qti.ImsRtpService.ImsVideoH264Config",
+            "vendor.qti.ImsRtpService.ImsVideoH265Config",
+            "vendor.qti.ImsRtpService.ImsVideoIonMemStatus",
+            "vendor.qti.ImsRtpService.ImsVideoMsgStatus",
+            "vendor.qti.ImsRtpService.ImsVideoNalHeader",
+            "vendor.qti.ImsRtpService.ImsVideoResponse",
+            "vendor.qti.ImsRtpService.ImsVideoRtpDataUsage",
+            "vendor.qti.ImsRtpService.ImsVideoRxFrame",
+            "vendor.qti.ImsRtpService.ImsVideoStatistics",
+            "vendor.qti.ImsRtpService.ImsVideoTxFrame",
+            "vendor.qti.ImsRtpService.ImsVideoValue",
+            "vendor.qti.ImsRtpService.ImsVtRecInfo",
+            "vendor.qti.ImsRtpService.TargetFeature",
+            "vendor.qti.ImsRtpService.TargetName",
+            "vendor.qti.ImsRtpService.VideoCodecFeature",
+            "vendor.qti.ImsRtpService.VideoMsgInd",
+            "vendor.qti.ImsRtpService.VideoMsgReq",
+            "vendor.qti.ImsRtpService.VideoMsgResp"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "0668dbe2c4bc60a8229665e8599256689e1679b3"
+        ],
+        "name": "vendor.qti.data.factoryservice",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.data.factoryservice.IFactory",
+            "vendor.qti.data.factoryservice.Result",
+            "vendor.qti.data.factoryservice.StatusCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "687f434c82da434eba4f7e271eb51d4d4c4eb99f",
+            "c791b9575dce65d7d779d404e17f6204a701bae8",
+            "c7b1ffd571e4c7bc1269c37924aa44cc4f3a82da",
+            "ff6536f2858fd24036c75cc09e215096a98bacf5",
+            "c9f9c32aef23511e072427b855f4957d3005589a",
+            "775f971890d55a4eef099d863e0610df80e24898"
+        ],
+        "name": "vendor.qti.data.txpwrservice",
+        "stability": "vintf",
+        "types": [
+          "vendor.qti.data.txpwrservice.BatteryState",
+          "vendor.qti.data.txpwrservice.BuildInfoParams",
+          "vendor.qti.data.txpwrservice.ByteTuple",
+          "vendor.qti.data.txpwrservice.CensusInfo",
+          "vendor.qti.data.txpwrservice.DnsAddress",
+          "vendor.qti.data.txpwrservice.IRequest",
+          "vendor.qti.data.txpwrservice.ITxPwrService",
+          "vendor.qti.data.txpwrservice.IpFamilyType",
+          "vendor.qti.data.txpwrservice.NetworkInfo",
+          "vendor.qti.data.txpwrservice.NetworkStats",
+          "vendor.qti.data.txpwrservice.NetworkStatsParams",
+          "vendor.qti.data.txpwrservice.NetworkStatus",
+          "vendor.qti.data.txpwrservice.ProtocolType",
+          "vendor.qti.data.txpwrservice.RadioTechStatus",
+          "vendor.qti.data.txpwrservice.RatType",
+          "vendor.qti.data.txpwrservice.SlotId",
+          "vendor.qti.data.txpwrservice.SocketInfo",
+          "vendor.qti.data.txpwrservice.SocketType",
+          "vendor.qti.data.txpwrservice.TechType",
+          "vendor.qti.data.txpwrservice.TelephonyInfoParams",
+          "vendor.qti.data.txpwrservice.ThermalState"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "abc4a968fbe0663f8f6d638f773371d5bb2f9725",
+            "ca0cd801fa42dba9e26dc5349a55178c36a5c9e6",
+            "6ba4b77651a1641cdfdc2de08ad8b5792592849e",
+            "be690c8c88f3c8b44e6af7b07671ff22dbe8674c",
+            "8ec8e637bd2bdf2aa207cb3532775a732123ddb0",
+            "d2e82711d42931720040f95fcc81f6367250be5c",
+            "2f83d9aa6097e991d9bbd29d3195bea19f81cc03"
+        ],
+        "name": "vendor.qti.gnss",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.gnss.ILocAidlAGnss",
+            "vendor.qti.gnss.ILocAidlAGnssCallback",
+            "vendor.qti.gnss.ILocAidlDebugReportService",
+            "vendor.qti.gnss.ILocAidlDebugReportServiceCallback",
+            "vendor.qti.gnss.ILocAidlEsStatusCallback",
+            "vendor.qti.gnss.ILocAidlEsStatusReceiver",
+            "vendor.qti.gnss.ILocAidlFlpService",
+            "vendor.qti.gnss.ILocAidlFlpServiceCallback",
+            "vendor.qti.gnss.ILocAidlGeocoder",
+            "vendor.qti.gnss.ILocAidlGeocoderCallback",
+            "vendor.qti.gnss.ILocAidlGeofenceService",
+            "vendor.qti.gnss.ILocAidlGeofenceServiceCallback",
+            "vendor.qti.gnss.ILocAidlGnss",
+            "vendor.qti.gnss.ILocAidlGnssConfigService",
+            "vendor.qti.gnss.ILocAidlGnssConfigServiceCallback",
+            "vendor.qti.gnss.ILocAidlGnssNi",
+            "vendor.qti.gnss.ILocAidlGnssNiCallback",
+            "vendor.qti.gnss.ILocAidlIzatConfig",
+            "vendor.qti.gnss.ILocAidlIzatConfigCallback",
+            "vendor.qti.gnss.ILocAidlIzatProvider",
+            "vendor.qti.gnss.ILocAidlIzatProviderCallback",
+            "vendor.qti.gnss.ILocAidlIzatSubscription",
+            "vendor.qti.gnss.ILocAidlIzatSubscriptionCallback",
+            "vendor.qti.gnss.ILocAidlQesdkTracking",
+            "vendor.qti.gnss.ILocAidlQesdkTrackingCallback",
+            "vendor.qti.gnss.ILocAidlRilInfoMonitor",
+            "vendor.qti.gnss.ILocAidlWWANDBProvider",
+            "vendor.qti.gnss.ILocAidlWWANDBProviderCallback",
+            "vendor.qti.gnss.ILocAidlWWANDBReceiver",
+            "vendor.qti.gnss.ILocAidlWWANDBReceiverCallback",
+            "vendor.qti.gnss.ILocAidlWiFiDBProvider",
+            "vendor.qti.gnss.ILocAidlWiFiDBProviderCallback",
+            "vendor.qti.gnss.ILocAidlWiFiDBReceiver",
+            "vendor.qti.gnss.ILocAidlWiFiDBReceiverCallback",
+            "vendor.qti.gnss.LocAidlAGnssStatusIpV4",
+            "vendor.qti.gnss.LocAidlAGnssStatusIpV6",
+            "vendor.qti.gnss.LocAidlAGnssStatusValue",
+            "vendor.qti.gnss.LocAidlAGnssSubId",
+            "vendor.qti.gnss.LocAidlAGnssType",
+            "vendor.qti.gnss.LocAidlAddress",
+            "vendor.qti.gnss.LocAidlAltitudeRefType",
+            "vendor.qti.gnss.LocAidlApCellInfo",
+            "vendor.qti.gnss.LocAidlApInfo",
+            "vendor.qti.gnss.LocAidlApLocationData",
+            "vendor.qti.gnss.LocAidlApObsData",
+            "vendor.qti.gnss.LocAidlApRangingData",
+            "vendor.qti.gnss.LocAidlApRangingScanResult",
+            "vendor.qti.gnss.LocAidlApScanData",
+            "vendor.qti.gnss.LocAidlApServingStatus",
+            "vendor.qti.gnss.LocAidlApSpecialInfo",
+            "vendor.qti.gnss.LocAidlApTimeStamp",
+            "vendor.qti.gnss.LocAidlApnType",
+            "vendor.qti.gnss.LocAidlApnTypeMask",
+            "vendor.qti.gnss.LocAidlBSObsData",
+            "vendor.qti.gnss.LocAidlBatchMode",
+            "vendor.qti.gnss.LocAidlBatchOptions",
+            "vendor.qti.gnss.LocAidlBatchStatus",
+            "vendor.qti.gnss.LocAidlBatchStatusInfo",
+            "vendor.qti.gnss.LocAidlBatteryLevelDataItem",
+            "vendor.qti.gnss.LocAidlBoolDataItem",
+            "vendor.qti.gnss.LocAidlBsCellInfo",
+            "vendor.qti.gnss.LocAidlBsInfo",
+            "vendor.qti.gnss.LocAidlBsLocationData",
+            "vendor.qti.gnss.LocAidlBsSpecialInfo",
+            "vendor.qti.gnss.LocAidlBtDeviceScanDetailsDataItem",
+            "vendor.qti.gnss.LocAidlBtLeDeviceScanDetailsDataItem",
+            "vendor.qti.gnss.LocAidlCellCdmaDataItem",
+            "vendor.qti.gnss.LocAidlCellGwDataItem",
+            "vendor.qti.gnss.LocAidlCellLteDataItem",
+            "vendor.qti.gnss.LocAidlCellOooDataItem",
+            "vendor.qti.gnss.LocAidlEphemerisSource",
+            "vendor.qti.gnss.LocAidlEphemerisType",
+            "vendor.qti.gnss.LocAidlFlpSessionStatus",
+            "vendor.qti.gnss.LocAidlFlpSessionStatusInfo",
+            "vendor.qti.gnss.LocAidlGeofenceBreachType",
+            "vendor.qti.gnss.LocAidlGeofenceStatus",
+            "vendor.qti.gnss.LocAidlGnssConstellationType",
+            "vendor.qti.gnss.LocAidlGnssNiEncodingType",
+            "vendor.qti.gnss.LocAidlGnssNiNotification",
+            "vendor.qti.gnss.LocAidlGnssNiType",
+            "vendor.qti.gnss.LocAidlGnssSvUsedInPosition",
+            "vendor.qti.gnss.LocAidlGnssUserResponseType",
+            "vendor.qti.gnss.LocAidlIzatHorizontalAccuracy",
+            "vendor.qti.gnss.LocAidlIzatLocation",
+            "vendor.qti.gnss.LocAidlIzatLocationStatus",
+            "vendor.qti.gnss.LocAidlIzatOtherAccuracy",
+            "vendor.qti.gnss.LocAidlIzatProviderStatus",
+            "vendor.qti.gnss.LocAidlIzatRequest",
+            "vendor.qti.gnss.LocAidlIzatRequestType",
+            "vendor.qti.gnss.LocAidlIzatStreamType",
+            "vendor.qti.gnss.LocAidlLocation",
+            "vendor.qti.gnss.LocAidlLocationError",
+            "vendor.qti.gnss.LocAidlLocationExtended",
+            "vendor.qti.gnss.LocAidlLocationFlagsBits",
+            "vendor.qti.gnss.LocAidlLocationQualityType",
+            "vendor.qti.gnss.LocAidlLocationTechnologyBits",
+            "vendor.qti.gnss.LocAidlNetworkInfoDataItem",
+            "vendor.qti.gnss.LocAidlNetworkPositionSourceType",
+            "vendor.qti.gnss.LocAidlNtripConnectionParams",
+            "vendor.qti.gnss.LocAidlPowerConnectStatusDataItem",
+            "vendor.qti.gnss.LocAidlQesdkAppInfo",
+            "vendor.qti.gnss.LocAidlQesdkSessionParams",
+            "vendor.qti.gnss.LocAidlQesdkSessionPrecision",
+            "vendor.qti.gnss.LocAidlQesdkSessionType",
+            "vendor.qti.gnss.LocAidlRangingBandWidth",
+            "vendor.qti.gnss.LocAidlRilServiceInfoDataItem",
+            "vendor.qti.gnss.LocAidlRobustLocationConfigValidBit",
+            "vendor.qti.gnss.LocAidlRobustLocationInfo",
+            "vendor.qti.gnss.LocAidlScreenStatusDataItem",
+            "vendor.qti.gnss.LocAidlServiceStateDataItem",
+            "vendor.qti.gnss.LocAidlStringDataItem",
+            "vendor.qti.gnss.LocAidlSubscriptionDataItemId",
+            "vendor.qti.gnss.LocAidlSystemStatusBestPosition",
+            "vendor.qti.gnss.LocAidlSystemStatusEphemeris",
+            "vendor.qti.gnss.LocAidlSystemStatusErrRecovery",
+            "vendor.qti.gnss.LocAidlSystemStatusInjectedPosition",
+            "vendor.qti.gnss.LocAidlSystemStatusLocation",
+            "vendor.qti.gnss.LocAidlSystemStatusNav",
+            "vendor.qti.gnss.LocAidlSystemStatusNavData",
+            "vendor.qti.gnss.LocAidlSystemStatusPdr",
+            "vendor.qti.gnss.LocAidlSystemStatusPositionFailure",
+            "vendor.qti.gnss.LocAidlSystemStatusReports",
+            "vendor.qti.gnss.LocAidlSystemStatusRfAndParams",
+            "vendor.qti.gnss.LocAidlSystemStatusSvHealth",
+            "vendor.qti.gnss.LocAidlSystemStatusTimeAndClock",
+            "vendor.qti.gnss.LocAidlSystemStatusXoState",
+            "vendor.qti.gnss.LocAidlSystemStatusXtra",
+            "vendor.qti.gnss.LocAidlTime",
+            "vendor.qti.gnss.LocAidlTimeChangeDataItem",
+            "vendor.qti.gnss.LocAidlTimeZoneChangeDataItem",
+            "vendor.qti.gnss.LocAidlUlpLocation",
+            "vendor.qti.gnss.LocAidlWiFiAPPositionQuality",
+            "vendor.qti.gnss.LocAidlWifiDBListStatus",
+            "vendor.qti.gnss.LocAidlWiFiRTTCapability",
+            "vendor.qti.gnss.LocAidlWifiSupplicantStatusDataItem",
+            "vendor.qti.gnss.LocAidlWwanAppInfo.aidl",
+            "vendor.qti.gnss.LocAidlXtraDataStatus",
+            "vendor.qti.gnss.LocAidlXtraStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "98d3fdcc5eae476e36d9932240c2f3c4fc6fc22f"
+        ],
+        "name": "vendor.qti.hardware.alarm",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.alarm.IAlarm"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "be7f6f90eb88c54a08b4bd98ba130b87a3a467c4"
+        ],
+        "name": "vendor.qti.hardware.bluetooth.audio",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.bluetooth.audio.AptxAdaptiveR4ChannelMode",
+            "vendor.qti.hardware.bluetooth.audio.AptxAdaptiveR4SampleRate",
+            "vendor.qti.hardware.bluetooth.audio.AptxAdaptiveR4_TTP",
+            "vendor.qti.hardware.bluetooth.audio.LeAudioVendorConfiguration",
+            "vendor.qti.hardware.bluetooth.audio.VendorCodecType",
+            "vendor.qti.hardware.bluetooth.audio.classicVendorCapabilities",
+            "vendor.qti.hardware.bluetooth.audio.classicVendorConfiguration"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "e032dfdbe394ae96a45697e1176f28997fff01b7"
+        ],
+        "name": "vendor.qti.hardware.bluetooth.xpanprovider",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.bluetooth.xpanprovider.IXpanProvider",
+            "vendor.qti.hardware.bluetooth.xpanprovider.IXpanProviderCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "21e4219ac017b23bfe5176bd3cb941fa35dca2e1",
+            "6df584abe145365e8c355371e32a4295351a86b2",
+            "369b2c972888a7d4d33c6251f09d3ff1338d603f"
+        ],
+        "name": "vendor.qti.hardware.bttpi",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.bttpi.BtTpiState",
+            "vendor.qti.hardware.bttpi.IBtTpi",
+            "vendor.qti.hardware.bttpi.IBtTpiEventsCb",
+            "vendor.qti.hardware.bttpi.IBtTpiStatusCb",
+            "vendor.qti.hardware.bttpi.IBtTpiStatusRspCb"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "22d73567251ff947b33c53317e1ef644ef27f656"
+        ],
+        "name": "vendor.qti.hardware.cacertaidlservice",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.cacertaidlservice.Certificate",
+            "vendor.qti.hardware.cacertaidlservice.IService",
+            "vendor.qti.hardware.cacertaidlservice.IServiceCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "5497b93a8c1e52d04628e3b5f44635ec408428c1"
+        ],
+        "name": "vendor.qti.hardware.camera.aon",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.camera.aon.AONCallbackEvent",
+            "vendor.qti.hardware.camera.aon.AONRegisterInfo",
+            "vendor.qti.hardware.camera.aon.AONSensorCap",
+            "vendor.qti.hardware.camera.aon.AONSensorInfo",
+            "vendor.qti.hardware.camera.aon.AONServiceType",
+            "vendor.qti.hardware.camera.aon.DeliveryMode",
+            "vendor.qti.hardware.camera.aon.FDAlgoMode",
+            "vendor.qti.hardware.camera.aon.FDEngineType",
+            "vendor.qti.hardware.camera.aon.FDEvtInfo",
+            "vendor.qti.hardware.camera.aon.FDEvtType",
+            "vendor.qti.hardware.camera.aon.FDProEvtInfo",
+            "vendor.qti.hardware.camera.aon.FDRegisterInfo",
+            "vendor.qti.hardware.camera.aon.FaceInfoPro",
+            "vendor.qti.hardware.camera.aon.FaceInfoProPerFace",
+            "vendor.qti.hardware.camera.aon.FacePosType",
+            "vendor.qti.hardware.camera.aon.IAONService",
+            "vendor.qti.hardware.camera.aon.IAONServiceCallback",
+            "vendor.qti.hardware.camera.aon.PositionType",
+            "vendor.qti.hardware.camera.aon.QREvtInfo",
+            "vendor.qti.hardware.camera.aon.QREvtType",
+            "vendor.qti.hardware.camera.aon.QRRegisterInfo",
+            "vendor.qti.hardware.camera.aon.Status"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": true,
+        "hashes": [
+            "87f0e9b47542c7bda9575afb3ff460ba1887dfd8"
+        ],
+        "name": "vendor.qti.hardware.camera.offlinecamera",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.camera.offlinecamera.IOfflineCameraCallback",
+            "vendor.qti.hardware.camera.offlinecamera.IOfflineCameraService",
+            "vendor.qti.hardware.camera.offlinecamera.IOfflineCameraSession",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineBufferRequest",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineCaptureResult",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineFlushInfo",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineFrameInfo",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineOpMode",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineRequestInfo",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineSessionConfigureInfo",
+            "vendor.qti.hardware.camera.offlinecamera.OfflineStreamBufferRet",
+            "vendor.qti.hardware.camera.offlinecamera.OpMode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "6d925058a8c280dd831fb437edb536759d46ce4a"
+        ],
+        "name": "vendor.qti.hardware.data.connectionaidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.data.connectionaidl.AllocatedBearers",
+            "vendor.qti.hardware.data.connectionaidl.BearerInfo",
+            "vendor.qti.hardware.data.connectionaidl.ErrorReason",
+            "vendor.qti.hardware.data.connectionaidl.IDataConnection",
+            "vendor.qti.hardware.data.connectionaidl.IDataConnectionIndication",
+            "vendor.qti.hardware.data.connectionaidl.IDataConnectionResponse",
+            "vendor.qti.hardware.data.connectionaidl.RatType",
+            "vendor.qti.hardware.data.connectionaidl.StatusCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "hashes": [
+            "a211b26fd9ab5e00b7585d165f5e090f0db276e5"
+        ],
+        "name": "vendor.qti.hardware.data.connectionfactory",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.data.connectionfactory.IFactory",
+            "vendor.qti.hardware.data.connectionfactory.ResultStatus",
+            "vendor.qti.hardware.data.connectionfactory.Status"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "hashes": [
+            "6b1a4e93c438ec490386089e5c3af86b21b333bf"
+        ],
+        "name": "vendor.qti.hardware.data.dataactivity",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.data.dataactivity.ApnType",
+            "vendor.qti.hardware.data.dataactivity.IDataActivityCallback",
+            "vendor.qti.hardware.data.dataactivity.IDataActivityService",
+            "vendor.qti.hardware.data.dataactivity.Status"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "8a374ef542585b064c75c1cf2d435036747ce2de"
+        ],
+        "name": "vendor.qti.hardware.data.iwlandata",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.data.iwlandata.IIWlan",
+            "vendor.qti.hardware.data.iwlandata.IIWlanIndication",
+            "vendor.qti.hardware.data.iwlandata.IIWlanResponse",
+            "vendor.qti.hardware.data.iwlandata.IWlanDataRegStateResult",
+            "vendor.qti.hardware.data.iwlandata.IWlanResponseInfo",
+            "vendor.qti.hardware.data.iwlandata.QualifiedNetworks"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "c8f5efa01858f7a42e56ad558a463900fb2bdd7f",
+            "53f3f6907837a0145c91b9e27c6bc53d2897efa6"
+        ],
+        "name": "vendor.qti.hardware.data.ka",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.data.ka.IKeepAliveCallback",
+            "vendor.qti.hardware.data.ka.IKeepAliveService",
+            "vendor.qti.hardware.data.ka.IpTuple",
+            "vendor.qti.hardware.data.ka.KeepAliveParams",
+            "vendor.qti.hardware.data.ka.KeepAliveType",
+            "vendor.qti.hardware.data.ka.PacketData",
+            "vendor.qti.hardware.data.ka.Status"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "5b3c569e783d4550ccbfb7e5b4c279c949f36903"
+        ],
+        "name": "vendor.qti.hardware.debugutils_aidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.debugutils.IDebugUtils"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "423c962c634a981b3722b48ad99e9fd851a4f8e8"
+        ],
+        "name": "vendor.qti.hardware.display.color",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.display.color.IDisplayColor",
+            "vendor.qti.hardware.display.color.Result",
+            "vendor.qti.hardware.display.color.SprModeInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "97126259369187f54ebaf80c013af971c9ffe06c"
+        ],
+        "name": "vendor.qti.hardware.display.composer3",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.display.composer3.IQtiComposer3Client",
+            "vendor.qti.hardware.display.composer3.QtiDisplayCommand",
+            "vendor.qti.hardware.display.composer3.QtiDrawMethod",
+            "vendor.qti.hardware.display.composer3.QtiLayerCommand",
+            "vendor.qti.hardware.display.composer3.QtiLayerFlags",
+            "vendor.qti.hardware.display.composer3.QtiLayerType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "hashes": [
+            "85e19ab4932644825750604ee629a47aec7589fd"
+        ],
+        "name": "vendor.qti.hardware.display.config",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.display.config.Attributes",
+            "vendor.qti.hardware.display.config.CameraSmoothOp",
+            "vendor.qti.hardware.display.config.DisplayPortType",
+            "vendor.qti.hardware.display.config.DisplayType",
+            "vendor.qti.hardware.display.config.DynRefreshRateOp",
+            "vendor.qti.hardware.display.config.ExternalStatus",
+            "vendor.qti.hardware.display.config.HDRCapsParams",
+            "vendor.qti.hardware.display.config.IDisplayConfig",
+            "vendor.qti.hardware.display.config.IDisplayConfigCallback",
+            "vendor.qti.hardware.display.config.PowerMode",
+            "vendor.qti.hardware.display.config.QsyncMode",
+            "vendor.qti.hardware.display.config.Rect",
+            "vendor.qti.hardware.display.config.TUIEventType"
+        ],
+        "vendor_available": "true"
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "e333c843c65c9b04c9b18f0231caef5e077682ae"
+        ],
+        "name": "vendor.qti.hardware.display.demura",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.display.demura.IDemuraFileFinder"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "717b637207e7b53e81228f9ebc0b2418cf873f2b"
+        ],
+        "name": "vendor.qti.hardware.display.postproc",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.display.postproc.IDisplayPostproc"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "24762e9708a87054a2c938af4c4fcb733db4446b"
+        ],
+        "name": "vendor.qti.hardware.dpmaidlservice",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.dpmaidlservice.DdsSlotIdInfo",
+            "vendor.qti.hardware.dpmaidlservice.FdConfigParamsInfo",
+            "vendor.qti.hardware.dpmaidlservice.FdConfigParamsPerSub",
+            "vendor.qti.hardware.dpmaidlservice.IDpmService",
+            "vendor.qti.hardware.dpmaidlservice.IDpmServiceTcmCallback",
+            "vendor.qti.hardware.dpmaidlservice.RatInfo",
+            "vendor.qti.hardware.dpmaidlservice.ScreenStateInfo",
+            "vendor.qti.hardware.dpmaidlservice.SuplStateInfo",
+            "vendor.qti.hardware.dpmaidlservice.TetheringStateInfo",
+            "vendor.qti.hardware.dpmaidlservice.WwanInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "1e9cb71236a9b49a0d3b355cfeedf5f191466426"
+        ],
+        "name": "vendor.qti.hardware.embmsslaidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.embmssl.BroadcastCoverageState",
+            "vendor.qti.hardware.embmssl.E911State",
+            "vendor.qti.hardware.embmssl.EmbmsAreaSnrType",
+            "vendor.qti.hardware.embmssl.EmbmsResponseCode",
+            "vendor.qti.hardware.embmssl.EmbmsServiceIpPort",
+            "vendor.qti.hardware.embmssl.EmbmsSrvIpType",
+            "vendor.qti.hardware.embmssl.EmbmsTuneawayDataInfo",
+            "vendor.qti.hardware.embmssl.IEmbms",
+            "vendor.qti.hardware.embmssl.IEmbmsIndication",
+            "vendor.qti.hardware.embmssl.IEmbmsResponse",
+            "vendor.qti.hardware.embmssl.OosReason",
+            "vendor.qti.hardware.embmssl.RadioState"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "a3e570c7003d309247c39fd29ab972ec1b7af77e"
+        ],
+        "name": "vendor.qti.hardware.factory",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.factory.FactoryResult",
+            "vendor.qti.hardware.factory.IFactory",
+            "vendor.qti.hardware.factory.IResultType",
+            "vendor.qti.hardware.factory.ReadFileReq",
+            "vendor.qti.hardware.factory.ReadFileResult",
+            "vendor.qti.hardware.factory.WriteFileReq"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "d8891d240f958148e01ead89690025d6066e0bdc"
+        ],
+        "name": "vendor.qti.hardware.fingerprint",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.fingerprint.AuthToken",
+            "vendor.qti.hardware.fingerprint.CaptureDebugData",
+            "vendor.qti.hardware.fingerprint.EnrollRecord",
+            "vendor.qti.hardware.fingerprint.IQfpExtendedCancellationSignal",
+            "vendor.qti.hardware.fingerprint.IQfpExtendedFingerprint",
+            "vendor.qti.hardware.fingerprint.IQfpExtendedSession",
+            "vendor.qti.hardware.fingerprint.IQfpExtendedSessionCallback",
+            "vendor.qti.hardware.fingerprint.Status"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "4749212c1b9b7ff91d2d354bc99f2737b495f4ff"
+        ],
+        "name": "vendor.qti.hardware.mwqemadapteraidlservice",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.mwqemadapteraidlservice.IMwqemAdapter",
+            "vendor.qti.hardware.mwqemadapteraidlservice.IMwqemAdapterCallback",
+            "vendor.qti.hardware.mwqemadapteraidlservice.MwqemIpTableCmd",
+            "vendor.qti.hardware.mwqemadapteraidlservice.MwqemIpTableInfo",
+            "vendor.qti.hardware.mwqemadapteraidlservice.MwqemRatInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "c5d67f27386b8feb13a185a4cdd647afbeb758ce"
+        ],
+        "name": "vendor.qti.hardware.perf2",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.perf2.IPerf",
+            "vendor.qti.hardware.perf2.IPerfCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "b6252272745d044c3583b814f52d4d8f002c87cb"
+        ],
+        "name": "vendor.qti.hardware.power.powermodule",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.power.powermodule.IPowerModule"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "5fd7a7ee2ec56f1617dd22038f7bb77ec3a85aed"
+        ],
+        "name": "vendor.qti.hardware.qconfig",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.qconfig.ChangedType",
+            "vendor.qti.hardware.qconfig.IQConfig",
+            "vendor.qti.hardware.qconfig.IQConfigListener",
+            "vendor.qti.hardware.qconfig.QConfigPresetIdResult",
+            "vendor.qti.hardware.qconfig.QConfigPresetParam",
+            "vendor.qti.hardware.qconfig.QConfigUserParam",
+            "vendor.qti.hardware.qconfig.Result"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "0a4f3d836ef0278f37061c1736d4de4734d68e46"
+        ],
+        "name": "vendor.qti.hardware.qseecom",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.qseecom.IQSEECom",
+            "vendor.qti.hardware.qseecom.IQSEEComCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "055ea9bd589c64146a79c6f88a8fe593c9491441"
+        ],
+        "name": "vendor.qti.hardware.qspa",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.qspa.IQspa",
+            "vendor.qti.hardware.qspa.PartInfo"
+        ],
+        "use_unfrozen": false,
+        "vendor_available": "true",
+        "version_pfv_map": {
+            "1": 15
+        },
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "ecf8f3562709306ed4f66129e2a3bb70ab85b6dc"
+        ],
+        "name": "vendor.qti.hardware.qteeconnector",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.qteeconnector.IApp",
+            "vendor.qti.hardware.qteeconnector.IAppConnector",
+            "vendor.qti.hardware.qteeconnector.IGPApp",
+            "vendor.qti.hardware.qteeconnector.IGPAppConnector",
+            "vendor.qti.hardware.qteeconnector.QTEECom_ion_fd_data",
+            "vendor.qti.hardware.qteeconnector.QTEECom_ion_fd_info"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "0659c4e501aec0b6fc5a5daf9e2c82b5399baab8",
+            "1faad85d82007935746c34f2a2b9a16e0fa76d2d"
+        ],
+        "name": "vendor.qti.hardware.qxr",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.qxr.IQXRCoreService",
+            "vendor.qti.hardware.qxr.IQXRCamService",
+            "vendor.qti.hardware.qxr.IQXRModService",
+            "vendor.qti.hardware.qxr.IQXRSplitService",
+            "vendor.qti.hardware.qxr.IQXRAudioService",
+            "vendor.qti.hardware.qxr.IQXRCommService"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2
+        ]
+    },
+    {
+        "hashes": [
+            "7807b67b5d557d9479da5c0f34c525bf48aaec90"
+        ],
+        "name": "vendor.qti.hardware.radio.am",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.am.AudioError",
+            "vendor.qti.hardware.radio.am.IQcRilAudio",
+            "vendor.qti.hardware.radio.am.IQcRilAudioRequest",
+            "vendor.qti.hardware.radio.am.IQcRilAudioResponse"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "04b5b1a60c9a286c06a792ecc17cfac68e1b0923"
+        ],
+        "name": "vendor.qti.hardware.radio.atcmdfwd",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.atcmdfwd.AtCmd",
+            "vendor.qti.hardware.radio.atcmdfwd.AtCmdResponse",
+            "vendor.qti.hardware.radio.atcmdfwd.AtCmdResult",
+            "vendor.qti.hardware.radio.atcmdfwd.AtCmdToken",
+            "vendor.qti.hardware.radio.atcmdfwd.AtCmdTokenNumMax",
+            "vendor.qti.hardware.radio.atcmdfwd.IAtCmdFwd"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "0a43da1eb93b558014a82a6e02a7a2653435d5a3"
+        ],
+        "name": "vendor.qti.hardware.radio.atfwd",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.atfwd.AtCmd",
+            "vendor.qti.hardware.radio.atfwd.AtCmdResponse",
+            "vendor.qti.hardware.radio.atfwd.AtCmdResult",
+            "vendor.qti.hardware.radio.atfwd.AtCmdToken",
+            "vendor.qti.hardware.radio.atfwd.AtCmdTokenNumMax",
+            "vendor.qti.hardware.radio.atfwd.IAtFwd",
+            "vendor.qti.hardware.radio.atfwd.IAtFwdIndication"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "68efd87a298711484a8947d4b134a41e1f4ef2ce"
+        ],
+        "name": "vendor.qti.hardware.radio.common",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.RadioError",
+            "vendor.qti.hardware.radio.RadioResponseInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "167593ab53d870766830445eda5bb523c4b50d74",
+            "b7fc0f340c89f98441d6452ee62fdabe9d6f77e5",
+            "a2c278c1165313b70dd8eb60727af4bd7fddfb42",
+            "9c0f7584c4bcbd1c1e99c5be090131bc33bf7a42",
+            "99ceb21e193af92f96d4719c4749da1604e158e3",
+            "bcb53de4a9dfae8a0daf84e64a311c91ba4866ff",
+            "0cdabbcc5fd4784810ee289752507a0583c26698",
+            "f88b3a3cb73919d6f4692738ad5a76aaf2a5a43c",
+            "b7d40ebda85286f5462e140675957cfaa6b84f86",
+            "8708383ed38b827eb6679991ee23cf0ea7eba3c5",
+            "c9d6da1fb85003f4a16d4425727c0673b67427d9",
+            "1c9870a51c575f38c440c1938fe44e84c19ccf4d"
+        ],
+        "name": "vendor.qti.hardware.radio.ims",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.ims.AcknowledgeSmsInfo",
+            "vendor.qti.hardware.radio.ims.AcknowledgeSmsReportInfo",
+            "vendor.qti.hardware.radio.ims.AddressInfo",
+            "vendor.qti.hardware.radio.ims.AnswerRequest",
+            "vendor.qti.hardware.radio.ims.AudioQuality",
+            "vendor.qti.hardware.radio.ims.AutoCallRejectionInfo",
+            "vendor.qti.hardware.radio.ims.AutoCallRejectionInfo2",
+            "vendor.qti.hardware.radio.ims.BlockReasonDetails",
+            "vendor.qti.hardware.radio.ims.BlockReasonType",
+            "vendor.qti.hardware.radio.ims.BlockStatus",
+            "vendor.qti.hardware.radio.ims.CallComposerAutoRejectionInfo",
+            "vendor.qti.hardware.radio.ims.CallComposerDialRequest",
+            "vendor.qti.hardware.radio.ims.CallComposerInfo",
+            "vendor.qti.hardware.radio.ims.CallDetails",
+            "vendor.qti.hardware.radio.ims.CallDomain",
+            "vendor.qti.hardware.radio.ims.CallFailCause",
+            "vendor.qti.hardware.radio.ims.CallFailCauseResponse",
+            "vendor.qti.hardware.radio.ims.CallForwardInfo",
+            "vendor.qti.hardware.radio.ims.CallForwardStatus",
+            "vendor.qti.hardware.radio.ims.CallForwardStatusInfo",
+            "vendor.qti.hardware.radio.ims.CallFwdTimerInfo",
+            "vendor.qti.hardware.radio.ims.CallInfo",
+            "vendor.qti.hardware.radio.ims.CallLocation",
+            "vendor.qti.hardware.radio.ims.CallModifyFailCause",
+            "vendor.qti.hardware.radio.ims.CallModifyInfo",
+            "vendor.qti.hardware.radio.ims.CallPriority",
+            "vendor.qti.hardware.radio.ims.CallProgressInfo",
+            "vendor.qti.hardware.radio.ims.CallProgressInfoType",
+            "vendor.qti.hardware.radio.ims.CallState",
+            "vendor.qti.hardware.radio.ims.CallType",
+            "vendor.qti.hardware.radio.ims.CallWaitingInfo",
+            "vendor.qti.hardware.radio.ims.CbNumInfo",
+            "vendor.qti.hardware.radio.ims.CbNumListInfo",
+            "vendor.qti.hardware.radio.ims.CfData",
+            "vendor.qti.hardware.radio.ims.CiWlanNotificationInfo",
+            "vendor.qti.hardware.radio.ims.ClipProvisionStatus",
+            "vendor.qti.hardware.radio.ims.ClipStatus",
+            "vendor.qti.hardware.radio.ims.ClirInfo",
+            "vendor.qti.hardware.radio.ims.ClirMode",
+            "vendor.qti.hardware.radio.ims.Codec",
+            "vendor.qti.hardware.radio.ims.ColrInfo",
+            "vendor.qti.hardware.radio.ims.ComputedAudioQuality",
+            "vendor.qti.hardware.radio.ims.ConfParticipantOperation",
+            "vendor.qti.hardware.radio.ims.ConferenceCallState",
+            "vendor.qti.hardware.radio.ims.ConferenceInfo",
+            "vendor.qti.hardware.radio.ims.ConfigFailureCause",
+            "vendor.qti.hardware.radio.ims.ConfigInfo",
+            "vendor.qti.hardware.radio.ims.ConfigItem",
+            "vendor.qti.hardware.radio.ims.Coordinate2D",
+            "vendor.qti.hardware.radio.ims.CrsData",
+            "vendor.qti.hardware.radio.ims.CrsType",
+            "vendor.qti.hardware.radio.ims.DeflectRequestInfo",
+            "vendor.qti.hardware.radio.ims.DialRequest",
+            "vendor.qti.hardware.radio.ims.DtmfInfo",
+            "vendor.qti.hardware.radio.ims.EcnamInfo",
+            "vendor.qti.hardware.radio.ims.EctType",
+            "vendor.qti.hardware.radio.ims.EmergencyCallBackMode",
+            "vendor.qti.hardware.radio.ims.EmergencyCallRoute",
+            "vendor.qti.hardware.radio.ims.EmergencyDialRequest",
+            "vendor.qti.hardware.radio.ims.EmergencyServiceCategory",
+            "vendor.qti.hardware.radio.ims.ErrorCode",
+            "vendor.qti.hardware.radio.ims.ExplicitCallTransferInfo",
+            "vendor.qti.hardware.radio.ims.Extra",
+            "vendor.qti.hardware.radio.ims.ExtraType",
+            "vendor.qti.hardware.radio.ims.FacilityType",
+            "vendor.qti.hardware.radio.ims.GeoLocationDataStatus",
+            "vendor.qti.hardware.radio.ims.GeoLocationInfo",
+            "vendor.qti.hardware.radio.ims.HandoverInfo",
+            "vendor.qti.hardware.radio.ims.HandoverType",
+            "vendor.qti.hardware.radio.ims.HangupRequestInfo",
+            "vendor.qti.hardware.radio.ims.IImsRadio",
+            "vendor.qti.hardware.radio.ims.IImsRadioIndication",
+            "vendor.qti.hardware.radio.ims.IImsRadioResponse",
+            "vendor.qti.hardware.radio.ims.ImsSubConfigInfo",
+            "vendor.qti.hardware.radio.ims.IncomingSms",
+            "vendor.qti.hardware.radio.ims.IpPresentation",
+            "vendor.qti.hardware.radio.ims.MediaConfig",
+            "vendor.qti.hardware.radio.ims.MessageDetails",
+            "vendor.qti.hardware.radio.ims.MessageSummary",
+            "vendor.qti.hardware.radio.ims.MessageWaitingIndication",
+            "vendor.qti.hardware.radio.ims.MsimAdditionalCallInfo",
+            "vendor.qti.hardware.radio.ims.MsimAdditionalInfoCode",
+            "vendor.qti.hardware.radio.ims.MultiIdentityLineInfo",
+            "vendor.qti.hardware.radio.ims.MultiIdentityLineType",
+            "vendor.qti.hardware.radio.ims.MultiIdentityRegistrationStatus",
+            "vendor.qti.hardware.radio.ims.MultiSimVoiceCapability",
+            "vendor.qti.hardware.radio.ims.MwiMessagePriority",
+            "vendor.qti.hardware.radio.ims.MwiMessageType",
+            "vendor.qti.hardware.radio.ims.NotificationType",
+            "vendor.qti.hardware.radio.ims.ParticipantStatusInfo",
+            "vendor.qti.hardware.radio.ims.PreAlertingCallInfo",
+            "vendor.qti.hardware.radio.ims.RadioState",
+            "vendor.qti.hardware.radio.ims.RadioTechType",
+            "vendor.qti.hardware.radio.ims.RedialInfo",
+            "vendor.qti.hardware.radio.ims.RegFailureReasonType",
+            "vendor.qti.hardware.radio.ims.RegState",
+            "vendor.qti.hardware.radio.ims.RegistrationBlockStatusInfo",
+            "vendor.qti.hardware.radio.ims.RegistrationInfo",
+            "vendor.qti.hardware.radio.ims.Result",
+            "vendor.qti.hardware.radio.ims.RttMode",
+            "vendor.qti.hardware.radio.ims.ServiceClassProvisionStatus",
+            "vendor.qti.hardware.radio.ims.ServiceClassStatus",
+            "vendor.qti.hardware.radio.ims.ServiceStatusInfo",
+            "vendor.qti.hardware.radio.ims.SipErrorInfo",
+            "vendor.qti.hardware.radio.ims.Size",
+            "vendor.qti.hardware.radio.ims.SmsCallBackMode",
+            "vendor.qti.hardware.radio.ims.SmsDeliverStatus",
+            "vendor.qti.hardware.radio.ims.SmsReportStatus",
+            "vendor.qti.hardware.radio.ims.SmsSendFailureReason",
+            "vendor.qti.hardware.radio.ims.SmsSendRequest",
+            "vendor.qti.hardware.radio.ims.SmsSendResponse",
+            "vendor.qti.hardware.radio.ims.SmsSendStatus",
+            "vendor.qti.hardware.radio.ims.SmsSendStatusReport",
+            "vendor.qti.hardware.radio.ims.SrtpEncryptionCategories",
+            "vendor.qti.hardware.radio.ims.SrtpEncryptionInfo",
+            "vendor.qti.hardware.radio.ims.SsInfoData",
+            "vendor.qti.hardware.radio.ims.SsRequestType",
+            "vendor.qti.hardware.radio.ims.SsServiceType",
+            "vendor.qti.hardware.radio.ims.SsTeleserviceType",
+            "vendor.qti.hardware.radio.ims.StatusForAccessTech",
+            "vendor.qti.hardware.radio.ims.StatusType",
+            "vendor.qti.hardware.radio.ims.StkCcUnsolSsResult",
+            "vendor.qti.hardware.radio.ims.SuppServiceNotification",
+            "vendor.qti.hardware.radio.ims.SuppServiceStatus",
+            "vendor.qti.hardware.radio.ims.SuppServiceStatusRequest",
+            "vendor.qti.hardware.radio.ims.SuppSvcOperationType",
+            "vendor.qti.hardware.radio.ims.SystemServiceDomain",
+            "vendor.qti.hardware.radio.ims.TirMode",
+            "vendor.qti.hardware.radio.ims.ToneOperation",
+            "vendor.qti.hardware.radio.ims.TtyInfo",
+            "vendor.qti.hardware.radio.ims.TtyMode",
+            "vendor.qti.hardware.radio.ims.UssdModeType",
+            "vendor.qti.hardware.radio.ims.VerificationStatus",
+            "vendor.qti.hardware.radio.ims.VerstatInfo",
+            "vendor.qti.hardware.radio.ims.ViceInfo",
+            "vendor.qti.hardware.radio.ims.VoWiFiCallQuality",
+            "vendor.qti.hardware.radio.ims.VoiceInfo",
+            "vendor.qti.hardware.radio.ims.VosActionInfo",
+            "vendor.qti.hardware.radio.ims.VosMoveInfo",
+            "vendor.qti.hardware.radio.ims.VosTouchInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "1fac51799a2a2f120084fdde71b7c116cc3ff729"
+        ],
+        "name": "vendor.qti.hardware.radio.internal.deviceinfo",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.internal.deviceinfo.ChargerType",
+            "vendor.qti.hardware.radio.internal.deviceinfo.DevicePowerInfo",
+            "vendor.qti.hardware.radio.internal.deviceinfo.DeviceState",
+            "vendor.qti.hardware.radio.internal.deviceinfo.IDeviceInfo",
+            "vendor.qti.hardware.radio.internal.deviceinfo.IDeviceInfoIndication",
+            "vendor.qti.hardware.radio.internal.deviceinfo.IDeviceInfoResponse"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "97897c77c52681cded4336885835d7739b3f3f5b"
+        ],
+        "name": "vendor.qti.hardware.radio.lpa",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.lpa.IUimLpa",
+            "vendor.qti.hardware.radio.lpa.IUimLpaIndication",
+            "vendor.qti.hardware.radio.lpa.IUimLpaResponse",
+            "vendor.qti.hardware.radio.lpa.UimLpaAddProfileFailureCause",
+            "vendor.qti.hardware.radio.lpa.UimLpaAddProfileProgressInd",
+            "vendor.qti.hardware.radio.lpa.UimLpaAddProfileStatus",
+            "vendor.qti.hardware.radio.lpa.UimLpaEuiccResetMask",
+            "vendor.qti.hardware.radio.lpa.UimLpaHttpCustomHeader",
+            "vendor.qti.hardware.radio.lpa.UimLpaHttpTransactionInd",
+            "vendor.qti.hardware.radio.lpa.UimLpaIconType",
+            "vendor.qti.hardware.radio.lpa.UimLpaProfileClassType",
+            "vendor.qti.hardware.radio.lpa.UimLpaProfileInfo",
+            "vendor.qti.hardware.radio.lpa.UimLpaProfilePolicyMask",
+            "vendor.qti.hardware.radio.lpa.UimLpaProfileState",
+            "vendor.qti.hardware.radio.lpa.UimLpaResult",
+            "vendor.qti.hardware.radio.lpa.UimLpaSrvAddrOp",
+            "vendor.qti.hardware.radio.lpa.UimLpaSrvAddrOpReq",
+            "vendor.qti.hardware.radio.lpa.UimLpaSrvAddrOpResp",
+            "vendor.qti.hardware.radio.lpa.UimLpaUserConsentType",
+            "vendor.qti.hardware.radio.lpa.UimLpaUserEventId",
+            "vendor.qti.hardware.radio.lpa.UimLpaUserReq",
+            "vendor.qti.hardware.radio.lpa.UimLpaUserResp"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "b291bffe971400c6f62a00cbe3032427743e4d92"
+        ],
+        "name": "vendor.qti.hardware.radio.qcrilhook",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.qcrilhook.IQtiOemHook",
+            "vendor.qti.hardware.radio.qcrilhook.IQtiOemHookIndication",
+            "vendor.qti.hardware.radio.qcrilhook.IQtiOemHookResponse",
+            "vendor.qti.hardware.radio.qcrilhook.RadioError"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "a229a0d7c59a03af78d0743d2aa9dac1cc5dd076",
+            "05aeba07c78dec7c3c71fca17a567a407443476c",
+            "610a9355e29256165a44e2e55df51b6fda064994",
+            "12d4368000415df9f715bce64fbb40dd1022e49a",
+            "837ff6fd268e493086126996731c4889770dd1cd",
+            "985d13db09abad297b1cb5f86f325bec0fa1dd3e",
+            "9c9eeeb1825df12ffb544f4307620c488e2295ea",
+            "3bbcfb9a25acaca5ec7d70aecb4263f27f68106c",
+            "aff2d285347b6813d5108b8a81972746ca240685",
+            "7f4916fc3faf420a1e0e45a1d665fa03ffa10226",
+            "98f8961ff238c719220a4ed698fdc93793bd2a72"
+        ],
+        "name": "vendor.qti.hardware.radio.qtiradio",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.qtiradio.AccessMode",
+            "vendor.qti.hardware.radio.qtiradio.AccessNetwork",
+            "vendor.qti.hardware.radio.qtiradio.CagInfo",
+            "vendor.qti.hardware.radio.qtiradio.CallForwardInfo",
+            "vendor.qti.hardware.radio.qtiradio.CdmaSignalStrength",
+            "vendor.qti.hardware.radio.qtiradio.CellConnectionStatus",
+            "vendor.qti.hardware.radio.qtiradio.CellIdentityCdma",
+            "vendor.qti.hardware.radio.qtiradio.CellIdentityGsm",
+            "vendor.qti.hardware.radio.qtiradio.CellIdentityLte",
+            "vendor.qti.hardware.radio.qtiradio.CellIdentityNr",
+            "vendor.qti.hardware.radio.qtiradio.CellIdentityTdscdma",
+            "vendor.qti.hardware.radio.qtiradio.CellIdentityWcdma",
+            "vendor.qti.hardware.radio.qtiradio.CellInfoCdma",
+            "vendor.qti.hardware.radio.qtiradio.CellInfoGsm",
+            "vendor.qti.hardware.radio.qtiradio.CellInfoLte",
+            "vendor.qti.hardware.radio.qtiradio.CellInfoTdscdma",
+            "vendor.qti.hardware.radio.qtiradio.CellInfoWcdma",
+            "vendor.qti.hardware.radio.qtiradio.CiwlanConfig",
+            "vendor.qti.hardware.radio.qtiradio.CiwlanMode",
+            "vendor.qti.hardware.radio.qtiradio.ClosedSubscriberGroupInfo",
+            "vendor.qti.hardware.radio.qtiradio.EndcStatus",
+            "vendor.qti.hardware.radio.qtiradio.EutranBands",
+            "vendor.qti.hardware.radio.qtiradio.EvdoSignalStrength",
+            "vendor.qti.hardware.radio.qtiradio.FacilityLockInfo",
+            "vendor.qti.hardware.radio.qtiradio.GeranBands",
+            "vendor.qti.hardware.radio.qtiradio.GsmSignalStrength",
+            "vendor.qti.hardware.radio.qtiradio.IQtiRadio",
+            "vendor.qti.hardware.radio.qtiradio.IQtiRadioIndication",
+            "vendor.qti.hardware.radio.qtiradio.IQtiRadioResponse",
+            "vendor.qti.hardware.radio.qtiradio.ImeiInfo",
+            "vendor.qti.hardware.radio.qtiradio.ImeiType",
+            "vendor.qti.hardware.radio.qtiradio.LteSignalStrength",
+            "vendor.qti.hardware.radio.qtiradio.McfgRefreshState",
+            "vendor.qti.hardware.radio.qtiradio.NetworkScanRequest",
+            "vendor.qti.hardware.radio.qtiradio.NetworkSelectionMode",
+            "vendor.qti.hardware.radio.qtiradio.NgranBands",
+            "vendor.qti.hardware.radio.qtiradio.NrConfig",
+            "vendor.qti.hardware.radio.qtiradio.NrIconType",
+            "vendor.qti.hardware.radio.qtiradio.NrSignalStrength",
+            "vendor.qti.hardware.radio.qtiradio.NrUwbIconBandInfo",
+            "vendor.qti.hardware.radio.qtiradio.NrUwbIconBandwidthInfo",
+            "vendor.qti.hardware.radio.qtiradio.NrUwbIconMode",
+            "vendor.qti.hardware.radio.qtiradio.NrUwbIconRefreshTime",
+            "vendor.qti.hardware.radio.qtiradio.NrUwbIconRefreshTimerType",
+            "vendor.qti.hardware.radio.qtiradio.OperatorInfo",
+            "vendor.qti.hardware.radio.qtiradio.PersoUnlockStatus",
+            "vendor.qti.hardware.radio.qtiradio.QtiCellIdentityNr",
+            "vendor.qti.hardware.radio.qtiradio.QtiCellInfo",
+            "vendor.qti.hardware.radio.qtiradio.QtiCellInfoNr",
+            "vendor.qti.hardware.radio.qtiradio.QtiCellInfoRatSpecificInfo",
+            "vendor.qti.hardware.radio.qtiradio.QtiNetworkScanRequest",
+            "vendor.qti.hardware.radio.qtiradio.QtiNetworkScanResult",
+            "vendor.qti.hardware.radio.qtiradio.RadioAccessFamily",
+            "vendor.qti.hardware.radio.qtiradio.RadioAccessSpecifier",
+            "vendor.qti.hardware.radio.qtiradio.RadioAccessSpecifierBands",
+            "vendor.qti.hardware.radio.qtiradio.RadioTechnology",
+            "vendor.qti.hardware.radio.qtiradio.SearchType",
+            "vendor.qti.hardware.radio.qtiradio.SetNetworkSelectionMode",
+            "vendor.qti.hardware.radio.qtiradio.SignalQuality",
+            "vendor.qti.hardware.radio.qtiradio.SnpnInfo",
+            "vendor.qti.hardware.radio.qtiradio.Status",
+            "vendor.qti.hardware.radio.qtiradio.TdscdmaSignalStrength",
+            "vendor.qti.hardware.radio.qtiradio.UtranBands",
+            "vendor.qti.hardware.radio.qtiradio.WcdmaSignalStrength"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "991283f90b34d9834a51ac95c87c06f0c43ee894",
+            "effb7459dbcfaba9912460c3b1246b021d6b3e2e",
+            "d2777ab2b174d54dc04e7cfbac812105d3515626",
+            "e0d1ae41bf19db76d5fdb430b466fe0bc08a627b"
+        ],
+        "name": "vendor.qti.hardware.radio.qtiradioconfig",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.qtiradioconfig.CiwlanCapability",
+            "vendor.qti.hardware.radio.qtiradioconfig.DualDataAction",
+            "vendor.qti.hardware.radio.qtiradioconfig.DualDataRecommendation",
+            "vendor.qti.hardware.radio.qtiradioconfig.DualDataSubscription",
+            "vendor.qti.hardware.radio.qtiradioconfig.IQtiRadioConfig",
+            "vendor.qti.hardware.radio.qtiradioconfig.IQtiRadioConfigIndication",
+            "vendor.qti.hardware.radio.qtiradioconfig.IQtiRadioConfigResponse",
+            "vendor.qti.hardware.radio.qtiradioconfig.MsimPreference",
+            "vendor.qti.hardware.radio.qtiradioconfig.SimType",
+            "vendor.qti.hardware.radio.qtiradioconfig.SimTypeInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "e8de3d97a96911142dc629018ae7a73515c363ca"
+        ],
+        "name": "vendor.qti.hardware.radio.uim",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.uim.IUim",
+            "vendor.qti.hardware.radio.uim.IUimIndication",
+            "vendor.qti.hardware.radio.uim.IUimResponse",
+            "vendor.qti.hardware.radio.uim.UimApplicationType",
+            "vendor.qti.hardware.radio.uim.UimGbaStatus",
+            "vendor.qti.hardware.radio.uim.UimRemoteSimlockOperationType",
+            "vendor.qti.hardware.radio.uim.UimRemoteSimlockResponseType",
+            "vendor.qti.hardware.radio.uim.UimRemoteSimlockStatus",
+            "vendor.qti.hardware.radio.uim.UimRemoteSimlockStatusType",
+            "vendor.qti.hardware.radio.uim.UimRemoteSimlockVersion"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "30443d42ae9ebd948c71011d464523d17cedf6c6"
+        ],
+        "name": "vendor.qti.hardware.radio.uim_remote_client",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.uim_remote_client.IUimRemoteServiceClient",
+            "vendor.qti.hardware.radio.uim_remote_client.IUimRemoteServiceClientIndication",
+            "vendor.qti.hardware.radio.uim_remote_client.IUimRemoteServiceClientResponse",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientApduRsp",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientApduStatus",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientAppInfo",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientAppState",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientAppType",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientCardInitStatusType",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientErrorCauseType",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientEventRsp",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientEventStatusType",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientPowerDownMode",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientRsp",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientTransportType",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientUsageType",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteClientVoltageClass",
+            "vendor.qti.hardware.radio.uim_remote_client.UimRemoteEventReqType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "63e7bdc3b3c396766cda9c00f5a253fcd4fc40ab"
+        ],
+        "name": "vendor.qti.hardware.radio.uim_remote_server",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.radio.uim_remote_server.IUimRemoteServiceServer",
+            "vendor.qti.hardware.radio.uim_remote_server.IUimRemoteServiceServerIndication",
+            "vendor.qti.hardware.radio.uim_remote_server.IUimRemoteServiceServerResponse",
+            "vendor.qti.hardware.radio.uim_remote_server.UimRemoteServiceServerApduType",
+            "vendor.qti.hardware.radio.uim_remote_server.UimRemoteServiceServerConnectRsp",
+            "vendor.qti.hardware.radio.uim_remote_server.UimRemoteServiceServerDisconnectType",
+            "vendor.qti.hardware.radio.uim_remote_server.UimRemoteServiceServerResultCode",
+            "vendor.qti.hardware.radio.uim_remote_server.UimRemoteServiceServerStatus",
+            "vendor.qti.hardware.radio.uim_remote_server.UimRemoteServiceServerTransferProtocol"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "1124bedd2592ecc422abfca430fcd146029fa072"
+        ],
+        "name": "vendor.qti.hardware.secureprocessor.common",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.secureprocessor.common.ErrorCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "6d8b9a7a6a4d26779d623dff8f373d25185679b6"
+        ],
+        "name": "vendor.qti.hardware.secureprocessor.config",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.secureprocessor.config.ConfigSection",
+            "vendor.qti.hardware.secureprocessor.config.ConfigSectionStart",
+            "vendor.qti.hardware.secureprocessor.config.ConfigTag",
+            "vendor.qti.hardware.secureprocessor.config.ConfigType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "009ae39b2c55b725cd3f83f5553da833b72909f9"
+        ],
+        "name": "vendor.qti.hardware.secureprocessor.device",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.secureprocessor.device.ISecureProcessor",
+            "vendor.qti.hardware.secureprocessor.device.sessionIDout"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "46a94292832e9c4c5434e369d5ea179792a7f5e3"
+        ],
+        "name": "vendor.qti.hardware.sensorscalibrate",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.sensorscalibrate.ISensorsCalibrate"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "fd4771abe6e1c694687c871ee5d888b6e9cbf7b0"
+        ],
+        "name": "vendor.qti.hardware.servicetrackeraidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.servicetrackeraidl.ClientConnection",
+            "vendor.qti.hardware.servicetrackeraidl.ClientData",
+            "vendor.qti.hardware.servicetrackeraidl.ClientRecord",
+            "vendor.qti.hardware.servicetrackeraidl.IServicetracker",
+            "vendor.qti.hardware.servicetrackeraidl.ServiceConnection",
+            "vendor.qti.hardware.servicetrackeraidl.ServiceData",
+            "vendor.qti.hardware.servicetrackeraidl.ServiceRecord",
+            "vendor.qti.hardware.servicetrackeraidl.Status"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "48d143f4e6c2872933966b8769d8111ab4c8e107"
+        ],
+        "name": "vendor.qti.hardware.sigma_miracast_aidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.sigma_miracast_aidl.ISigma_miracast"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "81832c92aa802927e98f3bf426e95b03e5d7f5e6"
+        ],
+        "name": "vendor.qti.hardware.soter",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.soter.ISoter",
+            "vendor.qti.hardware.soter.SoterBufferReturn",
+            "vendor.qti.hardware.soter.SoterErrorCode",
+            "vendor.qti.hardware.soter.SoterInitReturn"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "5330187f864535df8ad40289837f56561e7af0c3",
+            "185fc5c2e117e31c341c4e60d6658fb2252329cf"
+        ],
+        "name": "vendor.qti.hardware.spu",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.spu.ISPComClient",
+            "vendor.qti.hardware.spu.ISPComServer",
+            "vendor.qti.hardware.spu.ISPComSharedBuffer",
+            "vendor.qti.hardware.spu.ISPUManager",
+            "vendor.qti.hardware.spu.ISPUNotifier"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "ca73018f7173675483bf0b5dc3523dc17630c1b3"
+        ],
+        "name": "vendor.qti.hardware.trustedui",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.trustedui.ITrustedInput",
+            "vendor.qti.hardware.trustedui.ITrustedInputCallback",
+            "vendor.qti.hardware.trustedui.ITrustedUI",
+            "vendor.qti.hardware.trustedui.ITrustedUICallback",
+            "vendor.qti.hardware.trustedui.TUIConfig",
+            "vendor.qti.hardware.trustedui.TUICreateParams",
+            "vendor.qti.hardware.trustedui.TUIOutputID",
+            "vendor.qti.hardware.trustedui.TUIResponse"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "41be93e4ff2f788831b5935a5d60dcdecd532f17"
+        ],
+        "name": "vendor.qti.hardware.vpp",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.vpp.AiScalerRoi",
+            "vendor.qti.hardware.vpp.FlushDone",
+            "vendor.qti.hardware.vpp.IVpp",
+            "vendor.qti.hardware.vpp.IVppCallbacks",
+            "vendor.qti.hardware.vpp.IVppService",
+            "vendor.qti.hardware.vpp.ReconfigDone",
+            "vendor.qti.hardware.vpp.VidPropType",
+            "vendor.qti.hardware.vpp.VppAieConsts",
+            "vendor.qti.hardware.vpp.VppAisConsts",
+            "vendor.qti.hardware.vpp.VppBuffer",
+            "vendor.qti.hardware.vpp.VppBufferFlag",
+            "vendor.qti.hardware.vpp.VppCadeConsts",
+            "vendor.qti.hardware.vpp.VppCnrConsts",
+            "vendor.qti.hardware.vpp.VppCodecType",
+            "vendor.qti.hardware.vpp.VppColorFormat",
+            "vendor.qti.hardware.vpp.VppCtrlAie",
+            "vendor.qti.hardware.vpp.VppCtrlAis",
+            "vendor.qti.hardware.vpp.VppCtrlCade",
+            "vendor.qti.hardware.vpp.VppCtrlCnr",
+            "vendor.qti.hardware.vpp.VppCtrlDi",
+            "vendor.qti.hardware.vpp.VppCtrlEar",
+            "vendor.qti.hardware.vpp.VppCtrlFrc",
+            "vendor.qti.hardware.vpp.VppCtrlFrcSegment",
+            "vendor.qti.hardware.vpp.VppCtrlMeas",
+            "vendor.qti.hardware.vpp.VppCtrlQbr",
+            "vendor.qti.hardware.vpp.VppCtrlSplitScreen",
+            "vendor.qti.hardware.vpp.VppCtrlTnr",
+            "vendor.qti.hardware.vpp.VppDiMode",
+            "vendor.qti.hardware.vpp.VppEarMode",
+            "vendor.qti.hardware.vpp.VppError",
+            "vendor.qti.hardware.vpp.VppEventType",
+            "vendor.qti.hardware.vpp.VppFrcConsts",
+            "vendor.qti.hardware.vpp.VppFrcInterp",
+            "vendor.qti.hardware.vpp.VppFrcInterpRatio",
+            "vendor.qti.hardware.vpp.VppFrcLatency",
+            "vendor.qti.hardware.vpp.VppFrcLevel",
+            "vendor.qti.hardware.vpp.VppFrcMode",
+            "vendor.qti.hardware.vpp.VppHueMode",
+            "vendor.qti.hardware.vpp.VppKeyValueDouble",
+            "vendor.qti.hardware.vpp.VppKeyValueFloat",
+            "vendor.qti.hardware.vpp.VppKeyValueInt",
+            "vendor.qti.hardware.vpp.VppKeyValueString",
+            "vendor.qti.hardware.vpp.VppMemBuffer",
+            "vendor.qti.hardware.vpp.VppMetaBuffer",
+            "vendor.qti.hardware.vpp.VppMode",
+            "vendor.qti.hardware.vpp.VppPort",
+            "vendor.qti.hardware.vpp.VppPortParam",
+            "vendor.qti.hardware.vpp.VppPriority",
+            "vendor.qti.hardware.vpp.VppQbrMode",
+            "vendor.qti.hardware.vpp.VppRequirements",
+            "vendor.qti.hardware.vpp.VppResConsts",
+            "vendor.qti.hardware.vpp.VppResolution",
+            "vendor.qti.hardware.vpp.VppSessionFlags",
+            "vendor.qti.hardware.vpp.VppSplitDirection",
+            "vendor.qti.hardware.vpp.VppSplitScreenConsts",
+            "vendor.qti.hardware.vpp.VppTnrConsts"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "42bd698acab7cceeb5125af52c0b8fd730f354da",
+            "02516a22f958eb52df2dc46d70816baa678d7d1c"
+        ],
+        "name": "vendor.qti.hardware.wifi.supplicant",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.wifi.supplicant.ISupplicantVendor",
+            "vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIface",
+            "vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback",
+            "vendor.qti.hardware.wifi.supplicant.IVendorIfaceInfo",
+            "vendor.qti.hardware.wifi.supplicant.IVendorIfaceType",
+            "vendor.qti.hardware.wifi.supplicant.SupplicantVendorStatusCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "7027fafe55801630dd99fdafec2e4b78d1a104fc"
+        ],
+        "name": "vendor.qti.hardware.wifi.qtiwifi",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.wifi.qtiwifi.IQtiWifi",
+            "vendor.qti.hardware.wifi.qtiwifi.IQtiWifiCallback",
+            "vendor.qti.hardware.wifi.qtiwifi.IfaceInfo",
+            "vendor.qti.hardware.wifi.qtiwifi.IfaceType",
+            "vendor.qti.hardware.wifi.qtiwifi.QtiWifiStatusCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "1196270a85efcf1dfc9476683540dd2accc8f050"
+        ],
+        "name": "vendor.qti.hardware.wifi.wificfr",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.wifi.wificfr.IWificfr",
+            "vendor.qti.hardware.wifi.wificfr.IWificfrDataCallback",
+            "vendor.qti.hardware.wifi.wificfr.CaptureStatus",
+            "vendor.qti.hardware.wifi.wificfr.CaptureStatusCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "33ca8a7d676860f72154583a75d74d372a90d175"
+        ],
+        "name": "vendor.qti.hardware.wifi.wifimyftm",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.wifi.wifimyftm.IWifiMyFtm",
+            "vendor.qti.hardware.wifi.wifimyftm.MyFtmCmdStatus",
+            "vendor.qti.hardware.wifi.wifimyftm.MyFtmStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "75ca22000b7d8723017e3ce5e583818f35809d2a",
+            "2053da6c2bbbbf24568d396a8d809657f245e056"
+        ],
+        "name": "vendor.qti.ims.datachannelservice",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.ims.datachannelservice.DataChannelCommandErrorCode",
+            "vendor.qti.ims.datachannelservice.DataChannelErrorCode",
+            "vendor.qti.ims.datachannelservice.DataChannelInfo",
+            "vendor.qti.ims.datachannelservice.DataChannelMessage",
+            "vendor.qti.ims.datachannelservice.DataChannelResponse",
+            "vendor.qti.ims.datachannelservice.DataChannelState",
+            "vendor.qti.ims.datachannelservice.IDataChannelConnection",
+            "vendor.qti.ims.datachannelservice.IDataChannelConnectionListener",
+            "vendor.qti.ims.datachannelservice.IDataChannelService",
+            "vendor.qti.ims.datachannelservice.IDataChannelServiceListener",
+            "vendor.qti.ims.datachannelservice.IDataChannelTransport",
+            "vendor.qti.ims.datachannelservice.IDataChannelTransportListener",
+            "vendor.qti.ims.datachannelservice.MessageStatus",
+            "vendor.qti.ims.datachannelservice.MessageStatusInfo",
+            "vendor.qti.ims.datachannelservice.ReasonCode",
+            "vendor.qti.ims.datachannelservice.ServiceState"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+	    2
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "f3ab855821280c466eb6350f69b36f4c993a5071"
+        ],
+        "name": "vendor.qti.ims.factoryaidlservice",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.ims.factoryaidlservice.IImsFactory",
+            "vendor.qti.ims.factoryaidlservice.ResultStatus",
+            "vendor.qti.ims.factoryaidlservice.StatusCode"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "2465a75f82292be4fbf79f57d7580f733274ebdf"
+        ],
+        "name": "vendor.qti.memory.pasrmanager",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.memory.pasrmanager.IPasrManager",
+            "vendor.qti.memory.pasrmanager.PasrInfo",
+            "vendor.qti.memory.pasrmanager.PasrPriority",
+            "vendor.qti.memory.pasrmanager.PasrSrc",
+            "vendor.qti.memory.pasrmanager.PasrState",
+            "vendor.qti.memory.pasrmanager.PasrStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "9b3d9019c4929a6da7024c5bc4beeaac308a847b"
+        ],
+        "name": "vendor.qti.qccvndhal_aidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.qccvndhal_aidl.IQccvndhal",
+            "vendor.qti.qccvndhal_aidl.QccvndhalGenericData"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "dbd0e1f0ea5d14bbc3853a9f22dfd84d17a89241"
+        ],
+        "name": "vendor.qti.qesdhalaidl",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.qesdhalaidl.IQesdClientToken",
+            "vendor.qti.qesdhalaidl.IQesdTaskCallback",
+            "vendor.qti.qesdhalaidl.IQesdhal",
+            "vendor.qti.qesdhalaidl.QesdkDeinitStatus",
+            "vendor.qti.qesdhalaidl.QesdkInitReturn",
+            "vendor.qti.qesdhalaidl.QesdkInitStatus",
+            "vendor.qti.qesdhalaidl.QesdkRegSAStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "f1ad35427e91c61be303442c6a84d6b6899b2de6",
+            "1beb722c558172600708300f9b556d75495db6ba",
+            "b939a99220c53a9e515bf1305fac7a5e8a4a3b97",
+            "60370da086910c28180728ea367e33077d921e8f"
+        ],
+        "name": "vendor.qti.qesdsys",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.qesdsys.APIInfo",
+            "vendor.qti.qesdsys.IQesdSys",
+            "vendor.qti.qesdsys.IQesdSysCallback",
+            "vendor.qti.qesdsys.OperationType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "d43cd1309bd4375f541a73ac5fe6b77ad29ee729"
+        ],
+        "name": "vendor.qti.qspmhal",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.qspmhal.Command",
+            "vendor.qti.qspmhal.IQspmhal",
+            "vendor.qti.qspmhal.ParcelableMemory",
+            "vendor.qti.qspmhal.ProfData",
+            "vendor.qti.qspmhal.Status"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "development_hash": "",
+        "has_development": false,
+        "hashes": [
+            "edd6b0e8a96b99f186dcba1453302080f9c69281"
+        ],
+        "name": "vendor.qti.qvirt",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.qvirt.IVirtualMachine",
+            "vendor.qti.qvirt.IVirtualMachineCallback",
+            "vendor.qti.qvirt.IVirtualizationService",
+            "vendor.qti.qvirt.VirtualMachineState"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "13d7d12bd29519699bdb64b6ea7ce0fe1b88631c"
+        ],
+        "name": "vendor.qti.automotive.qcarcam2",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.automotive.qcarcam2.IQcarCamera",
+            "vendor.qti.automotive.qcarcam2.IQcarCameraStream",
+            "vendor.qti.automotive.qcarcam2.IQcarCameraStreamCB",
+            "vendor.qti.automotive.qcarcam2.QCarCamBatchConfig",
+            "vendor.qti.automotive.qcarcam2.QCarCamBatchFramesInfo",
+            "vendor.qti.automotive.qcarcam2.QCarCamBatchMode",
+            "vendor.qti.automotive.qcarcam2.QCarCamBufferRequest",
+            "vendor.qti.automotive.qcarcam2.QCarCamColorFmt",
+            "vendor.qti.automotive.qcarcam2.QCarCamColorSpace",
+            "vendor.qti.automotive.qcarcam2.QCarCamError",
+            "vendor.qti.automotive.qcarcam2.QCarCamErrorEvent",
+            "vendor.qti.automotive.qcarcam2.QCarCamErrorInfo",
+            "vendor.qti.automotive.qcarcam2.QCarCamEventPayload",
+            "vendor.qti.automotive.qcarcam2.QCarCamEventRecoveryMsg",
+            "vendor.qti.automotive.qcarcam2.QCarCamExposureConfig",
+            "vendor.qti.automotive.qcarcam2.QCarCamExposureMode",
+            "vendor.qti.automotive.qcarcam2.QCarCamFrameDropConfig",
+            "vendor.qti.automotive.qcarcam2.QCarCamFrameDropMode",
+            "vendor.qti.automotive.qcarcam2.QCarCamFrameInfo",
+            "vendor.qti.automotive.qcarcam2.QCarCamGammaConfig",
+            "vendor.qti.automotive.qcarcam2.QCarCamGammaType",
+            "vendor.qti.automotive.qcarcam2.QCarCamHWTimestamp",
+            "vendor.qti.automotive.qcarcam2.QCarCamInput",
+            "vendor.qti.automotive.qcarcam2.QCarCamInputModes",
+            "vendor.qti.automotive.qcarcam2.QCarCamInputSignal",
+            "vendor.qti.automotive.qcarcam2.QCarCamInputSrc",
+            "vendor.qti.automotive.qcarcam2.QCarCamInputStream",
+            "vendor.qti.automotive.qcarcam2.QCarCamInterlaceField",
+            "vendor.qti.automotive.qcarcam2.QCarCamIspUsecase",
+            "vendor.qti.automotive.qcarcam2.QCarCamIspUsecaseConfig",
+            "vendor.qti.automotive.qcarcam2.QCarCamLatencyControl",
+            "vendor.qti.automotive.qcarcam2.QCarCamMode",
+            "vendor.qti.automotive.qcarcam2.QCarCamOpenParam",
+            "vendor.qti.automotive.qcarcam2.QCarCamOpmode",
+            "vendor.qti.automotive.qcarcam2.QCarCamParamType",
+            "vendor.qti.automotive.qcarcam2.QCarCamPlane",
+            "vendor.qti.automotive.qcarcam2.QCarCamRecovery",
+            "vendor.qti.automotive.qcarcam2.QCarCamRequest",
+            "vendor.qti.automotive.qcarcam2.QCarCamStreamConfigData",
+            "vendor.qti.automotive.qcarcam2.QCarCamStreamRequest",
+            "vendor.qti.automotive.qcarcam2.QCarCamVendorParam",
+            "vendor.qti.automotive.qcarcam2.QcarcamBuffersInfo",
+            "vendor.qti.automotive.qcarcam2.QcarcamFrameField"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "991b9f2b74f0134fb388524f3c5d1d80fb104dea"
+        ],
+        "name": "vendor.qti.hardware.wifi.hostapd",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.hardware.wifi.hostapd.HostapdVendorStatusCode",
+            "vendor.qti.hardware.wifi.hostapd.IHostapdVendor",
+            "vendor.qti.hardware.wifi.hostapd.IHostapdVendorCallback",
+            "vendor.qti.hardware.wifi.hostapd.VendorApInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "d84cfc049c790cd9d8ee1d72f8ae041ef1ea9550"
+        ],
+        "name": "vendor.qti.sec.cloudagent",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.sec.cloudagent.BlobRequest",
+            "vendor.qti.sec.cloudagent.ICloudAgent",
+            "vendor.qti.sec.cloudagent.Request",
+            "vendor.qti.sec.cloudagent.Response"
+        ],
+        "use_unfrozen": false,
+        "vendor_available": "true",
+        "version_pfv_map": {
+            "1": 15
+        },
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "96c04875ab684bde16fe25a24c6eadd3c79f182c"
+        ],
+        "name": "vendor.qti.sec.datamanager",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.sec.datamanager.IDataManager",
+            "vendor.qti.sec.datamanager.NotificationInfo"
+        ],
+        "use_unfrozen": false,
+        "vendor_available": "true",
+        "version_pfv_map": {
+            "1": 15
+        },
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "9ce396ba2924240205220e3aef7394740c7ac0f4"
+        ],
+        "name": "vendor.qti.sec.featuremanager",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.sec.featuremanager.GetBundleResponseInfo",
+            "vendor.qti.sec.featuremanager.GetBundleStatus",
+            "vendor.qti.sec.featuremanager.IFeatureManager",
+            "vendor.qti.sec.featuremanager.RegisterForNotificationsInfo"
+        ],
+        "use_unfrozen": false,
+        "vendor_available": "true",
+        "version_pfv_map": {
+            "1": 15
+        },
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "e4ad1dc26d60a6d86bd3d0700a38a205c24e5e20"
+        ],
+        "name": "vendor.qti.sec.provisioningmanager",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.sec.provisioningmanager.FeatureInfo",
+            "vendor.qti.sec.provisioningmanager.FeatureStatus",
+            "vendor.qti.sec.provisioningmanager.IProvisioningManager",
+            "vendor.qti.sec.provisioningmanager.MqttCredentialsInfo",
+            "vendor.qti.sec.provisioningmanager.RegisterForNotificationsInfo"
+        ],
+        "use_unfrozen": false,
+        "vendor_available": "true",
+        "version_pfv_map": {
+            "1": 15
+        },
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": [
+            "dd53d7d4c14a130186e597fdec683f88f932dc63",
+            "b89fa4808957d3cba2ccc30024e23416b21df565"
+        ],
+        "name": "vendor.qti.vst",
+        "stability": "vintf",
+        "types": [
+            "vendor.qti.vst.HardwareBuffer",
+            "vendor.qti.vst.HardwareBufferDescription",
+            "vendor.qti.vst.ICameraVstSys",
+            "vendor.qti.vst.ICameraVstSysCallback",
+            "vendor.qti.vst.ICameraVstSysFactory",
+            "vendor.qti.vst.TestConfig",
+            "android.hardware.common.NativeHandle"
+        ],
+        "use_unfrozen": true,
+        "vendor_available": "true",
+        "version_pfv_map": {
+            "1": 15,
+            "2": 15
+        },
+        "versions": [
+            1,
+            2
+        ]
+    }
+]

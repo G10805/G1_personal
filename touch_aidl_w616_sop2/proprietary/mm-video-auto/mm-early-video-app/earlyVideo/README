@@ -1,0 +1,38 @@
+**************************************************************************************************
+* Copyright (c) 2023-2024 Qualcomm Technologies, Inc.
+* All Rights Reserved.
+* Confidential and Proprietary - Qualcomm Technologies, Inc.
+**************************************************************************************************
+
+                                       EARLY VIDEO APPLICATION
+--------------------------------------------------------------------------------------------------
+
+- This is a test/reference application for early video demonstration and not for commercialization. Support for this application is limited.
+- Application is initialized from common/src/VideoTestApp.cpp
+- Input for this application is the hex representation of the video clip, it is pre-computed and stored in utilities/inc/VideoMap.h
+- The following assumptions on the video clip have been taken in the application:
+        - Width: 1280 Height: 720
+        - Width: 1920 Height: 1080
+        - Color Format: NV12 8bit
+        - H264 encoded video clip
+- Currently the application supports video clips with H264 encoding  utilities/inc/VideoH264StreamParser.h and utilities/inc/VideoH264StreamParser.cpp
+
+The following configuration change is required to use the application for 1280x720 resolution video clip:
+- argv=1280 in early-init/early_init.conf under [earlyVideo]
+The following configuration change is required to use the application for 1920x1080 resolution video clip:
+- argv=1920 in early-init/early_init.conf under [earlyVideo]
+The following configuration change is required to use the application for default splash.h264 1280x720 resolution video clip:
+- argv=default in early-init/early_init.conf under [earlyVideo]
+
+The following changes are required to re-use the application with another video clip:
+- Array in utilities/inc/VideoMap.h
+- utilities/inc/VideoH264StreamParser.h and utilities/inc/VideoH264StreamParser.cpp needs to be changed for other encodings
+- utilities/inc/VideoPlatform.h and common/src/VideoTestApp.cpp needs to be changed for other encodings
+- NUM_FRMS_PARSE macro has to be updated accordingly
+
+Optimization Technique implemented:
+- Optimization has been done on BuildOffsetTable call.
+- BuildOffsetTable function earlier uses readBuffer function which uses read_file() calls to read the video, byte by byte from an input video clip and builds the offset table, read_file() call is a costly operation in terms of time taken.
+- Instead of reading the video file every time to access a byte, using an array to represent the video file (hex dump of the video file) and reading the bytes directly from this array would optimize the function.
+
+- In this application, the above mentioned optimization technique has been implemented. The array used by this method is pre-computed and stored in utilities/inc/VideoMap.h

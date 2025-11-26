@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "LegacyMode.proto";
+import "WifiTechnology.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ConnectionCapabilities
+{
+    wifi.supplicant.wt.WifiTechnology technology = 1;
+    int32 channelBandwidth = 2;
+    int32 maxNumberTxSpatialStreams = 3;
+    int32 maxNumberRxSpatialStreams = 4;
+    wifi.supplicant.lm.LegacyMode legacyMode = 5;
+    bool apTidToLinkMapNegotiationSupported = 6;
+}

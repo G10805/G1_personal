@@ -1,0 +1,17 @@
+cc_binary {
+    name: "carpowerusbservice",
+    vendor: true,
+    srcs: ["CarPowerUsbService.cpp"],
+    init_rc: ["car_power.rc"],
+    shared_libs: [
+        "libqtikeylistener",
+        "libcutils",
+        "liblog",
+        "libutils",
+        "libbinder_ndk",
+        "android.frameworks.automotive.powerpolicy-V2-ndk",
+        "libpowerpolicyclient",
+    ],
+    header_libs: ["libqtikeylistener_headers"],
+}
+

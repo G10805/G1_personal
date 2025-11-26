@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum AuxiliarySupplicantEventCode
+{
+    EAP_METHOD_SELECTED = 0;
+    SSID_TEMP_DISABLED = 1;
+}

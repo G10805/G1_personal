@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi;
+
+import "AvailableAfcChannelInfo.proto";
+import "AvailableAfcFrequencyInfo.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message AfcChannelAllowance
+{
+    repeated AvailableAfcFrequencyInfo availableAfcFrequencyInfos = 1;
+    repeated AvailableAfcChannelInfo availableAfcChannelInfos = 2;
+    int64 availabilityExpireTimeMs = 3;
+}

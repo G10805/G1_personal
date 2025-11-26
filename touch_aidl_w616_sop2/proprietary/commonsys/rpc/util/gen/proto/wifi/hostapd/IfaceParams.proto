@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+import "ChannelParams.proto";
+import "HwModeParams.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IfaceParams
+{
+    string name = 1;
+    HwModeParams hwModeParams = 2;
+    repeated ChannelParams channelParams = 3;
+}

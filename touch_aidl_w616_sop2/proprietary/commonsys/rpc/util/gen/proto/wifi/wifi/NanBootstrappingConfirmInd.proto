@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanBootstrappingResponseCode.proto";
+import "NanStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanBootstrappingConfirmInd
+{
+    int32 bootstrappingInstanceId = 1;
+    NanBootstrappingResponseCode responseCode = 2;
+    NanStatus reasonCode = 3;
+    int32 comeBackDelay = 4;
+    bytes cookie = 5;
+}

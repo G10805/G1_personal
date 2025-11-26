@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi.wdpfft;
+
+option optimize_for = LITE_RUNTIME;
+
+enum WifiDebugPacketFateFrameType
+{
+    UNKNOWN = 0;
+    ETHERNET_II = 1;
+    MGMT_80211 = 2;
+}

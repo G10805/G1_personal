@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi.ncst;
+
+option optimize_for = LITE_RUNTIME;
+
+enum NanCipherSuiteType
+{
+    NONE = 0;
+    SHARED_KEY_128_MASK = 1;
+    SHARED_KEY_256_MASK = 2;
+    PUBLIC_KEY_2WDH_128_MASK = 4;
+    PUBLIC_KEY_2WDH_256_MASK = 8;
+    PUBLIC_KEY_PASN_128_MASK = 64;
+    PUBLIC_KEY_PASN_256_MASK = 128;
+}

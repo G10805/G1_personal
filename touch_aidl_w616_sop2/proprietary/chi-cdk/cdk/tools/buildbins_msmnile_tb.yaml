@@ -1,0 +1,13 @@
+sensor_drivers:
+
+- com.qti.sensormodule.onsemi_max9296_ar0820rt:
+    - sensor/default/max9296_ar0820rt/max9296_ar0820rt.xml
+    - module/onsemi_max9296_ar0820rt_module.xml
+
+
+chromatix_projects:
+- com.qti.tuned.default:
+    - tuning/default_c7project
+
+- com.qti.tuned.onsemi_max9296_ar0820:
+    - tuning/max9296_ar0820_c7project

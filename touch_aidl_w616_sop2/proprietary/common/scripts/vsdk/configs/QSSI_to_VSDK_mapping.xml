@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<QVSDK_Mapping>
+	<!--========================================================================
+        Copyright (c) 2021-2022 Qualcomm Technologies, Inc.
+        All Rights Reserved.
+        Confidential and Proprietary - Qualcomm Technologies, Inc.
+    ========================================================================-->
+	<mapping QSSI_AU="tag_name" snapshots="vndk,vendor,recovery,host,otatools,rawdata,java" vsdk_configs_sha="sha_val" vsdk_sha="sha_val" vsdk_version="vsdk_version"/>
+</QVSDK_Mapping>

@@ -1,0 +1,32 @@
+aidl_interface {
+    name: "vendor.qti.hardware.secureprocessor.device",
+    vendor_available: true,
+    srcs: ["vendor/qti/hardware/secureprocessor/device/*.aidl"],
+    stability: "vintf",
+    imports: [
+        "android.hardware.common-V2",
+        "vendor.qti.hardware.secureprocessor.common-V1",
+    ],
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [
+                "android.hardware.common-V2",
+                "vendor.qti.hardware.secureprocessor.common-V1",
+            ],
+        },
+    ],
+    frozen: true,
+
+}

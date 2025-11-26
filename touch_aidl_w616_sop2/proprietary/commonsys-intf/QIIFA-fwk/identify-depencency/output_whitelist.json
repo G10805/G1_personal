@@ -1,0 +1,22 @@
+{
+  "standard": [
+    "files",
+    "NOTICE_VENDOR.xml",
+    "vendor.img",
+    "*all_targets",
+    "installed-files-vendor.txt",
+    "installed-files-vendor.json",
+    "android-sdk_eng.root_linux-x86.zip",
+    "NOTICE.html",
+    "sync"
+  ],
+  "camera": [
+    "*camx*",
+    "*camera*",
+    "*feature2*",
+    "*chi*"
+  ],
+  "display": [
+    "*display*"
+  ]
+}

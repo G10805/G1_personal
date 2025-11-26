@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--========================================================================-->
+<!-- Copyright (c) 2018 Qualcomm Technologies, Inc.                         -->
+<!-- All Rights Reserved.                                                   -->
+<!-- Confidential and Proprietary - Qualcomm Technologies, Inc.             -->
+<!--========================================================================-->
+<sensorDriverData
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../cdk/sensor/camxsensordriver.xsd">
+  <module_version major_revision="1" minor_revision="0" incr_revision="0"/>
+
+  <!--Sensor slave information -->
+  <slaveInfo>
+    <!--Name of the sensor -->
+    <sensorName>max9296_2_ar0231isp</sensorName>
+    <!--EXTERNAL SENSOR -->
+    <slaveAddress>0x0</slaveAddress>
+    <!--Register address / data size in bytes -->
+    <regAddrType range="[1,4]">2</regAddrType>
+    <!--Register address / data size in bytes -->
+    <regDataType range="[1,4]">1</regDataType>
+    <!--Register address for sensor Id -->
+    <sensorIdRegAddr>0xDEAD</sensorIdRegAddr>
+    <!--Sensor Id -->
+    <sensorId>0xFF</sensorId>
+    <!--Mask for sensor id. Sensor Id may only be few bits -->
+    <sensorIdMask>0xff00</sensorIdMask>
+    <!--I2C frequency mode of slave
+        Supported modes are: STANDARD (100 KHz), FAST (400 KHz), FAST_PLUS (1 MHz), CUSTOM (Custom frequency in DTSI) -->
+    <i2cFrequencyMode>CUSTOM</i2cFrequencyMode>
+    <!--Sequence of power configuration type and configuration value required to control power to the device -->
+    <powerUpSequence>
+      <powerSetting>
+        <configType>RESET</configType>
+        <configValue>1</configValue>
+        <delayMs>10</delayMs>
+      </powerSetting>
+    </powerUpSequence>
+    <!--Sequence of power configuration type and configuration value required to control power to the device -->
+    <powerDownSequence>
+      <powerSetting>
+        <configType>RESET</configType>
+        <configValue>1</configValue>
+        <delayMs>10</delayMs>
+      </powerSetting>
+    </powerDownSequence>
+  </slaveInfo>
+  <!--Addresses for various sensor registers -->
+  <regAddrInfo>
+    <!--Register address to program width -->
+    <xOutput>0xDEAD</xOutput>
+    <!--Register address to program height -->
+    <yOutput>0xDEAD</yOutput>
+    <!--Register address to program Frame length lines -->
+    <frameLengthLines>0xDEAD</frameLengthLines>
+    <!--Register address to program Line length pixel clock -->
+    <lineLengthPixelClock>0xDEAD</lineLengthPixelClock>
+    <!--Register address to program coarse integration time -->
+    <coarseIntgTimeAddr>0xDEAD</coarseIntgTimeAddr>
+    <!--Register address to program short coarse integration time
+        This address is optional and must be provided if supported by sensor -->
+    <!--shortCoarseIntgTimeAddr>0x0224</shortCoarseIntgTimeAddr -->
+    <!--Register address to program global gain channel -->
+    <globalGainAddr>0xDEAD</globalGainAddr>
+    <!--Register address to program short global gain channel
+        This address is optional and must be provided if supported by sensor -->
+    <!-- shortGlobalGainAddr>0x0216</shortGlobalGainAddr -->
+    <!--Register address to program digital gloabl gain channel
+        This address is optional and must be provided if supported by sensor -->
+    <!--digitalGlobalGainAddr>0x020E</digitalGlobalGainAddr -->
+    <!--Register address to program manual test pattern value for Red channel -->
+    <testPatternRAddr>0</testPatternRAddr>
+    <!--Register address to program manual test pattern value for Green Red channel -->
+    <testPatternGRAddr>0</testPatternGRAddr>
+    <!--Register address to program manual test pattern value for Blue channel -->
+    <testPatternBAddr>0</testPatternBAddr>
+    <!--Register address to program manual test pattern value for Green Blue channel -->
+    <testPatternGBAddr>0</testPatternGBAddr>
+  </regAddrInfo>
+  <!--Information of all the resolutions
+      Number of resolutions is detected from number of resolutionData nodes -->
+  <resolutionInfo>
+    <!--Specify which sensor version can support this setting-->
+    <sensorVersion>0</sensorVersion>
+    <resolutionData>
+      <colorFilterArrangement>YUV_UYVY</colorFilterArrangement>
+      <!--Stream information -->
+      <streamInfo>
+        <!--Information for a stream data -->
+        <streamConfiguration>
+          <!--Virtual Channel of the data
+              Valid values for virtual channel are: 0, 1, 2 and 3 -->
+          <vc range="[0,3]">0</vc>
+          <!--Data type of the stream. Default value is 0x2B(43) (10-bit RAW) 42 8-bit RAW -->
+          <dt>42</dt>
+          <!--Frame dimension: contains xStart, yStart, width and height -->
+          <frameDimension>
+            <xStart>0</xStart>
+            <yStart>0</yStart>
+            <width>1920</width>
+            <height>1024</height>
+          </frameDimension>
+          <!--Bit width of the data -->
+          <bitWidth>8</bitWidth>
+          <!--Type of the stream Supported stream types are:
+              Supported stream types are: BLOB, IMAGE, PDAF, HDR, META -->
+          <type>IMAGE</type>
+        </streamConfiguration>
+        <!--Information for a stream data -->
+      </streamInfo>
+      <!--Line length pixel clock of frame
+          Typically this value is the active width + blanking width -->
+      <lineLengthPixelClock>0x9CE</lineLengthPixelClock>
+      <!--Frame length lines of frame
+          Typically this value is the active height + blanking height 0xe50-->
+      <frameLengthLines>0x522</frameLengthLines>
+      <!--Minimum horizontal blanking interval in pixels -->
+      <minHorizontalBlanking>0</minHorizontalBlanking>
+      <!--Minimum horizontal blanking interval in lines -->
+      <minVerticalBlanking>0</minVerticalBlanking>
+      <!--Output pixel clock -->
+      <outputPixelClock>99000000</outputPixelClock>
+      <!--Horizontal binning value -->
+      <horizontalBinning>1</horizontalBinning>
+      <!--Vertical binning value -->
+      <verticalBinning>1</verticalBinning>
+      <!--Maximum frame rate -->
+      <frameRate>30</frameRate>
+      <!--Number of lanes in which the data is streamed -->
+      <laneCount>4</laneCount>
+      <!--The value is a ratio, and the sensors are able only to downscale.
+          It must be 1.00 or greater at all times.-->
+      <downScaleFactor>1.0</downScaleFactor>
+      <!--Settle time in nano seconds -->
+      <settleTimeNs>16</settleTimeNs>
+      <!--Flag to know if the sensor is a 3phase sensor -->
+      <is3Phase>0</is3Phase>
+      <!--Intergation related information for each resolution-->
+      <integrationInfo>
+        <!--Minimum intergation time-->
+        <integrationTimeMin>0</integrationTimeMin>
+        <!--The step of intergation time-->
+        <integrationTimeStep>0</integrationTimeStep>
+        <!--Integration time margin-->
+        <integrationTimeMargin>0</integrationTimeMargin>
+      </integrationInfo>
+      <!--Sequence of register settings to configure the device -->
+      <resSettings>
+        <regSetting>
+          <operation>WRITE</operation>
+          <slaveAddr>0xFF</slaveAddr>
+          <registerAddr>0xDEAD</registerAddr>
+          <registerData>0xFF</registerData>
+          <regAddrType>2</regAddrType>
+          <regDataType>1</regDataType>
+          <delayUs>0</delayUs>
+        </regSetting>
+      </resSettings>
+      <!--Crop information for the frame -->
+      <cropInfo>
+        <left>0</left>
+        <right>0</right>
+        <top>0</top>
+        <bottom>0</bottom>
+      </cropInfo>
+      <!--List of features / capabilities supported by sensor -->
+      <capability>NORMAL</capability>
+    </resolutionData>
+  </resolutionInfo>
+  <!--Exposure control information -->
+  <exposureControlInfo>
+    <!--Maximum analog again supported by sensor -->
+    <maxAnalogGain>16</maxAnalogGain>
+    <!--Maximum digital again supported by sensor -->
+    <maxDigitalGain>4</maxDigitalGain>
+    <!--Minimum offset to be maintained between line count and frame length lines -->
+    <verticalOffset>10</verticalOffset>
+    <!--Maximum line count supported by sensor -->
+    <maxLineCount>65525</maxLineCount>
+    <!--Conversion factor to convert real digital gain to register digital gain -->
+    <realToRegDigitalGainConversionFactor>256</realToRegDigitalGainConversionFactor>
+    <!--Real gain to register gain equation
+        The equation must contain "realGain" in its equation
+        Ex:= 512 - (512 / realGain) -->
+    <realToRegGain></realToRegGain>
+    <!--Register gain to real gain equation
+        The equation must contain "regGain" in its equation
+        Ex:= 512 / (512 - regGain) -->
+    <regToRealGain></regToRealGain>
+  </exposureControlInfo>
+  <!--Sequence of register settings to configure the device -->
+  <streamOnSettings>
+    <regSetting>
+      <operation>WRITE</operation>
+      <slaveAddr>0xFF</slaveAddr>
+      <registerAddr>0xDEAD</registerAddr>
+      <registerData>0xFF</registerData>
+      <regAddrType>2</regAddrType>
+      <regDataType>1</regDataType>
+      <delayUs>0</delayUs>
+    </regSetting>
+  </streamOnSettings>
+  <!--Sequence of register settings to configure the device -->
+  <streamOffSettings>
+    <regSetting>
+      <operation>WRITE</operation>
+      <slaveAddr>0xFF</slaveAddr>
+      <registerAddr>0xDEAD</registerAddr>
+      <registerData>0xFF</registerData>
+      <regAddrType>2</regAddrType>
+      <regDataType>1</regDataType>
+      <delayUs>0</delayUs>
+    </regSetting>
+  </streamOffSettings>
+  <!--Sequence of register settings to configure the device -->
+  <groupHoldOnSettings>
+     <regSetting>
+       <operation>WRITE</operation>
+       <slaveAddr>0xFF</slaveAddr>
+       <registerAddr>0xDEAD</registerAddr>
+       <registerData>0xFF</registerData>
+       <regAddrType>2</regAddrType>
+       <regDataType>1</regDataType>
+       <delayUs>0</delayUs>
+     </regSetting>
+  </groupHoldOnSettings>
+  <!--Sequence of register settings to configure the device -->
+  <groupHoldOffSettings>
+     <regSetting>
+       <operation>WRITE</operation>
+       <slaveAddr>0xFF</slaveAddr>
+       <registerAddr>0xDEAD</registerAddr>
+       <registerData>0xFF</registerData>
+       <regAddrType>2</regAddrType>
+       <regDataType>1</regDataType>
+       <delayUs>0</delayUs>
+     </regSetting>
+  </groupHoldOffSettings>
+  <!--Sequence of register settings to configure the device -->
+  <initSettings>
+    <!--Specify which sensor version can support this setting-->
+    <sensorVersion>0</sensorVersion>
+    <initSetting>
+      <regSetting>
+         <operation>WRITE</operation>
+         <slaveAddr>0xFF</slaveAddr>
+         <registerAddr>0xDEAD</registerAddr>
+         <registerData>0xFF</registerData>
+         <regAddrType>2</regAddrType>
+         <regDataType>1</regDataType>
+         <delayUs>0</delayUs>
+       </regSetting>
+    </initSetting>
+  </initSettings>
+  <testPatternInfo>
+    <testPatternData>
+      <!--Test pattern mode
+          Supported modes are: OFF, SOLID_COLOR, COLOR_BARS, COLOR_BARS_FADE_TO_GRAY, PN9, CUSTOM1 -->
+      <mode>OFF</mode>
+      <!--Sequence of register settings to configure the device -->
+      <settings>
+        <!--Register setting configuration
+            Contains: register address, register data, register address type, register data type,
+            operation and delay in micro seconds -->
+        <regSetting>
+          <!--Register address that is accessed -->
+          <registerAddr>0x0600</registerAddr>
+          <!--If operation is WRITE, registerData is the data value to be written into the specified register address
+              If operation is READ, registerData is the number of bytes to be read from the specified register address -->
+          <registerData>0</registerData>
+          <!--Register address / data size in bytes -->
+          <regAddrType range="[1,4]">2</regAddrType>
+          <!--Register address / data size in bytes -->
+          <regDataType range="[1,4]">1</regDataType>
+          <!--Type of the operation
+              Valid values are: WRITE, READ, POLL -->
+          <operation>WRITE</operation>
+          <!--Delay in micro seconds. Delay is 0 if not explicitly provided -->
+          <delayUs>0</delayUs>
+        </regSetting>
+      </settings>
+    </testPatternData>
+  </testPatternInfo>
+  <!--Color level information
+      These are the default currents in various channels in complete dark light -->
+  <colorLevelInfo>
+    <!--White level value -->
+    <whiteLevel>1023</whiteLevel>
+    <!--Pedestal value for Red channel -->
+    <rPedestal>64</rPedestal>
+    <!--Pedestal value for GreenRed channel -->
+    <grPedestal>64</grPedestal>
+    <!--Pedestal value for Blue channel -->
+    <bPedestal>64</bPedestal>
+    <!--Pedestal value for Green Blue channel -->
+    <gbPedestal>64</gbPedestal>
+  </colorLevelInfo>
+  <!--Information about black regions
+      Multiple black regions can be provided if applicable -->
+  <opticalBlackRegionInfo>
+    <!--Frame dimension: contains xStart, yStart, width and height -->
+    <dimension>
+      <xStart>0</xStart>
+      <yStart>0</yStart>
+      <width>0</width>
+      <height>0</height>
+    </dimension>
+  </opticalBlackRegionInfo>
+  <!--Information about the pixel array
+      Active dimension and dummy pixels width are provided -->
+  <pixelArrayInfo>
+    <!--Width and height of the frame or subframe -->
+    <activeDimension>
+      <width>1920</width>
+      <height>1024</height>
+    </activeDimension>
+    <!--Dummy pixels surrounding the active pixel array -->
+    <dummyInfo>
+      <left>0</left>
+      <right>0</right>
+      <top>0</top>
+      <bottom>0</bottom>
+    </dummyInfo>
+  </pixelArrayInfo>
+  <!--Application delay information -->
+  <delayInfo>
+    <!--Number of frames required to apply the linecount -->
+    <linecount>0</linecount>
+    <!--Number of frames required to apply the gain -->
+    <gain>0</gain>
+    <!--Maximum pipeline delay in number of frames -->
+    <maxPipeline>2</maxPipeline>
+    <!--Number of frames to skip -->
+    <frameSkip>1</frameSkip>
+  </delayInfo>
+  <sensorProperty>
+    <!--Pixel size in micro meters -->
+    <pixelSize>1.12</pixelSize>
+    <!--Crop factor -->
+    <cropFactor>5.78</cropFactor>
+    <!--Sensing method of senosor
+        Supported sensing methods: UNDEFINED, ONE_CHIP_COLOR_AREA, TWO_CHIP_COLOR_AREA
+        THREE_CHIP_COLOR_AREA, COLOR_SEQUENCE_AREA, TRILINEAR, COLOR_SEQUENCE_LINEAR -->
+    <sensingMethod>ONE_CHIP_COLOR_AREA</sensingMethod>
+    <ADCReadoutTime>0</ADCReadoutTime>
+  </sensorProperty>
+</sensorDriverData>

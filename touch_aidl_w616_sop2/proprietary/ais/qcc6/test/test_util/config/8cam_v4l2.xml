@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2017-2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0. The v4l2_node is the most important field.
+         -->
+        <properties input_id= "0" v4l2_node="/dev/video51" />
+        <display_setting display_id="0"
+            window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "1" v4l2_node="/dev/video52" />
+        <display_setting display_id="0"
+            window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "2" v4l2_node="/dev/video53" />
+        <display_setting display_id="0"
+            window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0.5" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "3" v4l2_node="/dev/video54" />
+        <display_setting display_id="0"
+            window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0.5" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "4" v4l2_node="/dev/video55" />
+        <display_setting display_id="1"
+            window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "5" v4l2_node="/dev/video56" />
+        <display_setting display_id="1"
+            window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "8" v4l2_node="/dev/video57" />
+        <display_setting display_id="1"
+            window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0.5" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+    <input_device>
+        <!-- 
+          There are 8 v4l2 nodes, /dev/video51 -> /dev/video58 on ADP board, 
+          ais_v4l2loopback_config.xml defines the relationship between input_id and v4l2_node.
+          By default /dev/video51 is relative to input_id=0
+         -->
+        <properties input_id= "9" v4l2_node="/dev/video58" />
+        <display_setting display_id="1"
+            window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0.5" />
+        <output_setting nbufs="5"  width="1920" height="1020" />
+    </input_device>
+</qcarcam_inputs>

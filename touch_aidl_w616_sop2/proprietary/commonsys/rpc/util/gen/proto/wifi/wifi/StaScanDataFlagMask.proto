@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum StaScanDataFlagMask
+{
+    SSDFM_RESERVED = 0;
+    INTERRUPTED = 1;
+}

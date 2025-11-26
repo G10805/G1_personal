@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiDebugHostWakeReasonRxIcmpPacketDetails.proto";
+import "WifiDebugHostWakeReasonRxMulticastPacketDetails.proto";
+import "WifiDebugHostWakeReasonRxPacketDetails.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiDebugHostWakeReasonStats
+{
+    int32 totalCmdEventWakeCnt = 1;
+    repeated int32 cmdEventWakeCntPerType = 2;
+    int32 totalDriverFwLocalWakeCnt = 3;
+    repeated int32 driverFwLocalWakeCntPerType = 4;
+    int32 totalRxPacketWakeCnt = 5;
+    WifiDebugHostWakeReasonRxPacketDetails rxPktWakeDetails = 6;
+    WifiDebugHostWakeReasonRxMulticastPacketDetails rxMulticastPkWakeDetails = 7;
+    WifiDebugHostWakeReasonRxIcmpPacketDetails rxIcmpPkWakeDetails = 8;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package hostapd.vendor;
+
+option optimize_for = LITE_RUNTIME;
+
+enum HostapdVendorStatusCode
+{
+    SUCCESS = 0;
+    FAILURE_UNKNOWN = 1;
+    FAILURE_ARGS_INVALID = 2;
+    FAILURE_IFACE_UNKNOWN = 3;
+}

@@ -1,0 +1,39 @@
+{
+    "QModKey_Static_VppFilter": {
+        "descriptor": "Holds the static presets specific to VPP",
+        "presets": [
+            {
+                "id": "frc",
+                "configs": {
+                    "vendor.qti-ext-vpp.mode": "HQV_MODE_MANUAL",
+                    "vendor.qti-ext-vpp-frc.mode": "FRC_MODE_VIDEO_CUSTOM",
+                    "vendor.qti-ext-vpp-frc.level": "FRC_LEVEL_HIGH",
+                    "vendor.qti-ext-vpp-frc.interp": "FRC_INTERP_CUSTOM",
+                    "vendor.qti-ext-vpp-frc.ts_start": "0",
+                    "vendor.qti-ext-vpp-frc.frame_copy_on_fallback": "1",
+                    "vendor.qti-ext-vpp-frc.frame_copy_input": "1",
+                    "vendor.qti-ext-vpp-frc.input_frame_rate": "0",
+                    "vendor.qti-ext-vpp-frc.output_frame_rate": "60"
+                }
+            }
+        ]
+    },
+
+    "QModKey_Dynamic_VppFilter": {
+        "descriptor": "Holds the dynamic presets specific to VPP",
+        "presets": [
+            {
+                "id": "bypass-disable",
+                "configs": {
+                    "vendor.qti-ext-vpp-bypass.enable": "0"
+                }
+            },
+            {
+                "id": "bypass-enable",
+                "configs": {
+                    "vendor.qti-ext-vpp-bypass.enable": "1"
+                }
+            }
+        ]
+    }
+}

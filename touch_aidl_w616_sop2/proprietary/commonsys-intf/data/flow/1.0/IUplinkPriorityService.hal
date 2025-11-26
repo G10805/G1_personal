@@ -1,0 +1,93 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.data.flow@1.0;
+
+import IUplinkPriorityIndication;
+
+/**
+ * Interface declaring uplink flow priority service.
+ */
+interface IUplinkPriorityService {
+    /**
+     * Sets the callback for the client.
+     *
+     * @param callback The async class for sending indications and responses back to client.
+     */
+    @entry
+    @callflow(next={"*"})
+    oneway setCallback(IUplinkPriorityIndication callback);
+
+     /**
+     * Adds an uplink priority flow.
+     *
+     * @param flow The Flow to be added.
+     *
+     * @return flowId Unique identifier of flow being added.
+     * @return status StatusCode of the call, which may be:
+     *   - `OK`               - Flow will attempt to be added. Status after addition will be
+     *                          sent via @1.0::IUplinkPriorityIndication().flowStatus().
+     *   - `CALLBACK_NOT_SET` - @1.0::IUplinkPriorityIndication has not been set.
+     *
+     */
+    @callflow(next={"*"})
+    addFlow(Flow flow) generates (uint32_t flowId, StatusCode status);
+
+    /**
+     * Returns a vector of FlowInfo objects corresponding to the Flows added by the client.
+     *
+     * @param flows Callback returning the vector of Flows which have been added. Includes
+     *      the flowId and FlowStatus accociated with each Flow.
+     *
+     * @return flows vector of Flow ID's and related Status for every flow added by the client.
+     */
+    @callflow(next={"*"})
+    getFlows() generates (vec<FlowInfo> flows);
+
+    /**
+     * Deletes the specific Flow if added by the client.
+     *
+     * Response for deleted Flow is @1.0::IUplinkPriorityIndication().flowStatus().
+     *
+     * @param flowId ID for the Flow to be deleted.
+     *
+     * @return status StatusCode of the call, which may be:
+     *   - `OK`               - Flow will be deleted. Status after deletion will be
+     *                          sent via @1.0::IUplinkPriorityIndication().flowStatus().
+     *                          @1.0::IUplinkPriorityIndication().flowStatus().
+     *   - `CALLBACK_NOT_SET` - @1.0::IUplinkPriorityIndication has not been set.
+     *   - `INVALID_ARGUMENTS`- flowId is not valid.
+     *
+     */
+    @callflow(next={"*"})
+    deleteFlow(int32_t flowId) generates (StatusCode status);
+
+    /**
+     * Deletes all Flows added by the client.
+     *
+     * Each deleted Flow will have a seperate response from
+     * @1.0::IUplinkPriorityIndication().flowStatus().
+     *
+     * @return status StatusCode of the call, which may be:
+     *   - `OK`               - Flows will be deleted. Status after deletion will be
+     *                          sent via @1.0::IUplinkPriorityIndication().flowStatus().
+     *   - `CALLBACK_NOT_SET` - @1.0::IUplinkPriorityIndication has not been set.
+     *
+     */
+    @callflow(next={"*"})
+    deleteAllFlows() generates (StatusCode status);
+
+    /**
+     * Called by the client to deinitialize and free up
+     * all the currently allocated resources. It is recommended to close
+     * the effect on the client side as soon as it is becomes unused.
+     *
+     * @return status OK in case the success. INVALID_STATE if the effect was already closed.
+     *
+     */
+    @exit
+    close() generates (StatusCode status);
+};

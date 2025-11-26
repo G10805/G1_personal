@@ -1,0 +1,14 @@
+{
+  "standard": [
+    "NOTICE-TARGET-SHARED_LIBRARIES*"
+  ],
+  "camera": [
+    "*camx*",
+    "*camera*",
+    "*feature2*",
+    "*chi*"
+  ],
+  "display": [
+    "*display*"
+  ]
+}

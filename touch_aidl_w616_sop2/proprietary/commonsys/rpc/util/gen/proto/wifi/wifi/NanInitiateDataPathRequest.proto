@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanDataPathChannelCfg.proto";
+import "NanDataPathSecurityConfig.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanInitiateDataPathRequest
+{
+    int32 peerId = 1;
+    bytes peerDiscMacAddr = 2;
+    NanDataPathChannelCfg channelRequestType = 3;
+    int32 channel = 4;
+    string ifaceName = 5;
+    NanDataPathSecurityConfig securityConfig = 6;
+    bytes appInfo = 7;
+    bytes serviceNameOutOfBand = 8;
+    uint32 discoverySessionId = 9;
+}

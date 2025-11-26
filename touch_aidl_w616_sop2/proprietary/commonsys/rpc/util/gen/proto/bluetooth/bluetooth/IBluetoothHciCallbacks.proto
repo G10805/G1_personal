@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package bluetooth;
+
+import "Status.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IBluetoothHciCallbacks
+{
+    message AclDataReceivedInd
+    {
+        bytes data = 1;
+    }
+
+    message HciEventReceivedInd
+    {
+        bytes event = 1;
+    }
+
+    message InitializationCompleteInd
+    {
+        Status status = 1;
+    }
+
+    message IsoDataReceivedInd
+    {
+        bytes data = 1;
+    }
+
+    message ScoDataReceivedInd
+    {
+        bytes data = 1;
+    }
+}

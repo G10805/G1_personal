@@ -1,0 +1,36 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_CFLAGS += -Wall -Werror -Wno-unused-parameter -D_FILE_OFFSET_BITS=64
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)
+
+ifneq ($(TARGET_COMPILE_WITH_MSM_KERNEL), false)
+	LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+	LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+endif
+
+LOCAL_SRC_FILES :=  uhab.c
+
+LOCAL_SHARED_LIBRARIES += liblog libcutils
+
+LOCAL_MODULE := libuhab
+
+LOCAL_VENDOR_MODULE := true
+
+LOCAL_MODULE_TAGS := optional
+
+ifeq (true,$(call math_gt_or_eq,$(SHIPPING_API_LEVEL),34))
+include $(BUILD_SHARED_LIBRARY)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmm-hab_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_HEADER_LIBRARY)
+else
+LOCAL_COPY_HEADERS_TO := mm-hab
+LOCAL_COPY_HEADERS := ./habmm.h
+include $(BUILD_SHARED_LIBRARY)
+endif
+

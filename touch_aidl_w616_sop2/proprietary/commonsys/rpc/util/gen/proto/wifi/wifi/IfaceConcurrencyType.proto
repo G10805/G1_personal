@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wifi.ict;
+
+option optimize_for = LITE_RUNTIME;
+
+enum IfaceConcurrencyType
+{
+    STA = 0;
+    AP = 1;
+    AP_BRIDGED = 2;
+    P2P = 3;
+    NAN_IFACE = 4;
+}

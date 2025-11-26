@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message GsmRand
+{
+    bytes data = 1;
+}

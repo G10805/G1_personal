@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+import "ChannelBandwidth.proto";
+import "Generation.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ApInfo
+{
+    string ifaceName = 1;
+    string apIfaceInstance = 2;
+    int32 freqMhz = 3;
+    ChannelBandwidth channelBandwidth = 4;
+    Generation generation = 5;
+    bytes apIfaceInstanceMacAddress = 6;
+}

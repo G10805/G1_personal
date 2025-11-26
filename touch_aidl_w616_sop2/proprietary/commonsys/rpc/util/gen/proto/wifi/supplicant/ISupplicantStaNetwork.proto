@@ -1,0 +1,976 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "AuthAlgMask.proto";
+import "DppConnectionKeys.proto";
+import "EapMethod.proto";
+import "EapPhase2Method.proto";
+import "GroupCipherMask.proto";
+import "GroupMgmtCipherMask.proto";
+import "ISupplicantStaNetworkCallback.proto";
+import "IfaceType.proto";
+import "KeyMgmtMask.proto";
+import "NetworkResponseEapSimGsmAuthParams.proto";
+import "NetworkResponseEapSimUmtsAuthParams.proto";
+import "OcspType.proto";
+import "PairwiseCipherMask.proto";
+import "ProtoMask.proto";
+import "SaeH2eMode.proto";
+import "TlsVersion.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ISupplicantStaNetwork
+{
+    message DisableReq
+    {
+    }
+
+    message DisableCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableReq
+    {
+        bool noConnect = 1;
+    }
+
+    message EnableCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableSaePkOnlyModeReq
+    {
+        bool enable = 1;
+    }
+
+    message EnableSaePkOnlyModeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableSuiteBEapOpenSslCiphersReq
+    {
+    }
+
+    message EnableSuiteBEapOpenSslCiphersCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableTlsSuiteBEapPhase1ParamReq
+    {
+        bool enable = 1;
+    }
+
+    message EnableTlsSuiteBEapPhase1ParamCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message GetAuthAlgReq
+    {
+    }
+
+    message GetAuthAlgCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.aam.AuthAlgMask result = 2;
+    }
+
+    message GetBssidReq
+    {
+    }
+
+    message GetBssidCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetEapAltSubjectMatchReq
+    {
+    }
+
+    message GetEapAltSubjectMatchCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapAnonymousIdentityReq
+    {
+    }
+
+    message GetEapAnonymousIdentityCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetEapCACertReq
+    {
+    }
+
+    message GetEapCACertCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapCAPathReq
+    {
+    }
+
+    message GetEapCAPathCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapClientCertReq
+    {
+    }
+
+    message GetEapClientCertCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapDomainSuffixMatchReq
+    {
+    }
+
+    message GetEapDomainSuffixMatchCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapEngineReq
+    {
+    }
+
+    message GetEapEngineCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message GetEapEngineIdReq
+    {
+    }
+
+    message GetEapEngineIdCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapIdentityReq
+    {
+    }
+
+    message GetEapIdentityCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetEapMethodReq
+    {
+    }
+
+    message GetEapMethodCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.em.EapMethod result = 2;
+    }
+
+    message GetEapPasswordReq
+    {
+    }
+
+    message GetEapPasswordCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetEapPhase2MethodReq
+    {
+    }
+
+    message GetEapPhase2MethodCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.epm.EapPhase2Method result = 2;
+    }
+
+    message GetEapPrivateKeyIdReq
+    {
+    }
+
+    message GetEapPrivateKeyIdCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEapSubjectMatchReq
+    {
+    }
+
+    message GetEapSubjectMatchCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetEdmgReq
+    {
+    }
+
+    message GetEdmgCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message GetGroupCipherReq
+    {
+    }
+
+    message GetGroupCipherCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.gcm.GroupCipherMask result = 2;
+    }
+
+    message GetGroupMgmtCipherReq
+    {
+    }
+
+    message GetGroupMgmtCipherCfm
+    {
+        HalStatus status = 1;
+        GroupMgmtCipherMask result = 2;
+    }
+
+    message GetIdReq
+    {
+    }
+
+    message GetIdCfm
+    {
+        HalStatus status = 1;
+        int32 result = 2;
+    }
+
+    message GetIdStrReq
+    {
+    }
+
+    message GetIdStrCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetInterfaceNameReq
+    {
+    }
+
+    message GetInterfaceNameCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetKeyMgmtReq
+    {
+    }
+
+    message GetKeyMgmtCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.kmm.KeyMgmtMask result = 2;
+    }
+
+    message GetOcspReq
+    {
+    }
+
+    message GetOcspCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.ot.OcspType result = 2;
+    }
+
+    message GetPairwiseCipherReq
+    {
+    }
+
+    message GetPairwiseCipherCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.pcm.PairwiseCipherMask result = 2;
+    }
+
+    message GetProtoReq
+    {
+    }
+
+    message GetProtoCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.pm.ProtoMask result = 2;
+    }
+
+    message GetPskReq
+    {
+    }
+
+    message GetPskCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetPskPassphraseReq
+    {
+    }
+
+    message GetPskPassphraseCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetRequirePmfReq
+    {
+    }
+
+    message GetRequirePmfCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message GetSaePasswordReq
+    {
+    }
+
+    message GetSaePasswordCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetSaePasswordIdReq
+    {
+    }
+
+    message GetSaePasswordIdCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetScanSsidReq
+    {
+    }
+
+    message GetScanSsidCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message GetSsidReq
+    {
+    }
+
+    message GetSsidCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetTypeReq
+    {
+    }
+
+    message GetTypeCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.it.IfaceType result = 2;
+    }
+
+    message GetWapiCertSuiteReq
+    {
+    }
+
+    message GetWapiCertSuiteCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetWepKeyReq
+    {
+        int32 keyIdx = 1;
+    }
+
+    message GetWepKeyCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetWepTxKeyIdxReq
+    {
+    }
+
+    message GetWepTxKeyIdxCfm
+    {
+        HalStatus status = 1;
+        int32 result = 2;
+    }
+
+    message GetWpsNfcConfigurationTokenReq
+    {
+    }
+
+    message GetWpsNfcConfigurationTokenCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message RegisterCallbackReq
+    {
+        optional ISupplicantStaNetworkCallback callback = 1;
+    }
+
+    message RegisterCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SelectReq
+    {
+    }
+
+    message SelectCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SendNetworkEapIdentityResponseReq
+    {
+        bytes identity = 1;
+        bytes encryptedIdentity = 2;
+    }
+
+    message SendNetworkEapIdentityResponseCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SendNetworkEapSimGsmAuthFailureReq
+    {
+    }
+
+    message SendNetworkEapSimGsmAuthFailureCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SendNetworkEapSimGsmAuthResponseReq
+    {
+        repeated NetworkResponseEapSimGsmAuthParams params = 1;
+    }
+
+    message SendNetworkEapSimGsmAuthResponseCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SendNetworkEapSimUmtsAuthFailureReq
+    {
+    }
+
+    message SendNetworkEapSimUmtsAuthFailureCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SendNetworkEapSimUmtsAuthResponseReq
+    {
+        NetworkResponseEapSimUmtsAuthParams params = 1;
+    }
+
+    message SendNetworkEapSimUmtsAuthResponseCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SendNetworkEapSimUmtsAutsResponseReq
+    {
+        bytes auts = 1;
+    }
+
+    message SendNetworkEapSimUmtsAutsResponseCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetAuthAlgReq
+    {
+        wifi.supplicant.aam.AuthAlgMask authAlgMask = 1;
+    }
+
+    message SetAuthAlgCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetBssidReq
+    {
+        bytes bssid = 1;
+    }
+
+    message SetBssidCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetDppKeysReq
+    {
+        DppConnectionKeys keys = 1;
+    }
+
+    message SetDppKeysCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapAltSubjectMatchReq
+    {
+        string match = 1;
+    }
+
+    message SetEapAltSubjectMatchCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapAnonymousIdentityReq
+    {
+        bytes identity = 1;
+    }
+
+    message SetEapAnonymousIdentityCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapCACertReq
+    {
+        string path = 1;
+    }
+
+    message SetEapCACertCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapCAPathReq
+    {
+        string path = 1;
+    }
+
+    message SetEapCAPathCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapClientCertReq
+    {
+        string path = 1;
+    }
+
+    message SetEapClientCertCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapDomainSuffixMatchReq
+    {
+        string match = 1;
+    }
+
+    message SetEapDomainSuffixMatchCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapEncryptedImsiIdentityReq
+    {
+        bytes identity = 1;
+    }
+
+    message SetEapEncryptedImsiIdentityCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapEngineReq
+    {
+        bool enable = 1;
+    }
+
+    message SetEapEngineCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapEngineIDReq
+    {
+        string id = 1;
+    }
+
+    message SetEapEngineIDCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapErpReq
+    {
+        bool enable = 1;
+    }
+
+    message SetEapErpCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapIdentityReq
+    {
+        bytes identity = 1;
+    }
+
+    message SetEapIdentityCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapMethodReq
+    {
+        wifi.supplicant.em.EapMethod method = 1;
+    }
+
+    message SetEapMethodCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapPasswordReq
+    {
+        bytes password = 1;
+    }
+
+    message SetEapPasswordCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapPhase2MethodReq
+    {
+        wifi.supplicant.epm.EapPhase2Method method = 1;
+    }
+
+    message SetEapPhase2MethodCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapPrivateKeyIdReq
+    {
+        string id = 1;
+    }
+
+    message SetEapPrivateKeyIdCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEapSubjectMatchReq
+    {
+        string match = 1;
+    }
+
+    message SetEapSubjectMatchCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEdmgReq
+    {
+        bool enable = 1;
+    }
+
+    message SetEdmgCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetGroupCipherReq
+    {
+        wifi.supplicant.gcm.GroupCipherMask groupCipherMask = 1;
+    }
+
+    message SetGroupCipherCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetGroupMgmtCipherReq
+    {
+        GroupMgmtCipherMask groupMgmtCipherMask = 1;
+    }
+
+    message SetGroupMgmtCipherCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetIdStrReq
+    {
+        string idStr = 1;
+    }
+
+    message SetIdStrCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetKeyMgmtReq
+    {
+        wifi.supplicant.kmm.KeyMgmtMask keyMgmtMask = 1;
+    }
+
+    message SetKeyMgmtCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetOcspReq
+    {
+        wifi.supplicant.ot.OcspType ocspType = 1;
+    }
+
+    message SetOcspCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetPairwiseCipherReq
+    {
+        wifi.supplicant.pcm.PairwiseCipherMask pairwiseCipherMask = 1;
+    }
+
+    message SetPairwiseCipherCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetPmkCacheReq
+    {
+        bytes serializedEntry = 1;
+    }
+
+    message SetPmkCacheCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetProactiveKeyCachingReq
+    {
+        bool enable = 1;
+    }
+
+    message SetProactiveKeyCachingCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetProtoReq
+    {
+        wifi.supplicant.pm.ProtoMask protoMask = 1;
+    }
+
+    message SetProtoCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetPskReq
+    {
+        bytes psk = 1;
+    }
+
+    message SetPskCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetPskPassphraseReq
+    {
+        string psk = 1;
+    }
+
+    message SetPskPassphraseCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetRequirePmfReq
+    {
+        bool enable = 1;
+    }
+
+    message SetRequirePmfCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetSaeH2eModeReq
+    {
+        wifi.supplicant.shm.SaeH2eMode mode = 1;
+    }
+
+    message SetSaeH2eModeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetSaePasswordReq
+    {
+        string saePassword = 1;
+    }
+
+    message SetSaePasswordCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetSaePasswordIdReq
+    {
+        string saePasswordId = 1;
+    }
+
+    message SetSaePasswordIdCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetScanSsidReq
+    {
+        bool enable = 1;
+    }
+
+    message SetScanSsidCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetSsidReq
+    {
+        bytes ssid = 1;
+    }
+
+    message SetSsidCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetUpdateIdentifierReq
+    {
+        int32 id = 1;
+    }
+
+    message SetUpdateIdentifierCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWapiCertSuiteReq
+    {
+        string suite = 1;
+    }
+
+    message SetWapiCertSuiteCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWepKeyReq
+    {
+        int32 keyIdx = 1;
+        bytes wepKey = 2;
+    }
+
+    message SetWepKeyCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWepTxKeyIdxReq
+    {
+        int32 keyIdx = 1;
+    }
+
+    message SetWepTxKeyIdxCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetRoamingConsortiumSelectionReq
+    {
+        bytes selectedRcoi = 1;
+    }
+
+    message SetRoamingConsortiumSelectionCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetMinimumTlsVersionEapPhase1ParamReq
+    {
+        wifi.supplicant.tv.TlsVersion tlsVersion = 1;
+    }
+
+    message SetMinimumTlsVersionEapPhase1ParamCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetStrictConservativePeerModeReq
+    {
+        bool enable = 1;
+    }
+
+    message SetStrictConservativePeerModeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

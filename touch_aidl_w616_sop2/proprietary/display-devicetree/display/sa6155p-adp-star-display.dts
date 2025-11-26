@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+
+#include "sa6155-display.dtsi"
+#include "sa6155-display-shd.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. SA6155P ADP-STAR";
+	compatible = "qcom,sa6155p-adp-star","qcom,adp-star", "qcom,sa6155p-adp-air", "qcom,sa6155p", "qcom,adp-air";
+	qcom,msm-id = <377 0>, <380 0>;
+	qcom,board-id = <0x010019 0>, <0x3010019 0>;
+};

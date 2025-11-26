@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum IpVersion
+{
+    VERSION_4 = 0;
+    VERSION_6 = 1;
+}

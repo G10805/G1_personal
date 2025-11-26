@@ -1,0 +1,8 @@
+{
+         "plugin_state": "enforced",
+         "known_aosp_project_list": ["system","frameworks","hidl","hardware","cts","packages"],
+         "allowed_paths": ["$QCPATH/interfaces","$QCPATH/interfaces-noship","vendor/qcom/opensource/interfaces"],
+         "package_convention_list": ["vendor.qti"]
+
+}
+

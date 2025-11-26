@@ -1,0 +1,24 @@
+Qualcomm Technologies, Inc.
+
+MSM HDCP driver
+
+msm-hdcp is the interface driver to facilitate the communication between DP driver and Qseecom interface of HDCP TA.
+msm-hdcp  interface: Required properties:
+- compatible:		Should be "qcom,msm-hdcp".
+- cell-index:		Specifies the instance.
+
+Optional properties:
+- qcom,msm-hdcp-master:	Specify the master msm-hdcp instance.
+- dpu-index:		Specifies the DPU Index.
+- max_hdcp_key_verify_retries:  Specifies the number of retries to do for HDCP key
+				verification when Qseecomd doesn't start in time during boot.
+				For each retry, there is a sleep of 100ms.
+
+Example:
+	qcom_msmhdcp1: qcom,msm_hdcp@1 {
+		compatible = "qcom,msm-hdcp";
+		cell-index = <1>;
+		dpu-index = <0>;
+		max_hdcp_key_verify_retries = <40>;
+		qcom,msm-hdcp-master = <&qcom_msmhdcp0>;
+	};

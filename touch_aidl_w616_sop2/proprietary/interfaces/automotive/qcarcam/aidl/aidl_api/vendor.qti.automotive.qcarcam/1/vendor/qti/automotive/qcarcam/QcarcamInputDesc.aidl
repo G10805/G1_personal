@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+
+package vendor.qti.automotive.qcarcam;
+
+@VintfStability
+@Backing(type="int")
+enum QcarcamInputDesc {
+    QCARCAM_INPUT_TYPE_EXT_REAR = 0,
+    QCARCAM_INPUT_TYPE_EXT_FRONT = 1,
+    QCARCAM_INPUT_TYPE_EXT_LEFT = 2,
+    QCARCAM_INPUT_TYPE_EXT_RIGHT = 3,
+    QCARCAM_INPUT_TYPE_DRIVER = 4,
+    QCARCAM_INPUT_TYPE_LANE_WATCH = 5,
+    QCARCAM_INPUT_TYPE_DIGITAL_MEDIA = 6,
+    QCARCAM_INPUT_TYPE_ANALOG_MEDIA = 7,
+    QCARCAM_INPUT_TYPE_GESTURE = 8,
+    QCARCAM_INPUT_TYPE_IRIS = 9,
+    QCARCAM_INPUT_TYPE_FINGERPRINT = 10,
+    QCARCAM_INPUT_TYPE_TUNER = 11,
+    QCARCAM_INPUT_TYPE_TESTPATTERN = 255,
+    QCARCAM_INPUT_TYPE_USER_DEFINED_START = 256,
+    QCARCAM_INPUT_NUM,
+    QCARCAM_INPUT_MAX = 0x7FFFFFFF,
+}

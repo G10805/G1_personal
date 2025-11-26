@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanIdentityResolutionAttribute.proto";
+import "NanPairingRequestType.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanPairingRequestInd
+{
+    uint32 discoverySessionId = 1;
+    int32 peerId = 2;
+    bytes peerDiscMacAddr = 3;
+    int32 pairingInstanceId = 4;
+    NanPairingRequestType requestType = 5;
+    bool enablePairingCache = 6;
+    NanIdentityResolutionAttribute peerNira = 7;
+}

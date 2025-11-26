@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum WifiDebugRingBufferFlags
+{
+    WDRBF_RESERVED = 0;
+    HAS_BINARY_ENTRIES = 1;
+    HAS_ASCII_ENTRIES = 2;
+    HAS_PER_PACKET_ENTRIES = 4;
+}

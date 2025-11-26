@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message NetworkRequestEapSimUmtsAuthParams
+{
+    bytes rand = 1;
+    bytes autn = 2;
+}

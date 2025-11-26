@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.perf@2.3;
+
+import @2.2::IPerf;
+
+interface IPerf extends @2.2::IPerf {
+
+    perfHintAcqRel(int32_t pl_handle, uint32_t hint, string pkg_name, int32_t duration, int32_t hint_type, vec<int32_t> reserved) generates (int32_t ret);
+    perfHintRenew(int32_t pl_handle, uint32_t hint, string pkg_name, int32_t duration, int32_t hint_type, vec<int32_t> reserved) generates (int32_t ret);
+
+};
+

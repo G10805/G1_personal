@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===============================================================================
+
+  Copyright (c) 2013-2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+===============================================================================
+-->
+
+<tns:secimage xmlns:tns="http://www.qualcomm.com/secimage"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.qualcomm.com/secimage ../xsd/secimage.xsd">
+
+    <metadata>
+        <chipset>aic100</chipset>
+        <version>2.0</version>
+    </metadata>
+
+    <!--
+       See documentation on general_properties below.
+    -->
+    <general_properties>
+        <selected_signer>local_v2</selected_signer>
+        <selected_encryptor></selected_encryptor>
+        <selected_cert_config>qti_presigned_certs</selected_cert_config>
+        <cass_capability>secboot_sha2_pss_subca1</cass_capability>
+
+        <key_size>4096</key_size>
+        <exponent>65537</exponent>
+
+        <mrc_index>0</mrc_index>
+        <num_root_certs>1</num_root_certs>
+        <max_num_root_certs>4</max_num_root_certs>
+        <root_revoke_activate_enable>disable</root_revoke_activate_enable>
+
+        <msm_part>0x101240E1</msm_part>
+        <soc_hw_version>0x60110100</soc_hw_version>
+        <soc_vers>0x6011</soc_vers>
+        <in_use_soc_hw_version>enable</in_use_soc_hw_version>
+        <use_serial_number_in_signing>disable</use_serial_number_in_signing>
+        <oem_id_independent>disable</oem_id_independent>
+        <oem_id>0x0000</oem_id>
+        <model_id>0x0000</model_id>
+        <debug>disable</debug>
+        <multi_serial_numbers>
+            <!--<serial>0x12345678</serial>-->
+        </multi_serial_numbers>
+        <serial_number></serial_number> <!-- This is used when use_serial_number_in_signing is set to 1, populate with chip serial number: ex: 0x12345678 -->
+
+        <secboot_version>3.0</secboot_version>
+        <qti_sign>false</qti_sign>
+        <oem_sign>true</oem_sign>
+
+        <max_cert_size>2048</max_cert_size>
+        <num_certs_in_certchain>3</num_certs_in_certchain>
+
+        <hmac>false</hmac>
+        <dsa_type>ecdsa</dsa_type>
+        <ecdsa_curve>secp384r1</ecdsa_curve>
+        <hash_algorithm>sha384</hash_algorithm>
+        <!-- aic100 supports both ECC & RSA. To configure RSA use the below:
+        <dsa_type>rsa</dsa_type>
+        <rsa_padding>pss</rsa_padding>
+        <hash_algorithm>sha256</hash_algorithm>
+        -->
+        <segment_hash_algorithm>sha384</segment_hash_algorithm>
+    </general_properties>
+
+    <!--
+        ***general_properties***
+
+        The default properties for all images. These properties may be overridden
+        per image in the 'images' section below as needed.
+
+        Supported signer are:
+        local: use local signer with test keys
+        csms: generate tosign file for csms upload (first run)
+              package csms output zip to form signed image (second run)
+        cass: use cass signer with production key
+
+        Supported encryptor are:
+        ssd_encryption: legacy encryption for OTA, supports MBN and ELF images.
+        unified_encryption_2_0: supports ELF images. Image must be signed to encrypt
+
+        Capability selected the signing key used. Currently,
+        the following two capabilities are supported. OEM IDs
+        are restricted to 0 or 1.
+
+        OEM may obtain additional capabilities from CASS support.
+
+        secboot_sha2_root : Use SHA256 signed root cert.
+                            Same as the CSMS SHA256 signed root cert.
+        secboot_sha1_root : Use SHA1 signed root cert.
+                            Same as the CSMS SHA1 signed root cert.
+
+        If SHA256 is selected, the PK_HASH_IN_FUSE needs to be blown,
+        and the ROOT CERT HASH below needs to be blown in OEM PK HASH:
+        7be49b72f9e4337223ccb84d6eccca4e61ce16e3602ac2008cb18b75babe6d09
+
+        msm_part: jtag_id for signing. (in hex)
+        oem_id: oem_id for signing. (in hex)
+        model_id: model_id for signing. (in hex)
+        debug: debug_id for signing. (in hex)
+        exponent: exponent value used in attestation key generation.
+
+        max_cert_size: Maximum size (in bytes) of one certificate.
+        key_size: Size (in bits) of the key used for signing.
+        num_certs_in_certchain: Number of certificates in the certificate chain.
+        num_root_certs: Number of root certificates in the certificate chain.
+    -->
+
+    <parsegen>
+        <!--
+        Parsegen information by default will be read from parsegen_config.xml.
+        Additional image_id's can be included here or existing image_id's may be overwritten
+        to be generated with the default image_ids.
+        -->
+    </parsegen>
+
+    <!-- Signing configurations used by secimage. -->
+    <signing>
+        <signer_attributes>
+            <!--
+                Use of CASS signer will require additional license agreement
+                and contract. Hardware token is required for access.
+            -->
+            <cass_signer_attributes>
+                <!--
+                    keystore_type: PKCS11 (hardware token)
+                    token_password: User will be prompted if password
+                                    is an empty string
+                    token_driver_home: Safenet driver location
+                -->
+                <user_identity>
+                    <keystore_type>PKCS11</keystore_type>
+                    <token_password></token_password>
+                    <token_driver_home>
+                        <windows>C:/WINDOWS/SYSTEM32/eTpkcs11.dll</windows>
+                        <linux>/usr/lib/libeTPkcs11.so</linux>
+                    </token_driver_home>
+                </user_identity>
+            </cass_signer_attributes>
+        </signer_attributes>
+    </signing>
+
+    <data_provisioning>
+        <base_path>./../../resources/data_prov_assets/</base_path>
+    </data_provisioning>
+
+    <post_process>
+        <pil_splitter>$(META_BUILD)/common/tools/misc/pil-splitter.py</pil_splitter>
+    </post_process>
+
+    <images_list>
+        <image sign_id="sbl1" name="sbl1.mbn" image_type="elf_end_aligned">
+            <general_properties_overrides>
+                <sw_id>0x00000000</sw_id>
+                <debug>nop</debug>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="sbl1_nand" name="sbl1.mbn" image_type="elf_preamble">
+            <general_properties_overrides>
+                <sw_id>0x00000000</sw_id>
+                <debug>nop</debug>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="nsp" name="nsp.elf" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x00000002</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="xbl_sec" name="xbl_sec.mbn" image_type="elf_post_phdr_load_aligned">
+            <general_properties_overrides>
+                <sw_id>0x0000000B</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+                <oem_id_independent>enable</oem_id_independent>
+                <qti_sign>true</qti_sign>
+                <oem_sign>false</oem_sign>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="qsm" name="qsm.elf" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000E</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+
+        <image sign_id="pvs" name="pvs.elf" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000F</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="sti" name="sti.elf" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x00000011</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="xbl_config" name="xbl_config.elf" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x00000025</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="secelf" name="sec.elf" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000002B</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="bist" name="bist.elf" image_type="elf_has_ht">
+           <general_properties_overrides>
+               <sw_id>0x00000031</sw_id>
+               <anti_rollback_version>0x00000000</anti_rollback_version>
+           </general_properties_overrides>
+        </image>
+
+         <image sign_id="dbgp_ap" image_type="elf_has_ht" output_file_name="apdp.mbn">
+            <general_properties_overrides>
+                <sw_id>0x00000200</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="dbgp" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x00000200</sw_id>
+                <anti_rollback_version>0x00000000</anti_rollback_version>
+            </general_properties_overrides>
+        </image>
+    </images_list>
+</tns:secimage>

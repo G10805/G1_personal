@@ -1,0 +1,34 @@
+/*!
+ *
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.spu@2.0;
+
+interface ISPComSharedBuffer {
+
+    /**
+     * Copy data from hidl_memory shared between SPU HAL client and SPU HAL
+     * server to DMA buffer shared between SPU HAL server and SPU
+     *
+     * @param  offset  Offset in shared memory to start copy from
+     * @param  size    Number of bytes to copy
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    copyToSpu(uint32_t offset, uint32_t size) generates(int32_t error);
+
+    /**
+     * Copy data from DMA buffer shared between SPU HAL server and SPU to
+     * hidl_memory shared between SPU HAL client and SPU HAL server
+     *
+     * @param   offset  Offset in shared memory to start copy from
+     * @param   size    Number of bytes to copy
+     *
+     * @return  error   Zero on success or non-zero error code on failure
+     */
+    copyFromSpu(uint32_t offset, uint32_t size) generates(int32_t error);
+};

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+========================================================================
+   Copyright(c) 2017-2018 Qualcomm Technologies, Inc.
+   All Rights Reserved.
+   Confidential and Proprietary - Qualcomm Technologies, Inc.
+========================================================================
+-->
+<chromatixAFTuningSoftwareStatistics
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="..\..\xsd\stats\af\afsoftwarestatelements.xsd">
+  <module_version major_revision="7" minor_revision="0" incr_revision="0"/>
+  <parameter_version>
+    <revision>"B"</revision>
+  </parameter_version>
+  <SWFilterDefault>
+    <filterType>0</filterType>
+    <FIR>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <FVMinHigh>0</FVMinHigh>
+      <FVMinLow>0</FVMinLow>
+      <coefficientlength>0</coefficientlength>
+    </FIR>
+    <IIR>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <FVMinHigh>0</FVMinHigh>
+      <FVMinLow>0</FVMinLow>
+      <coefficientlength>0</coefficientlength>
+    </IIR>
+  </SWFilterDefault>
+  <SWFilterFace>
+    <filterType>0</filterType>
+    <FIR>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <FVMinHigh>0</FVMinHigh>
+      <FVMinLow>0</FVMinLow>
+      <coefficientlength>0</coefficientlength>
+    </FIR>
+    <IIR>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <FVMinHigh>0</FVMinHigh>
+      <FVMinLow>0</FVMinLow>
+      <coefficientlength>0</coefficientlength>
+    </IIR>
+  </SWFilterFace>
+  <SWFilterLowLight>
+    <filterType>0</filterType>
+    <FIR>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <FVMinHigh>0</FVMinHigh>
+      <FVMinLow>0</FVMinLow>
+      <coefficientlength>0</coefficientlength>
+    </FIR>
+    <IIR>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffA>0</filterCoeffA>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <filterCoeffB>0</filterCoeffB>
+      <FVMinHigh>0</FVMinHigh>
+      <FVMinLow>0</FVMinLow>
+      <coefficientlength>0</coefficientlength>
+    </IIR>
+  </SWFilterLowLight>
+  <SWFVMinimumLuxTriggerHigh>0</SWFVMinimumLuxTriggerHigh>
+  <SWFVMinimumLuxTriggerLow>0</SWFVMinimumLuxTriggerLow>
+</chromatixAFTuningSoftwareStatistics>

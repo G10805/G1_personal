@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiStatusCode.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifiEventCallback
+{
+    message OnFailureInd
+    {
+        wifi.wsc.WifiStatusCode status = 1;
+    }
+
+    message OnStartInd
+    {
+    }
+
+    message OnStopInd
+    {
+    }
+
+    message OnSubsystemRestartInd
+    {
+        wifi.wsc.WifiStatusCode status = 1;
+    }
+}

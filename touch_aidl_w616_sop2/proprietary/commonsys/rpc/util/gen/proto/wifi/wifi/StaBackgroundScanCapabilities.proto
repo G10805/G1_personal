@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message StaBackgroundScanCapabilities
+{
+    int32 maxCacheSize = 1;
+    int32 maxBuckets = 2;
+    int32 maxApCachePerScan = 3;
+    int32 maxReportingThreshold = 4;
+}

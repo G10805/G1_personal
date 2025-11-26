@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum RttType
+{
+    RT_RESERVED = 0;
+    ONE_SIDED = 1;
+    TWO_SIDED = 2;
+}

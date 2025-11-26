@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package wifi;
+
+import "MacAddress.proto";
+import "NanDiscoveryCommonConfig.proto";
+import "NanPairingConfig.proto";
+import "NanSrfType.proto";
+import "NanSubscribeType.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanSubscribeRequest
+{
+    NanDiscoveryCommonConfig baseConfigs = 1;
+    NanSubscribeType subscribeType = 2;
+    NanSrfType srfType = 3;
+    bool srfRespondIfInAddressSet = 4;
+    bool shouldUseSrf = 5;
+    bool isSsiRequiredForMatch = 6;
+    repeated MacAddress intfAddr = 7;
+    NanPairingConfig pairingConfig = 8;
+    bytes identityKey = 9;
+}
