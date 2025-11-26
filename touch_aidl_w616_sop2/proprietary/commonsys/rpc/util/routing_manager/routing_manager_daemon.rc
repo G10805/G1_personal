@@ -1,4 +1,0 @@
-service routing_manager_daemon /vendor/bin/routing_manager_daemon
-    class hal
-    user vendor_someip
-    group vendor_someip

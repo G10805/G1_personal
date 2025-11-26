@@ -1,6 +1,0 @@
-<manifest version="1.0" type="device">
-    <hal format="aidl">
-        <name>vendor.visteon.hardware.interfaces.touch</name>
-        <fqname>ITouch/default</fqname>
-    </hal>
-</manifest>

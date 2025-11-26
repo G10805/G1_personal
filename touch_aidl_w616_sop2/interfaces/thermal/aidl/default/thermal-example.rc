@@ -1,4 +1,0 @@
-service vendor.thermal-example /vendor/bin/hw/android.hardware.thermal-service.example
-    class hal
-    user nobody
-    group system

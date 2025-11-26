@@ -1,4 +1,0 @@
-service vendor.secure_element /vendor/bin/hw/android.hardware.secure_element-service.example
-    class hal
-    user nobody
-    group nobody

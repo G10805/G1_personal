@@ -1,8 +1,0 @@
-cc_library_headers {
-    name: "libqc2audio_base_headers",
-    vendor_available: true,
-    export_include_dirs: [
-        "include",
-        "target",
-    ],
-}

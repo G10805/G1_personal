@@ -1,1 +1,0 @@
-SHA256(qpsa_16_roots.bin)= 7ddd3733e04e8132b206aaf3f5eb18724e38b8b418ff25dfdb395b139228d7a3

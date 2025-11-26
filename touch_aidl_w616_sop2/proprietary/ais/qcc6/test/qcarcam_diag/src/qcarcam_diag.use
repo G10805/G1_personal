@@ -1,6 +1,0 @@
-Usage: qcarcam_diag [-interval=<usec interval>]
-
-QCarCam diagnostic application, continuously gets the system diagnostic info
-Use -interval to specify delay in usec between queries
-
-Launch form command line "./qcarcam_diag"
