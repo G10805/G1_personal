@@ -1,0 +1,50 @@
+// FIXME: your file license if you have one
+
+cc_binary {
+    // FIXME: this should only be -impl for a passthrough hal.
+    // In most cases, to convert this to a binderized implementation, you should:
+    // - change '-impl' to '-service' here and make it a cc_binary instead of a
+    //   cc_library_shared.
+    // - add a *.rc file for this module.
+    // - delete HIDL_FETCH_I* functions.
+    // - call configureRpcThreadpool and registerAsService on the instance.
+    // You may also want to append '-impl/-service' with a specific identifier like
+    // '-vendor' or '-<hardware identifier>' etc to distinguish it.
+    name: "vendor.visteon.touch@1.0-service",
+    vendor: true,
+    relative_install_path: "hw",
+    // FIXME: this should be 'vendor: true' for modules that will eventually be
+    // on AOSP.
+    proprietary: true,
+    init_rc: ["vendor.visteon.hardware.interfaces.touch.rc"],
+    vintf_fragments: ["vendor.visteon.hardware.interfaces.touch.xml"],
+    srcs: [
+        "*.cpp",
+    ],
+    include_dirs: [
+    "vendor/visteon/hardware/interfaces/touch/1.0",
+   // "bits",
+  ],
+
+    shared_libs: [
+        "libhidlbase",
+        "libutils",
+ 	      "liblog",
+        "libsysutils",
+        "libutils",
+        "libcutils",
+        "libbase",
+        "libbinder",
+        "libhardware",
+        "vendor.visteon.hardware.interfaces.touch@1.0",
+    ],
+           cflags: [
+        "-DLOG_NDEBUG=1",
+        "-DLOG_TAG=\"Touch_service\"",
+        "-Wall",
+        "-Wextra",
+        "-Wno-error",
+        "-Wno-unused-parameter",
+        "-fexceptions",
+    ],
+}

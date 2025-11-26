@@ -1,0 +1,6 @@
+package vendor.visteon.hardware.interfaces.touch@1.0;
+
+interface ITouchCallback {
+	oneway onTouchReceived(int32_t in_id);
+};
+
