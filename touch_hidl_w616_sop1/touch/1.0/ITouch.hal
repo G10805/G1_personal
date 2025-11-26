@@ -1,7 +1,0 @@
-package vendor.visteon.hardware.interfaces.touch@1.0;
-
-import vendor.visteon.hardware.interfaces.touch@1.0::ITouchCallback;
-
-interface ITouch {
-	registerCallback(ITouchCallback obj, int32_t clientID);
-};
