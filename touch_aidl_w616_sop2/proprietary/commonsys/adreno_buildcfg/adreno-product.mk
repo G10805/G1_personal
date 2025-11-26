@@ -1,7 +1,0 @@
-PRODUCT_PACKAGES_DEBUG += init.graphics.test.rc
-
-#OPENCL_SYSTEM
-OPENCL_SYSTEM := libOpenCL_system
-
-PRODUCT_PACKAGES += $(OPENCL_SYSTEM)
-

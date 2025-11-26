@@ -1,5 +1,0 @@
-service vendor.earc-default /vendor/bin/hw/android.hardware.tv.hdmi.earc-service
-    interface aidl android.hardware.tv.hdmi.earc.IEArc/default
-    class hal
-    user system
-    group system

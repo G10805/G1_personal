@@ -1,6 +1,0 @@
-RAMDISK_SNAPSHOT_MODULES += \
-  e2fsck_ramdisk \
-  init_first_stage \
-  ld-android \
-  libc \
-  libdl \

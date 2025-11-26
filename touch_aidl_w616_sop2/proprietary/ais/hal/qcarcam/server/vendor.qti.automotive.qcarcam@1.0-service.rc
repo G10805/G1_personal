@@ -1,5 +1,0 @@
-service qcarcam_hal /vendor/bin/hw/vendor.qti.automotive.qcarcam@1.0-service
-    class hal
-    priority -20
-    user system
-    group system camera input
