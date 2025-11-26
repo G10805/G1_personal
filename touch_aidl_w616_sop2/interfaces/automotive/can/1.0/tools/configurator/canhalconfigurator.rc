@@ -1,4 +1,0 @@
-service canhalconfigurator /system_ext/bin/canhalconfigurator
-  class core
-  user root
-  oneshot

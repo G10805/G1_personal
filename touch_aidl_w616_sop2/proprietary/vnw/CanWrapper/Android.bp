@@ -1,5 +1,0 @@
-cc_library_headers {
-    name: "CanWrapperHeaders",
-    export_include_dirs: ["include"],
-    vendor: true,
-}
