@@ -1,5 +1,0 @@
-{
-    "appName": "tuiapp",
-    "privileges": ["TrustedUIApp", "TUICoreService", "SecureIndicator", "ConfirmationToken", "TPowerService"],
-    "services": ["TrustedUIApp"]
-}

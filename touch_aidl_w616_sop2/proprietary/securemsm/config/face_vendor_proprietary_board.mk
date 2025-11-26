@@ -1,1 +1,0 @@
-TARGET_USES_FACE := true
