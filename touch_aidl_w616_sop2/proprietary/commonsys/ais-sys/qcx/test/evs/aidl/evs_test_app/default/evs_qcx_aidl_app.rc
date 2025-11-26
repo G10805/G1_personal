@@ -1,6 +1,0 @@
-service evs_qcx_aidl_app /system/bin/evs_qcx_aidl_app
-    class hal
-    priority -20
-    user automotive_evs
-    group automotive_evs
-    disabled # will not automatically start with its class; must be explictly started.

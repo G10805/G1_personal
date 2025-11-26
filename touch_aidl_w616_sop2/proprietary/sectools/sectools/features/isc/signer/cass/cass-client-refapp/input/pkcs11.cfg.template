@@ -1,3 +1,0 @@
-name = eToken
-library = ${token_driver_home}
-description = etoken usb token

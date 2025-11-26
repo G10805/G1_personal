@@ -1,5 +1,0 @@
-service qcarcam_aidl_hal_qcc6 /vendor/bin/hw/vendor.qti.automotive.qcarcam2@V1-service-qcc6
-    class hal
-    priority -20
-    user system
-    group system camera input

@@ -1,5 +1,0 @@
-service android.hardware.automotive.can /vendor/bin/hw/android.hardware.automotive.can-service
-    class hal
-    capabilities NET_ADMIN
-    user vehicle_network
-    group system inet

@@ -1,8 +1,0 @@
-# Copyright (c) 2022 Qualcomm Technologies, Inc.
-# All Rights Reserved.
-# Confidential and Proprietary - Qualcomm Technologies, Inc.
-#
-service qti-audiocontrol-hal-aidl /vendor/bin/hw/vendor.qti.hardware.automotive.audiocontrol-service
-    class hal
-    user audioserver
-    group system

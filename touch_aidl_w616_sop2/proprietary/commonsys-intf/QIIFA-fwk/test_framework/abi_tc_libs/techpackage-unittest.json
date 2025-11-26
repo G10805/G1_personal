@@ -1,7 +1,0 @@
-{
-  "library_list": [
-  ],
-  "techpackage_name": "techpackage-unittest",
-  "enable": "true",
-  "lsdump_golden_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/abi-dumps/unittest"
-}

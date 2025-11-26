@@ -1,7 +1,0 @@
-runtime_resource_overlay {
-    name: "CarServiceResAutoTarget_Vendor",
-    resource_dirs: ["res"],
-    manifest: "AndroidManifest.xml",
-    sdk_version: "current",
-    soc_specific: true
-}

@@ -1,2 +1,0 @@
-19e11759a7a80d74965d1b31f861cd5cf728784f71e6d534aa7a0b10cb6860af vendor.qti.hardware.AMSIPC@1.0::types
-faffb905fa88f541231b53b7ab86ebce27deb7e0b507b8fe2de38467818aa395 vendor.qti.hardware.AMSIPC@1.0::IAMS
