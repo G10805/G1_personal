@@ -1,9 +1,0 @@
-# Copyright (c) 2022 Qualcomm Technologies, Inc.
-# All Rights Reserved.
-# Confidential and Proprietary - Qualcomm Technologies, Inc.
-#
-
-service vendor.vehicle-hal-qti /vendor/bin/hw/android.hardware.automotive.vehicle@V1-qti-service
-    class early_hal
-    user vehicle_network
-    group system inet input

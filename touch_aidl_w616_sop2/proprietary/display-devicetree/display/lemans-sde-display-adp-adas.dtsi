@@ -1,3 +1,0 @@
-&mdss_mdp1 {
-	compatible = "qcom,sde-kms-disregard";
-};
