@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum StaBackgroundScanLimits
+{
+    option allow_alias = true;
+    SBSL_RESERVED = 0;
+    MAX_CHANNELS = 16;
+    MAX_BUCKETS = 16;
+    MAX_AP_CACHE_PER_SCAN = 32;
+}

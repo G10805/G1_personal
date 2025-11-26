@@ -1,0 +1,7 @@
+cc_library_headers {
+    name: "libfastcv_vendor_headers",
+    export_include_dirs: ["fastcv_headers/fastcv", "fastcv_headers"],
+    owner: "qti",
+    proprietary: true,
+    relative_install_path: "fastcv",
+}

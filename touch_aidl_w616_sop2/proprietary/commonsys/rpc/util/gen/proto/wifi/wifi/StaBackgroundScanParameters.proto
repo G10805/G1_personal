@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi;
+
+import "StaBackgroundScanBucketParameters.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message StaBackgroundScanParameters
+{
+    int32 basePeriodInMs = 1;
+    int32 maxApPerScan = 2;
+    int32 reportThresholdPercent = 3;
+    int32 reportThresholdNumScans = 4;
+    repeated StaBackgroundScanBucketParameters buckets = 5;
+}

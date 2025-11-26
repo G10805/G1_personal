@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package bluetooth;
+
+option optimize_for = LITE_RUNTIME;
+
+enum Status
+{
+    SUCCESS = 0;
+    ALREADY_INITIALIZED = 1;
+    UNABLE_TO_OPEN_INTERFACE = 2;
+    HARDWARE_INITIALIZATION_ERROR = 3;
+    UNKNOWN = 4;
+}

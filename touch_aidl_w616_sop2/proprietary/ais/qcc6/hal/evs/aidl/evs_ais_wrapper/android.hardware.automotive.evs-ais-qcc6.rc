@@ -1,0 +1,17 @@
+service android.hardware.automotive.evs-ais-qcc6 /vendor/bin/android.hardware.automotive.evs-ais-qcc6
+    class early_hal
+    priority -20
+    user system
+    group automotive_evs camera
+    onrestart restart automotive_display
+    disabled
+
+on late-init
+    start android.hardware.automotive.evs-ais-qcc6
+    start automotive_display
+
+on userspace-reboot-resume
+    restart android.hardware.automotive.evs-ais-qcc6
+
+on property:vendor.evs.qcc6.hal.ready=1
+    restart evsmanagerd

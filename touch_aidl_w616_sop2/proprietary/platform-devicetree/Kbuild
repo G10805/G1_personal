@@ -1,0 +1,21 @@
+ifneq ($(CONFIG_QTI_QUIN_GVM), y)
+# For Metal targets
+dtbo-$(CONFIG_ARCH_SA6155) += sa6155p-platform-drivers.dtbo
+dtbo-$(CONFIG_ARCH_SA8155) += sa8155p-platform-drivers.dtbo
+dtbo-$(CONFIG_ARCH_SA8195) += sa8195p-platform-drivers.dtbo
+else
+# For GVM targets
+dtbo-y += sa8155-vm-la-platform-drivers.dtbo
+dtbo-y += sa8195-vm-la-platform-drivers.dtbo
+dtbo-y += sa6155-vm-la-platform-drivers.dtbo
+dtbo-y += direwolf-vm-la-platform-drivers.dtbo
+dtbo-y += direwolf-vm-lv-platform-drivers.dtbo
+dtbo-y += lemans-vm-la-platform-drivers.dtbo
+dtbo-y += lemans-vm-lv-platform-drivers.dtbo
+dtbo-y += monaco-vm-la-platform-drivers.dtbo
+dtbo-y += monaco-vm-lv-platform-drivers.dtbo
+endif
+
+always-y	:= $(dtb-y) $(dtbo-y)
+subdir-y	:= $(dts-dirs)
+clean-files	:= *.dtb *.dtbo

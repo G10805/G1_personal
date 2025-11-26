@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package qti.wifi;
+
+import "IQtiWifiCallback.proto";
+import "IfaceInfo.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IQtiWifi
+{
+    message ListAvailableInterfacesReq
+    {
+    }
+
+    message ListAvailableInterfacesCfm
+    {
+        HalStatus status = 1;
+        repeated IfaceInfo result = 2;
+    }
+
+    message RegisterQtiWifiCallbackReq
+    {
+        optional IQtiWifiCallback callback = 1;
+    }
+
+    message RegisterQtiWifiCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message DoQtiWifiCmdReq
+    {
+        string iface = 1;
+        string cmd = 2;
+    }
+
+    message DoQtiWifiCmdCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    int32 instanceId = 1;
+}

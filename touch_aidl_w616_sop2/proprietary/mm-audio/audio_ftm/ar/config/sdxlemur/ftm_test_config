@@ -1,0 +1,205 @@
+tc 1
+#Handset Capture
+!Capture
+gkv_tx:PCM_RECORD-HANDSETMIC-AUDIO_FLUENCE_SMECNS
+be_name_tx:MI2S-LPAIF-TX-PRIMARY
+pcm_id_tx:101
+channels_tx:1
+Txdevice:0
+
+enable
+AIF1_CAP Mixer I2S TX6:1
+CDC_IF TX6 MUX:DEC6
+ADC MUX6:DMIC
+DMIC MUX6:DMIC2
+DEC6 Volume:99
+
+disable
+AIF1_CAP Mixer I2S TX6:0
+CDC_IF TX6 MUX:ZERO
+ADC MUX6:ZERO
+DMIC MUX6:ZERO
+
+tc 2
+#Headset capture (headset mic enable and volume)
+!Capture
+gkv_tx:PCM_RECORD-HEADPHONE_MIC-AUDIO_FLUENCE_SMECNS
+be_name_tx:MI2S-LPAIF-TX-PRIMARY
+pcm_id_tx:101
+channels_tx:1
+Txdevice:0
+
+enable
+AIF1_CAP Mixer I2S TX6:1
+CDC_IF TX6 MUX:DEC6
+ADC MUX6:AMIC
+AMIC MUX6:ADC2
+DEC6 Volume:99
+
+disable
+AIF1_CAP Mixer I2S TX6:0
+CDC_IF TX6 MUX:ZERO
+ADC MUX6:ZERO
+AMIC MUX6:ZERO
+
+tc 3
+#Headset mono (headset speaker mono)
+!Playback
+gkv_rx:PCM_LL_PLAYBACK-HEADPHONES-INSTANCE1-AUDIO_MBDRC
+be_name_rx:MI2S-LPAIF-RX-PRIMARY
+pcm_id_rx:100
+channels_rx:1
+Rxdevice:0
+
+enable
+I2S RX0 MUX:AIF1_PB
+CDC_IF RX0 MUX:I2S RX0
+RX INT1_2 MUX:RX0
+RX INT1 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:1
+COMP2 Switch:1
+
+disable
+I2S RX0 MUX:ZERO
+CDC_IF RX0 MUX:ZERO
+RX INT1_2 MUX:ZERO
+RX INT1 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:0
+COMP2 Switch:0
+
+tc 4
+#Headset stereo (headset speaker stereo)
+!Playback
+gkv_rx:PCM_LL_PLAYBACK-HEADPHONES-INSTANCE1-AUDIO_MBDRC
+be_name_rx:MI2S-LPAIF-RX-PRIMARY
+pcm_id_rx:100
+channels_rx:2
+Rxdevice:0
+
+enable
+I2S RX0 MUX:AIF1_PB
+I2S RX1 MUX:AIF1_PB
+CDC_IF RX0 MUX:I2S RX0
+CDC_IF RX1 MUX:I2S RX1
+RX INT1_2 MUX:RX0
+RX INT2_2 MUX:RX1
+RX INT1 DEM MUX:CLSH_DSM_OUT
+RX INT2 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:1
+COMP2 Switch:1
+
+disable
+I2S RX0 MUX:ZERO
+I2S RX1 MUX:ZERO
+CDC_IF RX0 MUX:ZERO
+CDC_IF RX1 MUX:ZERO
+RX INT1_2 MUX:ZERO
+RX INT2_2 MUX:ZERO
+RX INT1 DEM MUX:CLSH_DSM_OUT
+RX INT2 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:0
+COMP2 Switch:0
+
+tc 5
+#Headset left (headset speaker left)
+!Playback
+gkv_rx:PCM_LL_PLAYBACK-HEADPHONES-INSTANCE1-AUDIO_MBDRC
+be_name_rx:MI2S-LPAIF-RX-PRIMARY
+pcm_id_rx:100
+channels_rx:1
+Rxdevice:0
+
+enable
+I2S RX0 MUX:AIF1_PB
+CDC_IF RX0 MUX:I2S RX0
+RX INT1_2 MUX:RX0
+RX INT1 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:1
+COMP2 Switch:1
+
+disable
+I2S RX0 MUX:ZERO
+CDC_IF RX0 MUX:ZERO
+RX INT1_2 MUX:ZERO
+RX INT1 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:0
+COMP2 Switch:0
+
+tc 6
+#Headset right (headset speaker right)
+!Playback
+gkv_rx:PCM_LL_PLAYBACK-HEADPHONES-INSTANCE1-AUDIO_MBDRC
+be_name_rx:MI2S-LPAIF-RX-PRIMARY
+pcm_id_rx:100
+channels_rx:1
+Rxdevice:0
+
+enable
+I2S RX1 MUX:AIF1_PB
+CDC_IF RX1 MUX:I2S RX1
+RX INT2_2 MUX:RX1
+RX INT2 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:1
+COMP2 Switch:1
+
+disable
+I2S RX1 MUX:ZERO
+CDC_IF RX1 MUX:ZERO
+RX INT2_2 MUX:ZERO
+RX INT2 DEM MUX:CLSH_DSM_OUT
+COMP1 Switch:0
+COMP2 Switch:0
+
+tc 7
+#Speaker (Class D speaker)
+!Playback
+gkv_rx:PCM_LL_PLAYBACK-SPEAKER-INSTANCE1-AUDIO_MBDRC
+be_name_rx:MI2S-LPAIF-RX-PRIMARY
+pcm_id_rx:100
+channels_rx:1
+Rxdevice:0
+
+enable
+RX7 Digital Volume:75
+I2S RX0 MUX:AIF1_PB
+CDC_IF RX0 MUX:I2S RX0
+RX INT7_1 MIX1 INP0:RX0
+COMP7 Switch:1
+SpkrLeft COMP Switch:1
+SpkrLeft BOOST Switch:1
+SpkrLeft VISENSE Switch:1
+SpkrLeft SWR DAC_Port Switch:1
+
+disable
+I2S RX0 MUX:ZERO
+CDC_IF RX0 MUX:ZERO
+RX INT7_1 MIX1 INP0:ZERO
+COMP7 Switch:0
+SpkrLeft COMP Switch:0
+SpkrLeft BOOST Switch:0
+SpkrLeft VISENSE Switch:0
+SpkrLeft SWR DAC_Port Switch:0
+
+tc 8
+#ADIE loopback (Headset mic and headset left)
+!CodecLoop
+gkv_rx:PCM_LL_PLAYBACK-HEADPHONES-INSTANCE1-AUDIO_MBDRC
+be_name_rx:MI2S-LPAIF-RX-PRIMARY
+pcm_id_rx:100
+channels_rx:1
+gkv_tx:PCM_RECORD-HEADPHONE_MIC-AUDIO_FLUENCE_SMECNS
+be_name_tx:MI2S-LPAIF-TX-PRIMARY
+pcm_id_tx:101
+channels_tx:1
+
+enable
+ADC MUX0:AMIC
+AMIC MUX0:ADC2
+IIR0 INP0 MUX:DEC0
+IIR0 INP0 Volume:75
+ADC2 Volume:30
+RX INT1 DEM MUX:CLSH_DSM_OUT
+RX INT2 DEM MUX:CLSH_DSM_OUT
+RX INT1_1 MIX1 INP0:IIR0
+RX INT2_1 MIX1 INP0:IIR0
+

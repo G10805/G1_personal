@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message ISupplicantCallback
+{
+    message OnInterfaceCreatedInd
+    {
+        string ifaceName = 1;
+    }
+
+    message OnInterfaceRemovedInd
+    {
+        string ifaceName = 1;
+    }
+}

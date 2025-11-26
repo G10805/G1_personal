@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum NanBootstrappingResponseCode
+{
+    NAN_BOOTSTRAPPING_REQUEST_ACCEPT = 0;
+    NAN_BOOTSTRAPPING_REQUEST_REJECT = 1;
+    NAN_BOOTSTRAPPING_REQUEST_COMEBACK = 2;
+}

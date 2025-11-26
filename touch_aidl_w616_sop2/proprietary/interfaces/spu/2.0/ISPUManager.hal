@@ -1,0 +1,167 @@
+/*!
+ *
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.spu@2.0;
+
+import ISPUNotifier;
+import ISPComSharedBuffer;
+import ISPComClient;
+import ISPComServer;
+
+interface ISPUManager {
+
+   /**
+    * Wait for SPU to be ready and finish boot applications loading
+    *
+    * Must be called after system boot and after each SPU subsystem restart to
+    * verify the system readiness before using ISPUManager interface
+    *
+    * @param   timeoutSec  Timeout in seconds
+    *
+    * @return  error       Zero on success or non-zero error code on failure
+    */
+    waitForSpuReady(uint32_t timeoutSec) generates(int32_t error);
+
+    /**
+     * Wait until HLOS-SPU link up is notified
+     *
+     * @param   timeoutMs  Timeout in milliseconds, zero timeout return link
+     *                     without waiting
+     *
+     * @return  status     True for link up or false for link down
+     */
+    waitForLinkUp(uint32_t timeoutMs) generates(bool status);
+
+    /**
+     * Send command to SPU to trigger SPU subsystem reset
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    resetSpu() generates(int32_t error);
+
+    /**
+     * Load SPU application
+     *
+     * @param   name   Channel name as defined in application manifest
+     * @param   data   Shared memory storing application image data
+     * @param   size   Application image byte size
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    loadApp(string name, memory data, int32_t size) generates(int32_t error);
+
+    /**
+     * Check if SPU application is loaded
+     *
+     * @param   name     Channel name as defined in application manifest
+     *
+     * @return  status   True if loaded a false otherwise
+     */
+    isAppLoaded(string name) generates(bool status);
+
+    /**
+     * Read SPU health info such as registers and sensors state
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     * @return  data   Response from SPU
+     */
+    checkHealth() generates(int32_t error, vec<int32_t> data);
+
+    /**
+     * Read SPU system data
+     *
+     * @param   id     Predefined system data id
+     * @param   arg1   First argument
+     * @param   arg2   Second argument
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     * @return  data   Response from SPU
+     */
+    sysDataRead(uint32_t id, uint32_t arg1, uint32_t arg2)
+        generates(int32_t error, vec<int32_t> data);
+
+    /**
+     * Read SPU system parameter
+     *
+     * @param   id     Predefined system parameter id
+     * @param   arg1   First argument
+     * @param   arg2   Second argument
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     * @return  value  Response from SPU
+     */
+    sysParamRead(uint32_t id, uint32_t arg1, uint32_t arg2)
+        generates (int32_t error, uint32_t value);
+
+    /**
+     * Write SPU System parameter
+     *
+     * @param   id     Predefined system parameter id
+     * @param   arg1   First argument
+     * @param   arg2   Second argument
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    sysParamWrite(uint32_t id, uint32_t arg1, uint32_t arg2)
+        generates(int32_t error);
+
+    /**
+     * Get handle to SPCom client interface
+     *
+     * @param   name    Channel name as defined in application manifest
+     *
+     * @return  client  SPCom client handle or null pointer on failure
+     */
+    getSPComClient(string name) generates(ISPComClient client);
+
+    /**
+     * Get handle to SPCom server interface
+     *
+     * @param   name    Channel name as defined in application manifest
+     *
+     * @return  server  SPCom server handle or null pointer on failure
+     */
+    getSPComServer(string name) generates(ISPComServer server);
+
+    /**
+     * Set a callable SPU event notifier for HAL client
+     *
+     * @param   notifier  Callable notifier object
+     *
+     * @return  error     Zero on success or non-zero error code on failure
+     */
+     setEventNotifier(ISPUNotifier notifier) generates(int32_t error);
+
+    /**
+     * Clear preset SPU event notifier of HAL client
+     *
+     * @return  error     Zero on success or non-zero error code on failure
+     */
+    clearEventNotifier() generates(int32_t error);
+
+    /**
+     * Get SPU image type: Signature type and HW version
+     *
+     * @return  type  Zero if cannot get image type or non-zero image type
+     */
+     getImageType() generates(uint32_t type);
+
+     /**
+      * Get SPCom max message size
+      *
+      * @return size  SPCom max message size
+      */
+     getSPComMaxMessageSize() generates(uint32_t size);
+
+     /**
+      * Get SPCom max channel name length including null terminator
+      *
+      * @return  length  SPCom max channel name length
+      */
+     getSPComMaxChannelNameLength() generates(uint32_t length);
+};

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant.dnr;
+
+option optimize_for = LITE_RUNTIME;
+
+enum DppNetRole
+{
+    STA = 0;
+    AP = 1;
+}

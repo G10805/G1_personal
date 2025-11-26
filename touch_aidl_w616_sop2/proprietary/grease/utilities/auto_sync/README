@@ -1,0 +1,38 @@
+### Introduction
+This directory contains scripts to be used to automatically
+find and sync the latest AU from the Grease site.
+
+### Initial Setup
+1. Add these tools to your path.
+    % cd [dir-containing-this-README]
+    % export PATH=$(pwd):$PATH
+
+2. Create a workspace.
+    % mkdir workspace
+
+3. Setup the workspace.
+    % cd workspace
+    % setup_config.sh -u [user] -p [password] \
+        -b [branch] -a [au-name]
+
+   For example:
+   % setup_config.sh -u myuser -p mypass \
+       -b CDR000/ics_strawberry -a AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.014
+
+### Syncing
+1. Run find_and_sync_latest_AU.sh
+    % cd workspace
+    % find_and_sync_latest_AU.sh
+
+2. Examine the sync log as needed.
+    % tail -20 sync_all_log
+
+#### Scheduled use
+Use cron or another job scheduler to periodically run
+find_and_sync_latest_AU.sh.
+
+Here's how to use the at command to schedule a single run
+one minute from now:
+
+    % echo 'cd workspace && find_and_sync_latest_AU.sh' | at 'now + 1 min'
+

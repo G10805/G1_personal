@@ -1,0 +1,9 @@
+subdirs = [
+    "*"
+]
+
+hidl_package_root {
+    name: "vendor.qti.hardware.AMSIPC",
+    path: "vendor/qcom/proprietary/mm-audio-auto/ams/ipc/HwBinder/interfaces/ams_ipc",
+}
+

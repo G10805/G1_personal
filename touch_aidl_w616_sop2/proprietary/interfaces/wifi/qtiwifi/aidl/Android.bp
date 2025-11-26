@@ -1,0 +1,24 @@
+aidl_interface {
+    name: "vendor.qti.hardware.wifi.qtiwifi",
+    vendor_available: true,
+    system_ext_specific: true,
+    host_supported: true,
+    stability: "vintf",
+    owner: "qti",
+    srcs: [
+        "vendor/qti/hardware/wifi/qtiwifi/*.aidl",
+    ],
+    backend: {
+        java: {
+            sdk_version: "module_current",
+            min_sdk_version: "Tiramisu",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}

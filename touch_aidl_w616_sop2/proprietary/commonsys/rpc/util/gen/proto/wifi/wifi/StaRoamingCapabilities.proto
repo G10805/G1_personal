@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message StaRoamingCapabilities
+{
+    int32 maxBlocklistSize = 1;
+    int32 maxAllowlistSize = 2;
+}

@@ -1,0 +1,110 @@
+prebuilt_etc {
+    name: "video_system_specs_shima_v1.json",
+    src: "data/video_system_specs_v1.json",
+    filename: "video_system_specs.json",
+    sub_dir: "media_shima_v1",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_shima_v1.xml",
+    src: "data/media_codecs_v1.xml",
+    filename: "media_codecs_shima_v1.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_performance_shima_v1.xml",
+    src: "data/media_codecs_performance_v1.xml",
+    filename: "media_codecs_performance_shima_v1.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_profiles_shima_v1.xml",
+    src: "data/media_profiles_v1.xml",
+    filename: "media_profiles_shima_v1.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "video_system_specs_shima_v2.json",
+    src: "data/video_system_specs_v2.json",
+    filename: "video_system_specs.json",
+    sub_dir: "media_shima_v2",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_shima_v2.xml",
+    src: "data/media_codecs_v2.xml",
+    filename: "media_codecs_shima_v2.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_performance_shima_v2.xml",
+    src: "data/media_codecs_performance_v2.xml",
+    filename: "media_codecs_performance_shima_v2.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_profiles_shima_v2.xml",
+    src: "data/media_profiles_v2.xml",
+    filename: "media_profiles_shima_v2.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "video_system_specs_shima_v3.json",
+    src: "data/video_system_specs_v3.json",
+    filename: "video_system_specs.json",
+    sub_dir: "media_shima_v3",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_shima_v3.xml",
+    src: "data/media_codecs_v3.xml",
+    filename: "media_codecs_shima_v3.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_performance_shima_v3.xml",
+    src: "data/media_codecs_performance_v3.xml",
+    filename: "media_codecs_performance_shima_v3.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_profiles_shima_v3.xml",
+    src: "data/media_profiles_v3.xml",
+    filename: "media_profiles_shima_v3.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}

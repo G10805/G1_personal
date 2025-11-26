@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiChipCapabilities
+{
+    int32 maxMloAssociationLinkCount = 1;
+    int32 maxMloStrLinkCount = 2;
+    int32 maxConcurrentTdlsSessionCount = 3;
+}

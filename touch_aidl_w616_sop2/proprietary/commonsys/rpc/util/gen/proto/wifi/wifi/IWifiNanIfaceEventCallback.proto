@@ -1,0 +1,243 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanBootstrappingConfirmInd.proto";
+import "NanBootstrappingRequestInd.proto";
+import "NanCapabilities.proto";
+import "NanClusterEventInd.proto";
+import "NanDataPathConfirmInd.proto";
+import "NanDataPathRequestInd.proto";
+import "NanDataPathScheduleUpdateInd.proto";
+import "NanFollowupReceivedInd.proto";
+import "NanMatchInd.proto";
+import "NanPairingConfirmInd.proto";
+import "NanPairingRequestInd.proto";
+import "NanStatus.proto";
+import "NanSuspensionModeChangeInd.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifiNanIfaceEventCallback
+{
+    message EventClusterEventInd
+    {
+        NanClusterEventInd event = 1;
+    }
+
+    message EventDataPathConfirmInd
+    {
+        NanDataPathConfirmInd event = 1;
+    }
+
+    message EventDataPathRequestInd
+    {
+        NanDataPathRequestInd event = 1;
+    }
+
+    message EventDataPathScheduleUpdateInd
+    {
+        NanDataPathScheduleUpdateInd event = 1;
+    }
+
+    message EventDataPathTerminatedInd
+    {
+        int32 ndpInstanceId = 1;
+    }
+
+    message EventDisabledInd
+    {
+        NanStatus status = 1;
+    }
+
+    message EventFollowupReceivedInd
+    {
+        NanFollowupReceivedInd event = 1;
+    }
+
+    message EventMatchInd
+    {
+        NanMatchInd event = 1;
+    }
+
+    message EventMatchExpiredInd
+    {
+        uint32 discoverySessionId = 1;
+        int32 peerId = 2;
+    }
+
+    message EventPublishTerminatedInd
+    {
+        uint32 sessionId = 1;
+        NanStatus status = 2;
+    }
+
+    message EventSubscribeTerminatedInd
+    {
+        uint32 sessionId = 1;
+        NanStatus status = 2;
+    }
+
+    message EventTransmitFollowupInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message EventSuspensionModeChangedInd
+    {
+        NanSuspensionModeChangeInd event = 1;
+    }
+
+    message NotifyCapabilitiesResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+        NanCapabilities capabilities = 3;
+    }
+
+    message NotifyConfigResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyCreateDataInterfaceResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyDeleteDataInterfaceResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyDisableResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyEnableResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyInitiateDataPathResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+        int32 ndpInstanceId = 3;
+    }
+
+    message NotifyRespondToDataPathIndicationResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyStartPublishResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+        uint32 sessionId = 3;
+    }
+
+    message NotifyStartSubscribeResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+        uint32 sessionId = 3;
+    }
+
+    message NotifyStopPublishResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyStopSubscribeResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyTerminateDataPathResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifySuspendResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyResumeResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyTransmitFollowupResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message EventPairingRequestInd
+    {
+        NanPairingRequestInd event = 1;
+    }
+
+    message EventPairingConfirmInd
+    {
+        NanPairingConfirmInd event = 1;
+    }
+
+    message NotifyInitiatePairingResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+        int32 pairingInstanceId = 3;
+    }
+
+    message NotifyRespondToPairingIndicationResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message EventBootstrappingRequestInd
+    {
+        NanBootstrappingRequestInd event = 1;
+    }
+
+    message EventBootstrappingConfirmInd
+    {
+        NanBootstrappingConfirmInd event = 1;
+    }
+
+    message NotifyInitiateBootstrappingResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+        int32 bootstrappingInstanceId = 3;
+    }
+
+    message NotifyRespondToBootstrappingIndicationResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+
+    message NotifyTerminatePairingResponseInd
+    {
+        int32 id = 1;
+        NanStatus status = 2;
+    }
+}

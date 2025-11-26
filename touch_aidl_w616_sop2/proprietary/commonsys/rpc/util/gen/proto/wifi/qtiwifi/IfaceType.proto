@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package qti.wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum IfaceType
+{
+    STA = 0;
+    AP = 1;
+}

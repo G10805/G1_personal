@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.            -->
+<!-- All Rights Reserved.                                      -->
+<!-- Confidential and Proprietary - Qualcomm Technologies, Inc.-->
+<hw_ep_info>
+    <codec_dma>
+        <codec_hw_intf name="cdc-pri" lpaif_type="LPAIF_WSA" intf_idx="CODEC_RX0"/>
+        <codec_hw_intf name="cdc-sec" lpaif_type="LPAIF_VA" intf_idx="CODEC_TX0"/>
+    </codec_dma>
+    <i2s>
+        <i2s_hw_intf name="i2s-pri" line_mask="2" ws_src="CONFIG_I2S_WS_SRC_INTERNAL" lpaif_type="LPAIF_AXI"/>
+        <i2s_hw_intf name="i2s-sec" line_mask="1" ws_src="CONFIG_I2S_WS_SRC_INTERNAL" lpaif_type="LPAIF_AXI"/>
+    </i2s>
+    <tdm>
+        <tdm_hw_intf name="tdm-pri" lpaif_type="LPAIF" sync_src="TDM_SYNC_SRC_INTERNAL" ctrl_data="TDM_CTRL_DATA_OE_DISABLE" sync_mode="TDM_SHORT_SYNC_MODE" ctrl_invert_sync_pulse="TDM_SYNC_NORMAL" ctrl_sync_data_delay="TDM_DATA_DELAY_0_BCLK_CYCLE"/>
+        <tdm_hw_intf name="tdm-sec" lpaif_type="LPAIF" sync_src="TDM_SYNC_SRC_INTERNAL" ctrl_data="TDM_CTRL_DATA_OE_DISABLE" sync_mode="TDM_SHORT_SYNC_MODE" ctrl_invert_sync_pulse="TDM_SYNC_NORMAL" ctrl_sync_data_delay="TDM_DATA_DELAY_0_BCLK_CYCLE"/>
+        <tdm_hw_intf name="tdm-ter" lpaif_type="LPAIF" sync_src="TDM_SYNC_SRC_INTERNAL" ctrl_data="TDM_CTRL_DATA_OE_DISABLE" sync_mode="TDM_SHORT_SYNC_MODE" ctrl_invert_sync_pulse="TDM_SYNC_NORMAL" ctrl_sync_data_delay="TDM_DATA_DELAY_0_BCLK_CYCLE"/>
+    </tdm>
+  <slim>
+    <slim_hw_intf name="slim-0-rx" slim_dev_id="SLIMBUS_DEVICE_1" index_0="SLIM_RX0" index_1="SLIM_RX1"/>
+    <slim_hw_intf name="slim-0-tx" slim_dev_id="SLIMBUS_DEVICE_1" index_0="SLIM_TX7" index_1="SLIM_TX1"/>
+  </slim>
+</hw_ep_info>
+
+<!-- line_mask in i2s indicates the lines that we are using
+ eg: 3 indicates 'line 0' and 'line 1' and 2 indicates 'line 1' -->
+

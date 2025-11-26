@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package wifi.supplicant.wcm;
+
+option optimize_for = LITE_RUNTIME;
+
+enum WpsConfigMethods
+{
+    WCM_RESERVED = 0;
+    USBA = 1;
+    ETHERNET = 2;
+    LABEL = 4;
+    DISPLAY = 8;
+    EXT_NFC_TOKEN = 16;
+    INT_NFC_TOKEN = 32;
+    NFC_INTERFACE = 64;
+    PUSHBUTTON = 128;
+    KEYPAD = 256;
+    VIRT_PUSHBUTTON = 640;
+    PHY_PUSHBUTTON = 1152;
+    P2PS = 4096;
+    VIRT_DISPLAY = 8200;
+    PHY_DISPLAY = 16392;
+}

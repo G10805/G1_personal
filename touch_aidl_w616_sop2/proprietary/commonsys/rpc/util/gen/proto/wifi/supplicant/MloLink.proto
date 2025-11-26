@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message MloLink
+{
+    uint32 linkId = 1;
+    bytes staLinkMacAddress = 2;
+    uint32 tidsUplinkMap = 3;
+    uint32 tidsDownlinkMap = 4;
+    bytes apLinkMacAddress = 5;
+    int32 frequencyMHz = 6;
+}

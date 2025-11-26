@@ -1,0 +1,16 @@
+
+ifeq ($(CONFIG_ARCH_SA8155), y)
+dtbo-y += sm8150-vidc.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SA8195), y)
+dtbo-y += sa8195-vidc.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SA6155), y)
+dtbo-y += sm6150-vidc.dtbo
+endif
+
+always-y    := $(dtb-y) $(dtbo-y)
+subdir-y    := $(dts-dirs)
+clean-files    := *.dtb *.dtbo

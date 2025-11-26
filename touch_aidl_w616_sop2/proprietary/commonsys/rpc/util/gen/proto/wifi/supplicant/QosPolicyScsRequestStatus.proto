@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "QosPolicyScsRequestStatusCode.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message QosPolicyScsRequestStatus
+{
+    uint32 policyId = 1;
+    QosPolicyScsRequestStatusCode qosPolicyScsRequestStatusCode = 2;
+}

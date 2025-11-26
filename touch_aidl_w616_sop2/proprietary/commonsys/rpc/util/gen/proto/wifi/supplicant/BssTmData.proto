@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "BssTmDataFlagsMask.proto";
+import "BssTmStatusCode.proto";
+import "MboCellularDataConnectionPrefValue.proto";
+import "MboTransitionReasonCode.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message BssTmData
+{
+    BssTmStatusCode status = 1;
+    BssTmDataFlagsMask flags = 2;
+    int32 assocRetryDelayMs = 3;
+    wifi.supplicant.mtrc.MboTransitionReasonCode mboTransitionReason = 4;
+    MboCellularDataConnectionPrefValue mboCellPreference = 5;
+}

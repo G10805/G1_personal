@@ -1,0 +1,9 @@
+&subsys_notif_virt {
+		cdsp1 {
+			subsys-name = "cdsp1";
+			interrupts = <GIC_SPI 69 IRQ_TYPE_LEVEL_HIGH>;
+			interrupt-names = "state-irq";
+			type = "virtual";
+			offset = <1024>;
+		};
+};

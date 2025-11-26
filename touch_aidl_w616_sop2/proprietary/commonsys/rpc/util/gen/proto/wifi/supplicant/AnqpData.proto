@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message AnqpData
+{
+    bytes venueName = 1;
+    bytes roamingConsortium = 2;
+    bytes ipAddrTypeAvailability = 3;
+    bytes naiRealm = 4;
+    bytes anqp3gppCellularNetwork = 5;
+    bytes domainName = 6;
+    bytes venueUrl = 7;
+}

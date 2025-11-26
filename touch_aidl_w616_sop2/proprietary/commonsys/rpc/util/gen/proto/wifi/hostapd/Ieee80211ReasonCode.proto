@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+option optimize_for = LITE_RUNTIME;
+
+enum Ieee80211ReasonCode
+{
+    IRC_RESERVED = 0;
+    WLAN_REASON_UNSPECIFIED = 1;
+    WLAN_REASON_PREV_AUTH_NOT_VALID = 2;
+    WLAN_REASON_DISASSOC_AP_BUSY = 5;
+}

@@ -1,0 +1,27 @@
+cc_library_shared {
+    name: "libqti_proto_util",
+    owner: "qti",
+    proprietary: true,
+
+    srcs: [
+        "src/proto_common.cpp",
+        "src/proto_message.cpp",
+    ],
+
+    cflags: ["-Wall", "-Werror"],
+
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libprotobuf-cpp-lite",
+        "libutils",
+    ],
+
+    export_include_dirs: [
+        "include",
+    ],
+
+    sanitize: {
+        integer_overflow: true,
+    },
+}

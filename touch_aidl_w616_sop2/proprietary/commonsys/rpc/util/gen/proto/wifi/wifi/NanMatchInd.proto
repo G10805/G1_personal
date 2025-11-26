@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanCipherSuiteType.proto";
+import "NanIdentityResolutionAttribute.proto";
+import "NanPairingConfig.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanMatchInd
+{
+    uint32 discoverySessionId = 1;
+    int32 peerId = 2;
+    bytes addr = 3;
+    bytes serviceSpecificInfo = 4;
+    bytes extendedServiceSpecificInfo = 5;
+    bytes matchFilter = 6;
+    bool matchOccurredInBeaconFlag = 7;
+    bool outOfResourceFlag = 8;
+    uint32 rssiValue = 9;
+    wifi.ncst.NanCipherSuiteType peerCipherType = 10;
+    bool peerRequiresSecurityEnabledInNdp = 11;
+    bool peerRequiresRanging = 12;
+    int32 rangingMeasurementInMm = 13;
+    int32 rangingIndicationType = 14;
+    bytes scid = 15;
+    NanPairingConfig peerPairingConfig = 16;
+    NanIdentityResolutionAttribute peerNira = 17;
+}

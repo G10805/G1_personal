@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message NanBandSpecificConfig
+{
+    uint32 rssiClose = 1;
+    uint32 rssiMiddle = 2;
+    uint32 rssiCloseProximity = 3;
+    int32 dwellTimeMs = 4;
+    int32 scanPeriodSec = 5;
+    bool validDiscoveryWindowIntervalVal = 6;
+    uint32 discoveryWindowIntervalVal = 7;
+}

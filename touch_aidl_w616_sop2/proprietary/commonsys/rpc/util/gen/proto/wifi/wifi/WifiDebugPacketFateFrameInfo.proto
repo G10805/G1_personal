@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiDebugPacketFateFrameType.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiDebugPacketFateFrameInfo
+{
+    wifi.wdpfft.WifiDebugPacketFateFrameType frameType = 1;
+    int64 frameLen = 2;
+    int64 driverTimestampUsec = 3;
+    int64 firmwareTimestampUsec = 4;
+    bytes frameContent = 5;
+}

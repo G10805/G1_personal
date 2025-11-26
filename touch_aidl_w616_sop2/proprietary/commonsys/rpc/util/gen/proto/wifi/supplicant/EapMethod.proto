@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wifi.supplicant.em;
+
+option optimize_for = LITE_RUNTIME;
+
+enum EapMethod
+{
+    PEAP = 0;
+    TLS = 1;
+    TTLS = 2;
+    PWD = 3;
+    SIM = 4;
+    AKA = 5;
+    AKA_PRIME = 6;
+    WFA_UNAUTH_TLS = 7;
+}

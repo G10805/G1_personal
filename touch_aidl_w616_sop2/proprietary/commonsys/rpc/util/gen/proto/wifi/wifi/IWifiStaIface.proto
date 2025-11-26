@@ -1,0 +1,318 @@
+syntax = "proto3";
+
+package wifi;
+
+import "IWifiStaIfaceEventCallback.proto";
+import "StaApfPacketFilterCapabilities.proto";
+import "StaBackgroundScanCapabilities.proto";
+import "StaBackgroundScanParameters.proto";
+import "StaLinkLayerStats.proto";
+import "StaRoamingCapabilities.proto";
+import "StaRoamingConfig.proto";
+import "StaRoamingState.proto";
+import "WifiBand.proto";
+import "WifiDebugRxPacketFateReport.proto";
+import "WifiDebugTxPacketFateReport.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifiStaIface
+{
+    enum FeatureSetMask
+    {
+        FSM_RESERVED = 0;
+        APF = 1;
+        BACKGROUND_SCAN = 2;
+        LINK_LAYER_STATS = 4;
+        RSSI_MONITOR = 8;
+        CONTROL_ROAMING = 16;
+        PROBE_IE_ALLOWLIST = 32;
+        SCAN_RAND = 64;
+        STA_5G = 128;
+        HOTSPOT = 256;
+        PNO = 512;
+        TDLS = 1024;
+        TDLS_OFFCHANNEL = 2048;
+        ND_OFFLOAD = 4096;
+        KEEP_ALIVE = 8192;
+    }
+
+    message GetNameReq
+    {
+    }
+
+    message GetNameCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message ConfigureRoamingReq
+    {
+        StaRoamingConfig config = 1;
+    }
+
+    message ConfigureRoamingCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message DisableLinkLayerStatsCollectionReq
+    {
+    }
+
+    message DisableLinkLayerStatsCollectionCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableLinkLayerStatsCollectionReq
+    {
+        bool debug = 1;
+    }
+
+    message EnableLinkLayerStatsCollectionCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message EnableNdOffloadReq
+    {
+        bool enable = 1;
+    }
+
+    message EnableNdOffloadCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message GetApfPacketFilterCapabilitiesReq
+    {
+    }
+
+    message GetApfPacketFilterCapabilitiesCfm
+    {
+        HalStatus status = 1;
+        StaApfPacketFilterCapabilities result = 2;
+    }
+
+    message GetBackgroundScanCapabilitiesReq
+    {
+    }
+
+    message GetBackgroundScanCapabilitiesCfm
+    {
+        HalStatus status = 1;
+        StaBackgroundScanCapabilities result = 2;
+    }
+
+    message GetFeatureSetReq
+    {
+    }
+
+    message GetFeatureSetCfm
+    {
+        HalStatus status = 1;
+        int32 result = 2;
+    }
+
+    message GetDebugRxPacketFatesReq
+    {
+    }
+
+    message GetDebugRxPacketFatesCfm
+    {
+        HalStatus status = 1;
+        repeated WifiDebugRxPacketFateReport result = 2;
+    }
+
+    message GetDebugTxPacketFatesReq
+    {
+    }
+
+    message GetDebugTxPacketFatesCfm
+    {
+        HalStatus status = 1;
+        repeated WifiDebugTxPacketFateReport result = 2;
+    }
+
+    message GetFactoryMacAddressReq
+    {
+    }
+
+    message GetFactoryMacAddressCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetLinkLayerStatsReq
+    {
+    }
+
+    message GetLinkLayerStatsCfm
+    {
+        HalStatus status = 1;
+        StaLinkLayerStats result = 2;
+    }
+
+    message GetRoamingCapabilitiesReq
+    {
+    }
+
+    message GetRoamingCapabilitiesCfm
+    {
+        HalStatus status = 1;
+        StaRoamingCapabilities result = 2;
+    }
+
+    message InstallApfPacketFilterReq
+    {
+        bytes program = 1;
+    }
+
+    message InstallApfPacketFilterCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ReadApfPacketFilterDataReq
+    {
+    }
+
+    message ReadApfPacketFilterDataCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message RegisterEventCallbackReq
+    {
+        optional IWifiStaIfaceEventCallback callback = 1;
+    }
+
+    message RegisterEventCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetMacAddressReq
+    {
+        bytes mac = 1;
+    }
+
+    message SetMacAddressCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetRoamingStateReq
+    {
+        StaRoamingState state = 1;
+    }
+
+    message SetRoamingStateCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetScanModeReq
+    {
+        bool enable = 1;
+    }
+
+    message SetScanModeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartBackgroundScanReq
+    {
+        int32 cmdId = 1;
+        StaBackgroundScanParameters params = 2;
+    }
+
+    message StartBackgroundScanCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartDebugPacketFateMonitoringReq
+    {
+    }
+
+    message StartDebugPacketFateMonitoringCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartRssiMonitoringReq
+    {
+        int32 cmdId = 1;
+        int32 maxRssi = 2;
+        int32 minRssi = 3;
+    }
+
+    message StartRssiMonitoringCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartSendingKeepAlivePacketsReq
+    {
+        int32 cmdId = 1;
+        bytes ipPacketData = 2;
+        int32 etherType = 3;
+        bytes srcAddress = 4;
+        bytes dstAddress = 5;
+        int32 periodInMs = 6;
+    }
+
+    message StartSendingKeepAlivePacketsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopBackgroundScanReq
+    {
+        int32 cmdId = 1;
+    }
+
+    message StopBackgroundScanCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopRssiMonitoringReq
+    {
+        int32 cmdId = 1;
+    }
+
+    message StopRssiMonitoringCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopSendingKeepAlivePacketsReq
+    {
+        int32 cmdId = 1;
+    }
+
+    message StopSendingKeepAlivePacketsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetDtimMultiplierReq
+    {
+        int32 multiplier = 1;
+    }
+
+    message SetDtimMultiplierCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

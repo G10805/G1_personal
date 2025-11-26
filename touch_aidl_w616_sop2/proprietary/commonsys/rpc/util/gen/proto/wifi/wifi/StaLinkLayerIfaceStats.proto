@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+import "StaLinkLayerLinkStats.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message StaLinkLayerIfaceStats
+{
+    repeated StaLinkLayerLinkStats links = 1;
+}

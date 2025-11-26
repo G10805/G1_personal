@@ -1,0 +1,147 @@
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
+#include <dt-bindings/clock/qcom,gcc-monaco_auto.h>
+#include <dt-bindings/clock/qcom,dispcc-monaco_auto.h>
+#include <dt-bindings/clock/qcom,videocc-lemans.h>
+
+&qupv3_se8_i2c {
+	status = "ok";
+};
+
+&soc {
+	umd_power: qcom,umd_power {
+		compatible = "qcom,umd-power";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		pll-names = "dsi0_phy_pll_out_byteclk", "dsi0_phy_pll_out_dsiclk",
+			"dsi1_phy_pll_out_byteclk", "dsi1_phy_pll_out_dsiclk",
+			"dp0_phy_pll_link_clk", "dp0_phy_pll_vco_div_clk",
+			"dp1_phy_pll_link_clk", "dp1_phy_pll_vco_div_clk";
+	};
+
+	refgen: refgen-regulator@891c000 {
+		compatible = "qcom,refgen-kona-regulator";
+		reg = <0x891c000 0x84>;
+		regulator-name = "refgen";
+		proxy-supply = <&refgen>;
+		qcom,proxy-consumer-enable;
+		regulator-enable-ramp-delay = <5>;
+	};
+};
+
+&umd_power {
+	mdss_mdp@1 { /*name@group_id*/
+		compatible = "qcom,umd-power-multimedia";
+		reg = <1>;
+		clock-names = "gcc_bus", "iface_clk",
+				"core_clk", "vsync_clk", "lut_clk";
+		clocks = <&gcc GCC_DISP_HF_AXI_CLK>,
+				<&dispcc DISP_CC_MDSS_AHB_CLK>,
+				<&dispcc DISP_CC_MDSS_MDP_CLK>,
+				<&dispcc DISP_CC_MDSS_VSYNC_CLK>,
+				<&dispcc DISP_CC_MDSS_MDP_LUT_CLK>;
+		clock-rate = <0 0 300000000 19200000 300000000>; /*POWER_LEVEL_ON*/
+		clock-max-rate = <0 0 460000000 19200000 460000000>; /*POWER_LEVEL_MAX*/
+
+		mdss-core-supply = <&disp_cc_mdss_core_gdsc>;
+		regulator-names = "mdss-core";
+
+		rgltr-min-voltage = <0>;
+		rgltr-max-voltage = <0>;
+		rgltr-load-current = <0>;
+	};
+
+	mdss_dsi0@2 {
+		compatible = "qcom,umd-power-multimedia";
+		reg = <2>;
+		clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
+				<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
+				<&dispcc DISP_CC_MDSS_PCLK0_CLK>,
+				<&dispcc DISP_CC_MDSS_PCLK0_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_ESC0_CLK>,
+				<&rpmhcc RPMH_CXO_CLK>;
+		clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
+				"pixel_clk", "pixel_clk_rcg",
+				"esc_clk", "xo";
+		clock-rate = <0 0 0 0 0 0 0>;
+
+		vdda-1p2-supply = <&pm7255_a_l5>;
+		refgen-supply = <&refgen>;
+		vdda-0p9-supply = <&pm7255_a_l4>;
+
+		regulator-names = "vdda-1p2", "refgen", "vdda-0p9";
+
+		rgltr-min-voltage = <1200000 0 912000>;
+		rgltr-max-voltage = <1200000 0 912000>;
+		rgltr-load-current = <30100 0 115000>;
+	};
+
+	mdss_edp0@3 {
+		compatible = "qcom,umd-power-multimedia";
+		reg = <3>;
+		clocks = <&dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
+				<&gcc GCC_EDP_REF_CLKREF_EN>,
+				<&rpmhcc RPMH_CXO_CLK>,
+				<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
+				<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL2_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL3_CLK_SRC>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL2_CLK>,
+				<&dispcc DISP_CC_MDSS_DPTX0_PIXEL3_CLK>;
+		clock-names = "core_aux_clk", "core_ref_clk", "rpmh_cxo_clk",
+				"link_clk", "link_clk_src", "link_iface_clk",
+				"pixel_clk_rcg", "pixel1_clk_rcg",
+				"pixel2_clk_rcg", "pixel3_clk_rcg",
+				"strm0_pixel_clk", "strm1_pixel_clk",
+				"strm2_pixel_clk", "strm3_pixel_clk";
+		clock-rate = <0 0 0 0 0 0 0 0 0 0 0 0 0 0>;
+
+		vdda-1p2-supply = <&pm7255_a_l5>;
+		vdda-0p9-supply = <&pm7255_a_l4>;
+		vdd_mx-supply = <&VDD_MXA_LEVEL>;
+
+		regulator-names = "vdda-1p2", "vdda-0p9", "vdd_mx";
+
+		rgltr-min-voltage = <1200000 912000 RPMH_REGULATOR_LEVEL_TURBO>;
+		rgltr-max-voltage = <1200000 912000 RPMH_REGULATOR_LEVEL_MAX>;
+		rgltr-load-current = <30100 115000 0>;
+	};
+
+	msm_vidc@4 {
+		compatible = "qcom,umd-power-multimedia";
+		reg = <4>;
+
+		clocks = <&gcc GCC_VIDEO_AXI0_CLK>,
+                         <&videocc VIDEO_CC_MVS0C_CLK>,
+                         <&videocc VIDEO_CC_MVS0_CLK>,
+                         <&videocc VIDEO_CC_MVS0_CLK_SRC>;
+		clock-names =
+                         "gcc_video_axi0",
+                         "core_clk",
+                         "vcodec_clk",
+                         "video_cc_mvs0_clk_src";
+		clock-rate = <0 840000000 560000000 1680000000>; /*POWER_LEVEL_ON*/
+
+		iris-ctl-supply = <&video_cc_mvs0c_gdsc>;
+		vcodec-supply = <&video_cc_mvs0_gdsc>;
+		regulator-names = "iris-ctl", "vcodec";
+	};
+};
+
+&dispcc {
+	clocks = <&rpmhcc RPMH_CXO_CLK>, <&rpmhcc RPMH_CXO_CLK_A>,
+			<&sleep_clk>, <&gcc GCC_DISP_AHB_CLK>,
+			<&umd_power 0>, <&umd_power 1>,
+			<&umd_power 2>, <&umd_power 3>,
+			<&umd_power 4>, <&umd_power 5>,
+			<&umd_power 6>, <&umd_power 7>;
+	clock-names = "bi_tcxo", "bi_tcxo_ao", "sleep_clk", "iface",
+			"dsi0_phy_pll_out_byteclk", "dsi0_phy_pll_out_dsiclk",
+			"dsi1_phy_pll_out_byteclk", "dsi1_phy_pll_out_dsiclk";
+};

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanBootstrappingMethod.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanBootstrappingRequest
+{
+    int32 peerId = 1;
+    bytes peerDiscMacAddr = 2;
+    NanBootstrappingMethod requestBootstrappingMethod = 3;
+    bytes cookie = 4;
+}

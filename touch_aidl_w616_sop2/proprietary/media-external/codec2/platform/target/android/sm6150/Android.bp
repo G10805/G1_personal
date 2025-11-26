@@ -1,0 +1,46 @@
+prebuilt_etc {
+    name: "video_system_specs_sm6150.json",
+    src: "data/video_system_specs.json",
+    filename: "video_system_specs.json",
+    sub_dir: "media_sm6150",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "video_system_specs_sm6150_default.json",
+    src: "data/video_system_specs.json",
+    filename: "video_system_specs.json",
+    sub_dir: "media",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_sm6150.xml",
+    src: "data/media_codecs.xml",
+    filename: "media_codecs_sm6150.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_codecs_performance_sm6150.xml",
+    src: "data/media_codecs_performance.xml",
+    filename: "media_codecs_performance_sm6150.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "media_profiles_sm6150.xml",
+    src: "data/media_profiles_vendor.xml",
+    filename: "media_profiles_sm6150.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}

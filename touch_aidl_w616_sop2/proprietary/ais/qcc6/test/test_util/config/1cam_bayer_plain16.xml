@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2019 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <!-- PLAIN16_12 dump -->
+        <properties input_id="0" op_mode="0" />
+        <display_setting display_id="0" />
+        <output_setting nbufs="5" format="0x50C0000" />
+    </input_device>
+</qcarcam_inputs>

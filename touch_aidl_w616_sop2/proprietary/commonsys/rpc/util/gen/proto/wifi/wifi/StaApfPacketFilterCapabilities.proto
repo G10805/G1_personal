@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message StaApfPacketFilterCapabilities
+{
+    int32 version = 1;
+    int32 maxLength = 2;
+}

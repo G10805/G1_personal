@@ -1,0 +1,40 @@
+# Copyright (c) 2022 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+service carpowerusbservice /vendor/bin/carpowerusbservice
+    class core
+    user system
+    group system inet input
+    disabled
+
+on boot
+    chown system system /sys/devices/platform/soc/a600000.ssusb/mode
+    chown system system /sys/devices/platform/soc/a800000.ssusb/mode
+    chown system system /sys/devices/platform/soc/a400000.ssusb/mode
+
+on property:boot.car_service_created=1
+    start carpowerusbservice
+
+service hiber /vendor/bin/hiber.sh
+   class core
+   user root
+   group root system
+   oneshot
+   disabled
+
+on property:vendor.car.hiber=hiberEntry
+   stop hiberRestore
+   start hiber
+
+on property:vendor.car.hiber=hiberExit
+   stop hiber
+   start hiberRestore
+
+service hiberRestore /vendor/bin/hiber_restore.sh
+   class core
+   user root
+   group root system
+   oneshot
+   disabled

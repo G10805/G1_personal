@@ -1,0 +1,15 @@
+cc_library {
+    name: "libTechPack_8",
+    header_abi_checker: {
+        enabled: true,
+    },
+    cflags: [
+        "-Werror",
+        "-Wno-undefined-bool-conversion",
+	"-Wno-format",
+    ],
+    srcs: ["test_case.cpp", "main.cpp"],
+    export_include_dirs: ["."],
+    owner: "qti",
+    proprietary: true,
+}

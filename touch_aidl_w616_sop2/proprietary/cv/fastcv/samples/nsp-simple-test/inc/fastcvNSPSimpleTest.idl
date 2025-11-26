@@ -1,0 +1,38 @@
+/**=============================================================================
+ 
+@file
+   fastcv_NSP_sample.idl
+ 
+@brief
+   IDL file for fastcv_NSP_sample.
+ 
+Copyright (c) 2023 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+ 
+=============================================================================**/
+
+#include "AEEStdDef.idl"
+#include "remote.idl"
+
+interface fastcvNSPSimpleTest : remote_handle64{
+AEEResult startTimerQ();
+AEEResult endTimerQ(rout uint64_t res0,
+                    rout uint64_t res1,
+                    rout uint64_t res2);
+
+AEEResult ExecQ(  in int32_t fdSrc,
+                  in uint32  srcWidth,
+                  in uint32  srcHeight,
+                  in uint32  srcStride,
+                  in int32_t fdDst,
+                  in uint32  dstWidth,
+                  in uint32  dstHeight,
+                  in uint32  dstStride,
+                  in int32   fdScratchbuf,
+                  in int32   nLoops);
+AEEResult memMap( in  dmahandle fd );
+AEEResult memUnmap( in int32_t    bufId,
+                    in uint32_t   bufSize );
+
+};

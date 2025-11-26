@@ -1,0 +1,47 @@
+# Copyright (c) Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+# Create the directories used for VLAN creation
+
+# Default Network Config
+on property:sys.boot_completed=1 && property:ro.product.name=gen4_gvm
+   write /dev/kmsg "Specific lunch combo: default network configuration"
+   exec_start network-config-default
+
+on property:sys.boot_completed=1 && property:ro.product.name=gen4_gvm_sdvcomm
+   write /dev/kmsg "Specific lunch combo: default network configuration"
+   exec_start network-config-default
+
+# Network Config for CDC
+on property:sys.boot_completed=1 && property:ro.product.name=gen4_gvm_cdccomm
+   write /dev/kmsg "Specific lunch combo: Start create-vlan for cdccomm"
+   exec_start create-vlan-cdccomm
+
+on property:sys.boot_completed=1 && property:ro.product.name=gen4_gvm_cdcsdv
+   write /dev/kmsg "Specific lunch combo: Start create-vlan for cdcsdv"
+   exec_start create-vlan-cdcsdv
+
+
+service network-config-default /system_ext/bin/network_config_default.sh
+    user system
+    group system shell inet net_admin
+    capabilities NET_ADMIN
+    disabled
+    oneshot
+
+service create-vlan-cdcsdv /system_ext/bin/create_vlan_vm_1.sh
+    user system
+    group system shell inet net_admin
+    capabilities NET_ADMIN
+    stdio_to_kmsg
+    disabled
+    oneshot
+
+service create-vlan-cdccomm /system_ext/bin/create_vlan_vm_2.sh
+    user system
+    group system shell inet net_admin
+    capabilities NET_ADMIN
+    disabled
+    oneshot
+

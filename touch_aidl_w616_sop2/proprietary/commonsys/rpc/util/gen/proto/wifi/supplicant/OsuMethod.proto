@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum OsuMethod
+{
+    OMA_DM = 0;
+    SOAP_XML_SPP = 1;
+}

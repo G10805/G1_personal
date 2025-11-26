@@ -1,0 +1,1666 @@
+[
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "729cca96cb4732246b6ed1b3d15e2cbe63413afd"
+        },
+        "name": "android.hardware.authsecret",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.authsecret.IAuthSecret"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "ba2a7caca61683385b3b100e4faab1b4139fc547"
+        },
+        "name": "android.hardware.automotive.audiocontrol",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.automotive.audiocontrol.AudioFocusChange",
+            "android.hardware.automotive.audiocontrol.AudioGainConfigInfo",
+            "android.hardware.automotive.audiocontrol.DuckingInfo",
+            "android.hardware.automotive.audiocontrol.IAudioControl",
+            "android.hardware.automotive.audiocontrol.IAudioGainCallback",
+            "android.hardware.automotive.audiocontrol.IFocusListener",
+            "android.hardware.automotive.audiocontrol.IModuleChangeCallback",
+            "android.hardware.automotive.audiocontrol.MutingInfo",
+            "android.hardware.automotive.audiocontrol.Reasons"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "4ebb038edc1da5aa232909382999b2831e70a319"
+        },
+        "name": "android.hardware.automotive.evs",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.automotive.evs.BufferDesc",
+            "android.hardware.automotive.evs.CameraDesc",
+            "android.hardware.automotive.evs.CameraParam",
+            "android.hardware.automotive.evs.ColorChannel",
+            "android.hardware.automotive.evs.DeviceStatus",
+            "android.hardware.automotive.evs.DeviceStatusType",
+            "android.hardware.automotive.evs.DisplayDesc",
+            "android.hardware.automotive.evs.DisplayState",
+            "android.hardware.automotive.evs.EmbeddedData",
+            "android.hardware.automotive.evs.EvsEventDesc",
+            "android.hardware.automotive.evs.EvsEventType",
+            "android.hardware.automotive.evs.EvsResult",
+            "android.hardware.automotive.evs.ExposureParameters",
+            "android.hardware.automotive.evs.GridStatisticDesc",
+            "android.hardware.automotive.evs.GridStatisticType",
+            "android.hardware.automotive.evs.GridStatistics",
+            "android.hardware.automotive.evs.Histogram",
+            "android.hardware.automotive.evs.IEvsCamera",
+            "android.hardware.automotive.evs.IEvsCameraStream",
+            "android.hardware.automotive.evs.IEvsDisplay",
+            "android.hardware.automotive.evs.IEvsEnumerator",
+            "android.hardware.automotive.evs.IEvsEnumeratorStatusCallback",
+            "android.hardware.automotive.evs.IEvsUltrasonicsArray",
+            "android.hardware.automotive.evs.IEvsUltrasonicsArrayStream",
+            "android.hardware.automotive.evs.ParameterRange",
+            "android.hardware.automotive.evs.Rotation",
+            "android.hardware.automotive.evs.RotationQuaternion",
+            "android.hardware.automotive.evs.SensorPose",
+            "android.hardware.automotive.evs.Size",
+            "android.hardware.automotive.evs.Stream",
+            "android.hardware.automotive.evs.StreamType",
+            "android.hardware.automotive.evs.Translation",
+            "android.hardware.automotive.evs.UltrasonicSensor",
+            "android.hardware.automotive.evs.UltrasonicsArrayDesc",
+            "android.hardware.automotive.evs.UltrasonicsDataFrameDesc"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "3614b1c47ed7be85c1e77554e7f04966cf35b465"
+        },
+        "name": "android.hardware.automotive.occupant_awareness",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.automotive.occupant_awareness.ConfidenceLevel",
+            "android.hardware.automotive.occupant_awareness.DriverMonitoringDetection",
+            "android.hardware.automotive.occupant_awareness.GazeDetection",
+            "android.hardware.automotive.occupant_awareness.IOccupantAwareness",
+            "android.hardware.automotive.occupant_awareness.IOccupantAwarenessClientCallback",
+            "android.hardware.automotive.occupant_awareness.OccupantAwarenessStatus",
+            "android.hardware.automotive.occupant_awareness.OccupantDetection",
+            "android.hardware.automotive.occupant_awareness.OccupantDetections",
+            "android.hardware.automotive.occupant_awareness.PresenceDetection",
+            "android.hardware.automotive.occupant_awareness.Role",
+            "android.hardware.automotive.occupant_awareness.VehicleRegion"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.automotive.vehicle",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.automotive.vehicle.GetValueRequest",
+            "android.hardware.automotive.vehicle.GetValueRequests",
+            "android.hardware.automotive.vehicle.GetValueResult",
+            "android.hardware.automotive.vehicle.GetValueResults",
+            "android.hardware.automotive.vehicle.IVehicle",
+            "android.hardware.automotive.vehicle.IVehicleCallback",
+            "android.hardware.automotive.vehicle.RawPropValues",
+            "android.hardware.automotive.vehicle.SetValueRequest",
+            "android.hardware.automotive.vehicle.SetValueRequests",
+            "android.hardware.automotive.vehicle.SetValueResult",
+            "android.hardware.automotive.vehicle.SetValueResults",
+            "android.hardware.automotive.vehicle.StatusCode",
+            "android.hardware.automotive.vehicle.SubscribeOptions",
+            "android.hardware.automotive.vehicle.VehicleAreaConfig",
+            "android.hardware.automotive.vehicle.VehiclePropConfig",
+            "android.hardware.automotive.vehicle.VehiclePropConfigs",
+            "android.hardware.automotive.vehicle.VehiclePropError",
+            "android.hardware.automotive.vehicle.VehiclePropErrors",
+            "android.hardware.automotive.vehicle.VehiclePropValue",
+            "android.hardware.automotive.vehicle.VehiclePropValues",
+            "android.hardware.automotive.vehicle.VehiclePropertyAccess",
+            "android.hardware.automotive.vehicle.VehiclePropertyChangeMode",
+            "android.hardware.automotive.vehicle.VehiclePropertyStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "2": "74b0b7cb149ee205b12cd2254d216725c6e5429c"
+        },
+        "name": "android.hardware.biometrics.face",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.biometrics.face.AcquiredInfo",
+            "android.hardware.biometrics.face.AuthenticationFrame",
+            "android.hardware.biometrics.face.BaseFrame",
+            "android.hardware.biometrics.face.Cell",
+            "android.hardware.biometrics.face.EnrollmentFrame",
+            "android.hardware.biometrics.face.EnrollmentStage",
+            "android.hardware.biometrics.face.EnrollmentStageConfig",
+            "android.hardware.biometrics.face.EnrollmentType",
+            "android.hardware.biometrics.face.Error",
+            "android.hardware.biometrics.face.FaceSensorType",
+            "android.hardware.biometrics.face.Feature",
+            "android.hardware.biometrics.face.IFace",
+            "android.hardware.biometrics.face.ISession",
+            "android.hardware.biometrics.face.ISessionCallback",
+            "android.hardware.biometrics.face.SensorProps"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "2": "c2f3b863b6dff925bc4451473ee6caa1aa304b8f"
+        },
+        "name": "android.hardware.biometrics.fingerprint",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.biometrics.fingerprint.AcquiredInfo",
+            "android.hardware.biometrics.fingerprint.Error",
+            "android.hardware.biometrics.fingerprint.FingerprintSensorType",
+            "android.hardware.biometrics.fingerprint.IFingerprint",
+            "android.hardware.biometrics.fingerprint.ISession",
+            "android.hardware.biometrics.fingerprint.ISessionCallback",
+            "android.hardware.biometrics.fingerprint.PointerContext",
+            "android.hardware.biometrics.fingerprint.SensorLocation",
+            "android.hardware.biometrics.fingerprint.SensorProps",
+            "android.hardware.biometrics.fingerprint.SensorShape",
+            "android.hardware.biometrics.fingerprint.TouchDetectionParameters"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "2": "b82d5b9f717bbf63bef774ee8f72572065ca61ce"
+        },
+        "name": "android.hardware.bluetooth.audio",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.bluetooth.audio.AacCapabilities",
+            "android.hardware.bluetooth.audio.AacConfiguration",
+            "android.hardware.bluetooth.audio.AacObjectType",
+            "android.hardware.bluetooth.audio.AptxAdaptiveCapabilities",
+            "android.hardware.bluetooth.audio.AptxAdaptiveChannelMode",
+            "android.hardware.bluetooth.audio.AptxAdaptiveConfiguration",
+            "android.hardware.bluetooth.audio.AptxAdaptiveInputMode",
+            "android.hardware.bluetooth.audio.AptxAdaptiveLeCapabilities",
+            "android.hardware.bluetooth.audio.AptxAdaptiveLeConfiguration",
+            "android.hardware.bluetooth.audio.AptxAdaptiveTimeToPlay",
+            "android.hardware.bluetooth.audio.AptxCapabilities",
+            "android.hardware.bluetooth.audio.AptxConfiguration",
+            "android.hardware.bluetooth.audio.AptxMode",
+            "android.hardware.bluetooth.audio.AptxSinkBuffering",
+            "android.hardware.bluetooth.audio.AudioCapabilities",
+            "android.hardware.bluetooth.audio.AudioConfiguration",
+            "android.hardware.bluetooth.audio.AudioLocation",
+            "android.hardware.bluetooth.audio.BluetoothAudioStatus",
+            "android.hardware.bluetooth.audio.BroadcastCapability",
+            "android.hardware.bluetooth.audio.ChannelMode",
+            "android.hardware.bluetooth.audio.CodecCapabilities",
+            "android.hardware.bluetooth.audio.CodecConfiguration",
+            "android.hardware.bluetooth.audio.CodecType",
+            "android.hardware.bluetooth.audio.IBluetoothAudioPort",
+            "android.hardware.bluetooth.audio.IBluetoothAudioProvider",
+            "android.hardware.bluetooth.audio.IBluetoothAudioProviderFactory",
+            "android.hardware.bluetooth.audio.LatencyMode",
+            "android.hardware.bluetooth.audio.Lc3Capabilities",
+            "android.hardware.bluetooth.audio.Lc3Configuration",
+            "android.hardware.bluetooth.audio.LdacCapabilities",
+            "android.hardware.bluetooth.audio.LdacChannelMode",
+            "android.hardware.bluetooth.audio.LdacConfiguration",
+            "android.hardware.bluetooth.audio.LdacQualityIndex",
+            "android.hardware.bluetooth.audio.LeAudioBroadcastConfiguration",
+            "android.hardware.bluetooth.audio.LeAudioCodecCapabilitiesSetting",
+            "android.hardware.bluetooth.audio.LeAudioCodecConfiguration",
+            "android.hardware.bluetooth.audio.LeAudioConfiguration",
+            "android.hardware.bluetooth.audio.OpusCapabilities",
+            "android.hardware.bluetooth.audio.OpusConfiguration",
+            "android.hardware.bluetooth.audio.PcmCapabilities",
+            "android.hardware.bluetooth.audio.PcmConfiguration",
+            "android.hardware.bluetooth.audio.PresentationPosition",
+            "android.hardware.bluetooth.audio.SbcAllocMethod",
+            "android.hardware.bluetooth.audio.SbcCapabilities",
+            "android.hardware.bluetooth.audio.SbcChannelMode",
+            "android.hardware.bluetooth.audio.SbcConfiguration",
+            "android.hardware.bluetooth.audio.SessionType",
+            "android.hardware.bluetooth.audio.UnicastCapability"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "5904a53ea55472ca9b45b731cb148c65d1090ba5"
+        },
+        "name": "android.hardware.camera.provider",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.camera.provider.CameraIdAndStreamCombination",
+            "android.hardware.camera.provider.ConcurrentCameraIdCombination",
+            "android.hardware.camera.provider.ICameraProvider",
+            "android.hardware.camera.provider.ICameraProviderCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "10abe2e5202d9b80ccebf5f6376d711a9a212b27"
+        },
+        "name": "android.hardware.contexthub",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.contexthub.AsyncEventType",
+            "android.hardware.contexthub.ContextHubInfo",
+            "android.hardware.contexthub.ContextHubMessage",
+            "android.hardware.contexthub.HostEndpointInfo",
+            "android.hardware.contexthub.IContextHub",
+            "android.hardware.contexthub.IContextHubCallback",
+            "android.hardware.contexthub.NanSessionRequest",
+            "android.hardware.contexthub.NanSessionStateUpdate",
+            "android.hardware.contexthub.NanoappBinary",
+            "android.hardware.contexthub.NanoappInfo",
+            "android.hardware.contexthub.NanoappRpcService",
+            "android.hardware.contexthub.Setting"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "7b4b0a0f36a7a6bb22d2016375e4a9d4a033592f"
+        },
+        "name": "android.hardware.drm",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.drm.CryptoSchemes",
+            "android.hardware.drm.DecryptArgs",
+            "android.hardware.drm.DestinationBuffer",
+            "android.hardware.drm.DrmMetric",
+            "android.hardware.drm.DrmMetricGroup",
+            "android.hardware.drm.DrmMetricNamedValue",
+            "android.hardware.drm.DrmMetricValue",
+            "android.hardware.drm.EventType",
+            "android.hardware.drm.HdcpLevel",
+            "android.hardware.drm.HdcpLevels",
+            "android.hardware.drm.ICryptoPlugin",
+            "android.hardware.drm.IDrmFactory",
+            "android.hardware.drm.IDrmPlugin",
+            "android.hardware.drm.IDrmPluginListener",
+            "android.hardware.drm.KeyRequest",
+            "android.hardware.drm.KeyRequestType",
+            "android.hardware.drm.KeySetId",
+            "android.hardware.drm.KeyStatus",
+            "android.hardware.drm.KeyStatusType",
+            "android.hardware.drm.KeyType",
+            "android.hardware.drm.KeyValue",
+            "android.hardware.drm.LogMessage",
+            "android.hardware.drm.LogPriority",
+            "android.hardware.drm.Mode",
+            "android.hardware.drm.NumberOfSessions",
+            "android.hardware.drm.OfflineLicenseState",
+            "android.hardware.drm.OpaqueData",
+            "android.hardware.drm.Pattern",
+            "android.hardware.drm.ProvideProvisionResponseResult",
+            "android.hardware.drm.ProvisionRequest",
+            "android.hardware.drm.SecureStop",
+            "android.hardware.drm.SecureStopId",
+            "android.hardware.drm.SecurityLevel",
+            "android.hardware.drm.SharedBuffer",
+            "android.hardware.drm.Status",
+            "android.hardware.drm.SubSample",
+            "android.hardware.drm.SupportedContentType",
+            "android.hardware.drm.Uuid"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "d7c8d1b9054ec2fb0510edb68b95ca69fd038719"
+        },
+        "name": "android.hardware.dumpstate",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.dumpstate.IDumpstateDevice"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "2": "fc957f1d3d261d065ff5e5415f2d21caa79c310f"
+        },
+        "name": "android.hardware.gnss",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.gnss.BlocklistedSource",
+            "android.hardware.gnss.CorrelationVector",
+            "android.hardware.gnss.ElapsedRealtime",
+            "android.hardware.gnss.GnssClock",
+            "android.hardware.gnss.GnssConstellationType",
+            "android.hardware.gnss.GnssData",
+            "android.hardware.gnss.GnssLocation",
+            "android.hardware.gnss.GnssMeasurement",
+            "android.hardware.gnss.GnssMultipathIndicator",
+            "android.hardware.gnss.GnssPowerStats",
+            "android.hardware.gnss.GnssSignalType",
+            "android.hardware.gnss.IAGnss",
+            "android.hardware.gnss.IAGnssCallback",
+            "android.hardware.gnss.IAGnssRil",
+            "android.hardware.gnss.IAGnssRilCallback",
+            "android.hardware.gnss.IGnss",
+            "android.hardware.gnss.IGnssAntennaInfo",
+            "android.hardware.gnss.IGnssAntennaInfoCallback",
+            "android.hardware.gnss.IGnssBatching",
+            "android.hardware.gnss.IGnssBatchingCallback",
+            "android.hardware.gnss.IGnssCallback",
+            "android.hardware.gnss.IGnssConfiguration",
+            "android.hardware.gnss.IGnssDebug",
+            "android.hardware.gnss.IGnssGeofence",
+            "android.hardware.gnss.IGnssGeofenceCallback",
+            "android.hardware.gnss.IGnssMeasurementCallback",
+            "android.hardware.gnss.IGnssMeasurementInterface",
+            "android.hardware.gnss.IGnssNavigationMessageCallback",
+            "android.hardware.gnss.IGnssNavigationMessageInterface",
+            "android.hardware.gnss.IGnssPowerIndication",
+            "android.hardware.gnss.IGnssPowerIndicationCallback",
+            "android.hardware.gnss.IGnssPsds",
+            "android.hardware.gnss.IGnssPsdsCallback",
+            "android.hardware.gnss.PsdsType",
+            "android.hardware.gnss.SatelliteClockInfo",
+            "android.hardware.gnss.SatellitePositionEcef",
+            "android.hardware.gnss.SatellitePvt",
+            "android.hardware.gnss.SatelliteVelocityEcef",
+            "android.hardware.gnss.measurement_corrections.IMeasurementCorrectionsCallback",
+            "android.hardware.gnss.measurement_corrections.IMeasurementCorrectionsInterface",
+            "android.hardware.gnss.measurement_corrections.MeasurementCorrections",
+            "android.hardware.gnss.measurement_corrections.ReflectingPlane",
+            "android.hardware.gnss.measurement_corrections.SingleSatCorrection",
+            "android.hardware.gnss.visibility_control.IGnssVisibilityControl",
+            "android.hardware.gnss.visibility_control.IGnssVisibilityControlCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "0dab5f7fc46756d126ac127cd6033fc242eff0aa"
+        },
+        "name": "android.hardware.graphics.allocator",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.graphics.allocator.AllocationError",
+            "android.hardware.graphics.allocator.AllocationResult",
+            "android.hardware.graphics.allocator.BufferDescriptorInfo",
+            "android.hardware.graphics.allocator.IAllocator"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "6e0e98f955d0bf3e7502a30fac0465e56cc98e75"
+        },
+        "name": "android.hardware.graphics.composer3",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.graphics.composer3.Buffer",
+            "android.hardware.graphics.composer3.Capability",
+            "android.hardware.graphics.composer3.ChangedCompositionLayer",
+            "android.hardware.graphics.composer3.ChangedCompositionTypes",
+            "android.hardware.graphics.composer3.ClientTarget",
+            "android.hardware.graphics.composer3.ClientTargetProperty",
+            "android.hardware.graphics.composer3.ClientTargetPropertyWithBrightness",
+            "android.hardware.graphics.composer3.ClockMonotonicTimestamp",
+            "android.hardware.graphics.composer3.Color",
+            "android.hardware.graphics.composer3.ColorMode",
+            "android.hardware.graphics.composer3.CommandError",
+            "android.hardware.graphics.composer3.CommandResultPayload",
+            "android.hardware.graphics.composer3.Composition",
+            "android.hardware.graphics.composer3.ContentType",
+            "android.hardware.graphics.composer3.DimmingStage",
+            "android.hardware.graphics.composer3.DisplayAttribute",
+            "android.hardware.graphics.composer3.DisplayBrightness",
+            "android.hardware.graphics.composer3.DisplayCapability",
+            "android.hardware.graphics.composer3.DisplayCommand",
+            "android.hardware.graphics.composer3.DisplayConnectionType",
+            "android.hardware.graphics.composer3.DisplayContentSample",
+            "android.hardware.graphics.composer3.DisplayContentSamplingAttributes",
+            "android.hardware.graphics.composer3.DisplayIdentification",
+            "android.hardware.graphics.composer3.DisplayRequest",
+            "android.hardware.graphics.composer3.FormatColorComponent",
+            "android.hardware.graphics.composer3.HdrCapabilities",
+            "android.hardware.graphics.composer3.IComposer",
+            "android.hardware.graphics.composer3.IComposerCallback",
+            "android.hardware.graphics.composer3.IComposerClient",
+            "android.hardware.graphics.composer3.LayerBrightness",
+            "android.hardware.graphics.composer3.LayerCommand",
+            "android.hardware.graphics.composer3.OverlayProperties",
+            "android.hardware.graphics.composer3.ParcelableBlendMode",
+            "android.hardware.graphics.composer3.ParcelableComposition",
+            "android.hardware.graphics.composer3.ParcelableDataspace",
+            "android.hardware.graphics.composer3.ParcelableTransform",
+            "android.hardware.graphics.composer3.PerFrameMetadata",
+            "android.hardware.graphics.composer3.PerFrameMetadataBlob",
+            "android.hardware.graphics.composer3.PerFrameMetadataKey",
+            "android.hardware.graphics.composer3.PlaneAlpha",
+            "android.hardware.graphics.composer3.PowerMode",
+            "android.hardware.graphics.composer3.PresentFence",
+            "android.hardware.graphics.composer3.PresentOrValidate",
+            "android.hardware.graphics.composer3.ReadbackBufferAttributes",
+            "android.hardware.graphics.composer3.RefreshRateChangedDebugData",
+            "android.hardware.graphics.composer3.ReleaseFences",
+            "android.hardware.graphics.composer3.RenderIntent",
+            "android.hardware.graphics.composer3.VirtualDisplay",
+            "android.hardware.graphics.composer3.VsyncPeriodChangeConstraints",
+            "android.hardware.graphics.composer3.VsyncPeriodChangeTimeline",
+            "android.hardware.graphics.composer3.ZOrder"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "94e77215594f8ad98ab33a769263d48fdabed92e"
+        },
+        "name": "android.hardware.health",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.health.BatteryCapacityLevel",
+            "android.hardware.health.BatteryChargingPolicy",
+            "android.hardware.health.BatteryChargingState",
+            "android.hardware.health.BatteryHealth",
+            "android.hardware.health.BatteryHealthData",
+            "android.hardware.health.BatteryStatus",
+            "android.hardware.health.DiskStats",
+            "android.hardware.health.HealthInfo",
+            "android.hardware.health.IHealth",
+            "android.hardware.health.IHealthInfoCallback",
+            "android.hardware.health.StorageInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "3828640730cbf161d79e54dafce9470fdafcca1e"
+        },
+        "name": "android.hardware.health.storage",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.health.storage.IGarbageCollectCallback",
+            "android.hardware.health.storage.IStorage",
+            "android.hardware.health.storage.Result"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "5f61a54bc37f935e7eb8d1fb624347f68c03c6ca",
+            "2": "194e04be642728623d65ec8321a3764fdea52ae0",
+            "3": "1b6d65bb827aecd66860e06a8806dc77a8d3382b",
+            "4": "2d63b17eb0f860c87b3564eda281342fb362e38d"
+        },
+        "name": "android.hardware.identity",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.identity.Certificate",
+            "android.hardware.identity.CipherSuite",
+            "android.hardware.identity.HardwareInformation",
+            "android.hardware.identity.IIdentityCredential",
+            "android.hardware.identity.IIdentityCredentialStore",
+            "android.hardware.identity.IPresentationSession",
+            "android.hardware.identity.IWritableIdentityCredential",
+            "android.hardware.identity.RequestDataItem",
+            "android.hardware.identity.RequestNamespace",
+            "android.hardware.identity.SecureAccessControlProfile"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "8caabf520f562590b693af83b1d2a0c409fb0236"
+        },
+        "name": "android.hardware.input.processor",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.input.processor.IInputProcessor"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "3e04aed366e96850c6164287eaf78a8e4ab071b0"
+        },
+        "name": "android.hardware.ir",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.ir.ConsumerIrFreqRange",
+            "android.hardware.ir.IConsumerIr"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "2": "c8b1e8ebb88c57dcb2c350a8d9b722e77dd864c8"
+        },
+        "name": "android.hardware.light",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.light.BrightnessMode",
+            "android.hardware.light.FlashMode",
+            "android.hardware.light.HwLight",
+            "android.hardware.light.HwLightState",
+            "android.hardware.light.ILights",
+            "android.hardware.light.LightType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "25438132a462bf5b6f4334d966c95b70824e66c0"
+        },
+        "name": "android.hardware.memtrack",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.memtrack.DeviceInfo",
+            "android.hardware.memtrack.IMemtrack",
+            "android.hardware.memtrack.MemtrackRecord",
+            "android.hardware.memtrack.MemtrackType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "32dabbc53f6f51763228400e3dea8e11c36d677f"
+        },
+        "name": "android.hardware.net.nlinterceptor",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.net.nlinterceptor.IInterceptor",
+            "android.hardware.net.nlinterceptor.InterceptedSocket"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "ae57b48403df6752d8d8d56d215c3e31db74935d",
+            "2": "04c95c94c96062e5faf35c00b4ae0e50a3f11d0d",
+            "3": "8c2c4ca2327e6f779dad6119c03d832ea4e1def1",
+            "4": "53178f8de9b8861df391cf0593f6f3e08adad33d"
+        },
+        "name": "android.hardware.neuralnetworks",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.neuralnetworks.BufferDesc",
+            "android.hardware.neuralnetworks.BufferRole",
+            "android.hardware.neuralnetworks.Capabilities",
+            "android.hardware.neuralnetworks.DataLocation",
+            "android.hardware.neuralnetworks.DeviceBuffer",
+            "android.hardware.neuralnetworks.DeviceType",
+            "android.hardware.neuralnetworks.ErrorStatus",
+            "android.hardware.neuralnetworks.ExecutionConfig",
+            "android.hardware.neuralnetworks.ExecutionPreference",
+            "android.hardware.neuralnetworks.ExecutionResult",
+            "android.hardware.neuralnetworks.Extension",
+            "android.hardware.neuralnetworks.ExtensionNameAndPrefix",
+            "android.hardware.neuralnetworks.ExtensionOperandTypeInformation",
+            "android.hardware.neuralnetworks.FencedExecutionResult",
+            "android.hardware.neuralnetworks.FusedActivationFunc",
+            "android.hardware.neuralnetworks.IBuffer",
+            "android.hardware.neuralnetworks.IBurst",
+            "android.hardware.neuralnetworks.IDevice",
+            "android.hardware.neuralnetworks.IExecution",
+            "android.hardware.neuralnetworks.IFencedExecutionCallback",
+            "android.hardware.neuralnetworks.IPreparedModel",
+            "android.hardware.neuralnetworks.IPreparedModelCallback",
+            "android.hardware.neuralnetworks.IPreparedModelParcel",
+            "android.hardware.neuralnetworks.Memory",
+            "android.hardware.neuralnetworks.Model",
+            "android.hardware.neuralnetworks.NumberOfCacheFiles",
+            "android.hardware.neuralnetworks.Operand",
+            "android.hardware.neuralnetworks.OperandExtraParams",
+            "android.hardware.neuralnetworks.OperandLifeTime",
+            "android.hardware.neuralnetworks.OperandPerformance",
+            "android.hardware.neuralnetworks.OperandType",
+            "android.hardware.neuralnetworks.Operation",
+            "android.hardware.neuralnetworks.OperationType",
+            "android.hardware.neuralnetworks.OutputShape",
+            "android.hardware.neuralnetworks.PerformanceInfo",
+            "android.hardware.neuralnetworks.PrepareModelConfig",
+            "android.hardware.neuralnetworks.Priority",
+            "android.hardware.neuralnetworks.Request",
+            "android.hardware.neuralnetworks.RequestArgument",
+            "android.hardware.neuralnetworks.RequestMemoryPool",
+            "android.hardware.neuralnetworks.Subgraph",
+            "android.hardware.neuralnetworks.SymmPerChannelQuantParams",
+            "android.hardware.neuralnetworks.Timing",
+            "android.hardware.neuralnetworks.TokenValuePair"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "37acf94ceb095ad537b66c3bd77c30a6ad5f5b0e"
+        },
+        "name": "android.hardware.nfc",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.nfc.INfc",
+            "android.hardware.nfc.INfcClientCallback",
+            "android.hardware.nfc.NfcCloseType",
+            "android.hardware.nfc.NfcConfig",
+            "android.hardware.nfc.NfcEvent",
+            "android.hardware.nfc.NfcStatus",
+            "android.hardware.nfc.PresenceCheckAlgorithm",
+            "android.hardware.nfc.ProtocolDiscoveryConfig"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "782d36d56fbdca1105672dd96b8e955b6a81dadf"
+        },
+        "name": "android.hardware.oemlock",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.oemlock.IOemLock",
+            "android.hardware.oemlock.OemLockSecureStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "2": "ef4f5ed58e39693f25c1f8fdcfe7b958c6b800bc",
+            "3": "fd3434f993d791e75d959a042010dd6fca13e33c"
+        },
+        "name": "android.hardware.power",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.power.Boost",
+            "android.hardware.power.IPower",
+            "android.hardware.power.IPowerHintSession",
+            "android.hardware.power.Mode",
+            "android.hardware.power.SessionHint",
+            "android.hardware.power.WorkDuration"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            2,
+            3
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "93253458fae451cf1187db6120a59fab428f7d02"
+        },
+        "name": "android.hardware.power.stats",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.power.stats.Channel",
+            "android.hardware.power.stats.EnergyConsumer",
+            "android.hardware.power.stats.EnergyConsumerAttribution",
+            "android.hardware.power.stats.EnergyConsumerResult",
+            "android.hardware.power.stats.EnergyConsumerType",
+            "android.hardware.power.stats.EnergyMeasurement",
+            "android.hardware.power.stats.IPowerStats",
+            "android.hardware.power.stats.PowerEntity",
+            "android.hardware.power.stats.State",
+            "android.hardware.power.stats.StateResidency",
+            "android.hardware.power.stats.StateResidencyResult"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.config",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.config.IRadioConfig",
+            "android.hardware.radio.config.IRadioConfigIndication",
+            "android.hardware.radio.config.IRadioConfigResponse",
+            "android.hardware.radio.config.MultipleEnabledProfilesMode",
+            "android.hardware.radio.config.PhoneCapability",
+            "android.hardware.radio.config.SimPortInfo",
+            "android.hardware.radio.config.SimSlotStatus",
+            "android.hardware.radio.config.SlotPortMapping"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.data",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.data.ApnAuthType",
+            "android.hardware.radio.data.ApnTypes",
+            "android.hardware.radio.data.DataCallFailCause",
+            "android.hardware.radio.data.DataProfileInfo",
+            "android.hardware.radio.data.DataRequestReason",
+            "android.hardware.radio.data.DataThrottlingAction",
+            "android.hardware.radio.data.EpsQos",
+            "android.hardware.radio.data.IRadioData",
+            "android.hardware.radio.data.IRadioDataIndication",
+            "android.hardware.radio.data.IRadioDataResponse",
+            "android.hardware.radio.data.KeepaliveRequest",
+            "android.hardware.radio.data.KeepaliveStatus",
+            "android.hardware.radio.data.LinkAddress",
+            "android.hardware.radio.data.NrQos",
+            "android.hardware.radio.data.OsAppId",
+            "android.hardware.radio.data.PcoDataInfo",
+            "android.hardware.radio.data.PdpProtocolType",
+            "android.hardware.radio.data.PortRange",
+            "android.hardware.radio.data.Qos",
+            "android.hardware.radio.data.QosBandwidth",
+            "android.hardware.radio.data.QosFilter",
+            "android.hardware.radio.data.QosFilterIpsecSpi",
+            "android.hardware.radio.data.QosFilterIpv6FlowLabel",
+            "android.hardware.radio.data.QosFilterTypeOfService",
+            "android.hardware.radio.data.QosSession",
+            "android.hardware.radio.data.RouteSelectionDescriptor",
+            "android.hardware.radio.data.SetupDataCallResult",
+            "android.hardware.radio.data.SliceInfo",
+            "android.hardware.radio.data.SlicingConfig",
+            "android.hardware.radio.data.TrafficDescriptor",
+            "android.hardware.radio.data.UrspRule"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.messaging",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.messaging.CdmaBroadcastSmsConfigInfo",
+            "android.hardware.radio.messaging.CdmaSmsAck",
+            "android.hardware.radio.messaging.CdmaSmsAddress",
+            "android.hardware.radio.messaging.CdmaSmsMessage",
+            "android.hardware.radio.messaging.CdmaSmsSubaddress",
+            "android.hardware.radio.messaging.CdmaSmsWriteArgs",
+            "android.hardware.radio.messaging.GsmBroadcastSmsConfigInfo",
+            "android.hardware.radio.messaging.GsmSmsMessage",
+            "android.hardware.radio.messaging.IRadioMessaging",
+            "android.hardware.radio.messaging.IRadioMessagingIndication",
+            "android.hardware.radio.messaging.IRadioMessagingResponse",
+            "android.hardware.radio.messaging.ImsSmsMessage",
+            "android.hardware.radio.messaging.SendSmsResult",
+            "android.hardware.radio.messaging.SmsAcknowledgeFailCause",
+            "android.hardware.radio.messaging.SmsWriteArgs"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.modem",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.modem.ActivityStatsInfo",
+            "android.hardware.radio.modem.ActivityStatsTechSpecificInfo",
+            "android.hardware.radio.modem.DeviceStateType",
+            "android.hardware.radio.modem.HardwareConfig",
+            "android.hardware.radio.modem.HardwareConfigModem",
+            "android.hardware.radio.modem.HardwareConfigSim",
+            "android.hardware.radio.modem.IRadioModem",
+            "android.hardware.radio.modem.IRadioModemIndication",
+            "android.hardware.radio.modem.IRadioModemResponse",
+            "android.hardware.radio.modem.ImeiInfo",
+            "android.hardware.radio.modem.NvItem",
+            "android.hardware.radio.modem.NvWriteItem",
+            "android.hardware.radio.modem.RadioCapability",
+            "android.hardware.radio.modem.RadioState",
+            "android.hardware.radio.modem.ResetNvType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.network",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.network.AccessTechnologySpecificInfo",
+            "android.hardware.radio.network.BarringInfo",
+            "android.hardware.radio.network.BarringTypeSpecificInfo",
+            "android.hardware.radio.network.Cdma2000RegistrationInfo",
+            "android.hardware.radio.network.CdmaRoamingType",
+            "android.hardware.radio.network.CdmaSignalStrength",
+            "android.hardware.radio.network.CellConnectionStatus",
+            "android.hardware.radio.network.CellIdentity",
+            "android.hardware.radio.network.CellIdentityCdma",
+            "android.hardware.radio.network.CellIdentityGsm",
+            "android.hardware.radio.network.CellIdentityLte",
+            "android.hardware.radio.network.CellIdentityNr",
+            "android.hardware.radio.network.CellIdentityTdscdma",
+            "android.hardware.radio.network.CellIdentityWcdma",
+            "android.hardware.radio.network.CellInfo",
+            "android.hardware.radio.network.CellInfoCdma",
+            "android.hardware.radio.network.CellInfoGsm",
+            "android.hardware.radio.network.CellInfoLte",
+            "android.hardware.radio.network.CellInfoNr",
+            "android.hardware.radio.network.CellInfoRatSpecificInfo",
+            "android.hardware.radio.network.CellInfoTdscdma",
+            "android.hardware.radio.network.CellInfoWcdma",
+            "android.hardware.radio.network.ClosedSubscriberGroupInfo",
+            "android.hardware.radio.network.Domain",
+            "android.hardware.radio.network.EmergencyMode",
+            "android.hardware.radio.network.EmergencyNetworkScanTrigger",
+            "android.hardware.radio.network.EmergencyRegResult",
+            "android.hardware.radio.network.EmergencyScanType",
+            "android.hardware.radio.network.EutranBands",
+            "android.hardware.radio.network.EutranRegistrationInfo",
+            "android.hardware.radio.network.EvdoSignalStrength",
+            "android.hardware.radio.network.GeranBands",
+            "android.hardware.radio.network.GsmSignalStrength",
+            "android.hardware.radio.network.IRadioNetwork",
+            "android.hardware.radio.network.IRadioNetworkIndication",
+            "android.hardware.radio.network.IRadioNetworkResponse",
+            "android.hardware.radio.network.IndicationFilter",
+            "android.hardware.radio.network.LceDataInfo",
+            "android.hardware.radio.network.LinkCapacityEstimate",
+            "android.hardware.radio.network.LteSignalStrength",
+            "android.hardware.radio.network.LteVopsInfo",
+            "android.hardware.radio.network.NetworkScanRequest",
+            "android.hardware.radio.network.NetworkScanResult",
+            "android.hardware.radio.network.NgranBands",
+            "android.hardware.radio.network.NrDualConnectivityState",
+            "android.hardware.radio.network.NrIndicators",
+            "android.hardware.radio.network.NrSignalStrength",
+            "android.hardware.radio.network.NrVopsInfo",
+            "android.hardware.radio.network.OperatorInfo",
+            "android.hardware.radio.network.PhoneRestrictedState",
+            "android.hardware.radio.network.PhysicalChannelConfig",
+            "android.hardware.radio.network.PhysicalChannelConfigBand",
+            "android.hardware.radio.network.RadioAccessSpecifier",
+            "android.hardware.radio.network.RadioAccessSpecifierBands",
+            "android.hardware.radio.network.RadioBandMode",
+            "android.hardware.radio.network.RegState",
+            "android.hardware.radio.network.RegStateResult",
+            "android.hardware.radio.network.RegistrationFailCause",
+            "android.hardware.radio.network.SignalStrength",
+            "android.hardware.radio.network.SignalThresholdInfo",
+            "android.hardware.radio.network.SuppSvcNotification",
+            "android.hardware.radio.network.TdscdmaSignalStrength",
+            "android.hardware.radio.network.UsageSetting",
+            "android.hardware.radio.network.UtranBands",
+            "android.hardware.radio.network.WcdmaSignalStrength"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.sim",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.sim.AppStatus",
+            "android.hardware.radio.sim.CardPowerState",
+            "android.hardware.radio.sim.CardStatus",
+            "android.hardware.radio.sim.Carrier",
+            "android.hardware.radio.sim.CarrierRestrictions",
+            "android.hardware.radio.sim.CdmaSubscriptionSource",
+            "android.hardware.radio.sim.IRadioSim",
+            "android.hardware.radio.sim.IRadioSimIndication",
+            "android.hardware.radio.sim.IRadioSimResponse",
+            "android.hardware.radio.sim.IccIo",
+            "android.hardware.radio.sim.IccIoResult",
+            "android.hardware.radio.sim.ImsiEncryptionInfo",
+            "android.hardware.radio.sim.PbReceivedStatus",
+            "android.hardware.radio.sim.PersoSubstate",
+            "android.hardware.radio.sim.PhonebookCapacity",
+            "android.hardware.radio.sim.PhonebookRecordInfo",
+            "android.hardware.radio.sim.PinState",
+            "android.hardware.radio.sim.SelectUiccSub",
+            "android.hardware.radio.sim.SessionInfo",
+            "android.hardware.radio.sim.SimApdu",
+            "android.hardware.radio.sim.SimLockMultiSimPolicy",
+            "android.hardware.radio.sim.SimRefreshResult"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.radio.voice",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.radio.voice.AudioQuality",
+            "android.hardware.radio.voice.Call",
+            "android.hardware.radio.voice.CallForwardInfo",
+            "android.hardware.radio.voice.CdmaCallWaiting",
+            "android.hardware.radio.voice.CdmaDisplayInfoRecord",
+            "android.hardware.radio.voice.CdmaInformationRecord",
+            "android.hardware.radio.voice.CdmaLineControlInfoRecord",
+            "android.hardware.radio.voice.CdmaNumberInfoRecord",
+            "android.hardware.radio.voice.CdmaOtaProvisionStatus",
+            "android.hardware.radio.voice.CdmaRedirectingNumberInfoRecord",
+            "android.hardware.radio.voice.CdmaSignalInfoRecord",
+            "android.hardware.radio.voice.CdmaT53AudioControlInfoRecord",
+            "android.hardware.radio.voice.CdmaT53ClirInfoRecord",
+            "android.hardware.radio.voice.CfData",
+            "android.hardware.radio.voice.ClipStatus",
+            "android.hardware.radio.voice.Dial",
+            "android.hardware.radio.voice.EmergencyCallRouting",
+            "android.hardware.radio.voice.EmergencyNumber",
+            "android.hardware.radio.voice.EmergencyServiceCategory",
+            "android.hardware.radio.voice.IRadioVoice",
+            "android.hardware.radio.voice.IRadioVoiceIndication",
+            "android.hardware.radio.voice.IRadioVoiceResponse",
+            "android.hardware.radio.voice.LastCallFailCause",
+            "android.hardware.radio.voice.LastCallFailCauseInfo",
+            "android.hardware.radio.voice.SrvccState",
+            "android.hardware.radio.voice.SsInfoData",
+            "android.hardware.radio.voice.StkCcUnsolSsResult",
+            "android.hardware.radio.voice.TtyMode",
+            "android.hardware.radio.voice.UssdModeType",
+            "android.hardware.radio.voice.UusInfo"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "ba450432e0dab8ee7bbc30013819ea8aef12054b"
+        },
+        "name": "android.hardware.rebootescrow",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.rebootescrow.IRebootEscrow"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {},
+        "name": "android.hardware.security.keymint",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.security.keymint.Algorithm",
+            "android.hardware.security.keymint.AttestationKey",
+            "android.hardware.security.keymint.BeginResult",
+            "android.hardware.security.keymint.BlockMode",
+            "android.hardware.security.keymint.Certificate",
+            "android.hardware.security.keymint.Digest",
+            "android.hardware.security.keymint.EcCurve",
+            "android.hardware.security.keymint.ErrorCode",
+            "android.hardware.security.keymint.HardwareAuthToken",
+            "android.hardware.security.keymint.HardwareAuthenticatorType",
+            "android.hardware.security.keymint.IKeyMintDevice",
+            "android.hardware.security.keymint.IKeyMintOperation",
+            "android.hardware.security.keymint.KeyCharacteristics",
+            "android.hardware.security.keymint.KeyCreationResult",
+            "android.hardware.security.keymint.KeyFormat",
+            "android.hardware.security.keymint.KeyMintHardwareInfo",
+            "android.hardware.security.keymint.KeyOrigin",
+            "android.hardware.security.keymint.KeyParameter",
+            "android.hardware.security.keymint.KeyParameterValue",
+            "android.hardware.security.keymint.KeyPurpose",
+            "android.hardware.security.keymint.PaddingMode",
+            "android.hardware.security.keymint.SecurityLevel",
+            "android.hardware.security.keymint.Tag",
+            "android.hardware.security.keymint.TagType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "cd55ca9963c6a57fa5f2f120a45c6e0c4fafb423"
+        },
+        "name": "android.hardware.security.secureclock",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.security.secureclock.ISecureClock",
+            "android.hardware.security.secureclock.TimeStampToken",
+            "android.hardware.security.secureclock.Timestamp"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "aea3745b559d2977f0676952e510fb0547a52140"
+        },
+        "name": "android.hardware.security.sharedsecret",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.security.sharedsecret.ISharedSecret",
+            "android.hardware.security.sharedsecret.SharedSecretParameters"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "c38c6b75e592ba5a6400b6348ad7f27db3064410"
+        },
+        "name": "android.hardware.sensors",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.sensors.AdditionalInfo",
+            "android.hardware.sensors.DynamicSensorInfo",
+            "android.hardware.sensors.Event",
+            "android.hardware.sensors.ISensors",
+            "android.hardware.sensors.ISensorsCallback",
+            "android.hardware.sensors.SensorInfo",
+            "android.hardware.sensors.SensorStatus",
+            "android.hardware.sensors.SensorType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "7d8d63478cd50e766d2072140c8aa3457f9fb585"
+        },
+        "name": "android.hardware.soundtrigger3",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.soundtrigger3.ISoundTriggerHw",
+            "android.hardware.soundtrigger3.ISoundTriggerHwCallback",
+            "android.hardware.soundtrigger3.ISoundTriggerHwGlobalCallback"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "d42f1677ada3f62036894111686245c3c8310fe4"
+        },
+        "name": "android.hardware.tv.tuner",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.tv.tuner.AudioExtraMetaData",
+            "android.hardware.tv.tuner.AudioPreselection",
+            "android.hardware.tv.tuner.AudioPreselectionLabel",
+            "android.hardware.tv.tuner.AudioPreselectionRenderingIndicationType",
+            "android.hardware.tv.tuner.AudioPresentation",
+            "android.hardware.tv.tuner.AudioStreamType",
+            "android.hardware.tv.tuner.AvStreamType",
+            "android.hardware.tv.tuner.Constant",
+            "android.hardware.tv.tuner.Constant64Bit",
+            "android.hardware.tv.tuner.DataFormat",
+            "android.hardware.tv.tuner.DemuxAlpFilterSettings",
+            "android.hardware.tv.tuner.DemuxAlpFilterSettingsFilterSettings",
+            "android.hardware.tv.tuner.DemuxAlpFilterType",
+            "android.hardware.tv.tuner.DemuxAlpLengthType",
+            "android.hardware.tv.tuner.DemuxCapabilities",
+            "android.hardware.tv.tuner.DemuxFilterAvSettings",
+            "android.hardware.tv.tuner.DemuxFilterDownloadEvent",
+            "android.hardware.tv.tuner.DemuxFilterDownloadSettings",
+            "android.hardware.tv.tuner.DemuxFilterEvent",
+            "android.hardware.tv.tuner.DemuxFilterIpPayloadEvent",
+            "android.hardware.tv.tuner.DemuxFilterMainType",
+            "android.hardware.tv.tuner.DemuxFilterMediaEvent",
+            "android.hardware.tv.tuner.DemuxFilterMediaEventExtraMetaData",
+            "android.hardware.tv.tuner.DemuxFilterMmtpRecordEvent",
+            "android.hardware.tv.tuner.DemuxFilterMonitorEvent",
+            "android.hardware.tv.tuner.DemuxFilterMonitorEventType",
+            "android.hardware.tv.tuner.DemuxFilterPesDataSettings",
+            "android.hardware.tv.tuner.DemuxFilterPesEvent",
+            "android.hardware.tv.tuner.DemuxFilterRecordSettings",
+            "android.hardware.tv.tuner.DemuxFilterScIndexMask",
+            "android.hardware.tv.tuner.DemuxFilterSectionBits",
+            "android.hardware.tv.tuner.DemuxFilterSectionEvent",
+            "android.hardware.tv.tuner.DemuxFilterSectionSettings",
+            "android.hardware.tv.tuner.DemuxFilterSectionSettingsCondition",
+            "android.hardware.tv.tuner.DemuxFilterSectionSettingsConditionTableInfo",
+            "android.hardware.tv.tuner.DemuxFilterSettings",
+            "android.hardware.tv.tuner.DemuxFilterStatus",
+            "android.hardware.tv.tuner.DemuxFilterSubType",
+            "android.hardware.tv.tuner.DemuxFilterTemiEvent",
+            "android.hardware.tv.tuner.DemuxFilterTsRecordEvent",
+            "android.hardware.tv.tuner.DemuxFilterType",
+            "android.hardware.tv.tuner.DemuxInfo",
+            "android.hardware.tv.tuner.DemuxIpAddress",
+            "android.hardware.tv.tuner.DemuxIpAddressIpAddress",
+            "android.hardware.tv.tuner.DemuxIpFilterSettings",
+            "android.hardware.tv.tuner.DemuxIpFilterSettingsFilterSettings",
+            "android.hardware.tv.tuner.DemuxIpFilterType",
+            "android.hardware.tv.tuner.DemuxMmtpFilterSettings",
+            "android.hardware.tv.tuner.DemuxMmtpFilterSettingsFilterSettings",
+            "android.hardware.tv.tuner.DemuxMmtpFilterType",
+            "android.hardware.tv.tuner.DemuxPid",
+            "android.hardware.tv.tuner.DemuxQueueNotifyBits",
+            "android.hardware.tv.tuner.DemuxRecordScIndexType",
+            "android.hardware.tv.tuner.DemuxScAvcIndex",
+            "android.hardware.tv.tuner.DemuxScHevcIndex",
+            "android.hardware.tv.tuner.DemuxScIndex",
+            "android.hardware.tv.tuner.DemuxScVvcIndex",
+            "android.hardware.tv.tuner.DemuxTlvFilterSettings",
+            "android.hardware.tv.tuner.DemuxTlvFilterSettingsFilterSettings",
+            "android.hardware.tv.tuner.DemuxTlvFilterType",
+            "android.hardware.tv.tuner.DemuxTsFilterSettings",
+            "android.hardware.tv.tuner.DemuxTsFilterSettingsFilterSettings",
+            "android.hardware.tv.tuner.DemuxTsFilterType",
+            "android.hardware.tv.tuner.DemuxTsIndex",
+            "android.hardware.tv.tuner.DvrSettings",
+            "android.hardware.tv.tuner.DvrType",
+            "android.hardware.tv.tuner.FilterDelayHint",
+            "android.hardware.tv.tuner.FilterDelayHintType",
+            "android.hardware.tv.tuner.FrontendAnalogAftFlag",
+            "android.hardware.tv.tuner.FrontendAnalogCapabilities",
+            "android.hardware.tv.tuner.FrontendAnalogSettings",
+            "android.hardware.tv.tuner.FrontendAnalogSifStandard",
+            "android.hardware.tv.tuner.FrontendAnalogType",
+            "android.hardware.tv.tuner.FrontendAtsc3Bandwidth",
+            "android.hardware.tv.tuner.FrontendAtsc3Capabilities",
+            "android.hardware.tv.tuner.FrontendAtsc3CodeRate",
+            "android.hardware.tv.tuner.FrontendAtsc3DemodOutputFormat",
+            "android.hardware.tv.tuner.FrontendAtsc3Fec",
+            "android.hardware.tv.tuner.FrontendAtsc3Modulation",
+            "android.hardware.tv.tuner.FrontendAtsc3PlpSettings",
+            "android.hardware.tv.tuner.FrontendAtsc3Settings",
+            "android.hardware.tv.tuner.FrontendAtsc3TimeInterleaveMode",
+            "android.hardware.tv.tuner.FrontendAtscCapabilities",
+            "android.hardware.tv.tuner.FrontendAtscModulation",
+            "android.hardware.tv.tuner.FrontendAtscSettings",
+            "android.hardware.tv.tuner.FrontendBandwidth",
+            "android.hardware.tv.tuner.FrontendCableTimeInterleaveMode",
+            "android.hardware.tv.tuner.FrontendCapabilities",
+            "android.hardware.tv.tuner.FrontendDtmbBandwidth",
+            "android.hardware.tv.tuner.FrontendDtmbCapabilities",
+            "android.hardware.tv.tuner.FrontendDtmbCodeRate",
+            "android.hardware.tv.tuner.FrontendDtmbGuardInterval",
+            "android.hardware.tv.tuner.FrontendDtmbModulation",
+            "android.hardware.tv.tuner.FrontendDtmbSettings",
+            "android.hardware.tv.tuner.FrontendDtmbTimeInterleaveMode",
+            "android.hardware.tv.tuner.FrontendDtmbTransmissionMode",
+            "android.hardware.tv.tuner.FrontendDvbcAnnex",
+            "android.hardware.tv.tuner.FrontendDvbcBandwidth",
+            "android.hardware.tv.tuner.FrontendDvbcCapabilities",
+            "android.hardware.tv.tuner.FrontendDvbcModulation",
+            "android.hardware.tv.tuner.FrontendDvbcOuterFec",
+            "android.hardware.tv.tuner.FrontendDvbcSettings",
+            "android.hardware.tv.tuner.FrontendDvbsCapabilities",
+            "android.hardware.tv.tuner.FrontendDvbsCodeRate",
+            "android.hardware.tv.tuner.FrontendDvbsModulation",
+            "android.hardware.tv.tuner.FrontendDvbsPilot",
+            "android.hardware.tv.tuner.FrontendDvbsRolloff",
+            "android.hardware.tv.tuner.FrontendDvbsScanType",
+            "android.hardware.tv.tuner.FrontendDvbsSettings",
+            "android.hardware.tv.tuner.FrontendDvbsStandard",
+            "android.hardware.tv.tuner.FrontendDvbsVcmMode",
+            "android.hardware.tv.tuner.FrontendDvbtBandwidth",
+            "android.hardware.tv.tuner.FrontendDvbtCapabilities",
+            "android.hardware.tv.tuner.FrontendDvbtCoderate",
+            "android.hardware.tv.tuner.FrontendDvbtConstellation",
+            "android.hardware.tv.tuner.FrontendDvbtGuardInterval",
+            "android.hardware.tv.tuner.FrontendDvbtHierarchy",
+            "android.hardware.tv.tuner.FrontendDvbtPlpMode",
+            "android.hardware.tv.tuner.FrontendDvbtSettings",
+            "android.hardware.tv.tuner.FrontendDvbtStandard",
+            "android.hardware.tv.tuner.FrontendDvbtTransmissionMode",
+            "android.hardware.tv.tuner.FrontendEventType",
+            "android.hardware.tv.tuner.FrontendGuardInterval",
+            "android.hardware.tv.tuner.FrontendInfo",
+            "android.hardware.tv.tuner.FrontendInnerFec",
+            "android.hardware.tv.tuner.FrontendInterleaveMode",
+            "android.hardware.tv.tuner.FrontendIptvCapabilities",
+            "android.hardware.tv.tuner.FrontendIptvSettings",
+            "android.hardware.tv.tuner.FrontendIptvSettingsFec",
+            "android.hardware.tv.tuner.FrontendIptvSettingsFecType",
+            "android.hardware.tv.tuner.FrontendIptvSettingsIgmp",
+            "android.hardware.tv.tuner.FrontendIptvSettingsProtocol",
+            "android.hardware.tv.tuner.FrontendIsdbs3Capabilities",
+            "android.hardware.tv.tuner.FrontendIsdbs3Coderate",
+            "android.hardware.tv.tuner.FrontendIsdbs3Modulation",
+            "android.hardware.tv.tuner.FrontendIsdbs3Rolloff",
+            "android.hardware.tv.tuner.FrontendIsdbs3Settings",
+            "android.hardware.tv.tuner.FrontendIsdbsCapabilities",
+            "android.hardware.tv.tuner.FrontendIsdbsCoderate",
+            "android.hardware.tv.tuner.FrontendIsdbsModulation",
+            "android.hardware.tv.tuner.FrontendIsdbsRolloff",
+            "android.hardware.tv.tuner.FrontendIsdbsSettings",
+            "android.hardware.tv.tuner.FrontendIsdbsStreamIdType",
+            "android.hardware.tv.tuner.FrontendIsdbtBandwidth",
+            "android.hardware.tv.tuner.FrontendIsdbtCapabilities",
+            "android.hardware.tv.tuner.FrontendIsdbtCoderate",
+            "android.hardware.tv.tuner.FrontendIsdbtGuardInterval",
+            "android.hardware.tv.tuner.FrontendIsdbtLayerSettings",
+            "android.hardware.tv.tuner.FrontendIsdbtMode",
+            "android.hardware.tv.tuner.FrontendIsdbtModulation",
+            "android.hardware.tv.tuner.FrontendIsdbtPartialReceptionFlag",
+            "android.hardware.tv.tuner.FrontendIsdbtSettings",
+            "android.hardware.tv.tuner.FrontendIsdbtTimeInterleaveMode",
+            "android.hardware.tv.tuner.FrontendModulation",
+            "android.hardware.tv.tuner.FrontendModulationStatus",
+            "android.hardware.tv.tuner.FrontendRollOff",
+            "android.hardware.tv.tuner.FrontendScanAtsc3PlpInfo",
+            "android.hardware.tv.tuner.FrontendScanMessage",
+            "android.hardware.tv.tuner.FrontendScanMessageStandard",
+            "android.hardware.tv.tuner.FrontendScanMessageType",
+            "android.hardware.tv.tuner.FrontendScanType",
+            "android.hardware.tv.tuner.FrontendSettings",
+            "android.hardware.tv.tuner.FrontendSpectralInversion",
+            "android.hardware.tv.tuner.FrontendStatus",
+            "android.hardware.tv.tuner.FrontendStatusAtsc3PlpInfo",
+            "android.hardware.tv.tuner.FrontendStatusReadiness",
+            "android.hardware.tv.tuner.FrontendStatusType",
+            "android.hardware.tv.tuner.FrontendTransmissionMode",
+            "android.hardware.tv.tuner.FrontendType",
+            "android.hardware.tv.tuner.IDemux",
+            "android.hardware.tv.tuner.IDescrambler",
+            "android.hardware.tv.tuner.IDvr",
+            "android.hardware.tv.tuner.IDvrCallback",
+            "android.hardware.tv.tuner.IFilter",
+            "android.hardware.tv.tuner.IFilterCallback",
+            "android.hardware.tv.tuner.IFrontend",
+            "android.hardware.tv.tuner.IFrontendCallback",
+            "android.hardware.tv.tuner.ILnb",
+            "android.hardware.tv.tuner.ILnbCallback",
+            "android.hardware.tv.tuner.ITimeFilter",
+            "android.hardware.tv.tuner.ITuner",
+            "android.hardware.tv.tuner.LnbEventType",
+            "android.hardware.tv.tuner.LnbPosition",
+            "android.hardware.tv.tuner.LnbTone",
+            "android.hardware.tv.tuner.LnbVoltage",
+            "android.hardware.tv.tuner.PlaybackSettings",
+            "android.hardware.tv.tuner.PlaybackStatus",
+            "android.hardware.tv.tuner.RecordSettings",
+            "android.hardware.tv.tuner.RecordStatus",
+            "android.hardware.tv.tuner.Result",
+            "android.hardware.tv.tuner.ScramblingStatus",
+            "android.hardware.tv.tuner.VideoStreamType"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "9762531142d72e03bb4228209846c135f276d40e"
+        },
+        "name": "android.hardware.usb",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.usb.AltModeData",
+            "android.hardware.usb.ComplianceWarning",
+            "android.hardware.usb.ContaminantDetectionStatus",
+            "android.hardware.usb.ContaminantProtectionMode",
+            "android.hardware.usb.ContaminantProtectionStatus",
+            "android.hardware.usb.DisplayPortAltModePinAssignment",
+            "android.hardware.usb.DisplayPortAltModeStatus",
+            "android.hardware.usb.IUsb",
+            "android.hardware.usb.IUsbCallback",
+            "android.hardware.usb.LinkTrainingStatus",
+            "android.hardware.usb.PlugOrientation",
+            "android.hardware.usb.PortDataRole",
+            "android.hardware.usb.PortMode",
+            "android.hardware.usb.PortPowerRole",
+            "android.hardware.usb.PortRole",
+            "android.hardware.usb.PortStatus",
+            "android.hardware.usb.PowerBrickStatus",
+            "android.hardware.usb.Status",
+            "android.hardware.usb.UsbDataStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "5bffd1b593a254bcbe9cb0b2fcf29f71452ae0af"
+        },
+        "name": "android.hardware.uwb",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.uwb.IUwb",
+            "android.hardware.uwb.IUwbChip",
+            "android.hardware.uwb.IUwbClientCallback",
+            "android.hardware.uwb.UwbEvent",
+            "android.hardware.uwb.UwbStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "eeab78b6096b029f424ab5ce9c2c4ef1249a5cb0",
+            "2": "ea8742d6993e1a82917da38b9938e537aa7fcb54"
+        },
+        "name": "android.hardware.vibrator",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.vibrator.ActivePwle",
+            "android.hardware.vibrator.Braking",
+            "android.hardware.vibrator.BrakingPwle",
+            "android.hardware.vibrator.CompositeEffect",
+            "android.hardware.vibrator.CompositePrimitive",
+            "android.hardware.vibrator.Effect",
+            "android.hardware.vibrator.EffectStrength",
+            "android.hardware.vibrator.IVibrator",
+            "android.hardware.vibrator.IVibratorCallback",
+            "android.hardware.vibrator.IVibratorManager",
+            "android.hardware.vibrator.PrimitivePwle"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1,
+            2
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "c2ea8ac04f236492c02b992dc46ae904db0acc7e"
+        },
+        "name": "android.hardware.weaver",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.weaver.IWeaver",
+            "android.hardware.weaver.WeaverConfig",
+            "android.hardware.weaver.WeaverReadResponse",
+            "android.hardware.weaver.WeaverReadStatus"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "370160cd436c80c5d355de5ad11d2aaee684d801"
+        },
+        "name": "android.hardware.wifi.hostapd",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.wifi.hostapd.ApInfo",
+            "android.hardware.wifi.hostapd.BandMask",
+            "android.hardware.wifi.hostapd.ChannelBandwidth",
+            "android.hardware.wifi.hostapd.ChannelParams",
+            "android.hardware.wifi.hostapd.ClientInfo",
+            "android.hardware.wifi.hostapd.DebugLevel",
+            "android.hardware.wifi.hostapd.EncryptionType",
+            "android.hardware.wifi.hostapd.FrequencyRange",
+            "android.hardware.wifi.hostapd.Generation",
+            "android.hardware.wifi.hostapd.HostapdStatusCode",
+            "android.hardware.wifi.hostapd.HwModeParams",
+            "android.hardware.wifi.hostapd.IHostapd",
+            "android.hardware.wifi.hostapd.IHostapdCallback",
+            "android.hardware.wifi.hostapd.Ieee80211ReasonCode",
+            "android.hardware.wifi.hostapd.IfaceParams",
+            "android.hardware.wifi.hostapd.NetworkParams",
+            "android.hardware.wifi.hostapd.ParamSizeLimits"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    },
+    {
+        "has_development": false,
+        "hashes": {
+            "1": "5b8bcab6b43177dffdec5873e84205b04757cc9d"
+        },
+        "name": "android.hardware.wifi.supplicant",
+        "stability": "vintf",
+        "types": [
+            "android.hardware.wifi.supplicant.AnqpData",
+            "android.hardware.wifi.supplicant.AnqpInfoId",
+            "android.hardware.wifi.supplicant.AssociationRejectionData",
+            "android.hardware.wifi.supplicant.AuthAlgMask",
+            "android.hardware.wifi.supplicant.AuxiliarySupplicantEventCode",
+            "android.hardware.wifi.supplicant.BssTmData",
+            "android.hardware.wifi.supplicant.BssTmDataFlagsMask",
+            "android.hardware.wifi.supplicant.BssTmStatusCode",
+            "android.hardware.wifi.supplicant.BssidChangeReason",
+            "android.hardware.wifi.supplicant.BtCoexistenceMode",
+            "android.hardware.wifi.supplicant.ConnectionCapabilities",
+            "android.hardware.wifi.supplicant.DebugLevel",
+            "android.hardware.wifi.supplicant.DppAkm",
+            "android.hardware.wifi.supplicant.DppConfigurationData",
+            "android.hardware.wifi.supplicant.DppConnectionKeys",
+            "android.hardware.wifi.supplicant.DppCurve",
+            "android.hardware.wifi.supplicant.DppEventType",
+            "android.hardware.wifi.supplicant.DppFailureCode",
+            "android.hardware.wifi.supplicant.DppNetRole",
+            "android.hardware.wifi.supplicant.DppProgressCode",
+            "android.hardware.wifi.supplicant.DppResponderBootstrapInfo",
+            "android.hardware.wifi.supplicant.DppStatusErrorCode",
+            "android.hardware.wifi.supplicant.EapErrorCode",
+            "android.hardware.wifi.supplicant.EapMethod",
+            "android.hardware.wifi.supplicant.EapPhase2Method",
+            "android.hardware.wifi.supplicant.ExtRadioWorkDefaults",
+            "android.hardware.wifi.supplicant.FreqRange",
+            "android.hardware.wifi.supplicant.GroupCipherMask",
+            "android.hardware.wifi.supplicant.GroupMgmtCipherMask",
+            "android.hardware.wifi.supplicant.GsmRand",
+            "android.hardware.wifi.supplicant.Hs20AnqpData",
+            "android.hardware.wifi.supplicant.Hs20AnqpSubtypes",
+            "android.hardware.wifi.supplicant.INonStandardCertCallback",
+            "android.hardware.wifi.supplicant.ISupplicant",
+            "android.hardware.wifi.supplicant.ISupplicantCallback",
+            "android.hardware.wifi.supplicant.ISupplicantP2pIface",
+            "android.hardware.wifi.supplicant.ISupplicantP2pIfaceCallback",
+            "android.hardware.wifi.supplicant.ISupplicantP2pNetwork",
+            "android.hardware.wifi.supplicant.ISupplicantStaIface",
+            "android.hardware.wifi.supplicant.ISupplicantStaIfaceCallback",
+            "android.hardware.wifi.supplicant.ISupplicantStaNetwork",
+            "android.hardware.wifi.supplicant.ISupplicantStaNetworkCallback",
+            "android.hardware.wifi.supplicant.IfaceInfo",
+            "android.hardware.wifi.supplicant.IfaceType",
+            "android.hardware.wifi.supplicant.IpVersion",
+            "android.hardware.wifi.supplicant.KeyMgmtMask",
+            "android.hardware.wifi.supplicant.LegacyMode",
+            "android.hardware.wifi.supplicant.MacAddress",
+            "android.hardware.wifi.supplicant.MboAssocDisallowedReasonCode",
+            "android.hardware.wifi.supplicant.MboCellularDataConnectionPrefValue",
+            "android.hardware.wifi.supplicant.MboTransitionReasonCode",
+            "android.hardware.wifi.supplicant.MiracastMode",
+            "android.hardware.wifi.supplicant.MloLink",
+            "android.hardware.wifi.supplicant.MloLinksInfo",
+            "android.hardware.wifi.supplicant.NetworkRequestEapSimGsmAuthParams",
+            "android.hardware.wifi.supplicant.NetworkRequestEapSimUmtsAuthParams",
+            "android.hardware.wifi.supplicant.NetworkResponseEapSimGsmAuthParams",
+            "android.hardware.wifi.supplicant.NetworkResponseEapSimUmtsAuthParams",
+            "android.hardware.wifi.supplicant.OceRssiBasedAssocRejectAttr",
+            "android.hardware.wifi.supplicant.OcspType",
+            "android.hardware.wifi.supplicant.OsuMethod",
+            "android.hardware.wifi.supplicant.P2pClientEapolIpAddressInfo",
+            "android.hardware.wifi.supplicant.P2pFrameTypeMask",
+            "android.hardware.wifi.supplicant.P2pGroupCapabilityMask",
+            "android.hardware.wifi.supplicant.P2pGroupStartedEventParams",
+            "android.hardware.wifi.supplicant.P2pProvDiscStatusCode",
+            "android.hardware.wifi.supplicant.P2pStatusCode",
+            "android.hardware.wifi.supplicant.PairwiseCipherMask",
+            "android.hardware.wifi.supplicant.PmkSaCacheData",
+            "android.hardware.wifi.supplicant.PortRange",
+            "android.hardware.wifi.supplicant.ProtoMask",
+            "android.hardware.wifi.supplicant.ProtocolNextHeader",
+            "android.hardware.wifi.supplicant.QosPolicyClassifierParams",
+            "android.hardware.wifi.supplicant.QosPolicyClassifierParamsMask",
+            "android.hardware.wifi.supplicant.QosPolicyData",
+            "android.hardware.wifi.supplicant.QosPolicyRequestType",
+            "android.hardware.wifi.supplicant.QosPolicyScsData",
+            "android.hardware.wifi.supplicant.QosPolicyScsRequestStatus",
+            "android.hardware.wifi.supplicant.QosPolicyScsRequestStatusCode",
+            "android.hardware.wifi.supplicant.QosPolicyScsResponseStatus",
+            "android.hardware.wifi.supplicant.QosPolicyScsResponseStatusCode",
+            "android.hardware.wifi.supplicant.QosPolicyStatus",
+            "android.hardware.wifi.supplicant.QosPolicyStatusCode",
+            "android.hardware.wifi.supplicant.RxFilterType",
+            "android.hardware.wifi.supplicant.SaeH2eMode",
+            "android.hardware.wifi.supplicant.SignalPollResult",
+            "android.hardware.wifi.supplicant.StaIfaceCallbackState",
+            "android.hardware.wifi.supplicant.StaIfaceReasonCode",
+            "android.hardware.wifi.supplicant.StaIfaceStatusCode",
+            "android.hardware.wifi.supplicant.SupplicantStateChangeData",
+            "android.hardware.wifi.supplicant.SupplicantStatusCode",
+            "android.hardware.wifi.supplicant.TlsVersion",
+            "android.hardware.wifi.supplicant.TransitionDisableIndication",
+            "android.hardware.wifi.supplicant.WifiTechnology",
+            "android.hardware.wifi.supplicant.WpaDriverCapabilitiesMask",
+            "android.hardware.wifi.supplicant.WpsConfigError",
+            "android.hardware.wifi.supplicant.WpsConfigMethods",
+            "android.hardware.wifi.supplicant.WpsDevPasswordId",
+            "android.hardware.wifi.supplicant.WpsErrorIndication",
+            "android.hardware.wifi.supplicant.WpsProvisionMethod"
+        ],
+        "vendor_available": "true",
+        "versions": [
+            1
+        ]
+    }
+]

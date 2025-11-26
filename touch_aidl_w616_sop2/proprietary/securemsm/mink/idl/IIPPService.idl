@@ -1,0 +1,71 @@
+/*===================================================================================
+Copyright (c) 2024 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===================================================================================*/
+
+/*===================================================================================
+FILE:  IIPPService.idl
+
+DESCRIPTION: IIPPService.idl defines the interface for IP Protection service
+running in QTVM that will expose interfaces to QTVM TAs for any elf decryption.
+=====================================================================================*/
+
+include "IMemObject.idl"
+
+/** @cond */
+interface IPPService
+/** @endcond */
+{
+
+   /**
+    * @addtogroup IPPService
+    * @{
+    */
+
+    /** @cond */
+    /* IPPService error codes */
+    error ERROR_PUBKEY_EXTRACT;
+    error ERROR_DECRYPT;
+    error ERROR_INVALID_ELF_FD;
+    error ERROR_SECIMG_COMMUNICATION;
+    error ERROR_MAPPING_FD;
+    error ERROR_PARSING_METADATA;
+    error ERROR_PARSING_DECRYPT_PARAMS;
+    /** @endcond */
+
+    /**
+     *  Get a public key from the device.
+     *
+     * @param [in] buffer swContext Any HLOS context needed to be mixed in for key
+     *                                derivation.
+     * @param [out] buffer pubKey Public key extracted from a hardware bound key.
+     *
+     * @return
+     * Object_OK on success. Any other error code on failure.
+     */
+    method getPublicKey(in buffer swContext, out buffer pubKey);
+
+    /**
+     * Decrypt the encrypted data segments contained in the elf.
+     * All the necessary information required to decrypt would be contained in the ELF,
+     * so passing the MemObject for the elf is sufficient. The expected encrypted ELF
+     * should be in the Qualcomm QBEC format generated using sectools offline. This
+     * will make sure all the necessary headers and data segments are inserted in the
+     * ELF in the expected QBEC format.
+     *
+     * @param [in] buffer swContext Any HLOS context needed to be mixed in for key
+     *                              derivation.
+     * @param [in] MemObject encryptedBuffer Memory object pointing to the read elf.
+     * @param [in] MemObject decryptedBuffer Memory object pointing to the buffer where
+     *                       data will be decrypted. If inline decryption is needed,
+     *                       pass NULL.
+     * @param [out] uint32_t Offset of the decrypted buffer within the "input buffer" when
+     *                       inline decryption is chosen.
+     *
+     * @return
+     * Object_OK on success. Any other error code on failure.
+    */
+    method decrypt(in buffer swContext, in IMemObject encryptedBuffer,
+                   in IMemObject decryptedBuffer, out uint32 offset);
+};

@@ -1,0 +1,89 @@
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
+		display/kalama-sde-display-rumi-overlay.dtbo \
+		display/kalama-sde-display-cdp-overlay.dtbo \
+		display/kalama-sde-display-cdp-wsa883x-overlay.dtbo \
+		display/kalama-sde-display-mtp-overlay.dtbo \
+		display/kalama-sde-display-qrd-overlay.dtbo \
+		display/kalama-sde-display-mtp-nfc-overlay.dtbo \
+		display/kalama-sde-display-rcm-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.dtbo \
+				  display/trustedvm-kalama-sde-display-mtp-nfc-overlay.dtbo \
+		  display/trustedvm-kalama-sde-display-cdp-overlay.dtbo \
+		  display/trustedvm-kalama-sde-display-cdp-wsa883x-overlay.dtbo \
+		  display/trustedvm-kalama-sde-display-rumi-overlay.dtbo \
+		  display/trustedvm-kalama-sde-display-qrd-overlay.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SA8155), y)
+ifeq ($(CONFIG_AUTO_LXC_OVERLAY), y)
+dtbo-y += display/sa8155-adp-star-display-lxc.dtbo
+else
+dtbo-y += display/sa8155-adp-star-display.dtbo
+endif
+endif
+
+ifeq ($(CONFIG_ARCH_SA8195), y)
+ifeq ($(CONFIG_AUTO_LXC_OVERLAY), y)
+dtbo-y += display/sa8195p-adp-star-display-lxc.dtbo
+else
+dtbo-y += display/sa8195p-adp-star-display.dtbo
+endif
+endif
+
+ifeq ($(CONFIG_ARCH_SA6155), y)
+dtbo-y += display/sa6155p-adp-star-display.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_LEMANS), y)
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += display/lemans-sde-display-adp-star.dtbo \
+		display/lemans-sde-display-adp-adas.dtbo
+endif
+endif
+
+ifeq ($(CONFIG_ARCH_MONACO_AUTO), y)
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += display/monaco-mm-umd-power.dtbo
+endif
+endif
+
+ifeq ($(CONFIG_QTI_QUIN_GVM), y)
+dtbo-y += display/quin-vm-display.dtbo
+endif
+
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
+		display/waipio-sde-display-mtp-overlay.dtbo \
+		display/waipio-sde-display-cphy-mtp-overlay.dtbo \
+		display/waipio-sde-display-cdp-overlay.dtbo \
+		display/waipio-sde-display-qrd-overlay.dtbo \
+		display/waipio-sde-display-hdk-overlay.dtbo \
+		display/waipio-sde-display-waipio-lemur-cdp-overlay.dtbo \
+		display/waipio-sde-display-waipio-lemur-mtp-overlay.dtbo \
+		display/waipio-sde-display-rumi-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_WAIPIO) += display/trustedvm-waipio-sde-display-mtp-overlay.dtbo \
+		display/trustedvm-waipio-sde-display-cdp-overlay.dtbo \
+		display/trustedvm-waipio-sde-display-rumi-overlay.dtbo \
+		display/trustedvm-waipio-sde-display-qrd-overlay.dtbo
+endif
+
+ifeq ($(CONFIG_QTI_QUIN_GVM), y)
+dtbo-y += display/sa8155-adp-star-vm-display.dtbo
+dtbo-y += display/direwolf-adp-star-vm-display.dtbo
+dtbo-y += display/lemans-adp-star-vm-display.dtbo
+dtbo-y += display/sa8195-adp-star-vm-display.dtbo
+dtbo-y += display/monaco-adp-star-vm-display.dtbo
+dtbo-y += display/sa6155-adp-star-vm-display.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += display/lemans-adp-star-hgyvm-display.dtbo
+dtbo-y += display/monaco-adp-star-hgyvm-display.dtbo
+endif
+
+always-y    := $(dtb-y) $(dtbo-y)
+subdir-y    := $(dts-dirs)
+clean-files    := *.dtb *.dtbo

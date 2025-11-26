@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package wifi;
+
+import "StaScanData.proto";
+import "StaScanResult.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifiStaIfaceEventCallback
+{
+    message OnBackgroundFullScanResultInd
+    {
+        int32 cmdId = 1;
+        int32 bucketsScanned = 2;
+        StaScanResult result = 3;
+    }
+
+    message OnBackgroundScanFailureInd
+    {
+        int32 cmdId = 1;
+    }
+
+    message OnBackgroundScanResultsInd
+    {
+        int32 cmdId = 1;
+        repeated StaScanData scanDatas = 2;
+    }
+
+    message OnRssiThresholdBreachedInd
+    {
+        int32 cmdId = 1;
+        bytes currBssid = 2;
+        int32 currRssi = 3;
+    }
+}

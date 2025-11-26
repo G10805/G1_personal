@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "GsmRand.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NetworkRequestEapSimGsmAuthParams
+{
+    repeated GsmRand rands = 1;
+}

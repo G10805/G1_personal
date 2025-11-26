@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message DppConnectionKeys
+{
+    bytes connector = 1;
+    bytes cSign = 2;
+    bytes netAccessKey = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum WifiIfaceMode
+{
+    WIM_RESERVED = 0;
+    IFACE_MODE_STA = 1;
+    IFACE_MODE_SOFTAP = 2;
+    IFACE_MODE_IBSS = 4;
+    IFACE_MODE_P2P_CLIENT = 8;
+    IFACE_MODE_P2P_GO = 16;
+    IFACE_MODE_NAN = 32;
+    IFACE_MODE_MESH = 64;
+    IFACE_MODE_TDLS = 128;
+}

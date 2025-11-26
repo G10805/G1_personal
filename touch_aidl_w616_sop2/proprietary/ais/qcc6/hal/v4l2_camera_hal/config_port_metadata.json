@@ -1,0 +1,118 @@
+
+{
+  "cameras" : [
+    {
+      "input_id" : "0",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_REAR",
+      "facing" : "EXTERIOR_REAR"
+    },
+    {
+      "input_id" : "1",
+      "lens_facing" : "FRONT",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE"],
+      "location" : "INTERIOR",
+      "facing" : "INTERIOR_OTHER"
+    },
+    {
+      "input_id" : "2",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_LEFT",
+      "facing" : "EXTERIOR_LEFT"
+    },
+    {
+      "input_id" : "3",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_RIGHT",
+      "facing" : "EXTERIOR_RIGHT"
+    },
+    {
+      "input_id" : "4",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_REAR",
+      "facing" : "EXTERIOR_REAR"
+    },
+    {
+      "input_id" : "5",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_FRONT",
+      "facing" : "EXTERIOR_FRONT"
+    },
+    {
+      "input_id" : "8",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_LEFT",
+      "facing" : "EXTERIOR_LEFT"
+    },
+    {
+      "input_id" : "9",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_RIGHT",
+      "facing" : "EXTERIOR_RIGHT"
+    },
+    {
+      "input_id" : "12",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_REAR",
+      "facing" : "EXTERIOR_REAR"
+    },
+    {
+      "input_id" : "13",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_FRONT",
+      "facing" : "EXTERIOR_FRONT"
+    },
+    {
+      "input_id" : "14",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_LEFT",
+      "facing" : "EXTERIOR_LEFT"
+    },
+    {
+      "input_id" : "15",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_RIGHT",
+      "facing" : "EXTERIOR_RIGHT"
+    },
+    {
+      "input_id" : "16",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_REAR",
+      "facing" : "EXTERIOR_REAR"
+    },
+    {
+      "input_id" : "17",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_FRONT",
+      "facing" : "EXTERIOR_FRONT"
+    },
+    {
+      "input_id" : "18",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_LEFT",
+      "facing" : "EXTERIOR_LEFT"
+    },
+    {
+      "input_id" : "19",
+      "lens_facing" : "BACK",
+      "req_avl_cap" : ["BACKWARD_COMPATIBLE", "SYSTEM_CAMERA"],
+      "location" : "EXTERIOR_RIGHT",
+      "facing" : "EXTERIOR_RIGHT"
+    }
+  ]
+}
+

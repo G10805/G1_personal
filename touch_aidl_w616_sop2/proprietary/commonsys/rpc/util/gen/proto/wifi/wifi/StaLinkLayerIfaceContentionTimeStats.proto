@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message StaLinkLayerIfaceContentionTimeStats
+{
+    int32 contentionTimeMinInUsec = 1;
+    int32 contentionTimeMaxInUsec = 2;
+    int32 contentionTimeAvgInUsec = 3;
+    int32 contentionNumSamples = 4;
+}

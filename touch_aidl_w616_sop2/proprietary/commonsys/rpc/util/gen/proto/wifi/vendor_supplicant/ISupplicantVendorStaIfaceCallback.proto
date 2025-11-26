@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package supplicant.vendor;
+
+option optimize_for = LITE_RUNTIME;
+
+message ISupplicantVendorStaIfaceCallback
+{
+    message OnCtrlEventInd
+    {
+        string ifaceName = 1;
+        string eventStr = 2;
+    }
+}

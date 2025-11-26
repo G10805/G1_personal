@@ -1,0 +1,25 @@
+#include "ipa_v4.dtsi"
+
+&ipa_hw {
+	reg =
+		<0x5800000 0x34000>,
+		 <0x5804000 0x28000>;
+	qcom,skip-ieob-mask-wa;
+	qcom,use-gsi-ipa-fw = "scuba_ipa_fws";
+	firmware-names = "scuba_ipa_fws";
+};
+
+&ipa_smmu_ap {
+	iommus = <&apps_smmu 0x0140 0x0>;
+	qcom,iommu-dma = "atomic";
+};
+
+&ipa_smmu_wlan {
+	iommus = <&apps_smmu 0x141 0x0>;
+	/* ipa-uc ram */
+	qcom,iommu-dma = "atomic";
+};
+
+&ipa_smmu_uc {
+	iommus = <&apps_smmu 0x0142 0x0>;
+};

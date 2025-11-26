@@ -1,0 +1,35 @@
+cc_library_shared {
+    name: "libqti_hal_rpc_util",
+    owner: "qti",
+    proprietary: true,
+
+    srcs: [
+        "src/hal_rpc.cpp",
+        "src/hal_status.cpp",
+        "src/hal_util.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "libchrome",
+        "libcutils",
+        "libutils",
+        "libqti_log_util",
+        "libqti_message_sched_util",
+        "libqti_proto_util",
+        "libqti_rpc_common_util",
+        "libqti_someip_util",
+        "libvsomeip3",
+    ],
+
+    export_include_dirs: [
+        "include",
+    ],
+}

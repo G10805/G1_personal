@@ -1,0 +1,14 @@
+/*===================================================================================
+  Copyright (c) 2024 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===================================================================================*/
+ /*===================================================================================
+ FILE:  CEmbeddedIPPTestApp.idl
+
+ DESCRIPTION:  This file specifies the UID that is used to expose
+ IPP test client in QTVM.
+
+ =====================================================================================*/
+
+const uint32 CEmbeddedIPPTestApp_UID = 0xFF000037;

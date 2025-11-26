@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package hostapd.vendor;
+
+import "VendorApInfo.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IHostapdVendorCallback
+{
+    message OnCtrlEventInd
+    {
+        string ifaceName = 1;
+        string event_str = 2;
+    }
+
+    message OnApInstanceInfoChangedInd
+    {
+        VendorApInfo apInfo = 1;
+    }
+
+    message OnFailureInd
+    {
+        string ifname = 1;
+        string instanceName = 2;
+    }
+}

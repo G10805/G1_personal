@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiDebugHostWakeReasonRxMulticastPacketDetails
+{
+    int32 ipv4RxMulticastAddrCnt = 1;
+    int32 ipv6RxMulticastAddrCnt = 2;
+    int32 otherRxMulticastAddrCnt = 3;
+}

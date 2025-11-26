@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2019 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <properties input_id="0" node="/dev/video51"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY"/>
+    </input_device>
+    <input_device>
+        <properties input_id="1" node="/dev/video52"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY"/>
+    </input_device>
+</qcarcam_inputs>

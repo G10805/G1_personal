@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi.supplicant.gcm;
+
+option optimize_for = LITE_RUNTIME;
+
+enum GroupCipherMask
+{
+    GCM_RESERVED = 0;
+    WEP40 = 2;
+    WEP104 = 4;
+    TKIP = 8;
+    CCMP = 16;
+    GTK_NOT_USED = 16384;
+    GCMP_256 = 256;
+    SMS4 = 128;
+    GCMP_128 = 64;
+}

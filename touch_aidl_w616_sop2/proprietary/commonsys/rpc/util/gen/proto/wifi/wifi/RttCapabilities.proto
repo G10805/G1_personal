@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wifi;
+
+import "RttBw.proto";
+import "RttPreamble.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message RttCapabilities
+{
+    bool rttOneSidedSupported = 1;
+    bool rttFtmSupported = 2;
+    bool lciSupported = 3;
+    bool lcrSupported = 4;
+    bool responderSupported = 5;
+    wifi.rp.RttPreamble preambleSupport = 6;
+    RttBw bwSupport = 7;
+    uint32 mcVersion = 8;
+}

@@ -1,0 +1,20 @@
+//--------------------------------------------------------------------------------------------------
+// hwcodec  headers
+//--------------------------------------------------------------------------------------------------
+cc_library_headers {
+    name: "libqc2audio_hwcodec_headers",
+    vendor: true,
+    export_include_dirs: [
+        "include",
+        "dec/aac/include",
+        "dec/amr/include",
+        "dec/alac/include",
+        "dec/ape/include",
+        "dec/wma/include",
+        "enc/amr/include",
+        "enc/aac/include",
+        "enc/evrc/include",
+        "enc/qcelp/include",
+        "dsp/include"
+    ],
+}

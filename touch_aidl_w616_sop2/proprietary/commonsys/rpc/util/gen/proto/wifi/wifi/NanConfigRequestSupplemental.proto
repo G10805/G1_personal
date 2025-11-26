@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message NanConfigRequestSupplemental
+{
+    int32 discoveryBeaconIntervalMs = 1;
+    int32 numberOfSpatialStreamsInDiscovery = 2;
+    bool enableDiscoveryWindowEarlyTermination = 3;
+    bool enableRanging = 4;
+    bool enableInstantCommunicationMode = 5;
+    int32 instantModeChannel = 6;
+    int32 clusterId = 7;
+}

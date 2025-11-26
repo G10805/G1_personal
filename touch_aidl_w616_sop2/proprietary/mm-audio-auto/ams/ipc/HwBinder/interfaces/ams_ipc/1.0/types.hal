@@ -1,0 +1,37 @@
+/**
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.hardware.AMSIPC@1.0;
+
+
+/**
+ * AMS Commands
+ */
+enum ipc_ams_cmd_e : uint32_t {
+    IPC_AMS_CMD_TUNNEL = 0x00015000,
+    IPC_AMS_CMD_ENABLE_ENDPOINT = 0x00015001,
+    IPC_AMS_CMD_DISABLE_ENDPOINT = 0x00015002,
+    IPC_AMS_CMD_SET_CLK_ATTR = 0x00015003,
+    IPC_AMS_CMD_GET_CACHED_GRAPH_INFO = 0x00015004,
+    IPC_AMS_CMD_GET_CACHED_GRAPH_NUM = 0x00015005,
+    IPC_AMS_CMD_OPERATE_DEVICE = 0x00015006,
+    IPC_AMS_CMD_ALLOC_SHMEM = 0x00015007,
+    IPC_AMS_CMD_FREE_SHMEM = 0x00015008,
+    IPC_AMS_CMD_GET_CACHED_GRAPH_PROP_NUM = 0x00015009,
+    IPC_AMS_CMD_GET_CACHED_GRAPH_PROP_INFO = 0x0001500A,
+    IPC_AMS_CMD_GET_CACHED_GRAPH_PROP_DESCR = 0x0001500B,
+    IPC_AMS_CMD_GET_CACHED_GRAPH_DESCR = 0x0001500C,
+    IPC_AMS_CMD_OPERATE_DEVICE_QUERY = 0x0001500D,
+};
+
+/** shared memory buffer info */
+struct ipc_ams_shmem_info {
+    memory shmem;
+    uint32_t mem_map_handle;
+    uint32_t size;
+};
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <properties input_id="0" node="/dev/video51" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="1" node="/dev/video52" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="2" node="/dev/video53" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="3" node="/dev/video54" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="4" node="/dev/video55" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="5" node="/dev/video56" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="6" node="/dev/video57" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="7" node="/dev/video58" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="8" node="/dev/video59" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="9" node="/dev/video60" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="10" node="/dev/video61" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="11" node="/dev/video62" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="12" node="/dev/video63" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="13" node="/dev/video64" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="14" node="/dev/video65" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+    <input_device>
+        <properties input_id="15" node="/dev/video66" opMode="RAW_DUMP"/>
+        <output_setting width="1920" height="1024" pixelformat="V4L2_PIX_FMT_UYVY" is_buf_align="true"/>
+    </input_device>
+</qcarcam_inputs>

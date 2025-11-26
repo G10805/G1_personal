@@ -1,0 +1,19 @@
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/clock/qcom,gcc-sm8150.h>
+#include <dt-bindings/clock/qcom,camcc-sm8150.h>
+#include <dt-bindings/interconnect/qcom,sm8150.h>
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
+
+#include "sm8150-v2-camera.dtsi"
+#include "sa8155-camera.dtsi"
+
+/ {
+    model = "ADP-AIR";
+    compatible = "qcom,sa8155-v2-adp-air", "qcom,sa8155",
+                "qcom,adp-air";
+    qcom,board-id = <0 0>;
+    qcom,msm-id = <339 0x20000>, <362 0x20000>, <367 0x20000>, <361 0x20000>;
+};

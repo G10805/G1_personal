@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum ProtocolNextHeader
+{
+    PNH_RESERVED = 0;
+    TCP = 6;
+    UDP = 17;
+    ESP = 50;
+}

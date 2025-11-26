@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+import "ApInfo.proto";
+import "ClientInfo.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IHostapdCallback
+{
+    message OnApInstanceInfoChangedInd
+    {
+        ApInfo apInfo = 1;
+    }
+
+    message OnConnectedClientsChangedInd
+    {
+        ClientInfo clientInfo = 1;
+    }
+
+    message OnFailureInd
+    {
+        string ifaceName = 1;
+        string instanceName = 2;
+    }
+}

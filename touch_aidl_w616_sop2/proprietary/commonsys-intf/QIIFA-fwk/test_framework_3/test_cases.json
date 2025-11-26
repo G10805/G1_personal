@@ -1,0 +1,1396 @@
+{
+  "HIDL": {
+    "default_success": {
+      "index": 0,
+      "file_path": "hardware/interfaces/current.txt",
+      "tc_method": "do_nothing",
+      "tc_method_kwargs": {},
+      "expected_result": "pass"
+    },
+    "modify_hash_fail": {
+      "index": 1,
+      "file_path": "vendor/qcom/proprietary/interfaces/current.txt",
+      "tc_method": "modify_hash",
+      "tc_method_kwargs": {
+        "hal_name": "vendor.qti.hardware.alarm",
+        "version": "1.0",
+        "intf_name": "IAlarm"
+      },
+      "expected_result": "fail"
+    },
+    "delete_hash_fail": {
+      "index": 2,
+      "file_path": "vendor/qcom/proprietary/interfaces/current.txt",
+      "tc_method": "delete_hash",
+      "tc_method_kwargs": {
+        "hal_name": "vendor.qti.hardware.alarm",
+        "version": "1.0",
+        "intf_name": "IAlarm"
+      },
+      "expected_result": "fail"
+    },
+    "add_dummy_hash_pass": {
+      "index": 3,
+      "file_path": "hardware/interfaces/current.txt",
+      "tc_method": "add_dummy_hash",
+      "tc_method_kwargs": {
+      },
+      "expected_result": "pass"
+    },
+    "add_version_xml_fail": {
+      "index": 4,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "add_hidl_version",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "new_version": "2.0-1"
+      },
+      "expected_result": "fail"
+    },
+    "remove_version_xml_fail": {
+      "index": 5,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_hidl_version",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.gnss",
+        "remove_version": "1.0-1"
+      },
+      "expected_result": "fail"
+    },
+    "modify_version_xml_fail": {
+      "index": 6,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_hidl_version",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "prev_version": "1.1",
+        "mod_version": "1.0-2"
+      },
+      "expected_result": "fail"
+    },
+    "remove_intf_xml_fail": {
+      "index": 7,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_hidl_intf",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "remove_intf": "IEvsEnumerator"
+      },
+      "expected_result": "fail"
+    },
+    "modify_intf_xml_fail": {
+      "index": 8,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_hidl_intf",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "prev_intf": "IEvsEnumerator",
+        "mod_intf": "IRADIOOOBABYYYY"
+      },
+      "expected_result": "fail"
+    },
+    "add_intf_xml_fail": {
+      "index": 9,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "add_hidl_intf",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "new_intf": "INEWWW"
+      },
+      "expected_result": "fail"
+    },
+    "add_intf_instance_xml_pass": {
+      "index": 10,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "add_intf_instance",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "intf_name": "IEvsEnumerator",
+        "new_instance": "new_instance"
+      },
+      "expected_result": "pass"
+    },
+    "remove_intf_instance_xml_pass": {
+      "index": 11,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_intf_instance",
+      "tc_method_kwargs": {
+        "hal_name": "vendor.qti.voiceprint",
+        "intf_name": "IQtiVoicePrintService",
+        "remove_instance": "default"
+      },
+      "expected_result": "pass"
+    },
+    "modify_intf_instance_xml_pass": {
+      "index": 12,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_intf_instance",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.radio",
+        "intf_name": "IRadio",
+        "prev_instance": "slot1",
+        "mod_instance": "mod_instance"
+      },
+      "expected_result": "pass"
+    },
+    "modify_signature_version_fail": {
+      "index": 13,
+      "file_path": "hardware/interfaces/current.txt",
+      "tc_method": "modify_signature_version",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "prev_version": "1.0",
+        "new_version": "1.0.12",
+        "intf_name": "IEvsCameraStream"
+      },
+      "expected_result": "fail"
+    },
+    "modify_comments_pass": {
+      "index": 14,
+      "file_path": "hardware/interfaces/current.txt",
+      "tc_method": "modify_comments",
+      "tc_method_kwargs": {
+        "comment": "# HALs released in Android R"
+      },
+      "expected_result": "pass"
+    },
+    "modify_compatibility_matrix_hal_format_random_value_fail": {
+      "index": 15,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_format",
+      "tc_method_kwargs": {
+        "new_format": "1hidl"
+      },
+      "expected_result": "fail"
+    },
+    "modify_compatibility_matrix_hal_format_fail": {
+      "index": 16,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_format",
+      "tc_method_kwargs": {
+        "new_format": "aidl"
+      },
+      "expected_result": "pass"
+    },
+    "remove_compatibility_matrix_hal_format_fail": {
+      "index": 17,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_compatibility_matrix_hal_format",
+      "tc_method_kwargs": {
+      },
+      "expected_result": "fail"
+    },
+    "modify_compatibility_matrix_hal_optional_pass": {
+      "index": 18,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_optional",
+      "tc_method_kwargs": {
+        "new_optional": "false"
+      },
+      "expected_result": "pass"
+    },
+    "remove_compatibility_matrix_hal_optional_pass": {
+      "index": 19,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_compatibility_matrix_hal_optional",
+      "tc_method_kwargs": {
+      },
+      "expected_result": "pass"
+    },
+    "modify_compatibility_matrix_hal_name_fail": {
+      "index": 20,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_name",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs"
+      },
+      "expected_result": "fail"
+    },
+    "modify_hal_version_major_minor_format_fail": {
+      "index": 21,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_hal_version_major_minor_format",
+      "tc_method_kwargs": {
+        "hal_name": "android.hardware.automotive.evs",
+        "new_version": "1.1.0"
+      },
+      "expected_result": "fail"
+    },
+    "check_hal_files_are_present": {
+      "index": 22,
+      "file_path": "hardware/interfaces/current.txt",
+      "tc_method": "check_hal_files_are_present",
+      "tc_method_kwargs": {
+      },
+      "expected_result": "pass"
+    }
+  },
+  "AIDL": {
+    "default_success_qiifa_aidl_cmd_device": {
+      "index": 0,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "do_nothing",
+      "tc_method_kwargs": {},
+      "expected_result": "pass",
+      "post_check": [
+        "There are no QIIFA violators",
+        "QIIFA: Success"
+      ]
+    },
+    "modify_aidl_stability_qiifa_aidl_cmd_device": {
+      "index": 1,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_stability",
+      "tc_method_kwargs": {
+      },
+      "post_check": [
+        "AIDL interface's stability check has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_stability_qiifa_aidl_cmd_device": {
+      "index": 2,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_stability",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's stability check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 3,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 4,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "add_new_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 5,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "add_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_vendor_available_qiifa_aidl_cmd_device": {
+      "index": 6,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's vendor available flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_vendor_available_qiifa_aidl_cmd_device": {
+      "index": 7,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Vendor Available check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_types_qiifa_aidl_cmd_device": {
+      "index": 8,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_types_qiifa_aidl_cmd_device": {
+      "index": 9,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's types check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_name_qiifa_aidl_cmd_device": {
+      "index": 10,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_name",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Please check the AIDL Interface, QIIFA CMD does not have this information",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_has_development_qiifa_aidl_cmd_device": {
+      "index": 11,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_has_development_qiifa_aidl_cmd_device": {
+      "index": 12,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 13,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 14,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "add_new_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 15,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "add_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "default_success_aidl_metadata": {
+      "index": 16,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "do_nothing",
+      "tc_method_kwargs": {},
+      "expected_result": "pass",
+      "post_check": [
+        "There are no QIIFA violators",
+        "QIIFA: Success"
+      ]
+    },
+    "modify_stability_aidl_metadata": {
+      "index": 17,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_stability",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's stability check has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_stability_aidl_metadata": {
+      "index": 18,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_stability",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's stability check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_vendor_available_aidl_metadata": {
+      "index": 19,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's vendor available flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_vendor_available_aidl_metadata": {
+      "index": 20,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Vendor Available check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_types_aidl_metadata": {
+      "index": 21,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_types_aidl_metadata": {
+      "index": 22,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's types check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "add_types_aidl_metadata": {
+      "index": 23,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "add_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_hash_aidl_metadata": {
+      "index": 24,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_hash_metadata",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_hash_aidl_metadata": {
+      "index": 25,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Hashes is not present in AIDL Metadata JSON"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_has_development_aidl_metadata": {
+      "index": 26,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_has_development_aidl_metadata": {
+      "index": 27,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_versions_aidl_metadata": {
+      "index": 28,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Version is not present in AIDL Metadata JSON",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "default_success_compatibility_matrix": {
+      "index": 29,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "do_nothing",
+      "tc_method_kwargs": {
+        "new_format": "hidl"
+      },
+      "post_check": [
+        "There are no QIIFA violators",
+        "QIIFA: Success"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_hal_name_compatibility_matrix": {
+      "index": 30,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_name",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Please check the AIDL Interface, Either the compatibiltiy Matrix or the Interface definition is not present",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_hal_format_compatibility_matrix": {
+      "index": 31,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_format",
+      "tc_method_kwargs": {
+        "new_format": "hidl"
+      },
+      "post_check": [
+        "Please check the AIDL Interface, Either the compatibiltiy Matrix or the Interface definition is not present",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_hal_format_compatibility_matrix": {
+      "index": 32,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_compatibility_matrix_hal_format",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Please check the AIDL Interface, Either the compatibiltiy Matrix or the Interface definition is not present",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_hal_version_compatibility_matrix": {
+      "index": 33,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "modify_compatibility_matrix_hal_version",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_hal_version_compatibility_matrix": {
+      "index": 34,
+      "file_path": "out/target/product/qssi_64/system/etc/vintf/compatibility_matrix.device.xml",
+      "tc_method": "remove_compatibility_matrix_hal_version",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 35,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "empty_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_aidl_type_qiifa_aidl_cmd_device": {
+      "index": 36,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "empty_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 37,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "empty_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_hash_aidl_metadata": {
+      "index": 38,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "empty_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_type_aidl_metadata": {
+      "index": 39,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "empty_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    }
+  },
+  "AIDL_VENDOR": {
+    "default_success_qiifa_aidl_cmd_device": {
+      "index": 0,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "do_nothing",
+      "tc_method_kwargs": {},
+      "expected_result": "pass",
+      "post_check": [
+        "There are no QIIFA violators",
+        "QIIFA: Success"
+      ]
+    },
+    "modify_aidl_stability_qiifa_aidl_cmd_device": {
+      "index": 1,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_stability",
+      "tc_method_kwargs": {
+      },
+      "post_check": [
+        "AIDL interface's stability check has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_stability_qiifa_aidl_cmd_device": {
+      "index": 2,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_stability",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's stability check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 3,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 4,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_vendor_available_qiifa_aidl_cmd_device": {
+      "index": 5,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's vendor available flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_vendor_available_qiifa_aidl_cmd_device": {
+      "index": 6,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Vendor Available check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_types_qiifa_aidl_cmd_device": {
+      "index": 7,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_types_qiifa_aidl_cmd_device": {
+      "index": 8,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's types check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_name_qiifa_aidl_cmd_device": {
+      "index": 9,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_name",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Please check the AIDL Interface, QIIFA CMD does not have this information",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_has_development_qiifa_aidl_cmd_device": {
+      "index": 10,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_has_development_qiifa_aidl_cmd_device": {
+      "index": 11,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development check is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 12,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "modify_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 13,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "delete_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions is present in META data but not present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "default_success_aidl_metadata": {
+      "index": 14,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "do_nothing",
+      "tc_method_kwargs": {},
+      "expected_result": "pass",
+      "post_check": [
+        "There are no QIIFA violators",
+        "QIIFA: Success"
+      ]
+    },
+    "modify_stability_aidl_metadata": {
+      "index": 15,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_stability",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's stability check has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_stability_aidl_metadata": {
+      "index": 16,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_stability",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's stability check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_vendor_available_aidl_metadata": {
+      "index": 17,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's vendor available flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_vendor_available_aidl_metadata": {
+      "index": 18,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_vendor_available",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Vendor Available check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_types_aidl_metadata": {
+      "index": 19,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_types_aidl_metadata": {
+      "index": 20,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's types check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "add_types_aidl_metadata": {
+      "index": 21,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "add_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_hash_aidl_metadata": {
+      "index": 22,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_hash_metadata",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_hash_aidl_metadata": {
+      "index": 23,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Hashes is not present in AIDL Metadata JSON"
+      ],
+      "expected_result": "pass"
+    },
+    "modify_has_development_aidl_metadata": {
+      "index": 24,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "modify_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development flag has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_has_development_aidl_metadata": {
+      "index": 25,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_has_development",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's has development check is not present in META data but present in QIIFA CMD",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "delete_versions_aidl_metadata": {
+      "index": 26,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "delete_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "Version is not present in AIDL Metadata JSON",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_aidl_hash_qiifa_aidl_cmd_device": {
+      "index": 27,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "empty_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_aidl_type_qiifa_aidl_cmd_device": {
+      "index": 28,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "empty_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_aidl_versions_qiifa_aidl_cmd_device": {
+      "index": 29,
+      "file_path": "vendor/qcom/proprietary/commonsys-intf/QIIFA-cmd/aidl/qiifa_aidl_cmd_device.json",
+      "tc_method": "empty_aidl_versions",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's versions has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_hash_aidl_metadata": {
+      "index": 30,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "empty_aidl_hash",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's hashes has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "empty_type_aidl_metadata": {
+      "index": 31,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "empty_aidl_types",
+      "tc_method_kwargs": {},
+      "post_check": [
+        "AIDL interface's Types has been modified",
+        "Failure: There is/are interface integrity QIIFA violaters"
+      ],
+      "expected_result": "pass"
+    },
+    "platform_version_vs_target_level": {
+      "index": 32,
+      "file_path": "out/soong/.intermediates/system/tools/aidl/build/aidl_metadata_json/aidl_metadata.json",
+      "tc_method": "verify_platform_version_target_level",
+      "tc_method_kwargs": {},
+      "expected_result": "pass"
+    }
+  },
+  "API_DEP": {
+    "dependency 2.0 config 2.0 e.i. default": {
+      "index": 0,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_0_config_2_0",
+      "tc_method_kwargs": {},
+      "expected_result": "pass"
+    },
+    "dependency 2.0 config 2.1": {
+      "index": 1,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_0_config_2_1",
+      "tc_method_kwargs": {
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "2.1"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.0 config 3.0": {
+      "index": 2,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_0_config_3_0",
+      "tc_method_kwargs": {
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "3.0"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.0 config 3.1": {
+      "index": 3,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_0_config_3_1",
+      "tc_method_kwargs": {
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "3.1"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.1 config 2.0 ": {
+      "index": 4,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_1_config_2_0",
+      "tc_method_kwargs": {
+        "file_a": {
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.1"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.1 config 3.0": {
+      "index": 5,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_1_config_3_0",
+      "tc_method_kwargs": {
+        "file_a": {
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.1"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "3.0"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.0 config 1.0": {
+      "index": 6,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_0_config_1_0",
+      "tc_method_kwargs": {
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "1.0"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.3 || 2.8 config 2.1": {
+      "index": 7,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_3_or_2_8_config_2_1",
+      "tc_method_kwargs": {
+        "file_a": {
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.3 || 2.8"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "2.1"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.3 || 2.8 config 2.5": {
+      "index": 8,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_3_or_2_8_config_2_5",
+      "tc_method_kwargs": {
+        "file_a": {
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.3 || 2.8"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "2.5"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency 2.3 || 2.8 config 2.9": {
+      "index": 9,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_2_3_or_2_8_config_2_9",
+      "tc_method_kwargs": {
+        "file_a": {
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.3 || 2.8"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "2.9"
+          }
+        }
+      },
+      "expected_result": "fail"
+    },
+    "dependency xml file deleted": {
+      "index": 10,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "dep_xml_del",
+      "tc_method_kwargs": {
+      },
+      "expected_result": "fail"
+    },
+    "Interdependency test case #1": {
+      "index": 11,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "interdep_test_case_1",
+      "tc_method_kwargs": {
+        "file_a": {
+          "new_dep": {
+            "component": "TP-C",
+            "ver": "2.0"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "3.0"
+          }
+        },
+        "file_c": {
+          "mod_cur_config": {
+            "name": "TP-C",
+            "new_config_ver": "2.1"
+          }
+        }
+      },
+      "post_check": [
+        "Component TP-A dependency TP-C version(s) [2.0] not in version list.",
+        "Component TP-A dependency TP-B version(s) [2.0] not in version list."
+      ],
+      "expected_result": "pass"
+    },
+    "Interdependency test case #2": {
+      "index": 12,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "interdep_test_case_2",
+      "tc_method_kwargs": {
+        "file_a": {
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.1"
+          },
+          "new_dep": {
+            "component": "TP-C",
+            "ver": "2.0 || 2.5"
+          }
+        },
+        "file_c": {
+          "mod_cur_config": {
+            "name": "TP-C",
+            "new_config_ver": "2.3"
+          }
+        }
+      },
+      "post_check": [
+        "Component TP-A dependency TP-C version(s) [2.0, 2.5] not in version list.",
+        "Component TP-A dependency TP-B version(s) [2.1] not in version list."
+      ],
+      "expected_result": "pass"
+    },
+    "Interdependency test case #3": {
+      "index": 13,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "interdep_test_case_3",
+      "tc_method_kwargs": {
+        "file_a": {
+          "new_dep": {
+            "component": "TP-C",
+            "ver": "2.1 || 3.1"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "3.1"
+          }
+        },
+        "file_c": {
+          "mod_cur_config": {
+            "name": "TP-C",
+            "new_config_ver": "3.3"
+          }
+        }
+      },
+      "post_check": [
+        "Component TP-A dependency TP-C version(s) [2.1, 3.1] not in version list.",
+        "Component TP-A dependency TP-B version(s) [2.0] not in version list."
+      ],
+      "expected_result": "pass"
+    },
+    "Interdependency test case #4": {
+      "index": 14,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "interdep_test_case_4",
+      "tc_method_kwargs": {
+        "file_a": {
+          "new_dep": {
+            "component": "TP-C",
+            "ver": "2.5"
+          },
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.3"
+          },
+          "mod_cur_config": {
+            "name": "TP-A",
+            "new_config_ver": "3.0"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "2.5"
+          },
+          "new_dep": {
+            "component": "TP-C",
+            "ver": "3.0"
+          }
+        },
+        "file_c": {
+          "mod_cur_config": {
+            "name": "TP-C",
+            "new_config_ver": "2.3"
+          },
+          "new_dep": {
+            "component": "TP-A",
+            "ver": "2.7 || 3.1"
+          }
+        }
+      },
+      "post_check": [
+        "Component TP-A dependency TP-B version(s) [2.3] not in version list.",
+        "Component TP-A dependency TP-C version(s) [2.5] not in version list.",
+        "Component TP-B dependency TP-C version(s) [3.0] not in version list.",
+        "Component TP-C dependency TP-A version(s) [2.7, 3.1] not in version list."
+      ],
+      "expected_result": "pass"
+    },
+    "Interdependency test case #5": {
+      "index": 15,
+      "files": "vendor/qcom/proprietary/commonsys-intf/QIIFA-fwk/test_framework/api_dep_files/",
+      "tc_method": "interdep_test_case_5",
+      "tc_method_kwargs": {
+        "file_a": {
+          "new_dep_c": {
+            "component": "TP-C",
+            "ver": "3.0 || 3.5"
+          },
+          "new_dep_d": {
+            "component": "TP-D",
+            "ver": "2.5"
+          },
+          "mod_cur_dep": {
+            "component": "TP-B",
+            "new_dep_ver": "2.5"
+          },
+          "mod_cur_config": {
+            "name": "TP-A",
+            "new_config_ver": "2.3"
+          }
+        },
+        "file_b": {
+          "mod_cur_config": {
+            "name": "TP-B",
+            "new_config_ver": "2.7"
+          },
+          "new_dep": {
+            "component": "TP-A",
+            "ver": "3.0"
+          }
+        },
+        "file_c": {
+          "mod_cur_config": {
+            "name": "TP-C",
+            "new_config_ver": "3.3"
+          },
+          "new_dep_b": {
+            "component": "TP-B",
+            "ver": "2.9"
+          },
+          "new_dep_d": {
+            "component": "TP-D",
+            "ver": "2.1"
+          }
+        }
+      },
+      "post_check": [
+        "Component TP-A dependency TP-B version(s) [2.5] not in version list",
+        "Component TP-A dependency TP-C version(s) [3.0, 3.5] not in version list",
+        "ERROR CD TP-A has dependency on TP-D which does not have a corresponding CD file",
+        "Component TP-B dependency TP-A version(s) [3.0] not in version list.",
+        "Component TP-C dependency TP-B version(s) [2.9] not in version list.",
+        "ERROR CD TP-C has dependency on TP-D which does not have a corresponding CD file"
+      ],
+      "expected_result": "pass"
+    }
+  }
+}

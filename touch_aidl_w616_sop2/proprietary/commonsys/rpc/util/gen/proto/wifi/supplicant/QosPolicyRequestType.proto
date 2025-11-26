@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum QosPolicyRequestType
+{
+    QOS_POLICY_ADD = 0;
+    QOS_POLICY_REMOVE = 1;
+}

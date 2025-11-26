@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2019 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <!-- NV12 SHDR op_mode -->
+        <properties input_id="0" op_mode="1" />
+        <display_setting display_id="0" format="nv12" />
+        <output_setting nbufs="5" format="0x0080104" />
+    </input_device>
+</qcarcam_inputs>

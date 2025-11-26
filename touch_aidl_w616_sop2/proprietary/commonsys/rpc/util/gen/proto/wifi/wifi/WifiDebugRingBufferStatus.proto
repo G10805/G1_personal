@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiDebugRingBufferStatus
+{
+    string ringName = 1;
+    int32 flags = 2;
+    int32 ringId = 3;
+    int32 sizeInBytes = 4;
+    int32 freeSizeInBytes = 5;
+    int32 verboseLevel = 6;
+}

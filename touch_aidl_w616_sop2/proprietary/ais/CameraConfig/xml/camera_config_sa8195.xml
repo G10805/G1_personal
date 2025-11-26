@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2020 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<!-- THIS IS A SAMPLE CAMERA CONFIG XML TO ILLUSTRATE HOW IT CAN BE USED -->
+
+<!--
+                             SA8195 SAMPLE
+=========================================================================== */
+/*              CSI     lanes   IFEs   I2C Port    Sensors
+ * max9296_0     0        4      0    /dev/cci0    2 x AR0231 BAYER
+ * max9296_1     1        4      1    /dev/cci0    2 x AR0231 BAYER
+ * max9296_2     2        4      2    /dev/cci1    2 x AR0231 YUV SENSORS
+ * max9296_3     3        4      3    /dev/cci1    2 x AR0231 YUV with METADATA
+*/
+-->
+
+<CameraConfig version="0x403">
+    <board name="SA8195_ADP" boardType="CAMERA_HW_BOARD_ADPAIR_V2_PL195">
+        <i2cDevs>
+            <i2cDev name="cci0">
+                <properties i2ctype = "CAMERA_I2C_TYPE_CCI" device_id = "0" port_id = "0"/>
+                <sda_pin gpio = "17" function = "1"/>
+                <scl_pin gpio = "18" function = "1"/>
+            </i2cDev>
+            <i2cDev name="cci1">
+                <properties i2ctype = "CAMERA_I2C_TYPE_CCI" device_id = "0" port_id = "1"/>
+                <sda_pin gpio = "19" function = "1"/>
+                <scl_pin gpio = "20" function = "1"/>
+            </i2cDev>
+        </i2cDevs>
+
+        <inputDevs>
+            <inputDev devId = "0">
+                <properties>
+                    <!-- 2 AR0231 Bayer Sensor -->
+                    <config subdevId = "0" type="1" numSensors="2" powersaveMode="2"/>
+                    <sensor link="0" type="1" />
+                    <sensor link="1" type="1" />
+                </properties>
+                <driverInfo devCategory = "CAMERA_DEVICE_CATEGORY_SENSOR" libName="ais_max9296" openFcn="CameraSensorDevice_Open_max9296"/>
+                <i2cPort i2ctype = "CAMERA_I2C_TYPE_CCI" device_id = "0" port_id = "0" />
+                <csiInfo csiId = "0" numLanes = "4" laneAssign = "0x3210" ifeMap="0x60" numIfeMap="2"/>
+                <gpio id = "CAMERA_GPIO_RESET" num = "21" config = "0x31"/>
+                <intr id = "CAMERA_GPIO_INTR" pin_id = "13" intr_type = "CAMERA_GPIO_INTR_TLMM" trigger = "CAMERA_GPIO_TRIGGER_FALLING" gpio_cfg = "0x30"/>
+            </inputDev>
+            <inputDev devId = "1">
+                <properties>
+                    <!-- 2 AR0231 Bayer Sensor -->
+                    <config subdevId = "1" type="1" numSensors="2" powersaveMode="2"/>
+                    <sensor link="0" type="1" />
+                    <sensor link="1" type="1" />
+                </properties>
+                <driverInfo devCategory = "CAMERA_DEVICE_CATEGORY_SENSOR" libName="ais_max9296" openFcn="CameraSensorDevice_Open_max9296"/>
+                <i2cPort i2ctype = "CAMERA_I2C_TYPE_CCI" device_id = "0" port_id = "0"/>
+                <csiInfo csiId = "1" numLanes = "4" laneAssign = "0x3210" ifeMap="0x71" numIfeMap="2"/>
+                <gpio id = "CAMERA_GPIO_RESET" num = "22" config = "0x31"/>
+                <intr id = "CAMERA_GPIO_INTR" pin_id = "14" intr_type = "CAMERA_GPIO_INTR_TLMM" trigger = "CAMERA_GPIO_TRIGGER_FALLING" gpio_cfg = "0x30"/>
+            </inputDev>
+            <inputDev devId = "2">
+                <properties>
+                    <!-- 2 AR0231 YUV Sensors -->
+                    <config subdevId = "2" type="1" opMode = "0" numSensors="2" powersaveMode="2"/>
+                    <sensor link="0" type="2" snsrModeId="0" />
+                    <sensor link="1" type="2" snsrModeId="0" />
+                </properties>
+                <driverInfo devCategory = "CAMERA_DEVICE_CATEGORY_SENSOR" libName="ais_max9296" openFcn="CameraSensorDevice_Open_max9296"/>
+                <i2cPort i2ctype = "CAMERA_I2C_TYPE_CCI" device_id = "0" port_id = "1"/>
+                <csiInfo csiId = "2" numLanes = "4" laneAssign = "0x3210" ifeMap="0x42" numIfeMap="2"/>
+                <gpio id = "CAMERA_GPIO_RESET" num = "23" config = "0x31"/>
+                <intr id = "CAMERA_GPIO_INTR" pin_id = "15" intr_type = "CAMERA_GPIO_INTR_TLMM" trigger = "CAMERA_GPIO_TRIGGER_FALLING" gpio_cfg = "0x30"/>
+            </inputDev>
+            <inputDev devId = "3">
+                <properties>
+                    <!-- 2 AR0231 YUV with METADATA -->
+                    <config subdevId = "3" type = "1" opMode = "0" numSensors = "2" powersaveMode = "2"/>
+                    <sensor link="0" type="2" snsrModeId="1" />
+                    <sensor link="1" type="2" snsrModeId="1" />
+                </properties>
+                <driverInfo devCategory = "CAMERA_DEVICE_CATEGORY_SENSOR" libName="ais_max9296" openFcn="CameraSensorDevice_Open_max9296"/>
+                <i2cPort i2ctype = "CAMERA_I2C_TYPE_CCI" device_id = "0" port_id = "1"/>
+                <csiInfo csiId = "3" numLanes = "4" laneAssign = "0x3210" ifeMap="0x53" numIfeMap="2"/>
+                <gpio id = "CAMERA_GPIO_RESET" num = "25" config = "0x31"/>
+                <intr id = "CAMERA_GPIO_INTR" pin_id = "16" intr_type = "CAMERA_GPIO_INTR_TLMM" trigger = "CAMERA_GPIO_TRIGGER_FALLING" gpio_cfg = "0x30"/>
+            </inputDev>
+        </inputDevs>
+        <engineSettings numBufMax="12" powerManagementPolicy="CAMERA_PM_POLICY_LPM_EVENT_ALL" latencyMeasurementMode="CAMERA_LM_MODE_DISABLE"
+            recoveryRestartDelay="33"  recoveryTimeoutAfterUsrCtxtRestart="500" recoveryRetryDelay="300" recoveryMaxNumAttempts="1">
+            <inputFatalError type="MATCH_INPUT_DEVICE" severity="0"/>
+            <csidFatalError type="MATCH_IFE_DEVICE" severity="0"/>
+            <ifeOutputError type="MATCH_IFE_DEVICE" severity="0"/>
+        </engineSettings>
+
+    </board>
+
+    <inputMapping>
+        <inputMap qcarcamId = "0" opMode = "QCARCAM_OPMODE_SHDR">
+            <inputSrc devId = "0" srcId = "0"/>
+        </inputMap>
+        <inputMap qcarcamId = "1" opMode = "QCARCAM_OPMODE_SHDR">
+            <inputSrc devId = "0" srcId = "1"/>
+        </inputMap>
+        <inputMap qcarcamId = "2" opMode = "QCARCAM_OPMODE_SHDR">
+            <inputSrc devId = "1" srcId = "0"/>
+        </inputMap>
+        <inputMap qcarcamId = "3" opMode = "QCARCAM_OPMODE_SHDR">
+            <inputSrc devId = "1" srcId = "1"/>
+        </inputMap>
+        <inputMap qcarcamId = "4" opMode = "QCARCAM_OPMODE_RAW_DUMP">
+            <inputSrc devId = "2" srcId = "0"/>
+        </inputMap>
+        <inputMap qcarcamId = "5" opMode = "QCARCAM_OPMODE_RAW_DUMP">
+            <inputSrc devId = "2" srcId = "1"/>
+        </inputMap>
+        <inputMap qcarcamId = "8" opMode = "QCARCAM_OPMODE_RAW_DUMP">
+            <inputSrc devId = "3" srcId = "0"/>
+        </inputMap>
+        <inputMap qcarcamId = "9" opMode = "QCARCAM_OPMODE_RAW_DUMP">
+            <inputSrc devId = "3" srcId = "1"/>
+        </inputMap>
+        <inputMap qcarcamId = "50" opMode = "QCARCAM_OPMODE_PAIRED_INPUT">
+            <inputSrc devId = "0" srcId = "0"/>
+            <inputSrc devId = "0" srcId = "0"/>
+        </inputMap>
+    </inputMapping>
+</CameraConfig>

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiChannelStats.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message StaLinkLayerRadioStats
+{
+    int32 onTimeInMs = 1;
+    int32 txTimeInMs = 2;
+    repeated int32 txTimeInMsPerLevel = 3;
+    int32 rxTimeInMs = 4;
+    int32 onTimeInMsForScan = 5;
+    int32 onTimeInMsForNanScan = 6;
+    int32 onTimeInMsForBgScan = 7;
+    int32 onTimeInMsForRoamScan = 8;
+    int32 onTimeInMsForPnoScan = 9;
+    int32 onTimeInMsForHs20Scan = 10;
+    repeated WifiChannelStats channelStats = 11;
+    int32 radioId = 12;
+}

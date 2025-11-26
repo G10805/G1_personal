@@ -1,0 +1,7 @@
+# Hash for vendor.qti.hardware.ListenSoundModel@1.0 package
+3357961adfc4ad0bd9a9a999cfce52263fcd883c5899f69e93e3c28a6eb17385 vendor.qti.hardware.ListenSoundModel@1.0::types
+08572c003028e14be65bf24f94dab5468cf25750900a056ec727fdfb9671e80a vendor.qti.hardware.ListenSoundModel@1.0::IListenSoundModel
+
+# Hash for vendor.qti.hardware.ListenSoundModel@1.1 package
+8142c85f04e372a3a6d85cf74063365835ca4dc60354600638809ab48b558e51 vendor.qti.hardware.ListenSoundModel@1.1::types
+33443d6cf042b0406030377142e56c87f0fc550be668b2f29e998d8aa8c20dd9 vendor.qti.hardware.ListenSoundModel@1.1::IListenSoundModel

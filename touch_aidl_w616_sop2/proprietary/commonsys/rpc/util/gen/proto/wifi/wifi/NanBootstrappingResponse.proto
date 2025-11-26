@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+message NanBootstrappingResponse
+{
+    int32 bootstrappingInstanceId = 1;
+    bool acceptRequest = 2;
+}

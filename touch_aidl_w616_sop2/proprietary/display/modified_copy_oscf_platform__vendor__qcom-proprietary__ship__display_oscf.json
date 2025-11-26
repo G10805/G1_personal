@@ -1,0 +1,200 @@
+{
+  "data": [
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": "* Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n| * Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice shall be included in\n* all copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR\n* OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\n* ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n* OTHER DEALINGS IN THE SOFTWARE.\n| * Licensed under the Apache License, Version 2.0 (the \"License\");\n* you may not use this file except in compliance with the License.\n* You may obtain a copy of the License at\n*\n*      http://www.apache.org/licenses/LICENSE-2.0\n*\n* Unless required by applicable law or agreed to in writing, software\n* distributed under the License is distributed on an \"AS IS\" BASIS,\n* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n* See the License for the specific language governing permissions and\n* limitations under the License.*/\n",
+      "original_package_url": "https://source.codeaurora.org/quic/le/wayland/weston/tree/clients/simple-shm.c?h=LE.UM.1.2.7.r1.2\n|https://source.codeaurora.org/quic/la/platform/hardware/qcom/media/tree/mm-video-v4l2/vidc/vdec/test/omx_vdec_test.cpp?h=video-userspace.auto.1.0",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/test-apps/drm-test/drm-test.cpp",
+      "ref_tickets": [
+        "H207256,H349018"
+      ],
+      "cr_text": " * Copyright (c) 2010 - 2013, 2016 - 2017,  The Linux Foundation. All rights reserved.\n * Copyright (c) 2011 Benjamin Franzke\n * Copyright (c) 2010 Intel Corporation",
+      "original_package_version": "1.9",
+      "original_package_name": "wayland/weston"
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": "* Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n| * Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice shall be included in\n* all copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR\n* OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\n* ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n* OTHER DEALINGS IN THE SOFTWARE.\n| * Licensed under the Apache License, Version 2.0 (the \"License\");\n* you may not use this file except in compliance with the License.\n* You may obtain a copy of the License at\n*\n*      http://www.apache.org/licenses/LICENSE-2.0\n*\n* Unless required by applicable law or agreed to in writing, software\n* distributed under the License is distributed on an \"AS IS\" BASIS,\n* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n* See the License for the specific language governing permissions and\n* limitations under the License.*/\n",
+      "original_package_url": "https://github.com/grate-driver/libdrm/blob/master/tests/modetest/buffers.c",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/test-apps/drm-test/drm-test.cpp",
+      "ref_tickets": [
+        "H269210,349018"
+      ],
+      "cr_text": "* Copyright 2008 Tungsten Graphics\n *   Jakob Bornecrantz <jakob@tungstengraphics.com>\n * Copyright 2008 Intel Corporation\n *   Jesse Barnes <jesse.barnes@intel.com>",
+      "original_package_version": "2.4.x",
+      "original_package_name": "libdrm"
+    },
+    {
+      "spdx": [
+        "Public Domain"
+      ],
+      "lic_text": " * Written 2012 by David Herrmann <dh.herrmann@googlemail.com>\n * Dedicated to the Public Domain.",
+      "original_package_url": "https://github.com/AlphaPerfect/docs/blob/master/drm-howto/modeset-vsync.c",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/test-apps/drm-test/drm-test.cpp",
+      "ref_tickets": [
+        "H298813, H321159 ,349018"
+      ],
+      "cr_text": "/* Copied from   https://github.com/AlphaPerfect/docs/blob/master/drm-howto/modeset-vsync.c",
+      "original_package_version": "",
+      "original_package_name": "AlphaPerfect /docs "
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": "* Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n",
+      "original_package_url": "https://source.codeaurora.org/quic/le/wayland/weston/tree/clients/simple-shm.c?h=LE.UM.1.2.7.r1.2\n|https://source.codeaurora.org/quic/la/platform/hardware/qcom/media/tree/mm-video-v4l2/vidc/vdec/test/omx_vdec_test.cpp?h=video-userspace.auto.1.0",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/test-apps/drm-test/drm-test.h",
+      "ref_tickets": [
+        "H349018,H207256"
+      ],
+      "cr_text": " * Copyright (c) 2010 - 2013, 2016 - 2017,  The Linux Foundation. All rights reserved.\n * Copyright (c) 2011 Benjamin Franzke\n * Copyright (c) 2010 Intel Corporation",
+      "original_package_version": "1.9",
+      "original_package_name": "wayland/weston |/platform/hardware/qcom/media"
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": " * Permission is hereby granted, free of charge, to any person obtaining a\n * copy of this software and associated documentation files (the \"Software\"),\n * to deal in the Software without restriction, including without limitation\n * the rights to use, copy, modify, merge, publish, distribute, sublicense,\n * and/or sell copies of the Software, and to permit persons to whom the\n * Software is furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice (including the next\n * paragraph) shall be included in all copies or substantial portions of the\n * Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n * DEALINGS IN THE SOFTWARE.\n___________________________________\n Written 2012 by David Herrmann <dh.herrmann@googlemail.com>\n Dedicated to the Public Domain.",
+      "original_package_url": "",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/test-apps/drm-test/NOTICE",
+      "ref_tickets": [
+        "H349018,H301335"
+      ],
+      "cr_text": "/*Copyright (c) 2010 - 2013, 2016 - 2017, The Linux Foundation. All rights reserved.\n * Copyright  2011 Benjamin Franzke\n * Copyright  2010 Intel Corporation\n * Copyright 2008 Tungsten Graphics\n *   Jakob Bornecrantz <jakob@tungstengraphics.com>\n * Copyright 2008 Intel Corporation\n *   Jesse Barnes <jesse.barnes@intel.com>\n*   Jakob Bornecrantz <jakob@tungstengraphics.com>\n* Copyright 2008 Intel Corporation\n*   Jesse Barnes <jesse.barnes@intel.com>\n| * Copyright  2011 Benjamin Franzke\n* Copyright  2010 Intel Corporation\n* Copyright 2008 Tungsten Graphics\n*   Jakob Bornecrantz <jakob@tungstengraphics.com>\n* Copyright 2008 Intel Corporation\n*   Jesse Barnes <jesse.barnes@intel.com>\n| * Copyright  2011 Benjamin Franzke\n* Copyright  2010 Intel Corporation\n* Copyright 2008 Tungsten Graphics\n*   Jakob Bornecrantz <jakob@tungstengraphics.com>\n* Copyright 2008 Intel Corporation\n*   Jesse Barnes <jesse.barnes@intel.com>\n| * Copyright  2011 Benjamin Franzke\n* Copyright  2010 Intel Corporation\n* Copyright 2008 Tungsten Graphics\n*   Jakob Bornecrantz <jakob@tungstengraphics.com>\n* Copyright 2008 Intel Corporation\n*   Jesse Barnes <jesse.barnes@intel.com>\n",
+      "original_package_version": "",
+      "original_package_name": ""
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": "* Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n| * Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice shall be included in\n* all copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR\n* OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\n* ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n* OTHER DEALINGS IN THE SOFTWARE.\n| * Licensed under the Apache License, Version 2.0 (the \"License\");\n* you may not use this file except in compliance with the License.\n* You may obtain a copy of the License at\n*\n*      http://www.apache.org/licenses/LICENSE-2.0\n*\n* Unless required by applicable law or agreed to in writing, software\n* distributed under the License is distributed on an \"AS IS\" BASIS,\n* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n* See the License for the specific language governing permissions and\n* limitations under the License.*/\n",
+      "original_package_url": "https://source.codeaurora.org/quic/le/wayland/weston/tree/clients/simple-shm.c?h=LE.UM.1.2.7.r1.2\n|https://source.codeaurora.org/quic/la/platform/hardware/qcom/media/tree/mm-video-v4l2/vidc/vdec/test/omx_vdec_test.cpp?h=video-userspace.auto.1.0",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/esplash.cpp",
+      "ref_tickets": [
+        "H207256"
+      ],
+      "cr_text": " * Copyright (c) 2010 - 2013, 2016 - 2017,  The Linux Foundation. All rights reserved.\n * Copyright (c) 2011 Benjamin Franzke\n * Copyright (c) 2010 Intel Corporation",
+      "original_package_version": "1.9",
+      "original_package_name": "wayland/weston"
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": "* Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n| * Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice shall be included in\n* all copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR\n* OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\n* ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n* OTHER DEALINGS IN THE SOFTWARE.\n| * Licensed under the Apache License, Version 2.0 (the \"License\");\n* you may not use this file except in compliance with the License.\n* You may obtain a copy of the License at\n*\n*      http://www.apache.org/licenses/LICENSE-2.0\n*\n* Unless required by applicable law or agreed to in writing, software\n* distributed under the License is distributed on an \"AS IS\" BASIS,\n* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n* See the License for the specific language governing permissions and\n* limitations under the License.*/\n",
+      "original_package_url": "https://github.com/grate-driver/libdrm/blob/master/tests/modetest/buffers.c",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/esplash.cpp",
+      "ref_tickets": [
+        "H269210"
+      ],
+      "cr_text": "* Copyright 2008 Tungsten Graphics\n *   Jakob Bornecrantz <jakob@tungstengraphics.com>\n * Copyright 2008 Intel Corporation\n *   Jesse Barnes <jesse.barnes@intel.com>",
+      "original_package_version": "2.4.x",
+      "original_package_name": "libdrm"
+    },
+    {
+      "spdx": [
+        "Public Domain"
+      ],
+      "lic_text": " * Written 2012 by David Herrmann <dh.herrmann@googlemail.com>\n * Dedicated to the Public Domain.",
+      "original_package_url": "https://github.com/AlphaPerfect/docs/blob/master/drm-howto/modeset-vsync.c",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/esplash.cpp",
+      "ref_tickets": [
+        "H298813, H321159"
+      ],
+      "cr_text": "/* Copied from   https://github.com/AlphaPerfect/docs/blob/master/drm-howto/modeset-vsync.c",
+      "original_package_version": "",
+      "original_package_name": "AlphaPerfect /docs "
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": " * Permission is hereby granted, free of charge, to any person obtaining a\n * copy of this software and associated documentation files (the \"Software\"),\n * to deal in the Software without restriction, including without limitation\n * the rights to use, copy, modify, merge, publish, distribute, sublicense,\n * and/or sell copies of the Software, and to permit persons to whom the\n * Software is furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n * THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR\n * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\n * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n * OTHER DEALINGS IN THE SOFTWARE.\n *\n * Authors: Dave Airlie\n *          Alex Deucher",
+      "original_package_url": "https://source.codeaurora.org/quic/la/kernel/msm-4.14/tree/drivers/gpu/drm/radeon/radeon_display.c?h=LA.AU.0.1.0.r1",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/esplash.cpp",
+      "ref_tickets": [
+        "H321159"
+      ],
+      "cr_text": " * Copyright 2007-8 Advanced Micro Devices, Inc.\n* Copyright 2008 Red Hat Inc.\n",
+      "original_package_version": "4.14",
+      "original_package_name": "kernel/msm4.14 "
+    },
+    {
+      "spdx": [
+        "Apache-2.0"
+      ],
+      "lic_text": "* Licensed under the Apache License, Version 2.0 (the \"License\");\n* you may not use this file except in compliance with the License.\n* You may obtain a copy of the License at\n*\n*      http://www.apache.org/licenses/LICENSE-2.0\n*\n* Unless required by applicable law or agreed to in writing, software\n* distributed under the License is distributed on an \"AS IS\" BASIS,\n* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n* See the License for the specific language governing permissions and\n* limitations under the License.*/\n",
+      "original_package_url": "https://github.com/rockchip-linux/ffmpeg-legacy/blob/master/rk_ffmpeg_2.6.2/ffmpeg-decode-example/dev.h\n",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/esplash.cpp",
+      "ref_tickets": [
+        "H321159"
+      ],
+      "cr_text": "* Copyright 2016 Rockchip Electronics S.LSI Co. LTD\n",
+      "original_package_version": "2.6.2",
+      "original_package_name": "rockchip-linux/ffmpeg-legacy"
+    },
+    {
+      "spdx": [
+        "MIT"
+      ],
+      "lic_text": "* Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n",
+      "original_package_url": "https://source.codeaurora.org/quic/le/wayland/weston/tree/clients/simple-shm.c?h=LE.UM.1.2.7.r1.2\n|https://source.codeaurora.org/quic/la/platform/hardware/qcom/media/tree/mm-video-v4l2/vidc/vdec/test/omx_vdec_test.cpp?h=video-userspace.auto.1.0",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/esplash.h",
+      "ref_tickets": [
+        "H207256"
+      ],
+      "cr_text": " * Copyright (c) 2010 - 2013, 2016 - 2017,  The Linux Foundation. All rights reserved.\n * Copyright (c) 2011 Benjamin Franzke\n * Copyright (c) 2010 Intel Corporation",
+      "original_package_version": "1.9",
+      "original_package_name": "wayland/weston |/platform/hardware/qcom/media"
+    },
+    {
+      "spdx": [
+        "Apache-2.0"
+      ],
+      "lic_text": "This text file is provided to comply with the attribution requirements of the licenses herein, but see NOTICE for license terms of this software.The Apache 2.0 license can be found at http://www.apache.org/licenses/LICENSE-2.0.html\n\nApache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n\"License\" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n\"Licensor\" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n\"Legal Entity\" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n\"control\" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n\"You\" (or \"Your\") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n\"Source\" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n\"Object\" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n\"Work\" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n\"Derivative Works\" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n\"Contribution\" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, \"submitted\"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as \"Not a Contribution.\"\n\n\"Contributor\" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a \"NOTICE\" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n",
+      "original_package_url": "",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/LICENSE",
+      "ref_tickets": [
+        "H321159"
+      ],
+      "cr_text": "",
+      "original_package_version": "",
+      "original_package_name": ""
+    },
+    {
+      "spdx": [
+        "Apache-2.0",
+        "MIT"
+      ],
+      "lic_text": "| * Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice (including the next\n* paragraph) shall be included in all copies or substantial portions of the\n* Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n* DEALINGS IN THE SOFTWARE.\n|  Written 2012 by David Herrmann <dh.herrmann@googlemail.com>\nDedicated to the Public Domain.\n| * Permission is hereby granted, free of charge, to any person obtaining a\n* copy of this software and associated documentation files (the \"Software\"),\n* to deal in the Software without restriction, including without limitation\n* the rights to use, copy, modify, merge, publish, distribute, sublicense,\n* and/or sell copies of the Software, and to permit persons to whom the\n* Software is furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice shall be included in\n* all copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL\n* THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR\n* OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\n* ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n* OTHER DEALINGS IN THE SOFTWARE.\n| * Licensed under the Apache License, Version 2.0 (the \"License\");\n* you may not use this file except in compliance with the License.\n* You may obtain a copy of the License at\n*\n*      http://www.apache.org/licenses/LICENSE-2.0\n*\n* Unless required by applicable law or agreed to in writing, software\n* distributed under the License is distributed on an \"AS IS\" BASIS,\n* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n* See the License for the specific language governing permissions and\n* limitations under the License.\n| Note: Any files for which the above Apache License notices are required\n| A copy of the Apache 2.0 license is included in the file LICENSE",
+      "original_package_url": "",
+      "modified": true,
+      "path": "modified_copy_oscf_platform/vendor/qcom-proprietary/ship/display.git/auto-test/utils/eSplash/NOTICE",
+      "ref_tickets": [
+        "H298813, H321159"
+      ],
+      "cr_text": "/*Copyright (c) 2010 - 2013, 2016 - 2017, The Linux Foundation. All rights reserved.\n * Copyright  2011 Benjamin Franzke\n * Copyright  2010 Intel Corporation\n * Copyright 2008 Tungsten Graphics\n *   Jakob Bornecrantz <jakob@tungstengraphics.com>\n * Copyright 2008 Intel Corporation\n *   Jesse Barnes <jesse.barnes@intel.com>\n\n| * Copyright 2007-8 Advanced Micro Devices, Inc.\n* Copyright 2008 Red Hat Inc.\n| * Copyright 2007-8 Advanced Micro Devices, Inc.\n* Copyright 2008 Red Hat Inc.\n| * Copyright 2016 Rockchip Electronics S.LSI Co. LTD",
+      "original_package_version": "",
+      "original_package_name": ""
+    }
+  ]
+}

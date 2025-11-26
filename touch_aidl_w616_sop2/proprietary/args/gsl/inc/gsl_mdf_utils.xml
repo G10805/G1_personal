@@ -1,0 +1,27 @@
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.             -->
+<!-- All Rights Reserved.                                       -->
+<!-- Confidential and Proprietary - Qualcomm Technologies, Inc. -->
+<DRIVER_MODULE_DEF versionMajor="0x0" versionMinor="0x0" versionBranch="0x0" versionSubBranch="0x0" title_date="08/01/2018">
+  <MODULE_LIST>
+    <MODULE name="GSL_MULTI_DSP_FWK_DATA_MID" id="0x2005" displayName="GSL_MULTI_DSP_FWK_DATA_MID" description="Processor group shared memory information \n">
+      <PARAMETER_LIST>
+        <PARAMETER isSubStruct="true" name="per_group_shmem_info_t" maxSize="0x0">
+          <CONFIG_ELEMENT description="Size of the shared memory" name="shmem_size" type="uint32_t" typeUnSigned="true" byteSize="0x4" byteOffset="0x0" min="0x0"
+            max="0xffffffff" default="0x400"/>
+          <CONFIG_ELEMENT description="Number of satellites in this group" name="num_satellite_procs" type="uint32_t" typeUnSigned="true" byteSize="0x4" byteOffset="0x4"
+            min="0x0" max="0xffffffff" default="0x1"/>
+          <CONFIG_ELEMENT description="Master proc in this group" name="master_proc" type="uint32_t" typeUnSigned="true" byteSize="0x4" byteOffset="0x4"
+            min="0x0" max="0xffffffff" default="0x2"/>
+          <CONFIG_ELEMENT description="Shared memory info of each group" name="satellite_proc_ids" type="uint32_t" typeUnSigned="true" byteSize="0x4" byteOffset="0x8"
+            arrayElements="0" min="0x0" max="0xffffffff" default="0x0" variableArraySize="num_satellite_procs"/>
+        </PARAMETER>
+        <PARAMETER name="PARAM_ID_PROC_GROUP_INFO_PARAMS" pid="0x1" maxSize="0x0" description="Used to configure processor group info">
+          <DEFAULT_DEPENDENCIES/>
+          <CONFIG_ELEMENT name="num_proc_groups" type="uint32_t" typeUnSigned="true" byteSize="0x4" byteOffset="0x0" min="0x0" max="0xffffffff" default="0x1"
+            description="Number of processor group."/>
+          <CONFIG_ELEMENT name="shmem_info" type="per_group_shmem_info_t" byteSize="0x0" byteOffset="0x4" arrayElements="0" variableArraySize="num_proc_groups"/>
+        </PARAMETER>
+      </PARAMETER_LIST>
+    </MODULE>
+  </MODULE_LIST>
+</DRIVER_MODULE_DEF>

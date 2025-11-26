@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wifi.wdrpf;
+
+option optimize_for = LITE_RUNTIME;
+
+enum WifiDebugRxPacketFate
+{
+    SUCCESS = 0;
+    FW_QUEUED = 1;
+    FW_DROP_FILTER = 2;
+    FW_DROP_INVALID = 3;
+    FW_DROP_NOBUFS = 4;
+    FW_DROP_OTHER = 5;
+    DRV_QUEUED = 6;
+    DRV_DROP_FILTER = 7;
+    DRV_DROP_INVALID = 8;
+    DRV_DROP_NOBUFS = 9;
+    DRV_DROP_OTHER = 10;
+}
