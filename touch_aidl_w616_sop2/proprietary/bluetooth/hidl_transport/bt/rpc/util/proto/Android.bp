@@ -1,0 +1,20 @@
+cc_library_static {
+    name: "libqti_bt_hci_proto",
+    vendor: true,
+
+    proto: {
+        canonical_path_from_root: false,
+        export_proto_headers: true,
+        type: "lite",
+    },
+
+    local_include_dirs: [
+        "./",
+    ],
+
+    srcs: [
+        "Status.proto",
+        "BluetoothHci.proto",
+        "BluetoothHciCallbacks.proto",
+    ],
+}

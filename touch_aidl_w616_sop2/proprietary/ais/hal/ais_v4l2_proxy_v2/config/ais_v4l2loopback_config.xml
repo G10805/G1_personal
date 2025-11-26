@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <extra_mode>
+        <properties latency_mode="0"/>
+    </extra_mode>
+    <input_device>
+        <properties input_id="0" node="/dev/video51"/>
+    </input_device>
+    <input_device>
+        <properties input_id="1" node="/dev/video52"/>
+    </input_device>
+    <input_device>
+        <properties input_id="2" node="/dev/video53"/>
+    </input_device>
+    <input_device>
+        <properties input_id="3" node="/dev/video54"/>
+    </input_device>
+    <input_device>
+        <properties input_id="4" node="/dev/video55"/>
+    </input_device>
+    <input_device>
+        <properties input_id="5" node="/dev/video56"/>
+    </input_device>
+    <input_device>
+        <properties input_id="8" node="/dev/video57"/>
+    </input_device>
+    <input_device>
+        <properties input_id="9" node="/dev/video58"/>
+    </input_device>
+    <input_device>
+        <properties input_id="12" node="/dev/video59"/>
+    </input_device>
+    <input_device>
+        <properties input_id="13" node="/dev/video60"/>
+    </input_device>
+    <input_device>
+        <properties input_id="14" node="/dev/video61"/>
+    </input_device>
+    <input_device>
+        <properties input_id="15" node="/dev/video62"/>
+    </input_device>
+    <input_device>
+        <properties input_id="16" node="/dev/video63"/>
+    </input_device>
+    <input_device>
+        <properties input_id="17" node="/dev/video64"/>
+    </input_device>
+    <input_device>
+        <properties input_id="18" node="/dev/video65"/>
+    </input_device>
+    <input_device>
+        <properties input_id="19" node="/dev/video66"/>
+    </input_device>
+</qcarcam_inputs>

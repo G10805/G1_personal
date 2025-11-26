@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi.supplicant.ot;
+
+option optimize_for = LITE_RUNTIME;
+
+enum OcspType
+{
+    NONE = 0;
+    REQUEST_CERT_STATUS = 1;
+    REQUIRE_CERT_STATUS = 2;
+    REQUIRE_ALL_CERTS_STATUS = 3;
+}

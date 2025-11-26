@@ -1,0 +1,35 @@
+/*============================================================================
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ * ===========================================================================*/
+
+
+/*======================================================================
+DESCRIPTION : ListenSoundModelLibrary Version 1.1
+====================================================================*/
+
+package vendor.qti.hardware.ListenSoundModel@1.1;
+
+import @1.0::IListenSoundModel;
+
+interface IListenSoundModel extends @1.0::IListenSoundModel
+{
+    ipc_lsm_smlInit_v2(uint32_t configId, vec<int8_t> pConfig, uint32_t configSize,
+        memory pStaticMemory, uint32_t staticMemorySize)
+        generates (uint32_t status, ListenSmlModel pSmlModel);
+    ipc_lsm_smlSet_v2(ListenSmlModel pSmlModel, uint32_t configId,
+        vec<int8_t> pConfig, uint32_t configSize)
+        generates (uint32_t status);
+    ipc_lsm_smlGet_v2(ListenSmlModel pSmlModel, uint32_t configId, vec<int8_t> pConfig,
+        uint32_t configSize)
+        generates (uint32_t status, vec<int8_t> pOutConfig, uint32_t configFilledSize);
+    ipc_lsm_smlProcess_v2(ListenSmlModel pSmlModel, vec<int8_t> pInputData,
+        uint32_t inputDataSize, uint32_t inputDataId)
+        generates (uint32_t status, vec<int8_t> pOutputData, uint32_t outputDataSize,
+        uint32_t outputDataId);
+    ipc_lsm_smlGetReqMem(uint32_t memStructId, vec<int8_t> memStruct,
+        uint32_t memStructSize, uint32_t configId,
+        vec<int8_t> configStruct, uint32_t configStructSize)
+        generates (uint32_t status);
+};

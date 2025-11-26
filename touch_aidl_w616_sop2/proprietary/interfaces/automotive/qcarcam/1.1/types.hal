@@ -1,0 +1,210 @@
+/*
+ * Copyright (c) 2021-2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.automotive.qcarcam@1.1;
+
+import @1.0::types;
+
+enum QcarcamStreamParam : @1.0::QcarcamStreamParam{
+    QCARCAM_VENDOR=24,               ///< vendor param
+    QCARCAM_INPUT_MODE,           ///< Input device mode.
+    QCARCAM_MASTER,               ///< Set the client as master
+    QCARCAM_EVENT_CHANGE_SUBSCRIBE,      ///< Event subscription
+    QCARCAM_EVENT_CHANGE_UNSUBSCRIBE,    ///< Event unsubscribe
+    QCARCAM_BATCH_MODE,           ///< Configures batch mode through qcarcam_batch_mode_config_t
+    QCARCAM_ISP_USECASE,          ///< Configures ISP usecase type
+};
+
+enum QcarcamColorFmt : @1.0::QcarcamColorFmt{
+    QCARCAM_FMT_PLAIN16_10=0x50a0000,
+    QCARCAM_FMT_PLAIN16_12=0x50c0000,
+    QCARCAM_FMT_PLAIN16_14=0x50e0000,
+    QCARCAM_FMT_PLAIN16_16=0x5100000,
+    QCARCAM_FMT_PLAIN32_20=0x6140000,
+    QCARCAM_FMT_YU12=0x7080106,
+    QCARCAM_FMT_YV12=0x7080107,
+    QCARCAM_FMT_MIPIUYVY_10=0x10a0102,
+    QCARCAM_FMT_P010=0x50a0104,
+    QCARCAM_FMT_BGR_888=0x7180301,
+    QCARCAM_FMT_RGB_565=0x7100302,
+    QCARCAM_FMT_RGBX_8888=0x7200303,
+    QCARCAM_FMT_BGRX_8888=0x7200304,
+    QCARCAM_FMT_RGBX_1010102=0x7200305,
+    QCARCAM_FMT_BGRX_1010102=0x7200306,
+};
+
+
+struct QcarcamCtrlAeRegions
+{
+    int32_t xMin;         ///< Top-left X-coordinate
+    int32_t yMin;         ///< Top-left y-coordinate
+    int32_t xMax;         ///< Bottom-right x-coordinate
+    int32_t yMax;         ///< Bottom-right y-coordinate
+    int32_t weight;       ///< Weight of the region, The weight must be within [0, 1000], and represents a weight for every pixel in the area
+};
+
+struct QcarcamVendorParam
+{
+    uint32_t[64] data;
+};
+
+/// @brief Batch mode types
+enum QcarcamBatchModeType : int32_t
+{
+    QCARCAM_BATCH_MODE_DEFAULT = 0,  ///< frame info filled for each batched frame
+};
+
+/// @brief Batch mode configuration
+struct QcarcamBatchModeConfig
+{
+    QcarcamBatchModeType batch_mode;
+    uint32_t num_batch_frames;
+    uint32_t frame_increment;   ///< offset in bytes frame N first pixel to frame N+1
+};
+
+struct QcarcamIspCtrls {
+
+    uint64_t param_mask;  ///< Mask to indicate setting QcarcamIspCtrls
+    QcarcamCtrlAELock ae_lock;
+    QcarcamCtrlAEMode ae_mode;
+    QcarcamCtrlAWBLock awb_lock;
+    QcarcamCtrlAWBMode awb_mode;
+    QcarcamCtrlControlEffectMode effect_mode;
+    QcarcamCtrlControlMode ctrl_mode;
+    QcarcamCtrlControlSceneMode scene_mode;
+    QcarcamCtrlAEAntibandingMode ae_antibanding_mode;
+    float contrast_level;
+    float saturation;
+    float ae_compensation;
+    QcarcamCtrlAeRegions ae_regions;
+};
+
+union QcarcamStreamConfigData {
+
+    uint64_t ptr_value;                           ///< unsigned int type
+    float float_value;                            ///< float type
+    uint32_t uint_value;                          ///< unsigned int type
+    QcarcamResolution res_value;                  ///< resolution type
+    QcarcamColorFmt color_value;                  ///< color type
+    QcarcamExposureConfig exposure_config;        ///< Exposure settings
+    QcarcamHDRExposureConfig hdr_exposure_config; ///< HDR Exposure settings
+    QcarcamFrameRate frame_rate_config;           ///< Frame rate settings
+    QcarcamGammaConfig gamma_config;              ///< Gamma settings
+    int32_t[32] arr_padding;                      ///< Used to ensure union size won't change
+    QcarcamIspCtrls isp_ctrls;                    ///< Used to set SOC ISP paramters
+    QcarcamVendorParam vendor_param;              ///< vendor param
+    QcarcamBatchModeConfig batch_config;          ///< batch mode config
+    uint64_t uint64_value;                         ///< unsigned uint64 value
+    QcarcamIspUsecaseConfig isp_config;           ///< isp_usecase config settings
+};
+
+/// @brief Frame done payload v2
+struct QcarcamFrameInfov2
+{
+    uint32_t id;  /// bufferlist id
+    int32_t idx;  /// index into the qcarcam_buffers_t buffers table
+    uint32_t flags;
+    uint32_t[4] seq_no;
+    uint64_t timestamp;
+    uint64_t timestamp_system;
+    uint64_t[4] sof_qtimestamp; ///< sof qtimer timestamp
+    QcarcamFrameField field_type;
+};
+
+struct QcarcamPlaneInfov2
+{
+    uint32_t width;  ///< width in pixels
+    uint32_t height; ///< height in pixels
+    uint32_t stride; ///< stride in bytes
+    uint32_t size;   ///< size in bytes
+    uint64_t hndl;  ///< buffer handle
+    uint32_t offset; ///< Buffer offset for plane
+};
+
+struct QcarcamBuffersInfov2
+{
+     QcarcamColorFmt color_fmt;
+     QcarcamPlaneInfov2[3] planes;
+     uint32_t n_planes;
+     uint32_t flags;
+};
+
+struct QcarcamBuffersInfoList
+{
+    uint32_t id;  ///< buffer list id
+    QcarcamBuffersInfov2[20] BuffersInfo; ///< Array of buffers
+    uint32_t n_buffers;    ///< Number of buffers in list
+};
+
+enum  QcarcamEvent : @1.0::QcarcamEvent {
+    QCARCAM_EVENT_VENDOR = 1 << 3,                 ///< Vendor event
+    QCARCAM_EVENT_PROPERTY_NOTIFY = 1 << 4,        ///< Property events
+    QCARCAM_EVENT_FRAME_SOF = 1 << 5,              ///< SOF event
+    QCARCAM_EVENT_RECOVERY = 1 << 6,               ///< Recovery in progress event
+    QCARCAM_EVENT_RECOVERY_SUCCESS = 1 << 7,       ///< Recovery successful event
+    QCARCAM_EVENT_ERROR_ABORTED = 1 << 8,          ///< Recovery failed event
+    QCARCAM_EVENT_FRAME_FREEZE = 1 << 9            ///< Frozen frame event with qcarcam_frame_freeze_t payload
+};
+
+struct QcarcamMode {
+    uint32_t color_fmt;
+    QcarcamResolution res;
+};
+
+/// @brief Input sources
+struct QcarcamInputInfov2
+{
+    QcarcamInputDesc desc;         ///< Unique input identifier
+    string name;
+    string parent_name;
+    QcarcamMode[10] modes;           ///< Number of supported color formats
+    int32_t num_modes;
+    int32_t flags;
+};
+
+/// @brief SOF event payload definition
+struct QcarcamTimestamp
+{
+    uint64_t timestamp_system; ///system SW timestamp
+    uint64_t qtimestamp;       ///sof qtimer HW timestamp
+};
+
+/// @brief structure to hold frame freeze payload
+struct QcarcamFrameFreeze
+{
+    uint32_t state;    ///< frame freeze state (e.g. detected, cleared, etc...)
+    uint32_t seq_no;   ///< frame id impacted
+    uint32_t[16] data; ///< additional data as needed (e.g. cookies, etc...)
+};
+
+/// @brief Union to hold possible values to p_payload in qcarcam_event_callback
+union QcarcamEventPayload
+{
+    uint32_t uint_payload;                                            ///< uint32_t type
+    QcarcamTimestamp sof_timestamp;                                   ///< SOF timestamp
+    QcarcamFrameFreeze frame_freeze;                                  ///< Frame freeze
+    QcarcamVendorParam vendor_data;                                   ///< vendor data paylaod
+    QcarcamFrameInfov2 frame_info;                                    ///< Frame info
+    uint32_t[64] array;                                               ///< max event payload
+};
+
+/// @brief ISP Usecase Parameters
+enum QcarcamIspUsecase : int32_t
+{
+    QCARCAM_ISP_USECASE_SHDR_BPS_IPE_AEC_AWB,
+    QCARCAM_ISP_USECASE_BPS_IPE_AEC_AWB,
+    QCARCAM_ISP_USECASE_MAX
+};
+
+/// @brief ISP instance config parameters
+struct QcarcamIspUsecaseConfig
+{
+    uint32_t id;                       ///< ISP instance id
+    uint32_t camera_id;                ///< ISP camera id
+    QcarcamIspUsecase use_case;        ///< ISP use case
+};
+

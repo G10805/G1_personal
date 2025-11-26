@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.data.iwlan@1.1;
+
+import @1.0::IIWlanResponse;
+import @1.0::IWlanResponseInfo;
+import android.hardware.radio@1.6::SetupDataCallResult;
+
+/**
+ * Interface declaring response functions for data service.
+ */
+interface IIWlanResponse extends @1.0::IIWlanResponse {
+  /**
+   * @param info Response info struct containing response type, serial no. and error
+   * @param dcResponse SetupDataCallResult defined in types.hal
+   *
+   * Valid errors returned:
+   *   RadioError:NONE must be returned on both success and failure of setup with the
+   *              DataCallResponse.status containing the actual status
+   *              For all other errors the DataCallResponse is ignored.
+   *   RadioError:RADIO_NOT_AVAILABLE
+   *   RadioError:OP_NOT_ALLOWED_BEFORE_REG_TO_NW
+   *   RadioError:OP_NOT_ALLOWED_DURING_VOICE_CALL
+   *   RadioError:REQUEST_NOT_SUPPORTED
+   *   RadioError:INVALID_ARGUMENTS
+   *   RadioError:INTERNAL_ERR
+   *   RadioError:NO_MEMORY
+   *   RadioError:NO_RESOURCES
+   *   RadioError:CANCELLED
+   *   RadioError:SIM_ABSENT
+   */
+   @entry
+  oneway setupDataCallResponse_1_1(IWlanResponseInfo info, SetupDataCallResult dcResponse);
+
+  /**
+   * @param info Response info struct containing response type, serial no. and error
+   * @param dcResponse List of DataCallResult as defined in types.hal
+   *
+   * Valid errors returned:
+   *   RadioError:NONE
+   *   RadioError:RADIO_NOT_AVAILABLE
+   *   RadioError:INTERNAL_ERR
+   *   RadioError:NO_MEMORY
+   *   RadioError:NO_RESOURCES
+   *   RadioError:CANCELLED
+   *   RadioError:REQUEST_NOT_SUPPORTED
+   *   RadioError:SIM_ABSENT
+   */
+  oneway getDataCallListResponse_1_1(IWlanResponseInfo info, vec<SetupDataCallResult> dcResponse);
+};

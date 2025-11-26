@@ -1,0 +1,54 @@
+/* temporarily disabled
+cc_defaults {
+    name: "qconfig_defaults",
+    proprietary: true,
+    owner: "qti",
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "vendor.qti.hardware.qconfig@1.0",
+        "libjsoncpp",
+        "libbase",
+    ],
+}
+
+cc_binary {
+    name: "qconfigservice",
+    defaults: ["qconfig_defaults"],
+    relative_install_path: "hw",
+    init_rc: ["service/qconfig.rc"],
+    srcs: ["service/*.cpp"],
+    local_include_dirs: ["service/inc"],
+}
+
+cc_library_shared {
+    name: "libqconfigclient",
+    defaults: ["qconfig_defaults"],
+    srcs: ["client/*.cpp"],
+    local_include_dirs: ["client/inc"],
+    export_include_dirs: ["client/inc"],
+}
+
+cc_test {
+    name: "qconfig_test",
+    defaults: ["qconfig_defaults"],
+    srcs: ["service/QConfig.cpp",
+           "client/QConfigClient.cpp",
+           "test/unittest_main.cpp"],
+    local_include_dirs: ["service/inc", "client/inc"],
+}
+
+cc_binary {
+    name: "qconfigfunctest",
+    defaults: ["qconfig_defaults"],
+    srcs: ["client/QConfigClient.cpp",
+           "test/functest_main.cpp"],
+    local_include_dirs: ["client/inc"],
+}
+*/

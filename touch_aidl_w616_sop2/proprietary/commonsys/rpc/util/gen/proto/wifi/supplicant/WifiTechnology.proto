@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi.supplicant.wt;
+
+option optimize_for = LITE_RUNTIME;
+
+enum WifiTechnology
+{
+    UNKNOWN = 0;
+    LEGACY = 1;
+    HT = 2;
+    VHT = 3;
+    HE = 4;
+    EHT = 5;
+}

@@ -1,0 +1,16 @@
+hidl_interface {
+
+    name: "vendor.qti.hardware.ListenSoundModel@1.1",
+    root: "vendor.qti.hardware.ListenSoundModel",
+    system_ext_specific: true,
+
+    srcs: [
+        "types.hal",
+        "IListenSoundModel.hal"
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+        "vendor.qti.hardware.ListenSoundModel@1.0"
+    ],
+    gen_java: false,
+}

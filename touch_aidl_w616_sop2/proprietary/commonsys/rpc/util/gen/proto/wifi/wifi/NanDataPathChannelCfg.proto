@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum NanDataPathChannelCfg
+{
+    CHANNEL_NOT_REQUESTED = 0;
+    REQUEST_CHANNEL_SETUP = 1;
+    FORCE_CHANNEL_SETUP = 2;
+}

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package wifi;
+
+import "StaLinkLayerIfaceContentionTimeStats.proto";
+import "StaLinkLayerIfacePacketStats.proto";
+import "StaPeerInfo.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message StaLinkLayerLinkStats
+{
+    int32 linkId = 1;
+    int32 radioId = 2;
+    int32 frequencyMhz = 3;
+    int32 beaconRx = 4;
+    int32 avgRssiMgmt = 5;
+    StaLinkLayerIfacePacketStats wmeBePktStats = 6;
+    StaLinkLayerIfacePacketStats wmeBkPktStats = 7;
+    StaLinkLayerIfacePacketStats wmeViPktStats = 8;
+    StaLinkLayerIfacePacketStats wmeVoPktStats = 9;
+    uint32 timeSliceDutyCycleInPercent = 10;
+    StaLinkLayerIfaceContentionTimeStats wmeBeContentionTimeStats = 11;
+    StaLinkLayerIfaceContentionTimeStats wmeBkContentionTimeStats = 12;
+    StaLinkLayerIfaceContentionTimeStats wmeViContentionTimeStats = 13;
+    StaLinkLayerIfaceContentionTimeStats wmeVoContentionTimeStats = 14;
+    repeated StaPeerInfo peers = 15;
+    enum StaLinkState
+    {
+        UNKNOWN = 0;
+        NOT_IN_USE = 1;
+        IN_USE = 2;
+    }
+    StaLinkState state = 16;
+}

@@ -1,0 +1,41 @@
+aidl_interface {
+    name: "vendor.qti.automotive.qcarcam2",
+    vendor_available: true,
+    srcs: ["vendor/qti/automotive/qcarcam2/*.aidl"],
+    stability: "vintf",
+    owner: "qti",
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    backend: {
+        cpp: {
+            // prefer NDK backend which can be used anywhere
+            // If you disable this, you also need to delete the C++
+            // translate code.
+            enabled: false,
+        },
+        java: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+        {
+            version: "2",
+            imports: ["android.hardware.common-V2"],
+        },
+        {
+            version: "3",
+            imports: ["android.hardware.common-V2"],
+        },
+
+    ],
+    frozen: true,
+
+}

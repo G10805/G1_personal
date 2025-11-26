@@ -1,0 +1,30 @@
+aidl_interface {
+    name: "vendor.visteon.hardware.interfaces.touch",
+    vendor_available: true,
+    //vendor: true,  // ? This ensures the .so goes to vendor/lib
+    srcs: [
+        "vendor/visteon/hardware/interfaces/touch/ITouch.aidl",
+        "vendor/visteon/hardware/interfaces/touch/ITouchCallback.aidl",
+    ],
+    stability: "vintf",
+    owner: "visteon",
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

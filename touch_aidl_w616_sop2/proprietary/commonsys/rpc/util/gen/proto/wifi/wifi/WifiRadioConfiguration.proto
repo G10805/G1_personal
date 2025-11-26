@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiAntennaMode.proto";
+import "WifiBand.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiRadioConfiguration
+{
+    WifiBand bandInfo = 1;
+    WifiAntennaMode antennaMode = 2;
+}

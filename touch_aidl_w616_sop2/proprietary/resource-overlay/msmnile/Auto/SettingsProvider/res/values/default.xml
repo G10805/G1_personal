@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+All rights reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<resources>
+    <bool name="def_show_ime_with_hard_keyboard">true</bool>
+</resources>

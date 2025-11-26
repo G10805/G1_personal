@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+option optimize_for = LITE_RUNTIME;
+
+enum ParamSizeLimits
+{
+    PSL_RESERVED = 0;
+    SSID_MAX_LEN_IN_BYTES = 32;
+    WPA2_PSK_PASSPHRASE_MIN_LEN_IN_BYTES = 8;
+    WPA2_PSK_PASSPHRASE_MAX_LEN_IN_BYTES = 63;
+}

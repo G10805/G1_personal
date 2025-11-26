@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package net.nlinterceptor;
+
+option optimize_for = LITE_RUNTIME;
+
+message InterceptedSocket
+{
+    int32 nlFamily = 1;
+    int32 portId = 2;
+}

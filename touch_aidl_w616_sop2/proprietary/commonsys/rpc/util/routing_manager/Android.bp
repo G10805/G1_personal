@@ -1,0 +1,21 @@
+
+
+cc_binary {
+    name: "routing_manager_daemon",
+    init_rc: ["routing_manager_daemon.rc"],
+    owner: "qti",
+    proprietary: true,
+    cppflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    srcs: [
+         "main.cpp",
+    ],
+
+    shared_libs: [
+        "libqti_someip_util",
+        "libvsomeip3",
+    ]
+}

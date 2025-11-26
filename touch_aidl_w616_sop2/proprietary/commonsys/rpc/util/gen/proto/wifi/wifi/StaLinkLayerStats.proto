@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wifi;
+
+import "StaLinkLayerIfaceStats.proto";
+import "StaLinkLayerRadioStats.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message StaLinkLayerStats
+{
+    StaLinkLayerIfaceStats iface = 1;
+    repeated StaLinkLayerRadioStats radios = 2;
+    int64 timeStampInMs = 3;
+}

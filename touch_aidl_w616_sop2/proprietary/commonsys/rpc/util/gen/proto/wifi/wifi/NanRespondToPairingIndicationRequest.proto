@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanPairingRequestType.proto";
+import "NanPairingSecurityConfig.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanRespondToPairingIndicationRequest
+{
+    bool acceptRequest = 1;
+    int32 pairingInstanceId = 2;
+    NanPairingRequestType requestType = 3;
+    bool enablePairingCache = 4;
+    bytes pairingIdentityKey = 5;
+    NanPairingSecurityConfig securityConfig = 6;
+}

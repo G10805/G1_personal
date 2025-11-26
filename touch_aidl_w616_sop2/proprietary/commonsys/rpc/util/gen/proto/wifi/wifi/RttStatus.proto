@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wifi.rs;
+
+option optimize_for = LITE_RUNTIME;
+
+enum RttStatus
+{
+    SUCCESS = 0;
+    FAILURE = 1;
+    FAIL_NO_RSP = 2;
+    FAIL_REJECTED = 3;
+    FAIL_NOT_SCHEDULED_YET = 4;
+    FAIL_TM_TIMEOUT = 5;
+    FAIL_AP_ON_DIFF_CHANNEL = 6;
+    FAIL_NO_CAPABILITY = 7;
+    ABORTED = 8;
+    FAIL_INVALID_TS = 9;
+    FAIL_PROTOCOL = 10;
+    FAIL_SCHEDULE = 11;
+    FAIL_BUSY_TRY_LATER = 12;
+    INVALID_REQ = 13;
+    NO_WIFI = 14;
+    FAIL_FTM_PARAM_OVERRIDE = 15;
+    NAN_RANGING_PROTOCOL_FAILURE = 16;
+    NAN_RANGING_CONCURRENCY_NOT_SUPPORTED = 17;
+}

@@ -1,0 +1,13 @@
+/dts-v1/;
+/plugin/;
+
+#include "quin-vm-common-platform-drivers.dtsi"
+#include "lemans-vm-la-platform-drivers.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Lemans Single LA Guest Virtual Machine";
+	compatible = "qcom,lemans", "qcom,quinvm";
+	qcom,msm-id = <532 0x20000>;
+	qcom,board-id = <0x0 0x1000001>, <0x0 0x2000001>;
+};
+

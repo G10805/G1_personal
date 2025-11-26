@@ -1,0 +1,18 @@
+cc_library_static {
+    name: "libqti-bluetooth-handsfree-audio-proto",
+    vendor: true,
+
+    proto: {
+        canonical_path_from_root: false,
+        export_proto_headers: true,
+        type: "lite",
+    },
+
+    local_include_dirs: [
+        "./",
+    ],
+
+    srcs: [
+        "*.proto",
+    ],
+}

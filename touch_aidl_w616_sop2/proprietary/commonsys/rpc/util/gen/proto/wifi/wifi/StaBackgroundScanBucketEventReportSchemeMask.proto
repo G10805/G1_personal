@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum StaBackgroundScanBucketEventReportSchemeMask
+{
+    SBSBERSM_RESERVED = 0;
+    EACH_SCAN = 1;
+    FULL_RESULTS = 2;
+    NO_BATCH = 4;
+}

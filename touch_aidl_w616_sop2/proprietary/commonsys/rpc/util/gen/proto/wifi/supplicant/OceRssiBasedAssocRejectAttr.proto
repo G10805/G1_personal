@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message OceRssiBasedAssocRejectAttr
+{
+    int32 deltaRssi = 1;
+    int32 retryDelayS = 2;
+}

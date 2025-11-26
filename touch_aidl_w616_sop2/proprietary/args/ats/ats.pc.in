@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: ats
+Description: ats library
+Version: @VERSION@
+Libs: -L${libdir} -lats 
+Cflags: -I${includedir}\ats

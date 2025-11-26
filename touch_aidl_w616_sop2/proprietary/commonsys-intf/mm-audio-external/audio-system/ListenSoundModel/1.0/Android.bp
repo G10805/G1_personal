@@ -1,0 +1,34 @@
+hidl_interface {
+
+    name: "vendor.qti.hardware.ListenSoundModel@1.0",
+    root: "vendor.qti.hardware.ListenSoundModel",
+    system_ext_specific: true,
+
+    srcs: [
+        "types.hal",
+        "IListenSoundModel.hal"
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    types: [
+        "ListenModelEnum",
+        "ListenDetectionStatusEnum",
+        "ListenSoundModelInfo",
+        "ListenEventPayload",
+        "ListenSoundModelHeader",
+        "ListenConfidenceLevels",
+        "listenDetectionTypeEnum",
+        "ListenDetectionEventV1",
+        "ListenDetectionEventV2",
+        "ListenDetectionEventType",
+        "ListenStatusEnum",
+        "ListenEpdParams",
+        "ListenQualityCheckResult",
+        "ListenEpdModule",
+        "ListenModelType",
+        "ListenSmlModel",
+    ],
+    gen_java: false,
+}
+

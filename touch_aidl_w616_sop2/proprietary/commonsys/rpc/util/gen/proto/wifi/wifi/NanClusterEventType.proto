@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum NanClusterEventType
+{
+    DISCOVERY_MAC_ADDRESS_CHANGED = 0;
+    STARTED_CLUSTER = 1;
+    JOINED_CLUSTER = 2;
+}

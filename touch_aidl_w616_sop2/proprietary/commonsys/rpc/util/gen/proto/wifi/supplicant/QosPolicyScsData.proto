@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "QosPolicyClassifierParams.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message QosPolicyScsData
+{
+    uint32 policyId = 1;
+    uint32 userPriority = 2;
+    QosPolicyClassifierParams classifierParams = 3;
+}

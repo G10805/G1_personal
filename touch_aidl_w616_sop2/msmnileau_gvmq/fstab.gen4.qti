@@ -1,0 +1,25 @@
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
+
+#<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
+/devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
+
+# Need to have this entry in here even though the mount point itself is no longer needed.
+# The update_engine code looks for this entry in order to determine the boot device address
+# and fails if it does not find it.
+/devices/platform/soc/*/xhci-hcd.*.auto*    /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
+/dev/block/system / ext4 ro defaults,avb
+/dev/block/by-name/metadata                            /metadata               ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
+/dev/block/by-name/userdata                            /data                   f2fs    rw,noatime,nosuid,nodev                              latemount,wait,check,formattable,checkpoint=fs,length=10737418240
+/dev/block/persist /mnt/vendor/persist ext4 rw defaults
+/dev/block/modem /vendor/firmware_mnt vfat ro,shortname=lower,uid=0,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 defaults
+/dev/block/bluetooth /vendor/bt_firmware vfat ro,shortname=lower,uid=0,gid=1000,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 defaults
+/dev/block/misc /misc emmc defaults defaults

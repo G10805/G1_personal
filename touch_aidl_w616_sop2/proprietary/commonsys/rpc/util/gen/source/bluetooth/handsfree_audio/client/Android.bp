@@ -1,0 +1,41 @@
+cc_library_shared {
+    name: "libqti-bluetooth-handsfree-audio-rpc",
+    owner: "qti",
+    proprietary: true,
+
+    srcs: [
+        "aidl/*.cpp",
+    ],
+
+    cflags: ["-Wall", "-Werror"],
+
+    static_libs: [
+        "libqti-bluetooth-handsfree-audio-proto",
+    ],
+
+    shared_libs: [
+        "vendor.qti.hardware.bluetooth.handsfree_audio-V1-ndk",
+        "libbase",
+        "libbinder_ndk",
+        "libcutils",
+        "liblog",
+        "libqti_hal_rpc_util",
+        "libqti_log_util",
+        "libqti_message_sched_util",
+        "libqti_proto_util",
+        "libqti_rpc_common_util",
+        "libqti_someip_util",
+        "libqti-bluetooth-handsfree-audio-message",
+        "libutils",
+        "libvsomeip3",
+    ],
+
+    export_include_dirs: [
+        "aidl",
+        "aidl/api",
+    ],
+
+    sanitize: {
+        integer_overflow: true,
+    },
+}

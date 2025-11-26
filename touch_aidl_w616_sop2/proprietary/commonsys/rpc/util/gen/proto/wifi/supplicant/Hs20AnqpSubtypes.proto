@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+enum Hs20AnqpSubtypes
+{
+    HAS_RESERVED = 0;
+    OPERATOR_FRIENDLY_NAME = 3;
+    WAN_METRICS = 4;
+    CONNECTION_CAPABILITY = 5;
+    OSU_PROVIDERS_LIST = 8;
+}

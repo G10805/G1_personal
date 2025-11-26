@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+import "BandMask.proto";
+import "FrequencyRange.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ChannelParams
+{
+    BandMask bandMask = 1;
+    repeated FrequencyRange acsChannelFreqRangesMhz = 2;
+    bool enableAcs = 3;
+    bool acsShouldExcludeDfs = 4;
+    int32 channel = 5;
+}

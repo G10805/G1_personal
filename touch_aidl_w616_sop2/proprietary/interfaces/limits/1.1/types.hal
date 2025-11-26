@@ -1,0 +1,40 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.limits@1.1;
+
+/** Mitigation Client type */
+@export
+enum MitigationType : int32_t {
+	UNKNOWN = -1,
+	DISPLAY_FPS = 0,
+	DISPLAY_BRIGHTNESS = 1,
+	CAMERA = 2,
+	CAMCORDER = 3,
+	COMPONENT = 4, // For other cooling devices
+};
+
+struct Mitigation {
+	/**
+	* Mitigation type.
+	*/
+	MitigationType type;
+
+	/**
+	* Name of this mitigation device.
+	* e.g., panel0-fps, panel1-fps.
+	*/
+	string name;
+
+	/**
+	* Current Mitigation level.
+	* Levels start from 0 to maxLevel (inclusive).
+	* Level 0 is default and mean no mitigation.
+	* Increasing levels will require increasing mitigation action.
+	*/
+	int32_t currentLevel;
+	int32_t maxLevel;
+};

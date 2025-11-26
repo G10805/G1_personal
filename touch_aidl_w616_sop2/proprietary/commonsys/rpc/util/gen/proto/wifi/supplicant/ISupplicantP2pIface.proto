@@ -1,0 +1,684 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "FreqRange.proto";
+import "ISupplicantP2pIfaceCallback.proto";
+import "ISupplicantP2pNetwork.proto";
+import "IfaceType.proto";
+import "MiracastMode.proto";
+import "P2pFrameTypeMask.proto";
+import "P2pGroupCapabilityMask.proto";
+import "WpsConfigMethods.proto";
+import "WpsProvisionMethod.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ISupplicantP2pIface
+{
+    message AddBonjourServiceReq
+    {
+        bytes query = 1;
+        bytes response = 2;
+    }
+
+    message AddBonjourServiceCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message AddGroupReq
+    {
+        bool persistent = 1;
+        int32 persistentNetworkId = 2;
+    }
+
+    message AddGroupCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message AddGroupWithConfigReq
+    {
+        bytes ssid = 1;
+        string pskPassphrase = 2;
+        bool persistent = 3;
+        int32 freq = 4;
+        bytes peerAddress = 5;
+        bool joinExistingGroup = 6;
+    }
+
+    message AddGroupWithConfigCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message AddNetworkReq
+    {
+    }
+
+    message AddNetworkCfm
+    {
+        HalStatus status = 1;
+        optional ISupplicantP2pNetwork result = 2;
+    }
+
+    message AddUpnpServiceReq
+    {
+        int32 version = 1;
+        string serviceName = 2;
+    }
+
+    message AddUpnpServiceCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message CancelConnectReq
+    {
+    }
+
+    message CancelConnectCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message CancelServiceDiscoveryReq
+    {
+        int64 identifier = 1;
+    }
+
+    message CancelServiceDiscoveryCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message CancelWpsReq
+    {
+        string groupIfName = 1;
+    }
+
+    message CancelWpsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ConfigureExtListenReq
+    {
+        int32 periodInMillis = 1;
+        int32 intervalInMillis = 2;
+    }
+
+    message ConfigureExtListenCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ConnectReq
+    {
+        bytes peerAddress = 1;
+        wifi.supplicant.wpm.WpsProvisionMethod provisionMethod = 2;
+        string preSelectedPin = 3;
+        bool joinExistingGroup = 4;
+        bool persistent = 5;
+        int32 goIntent = 6;
+    }
+
+    message ConnectCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message CreateNfcHandoverRequestMessageReq
+    {
+    }
+
+    message CreateNfcHandoverRequestMessageCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message CreateNfcHandoverSelectMessageReq
+    {
+    }
+
+    message CreateNfcHandoverSelectMessageCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message EnableWfdReq
+    {
+        bool enable = 1;
+    }
+
+    message EnableWfdCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message FindReq
+    {
+        int32 timeoutInSec = 1;
+    }
+
+    message FindCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message FlushReq
+    {
+    }
+
+    message FlushCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message FlushServicesReq
+    {
+    }
+
+    message FlushServicesCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message GetDeviceAddressReq
+    {
+    }
+
+    message GetDeviceAddressCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetEdmgReq
+    {
+    }
+
+    message GetEdmgCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message GetGroupCapabilityReq
+    {
+        bytes peerAddress = 1;
+    }
+
+    message GetGroupCapabilityCfm
+    {
+        HalStatus status = 1;
+        P2pGroupCapabilityMask result = 2;
+    }
+
+    message GetNameReq
+    {
+    }
+
+    message GetNameCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetNetworkReq
+    {
+        int32 id = 1;
+    }
+
+    message GetNetworkCfm
+    {
+        HalStatus status = 1;
+        optional ISupplicantP2pNetwork result = 2;
+    }
+
+    message GetSsidReq
+    {
+        bytes peerAddress = 1;
+    }
+
+    message GetSsidCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetTypeReq
+    {
+    }
+
+    message GetTypeCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.it.IfaceType result = 2;
+    }
+
+    message InviteReq
+    {
+        string groupIfName = 1;
+        bytes goDeviceAddress = 2;
+        bytes peerAddress = 3;
+    }
+
+    message InviteCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ListNetworksReq
+    {
+    }
+
+    message ListNetworksCfm
+    {
+        HalStatus status = 1;
+        repeated int32 result = 2;
+    }
+
+    message ProvisionDiscoveryReq
+    {
+        bytes peerAddress = 1;
+        wifi.supplicant.wpm.WpsProvisionMethod provisionMethod = 2;
+    }
+
+    message ProvisionDiscoveryCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RegisterCallbackReq
+    {
+        optional ISupplicantP2pIfaceCallback callback = 1;
+    }
+
+    message RegisterCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ReinvokeReq
+    {
+        int32 persistentNetworkId = 1;
+        bytes peerAddress = 2;
+    }
+
+    message ReinvokeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RejectReq
+    {
+        bytes peerAddress = 1;
+    }
+
+    message RejectCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RemoveBonjourServiceReq
+    {
+        bytes query = 1;
+    }
+
+    message RemoveBonjourServiceCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RemoveGroupReq
+    {
+        string groupIfName = 1;
+    }
+
+    message RemoveGroupCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RemoveNetworkReq
+    {
+        int32 id = 1;
+    }
+
+    message RemoveNetworkCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RemoveUpnpServiceReq
+    {
+        int32 version = 1;
+        string serviceName = 2;
+    }
+
+    message RemoveUpnpServiceCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ReportNfcHandoverInitiationReq
+    {
+        bytes select = 1;
+    }
+
+    message ReportNfcHandoverInitiationCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ReportNfcHandoverResponseReq
+    {
+        bytes request = 1;
+    }
+
+    message ReportNfcHandoverResponseCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RequestServiceDiscoveryReq
+    {
+        bytes peerAddress = 1;
+        bytes query = 2;
+    }
+
+    message RequestServiceDiscoveryCfm
+    {
+        HalStatus status = 1;
+        int64 result = 2;
+    }
+
+    message SaveConfigReq
+    {
+    }
+
+    message SaveConfigCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetDisallowedFrequenciesReq
+    {
+        repeated FreqRange ranges = 1;
+    }
+
+    message SetDisallowedFrequenciesCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetEdmgReq
+    {
+        bool enable = 1;
+    }
+
+    message SetEdmgCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetGroupIdleReq
+    {
+        string groupIfName = 1;
+        int32 timeoutInSec = 2;
+    }
+
+    message SetGroupIdleCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetListenChannelReq
+    {
+        int32 channel = 1;
+        int32 operatingClass = 2;
+    }
+
+    message SetListenChannelCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetMacRandomizationReq
+    {
+        bool enable = 1;
+    }
+
+    message SetMacRandomizationCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetMiracastModeReq
+    {
+        wifi.supplicant.mm.MiracastMode mode = 1;
+    }
+
+    message SetMiracastModeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetPowerSaveReq
+    {
+        string groupIfName = 1;
+        bool enable = 2;
+    }
+
+    message SetPowerSaveCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetSsidPostfixReq
+    {
+        bytes postfix = 1;
+    }
+
+    message SetSsidPostfixCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWfdDeviceInfoReq
+    {
+        bytes info = 1;
+    }
+
+    message SetWfdDeviceInfoCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWfdR2DeviceInfoReq
+    {
+        bytes info = 1;
+    }
+
+    message SetWfdR2DeviceInfoCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message RemoveClientReq
+    {
+        bytes peerAddress = 1;
+        bool isLegacyClient = 2;
+    }
+
+    message RemoveClientCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsConfigMethodsReq
+    {
+        wifi.supplicant.wcm.WpsConfigMethods configMethods = 1;
+    }
+
+    message SetWpsConfigMethodsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsDeviceNameReq
+    {
+        string name = 1;
+    }
+
+    message SetWpsDeviceNameCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsDeviceTypeReq
+    {
+        bytes type = 1;
+    }
+
+    message SetWpsDeviceTypeCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsManufacturerReq
+    {
+        string manufacturer = 1;
+    }
+
+    message SetWpsManufacturerCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsModelNameReq
+    {
+        string modelName = 1;
+    }
+
+    message SetWpsModelNameCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsModelNumberReq
+    {
+        string modelNumber = 1;
+    }
+
+    message SetWpsModelNumberCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetWpsSerialNumberReq
+    {
+        string serialNumber = 1;
+    }
+
+    message SetWpsSerialNumberCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartWpsPbcReq
+    {
+        string groupIfName = 1;
+        bytes bssid = 2;
+    }
+
+    message StartWpsPbcCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StartWpsPinDisplayReq
+    {
+        string groupIfName = 1;
+        bytes bssid = 2;
+    }
+
+    message StartWpsPinDisplayCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message StartWpsPinKeypadReq
+    {
+        string groupIfName = 1;
+        string pin = 2;
+    }
+
+    message StartWpsPinKeypadCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopFindReq
+    {
+    }
+
+    message StopFindCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message FindOnSocialChannelsReq
+    {
+        int32 timeoutInSec = 1;
+    }
+
+    message FindOnSocialChannelsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message FindOnSpecificFrequencyReq
+    {
+        int32 freqInHz = 1;
+        int32 timeoutInSec = 2;
+    }
+
+    message FindOnSpecificFrequencyCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message SetVendorElementsReq
+    {
+        P2pFrameTypeMask frameTypeMask = 1;
+        bytes vendorElemBytes = 2;
+    }
+
+    message SetVendorElementsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message ConfigureEapolIpAddressAllocationParamsReq
+    {
+        int32 ipAddressGo = 1;
+        int32 ipAddressMask = 2;
+        int32 ipAddressStart = 3;
+        int32 ipAddressEnd = 4;
+    }
+
+    message ConfigureEapolIpAddressAllocationParamsCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package hostapd.vendor;
+
+option optimize_for = LITE_RUNTIME;
+
+message VendorApInfo
+{
+    string ifaceName = 1;
+    string apIfaceInstance = 2;
+}

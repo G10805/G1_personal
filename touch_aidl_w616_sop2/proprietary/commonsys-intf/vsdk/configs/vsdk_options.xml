@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VSDKConfig>
+	<!--========================================================================
+        Copyright (c) 2022 Qualcomm Technologies, Inc.
+        All Rights Reserved.
+        Confidential and Proprietary - Qualcomm Technologies, Inc.
+        ========================================================================-->
+    <config>
+        <public name="vsdk_configs_params" description="Indicate git clone params to download vsdk configs" type="string"></public>
+        <public name="qssi_manifest" description="The path of qssi manifest file to generate rawdata snapshot" type="string"></public>
+
+        <private name="RunCommand">
+            <item name="rawdata_path" description="The path of rawdata python scripts" type="string">vendor/qcom/proprietary/commonsys-intf/vsdk-tools-sys/rawdata/</item>
+        </private>
+    </config>
+
+</VSDKConfig>

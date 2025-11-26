@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.data.dynamicdds@1.1;
+
+import @1.0::IDddsCallback;
+
+/**
+ * Extends the @1.0::IDddsCallback to provide recommended dds subscription
+ * changes.
+ */
+interface IDddsCallback extends @1.0::IDddsCallback {
+
+    /**
+     * Called when modem is recommending a new subscription. Recommendations
+     * will only be provided when the feature is disabled. When the feature
+     * is enabled, the recommendations will be automatically acted upon and
+     * and subscription changes will be provided through onSubChanged()
+     *
+     * @param slotId    suggested dds subscription sim slot
+     */
+    oneway onRecommendedSubChange(uint32_t slotId);
+};

@@ -1,0 +1,9 @@
+/* TODO(SM): _legacy to be removed after QCV changes have landed in hy11 */
+prebuilt_etc {
+    name: "media_profiles_V1_0_legacy.xml",
+    src: "data/media_profiles_V1_0.xml",
+    filename: "media_profiles_V1_0.xml",
+    vendor: true,
+    proprietary: true,
+    owner: "qti",
+}

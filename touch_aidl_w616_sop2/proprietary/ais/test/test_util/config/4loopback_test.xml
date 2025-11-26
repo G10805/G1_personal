@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2020 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <!-- Camera 0 1/4 screen Raw Dump -->
+        <properties input_id="0"/>
+        <display_setting display_id="0" format="rgb888"
+            window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0"
+                        src_width="1.0" src_height="1.0" src_x="0" src_y="0"/>
+        <output_setting nbufs="5"/>
+    </input_device>
+    <input_device>
+        <!-- Camera 2 1/4 screen Raw Dump -->
+        <properties input_id="2"/>
+        <display_setting display_id="0" format="rgb888"
+            window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0"
+                        src_width="1.0" src_height="1.0" src_x="0" src_y="0"/>
+        <output_setting nbufs="5"/>
+    </input_device>
+    <input_device>
+        <!-- Camera 4 1/4 screen Raw Dump -->
+        <properties input_id="4"/>
+        <display_setting display_id="0" format="rgb888"
+            window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0.5"
+                        src_width="1.0" src_height="1.0" src_x="0" src_y="0"/>
+        <output_setting nbufs="5"/>
+    </input_device>
+    <input_device>
+        <!-- Camera 8 1/4 screen Raw Dump -->
+        <properties input_id="8"/>
+        <display_setting display_id="0" format="rgb888"
+            window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0.5"
+                        src_width="1.0" src_height="1.0" src_x="0" src_y="0"/>
+        <output_setting nbufs="5"/>
+    </input_device>
+</qcarcam_inputs>

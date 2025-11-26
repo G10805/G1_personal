@@ -1,0 +1,12 @@
+/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.gnss@4.3;
+
+import @2.1::ILocHidlWiFiDBReceiverCallback;
+
+interface ILocHidlWiFiDBReceiverCallback extends @2.1::ILocHidlWiFiDBReceiverCallback {
+};

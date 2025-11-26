@@ -1,0 +1,20 @@
+/**
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.hardware.AMSIPC@1.0;
+
+
+interface IAMS {
+    ipc_ams_init()  generates (int32_t ret);
+    ipc_ams_deinit() generates (int32_t ret);
+    ipc_ams_open() generates (uint32_t ret);
+    ipc_ams_close(uint32_t hndl) generates (int32_t ret);
+    ipc_ams_ioctl_out1(uint32_t hndl, ipc_ams_cmd_e cmd, vec<uint8_t> params, uint32_t sz) generates (int32_t ret);
+    ipc_ams_ioctl_out3(uint32_t hndl, ipc_ams_cmd_e cmd, vec<uint8_t> params, uint32_t sz) generates (int32_t ret, vec<uint8_t> respbuf, uint32_t respbuf_sz);
+    ipc_ams_ioctl_out2(uint32_t hndl, ipc_ams_cmd_e cmd, vec<uint8_t> req, uint32_t req_sz) generates (int32_t ret, vec<uint8_t> respbuf, uint32_t respbuf_sz);
+    ipc_ams_alloc_shmem_buf(uint32_t hndl, vec<uint8_t> req, uint32_t req_sz) generates (int32_t ret, vec<ipc_ams_shmem_info> buf_info);
+};

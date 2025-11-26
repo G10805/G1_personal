@@ -1,0 +1,56 @@
+// This is the expected build file, but it may not be right in all cases
+
+aidl_interface {
+    name: "vendor.qti.memory.pasrmanager",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["vendor/qti/memory/pasrmanager/*.aidl"],
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    stability: "vintf",
+    backend: {
+        ndk: {
+            enabled: true,
+        },
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+    ],
+    frozen: true,
+
+}
+
+cc_library {
+    name: "vendor.qti.memory.pasrmanager-translate-ndk",
+    vendor_available: true,
+    srcs: ["translate/vendor/qti/memory/pasrmanager/translate-ndk.cpp"],
+    shared_libs: [
+        "libbinder_ndk",
+        "libhidlbase",
+        "vendor.qti.memory.pasrmanager-V1-ndk",
+        "vendor.qti.memory.pasrmanager@1.0",
+        "vendor.qti.memory.pasrmanager@1.1",
+    ],
+    export_include_dirs: ["include"],
+}
+
+java_library {
+    name: "vendor.qti.memory.pasrmanager-translate-java",
+    srcs: ["translate/vendor/qti/memory/pasrmanager/Translate.java"],
+    libs: [
+        "vendor.qti.memory.pasrmanager-V1-java",
+        "vendor.qti.memory.pasrmanager-V1.0-java",
+        "vendor.qti.memory.pasrmanager-V1.1-java",
+    ],
+    sdk_version: "module_current",
+}

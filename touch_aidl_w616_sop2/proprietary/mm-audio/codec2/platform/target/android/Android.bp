@@ -1,0 +1,37 @@
+//--------------------------------------------------------------------------------------------------
+// android platform
+//--------------------------------------------------------------------------------------------------
+cc_defaults {
+    name: "libqc2audio_platform_defaults",
+    vendor: true,
+    cflags: [
+        "-Wno-sign-conversion",
+    ],
+
+    // TODO(PC): remove this once kernel headers are avaialble to .bp
+    generated_headers: ["qc2audio_kernel_headers"],
+
+    header_libs: ["libqc2audio_base_headers", "libcodec2_headers",
+                  "libhardware_headers", "libqc2audio_platform_headers"],
+
+    shared_libs: ["libutils", "libcutils", "liblog", "libqc2audio_base",
+                  "libcodec2_vndk", "libqdMetaData"],
+
+    sanitize: {
+         misc_undefined: [
+         "signed-integer-overflow",
+         "unsigned-integer-overflow",
+         ],
+    },
+    export_header_lib_headers: ["libcodec2_headers"],
+}
+
+/* temporarily disabled
+cc_library_shared {
+    name: "libqc2audio_platform",
+    defaults: ["libqc2audio_platform_defaults",],
+    srcs: [
+        "QC2PlatformIonInfo.cpp",
+    ],
+}
+*/

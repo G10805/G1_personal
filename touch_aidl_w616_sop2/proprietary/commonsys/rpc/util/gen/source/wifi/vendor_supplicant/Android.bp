@@ -1,0 +1,35 @@
+cc_library_shared {
+
+    name: "libqti-supplicant-vendor-message",
+
+    proprietary: true,
+
+    local_include_dirs: [
+        "include/",
+        "message/include/"
+    ],
+
+    srcs: [
+        "message/src/*.cpp"
+    ],
+
+    shared_libs: [
+        "libbinder_ndk",
+        "libcutils",
+        "liblog",
+        "libprotobuf-cpp-lite",
+        "libqti_proto_util",
+        "libqti_rpc_common_util",
+        "libutils",
+        "vendor.qti.hardware.wifi.supplicant-V2-ndk"
+    ],
+
+    static_libs: [
+        "libqti-supplicant-vendor-proto"
+    ],
+
+    export_include_dirs: [
+        "include",
+        "message/include"
+    ],
+}

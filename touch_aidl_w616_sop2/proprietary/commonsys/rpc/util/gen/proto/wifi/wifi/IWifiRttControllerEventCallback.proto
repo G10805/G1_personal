@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wifi;
+
+import "RttResult.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IWifiRttControllerEventCallback
+{
+    message OnResultsInd
+    {
+        int32 cmdId = 1;
+        repeated RttResult results = 2;
+    }
+}

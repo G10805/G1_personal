@@ -1,0 +1,193 @@
+/*============================================================================
+* Copyright (c) 2021 Qualcomm Technologies, Inc.
+* All Rights Reserved.
+* Confidential and Proprietary - Qualcomm Technologies, Inc.
+============================================================================*/
+
+/*======================================================================
+DESCRIPTION : ListenSoundModelLibrary enums, structures, constants
+====================================================================*/
+
+package vendor.qti.hardware.ListenSoundModel@1.0;
+
+typedef string keywordId_t_s;
+typedef string userId_t_s;
+
+enum ListenModelEnum : uint32_t {
+    kKeywordModel = 1,          /* Keyword model */
+    kUserKeywordModel = 2,      /* Userkeyword model */
+    kTargetSoundModel = 3,
+    kMultiUserKeywordModel = 4, /* Multiple Keyword models */
+    kKeywordModelWithVop = 5,
+    kSecondStageKeywordModel = 6,
+    kSecondStageKeywordModelWithVop = 7,
+};
+
+enum ListenDetectionStatusEnum : uint32_t {
+    kSuccess = 0,
+    kFailure = 1
+};
+
+enum ListenDetectionTypeEnum : uint32_t {
+    kSingleKWDetectionEvent = 1,   /* SVA 1.0 model */
+    kMultiKWDetectionEvent = 2,    /* SVA 2.0 model */
+};
+
+enum ListenStatusEnum : uint32_t {
+    kSucess = 0,
+    kFailed = 1,
+    kBadParam,
+    kKeywordNotFound,
+    kUserNotFound,
+    kUserKwPairNotActive,
+    kSMVersionUnsupported,
+    kUserDataForKwAlreadyPresent,
+    kDuplicateKeyword,
+    kDuplicateUserKeywordPair,
+    kMaxKeywordsExceeded,
+    kMaxUsersExceeded,
+    kEventStructUnsupported,    /* payload contains event data that can not be processed, or mismatches SM version */
+    kLastKeyword,
+    kNoSignal,
+    kLowSnr,
+    kRecordingTooShort,
+    kRecordingTooLong,
+    kNeedRetrain,
+    kUserUDKPairNotRemoved,
+    kCannotCreateUserUDK,
+    kOutputArrayTooSmall,
+    kTooManyAbnormalUserScores,
+    kWrongModel,
+    kWrongModelAndIndicator,
+    kDuplicateModel,
+    kChoppedSample,
+    kSecondStageKeywordNotFound,
+    kClippedSample,
+};
+
+enum SML_CONFIG_STRUCTURE_ID : uint32_t {
+    SML_CONFIG_ID_VERSION,
+    SML_CONFIG_ID_PARSING,
+    SML_CONFIG_ID_ONLINE_VAD_INIT,
+    SML_CONFIG_ID_ONLINE_VAD_REINIT,
+    SML_CONFIG_ID_ONLINE_VAD_SET_PARAM,
+    SML_CONFIG_ID_ONLINE_VAD_PROCESS,
+    SML_CONFIG_ID_ONLINE_VAD_GET_RESULT,
+    SML_CONFIG_ID_ONLINE_VAD_RELEASE,
+    SML_CONFIG_ID_SET_PDK_PARAMS,
+    SML_CONFIG_ID_SET_UDK_PARAMS,
+    SML_CONFIG_ID_RESERVED,
+};
+
+struct ListenSoundModelInfo {
+    ListenModelEnum type;   /* model type: Keyword, User, TargetSound */
+    uint32_t version;       /* model version */
+    uint32_t size;          /* total size of the model: header + payload size */
+};
+
+struct ListenEventPayload {
+    ListenDetectionStatusEnum status; /* SUCCESS or FAILURE */
+    vec<uint8_t> data;                /* block of memory containing data payload */
+    uint32_t size;                    /* size in bytes of payload data */
+};
+
+struct ListenSoundModelHeader {
+    uint16_t numKeywords;  /* total number of keywords  */
+    uint16_t numUsers;    /* total number of users  */
+    uint16_t numActiveUserKeywordPairs; /* total number of active user+keyword pairs in SM */
+    bool isStripped; /* if corresponding keyword is stripped or not */
+    vec<uint16_t> langPerKw; /* Language code of each keyword */
+    /* number active Users per keyword - included as convenience */
+    vec<uint16_t> numUsersSetPerKw;
+    vec<bool> isUserDefinedKeyword;
+    /* Ordered 'truth' table of all possible pairs of users for each keyword.
+    * Active entries marked with 1, inactive 0.keywordPhrase
+    * 16-bit short (rather than boolean) is used to match SM model data size */
+    vec<vec<uint16_t>> userKeywordPairFlags;
+    uint16_t model_indicator; /* for SM 3.0, indicate which models were combined */
+};
+
+/* this should match the 'sensitivity' data structure input in VoiceWakeupParamType */
+struct ListenConfidenceLevels {
+    uint8_t size;  /* number of keyword plus activePair confidence levels set */
+    vec<uint8_t> pConfLevels;  /* level of each keyword and each active user+keyword pair */
+};
+
+struct ListenDetectionEventV1 {
+    string keyword;
+    uint16_t keywordConfidenceLevel;
+    uint16_t userConfidenceLevel;
+};
+
+struct ListenDetectionEventV2 {
+    string keywordPhrase; /* string containing phrase string of keyword with highest confidence score */
+    string userName;  /* string containing name of user with highest confidence score */
+    uint8_t highestKeywordConfidenceLevel;  // set to zero if detection status is Failed
+    uint8_t highestUserConfidenceLevel;     // set to zero if detection status is Failed
+    ListenConfidenceLevels  pairConfidenceLevels; // confidence levels of ALL pair (active or not)
+};
+
+struct ListenDetectionEventType {
+    ListenDetectionTypeEnum detection_data_type;
+    safe_union Event {
+        ListenDetectionEventV1 event_v1;
+        ListenDetectionEventV2 event_v2;
+    } event;
+};
+
+struct ListenEpdParams {
+    /* state machine parameters */
+    float minSnrOnset;                  /* The minimum snr of frame that speech segment starts */
+    float minSnrLeave;                  /* The minimum snr of frame that speech segment ends */
+    float snrFloor;                     /* The minimum snr value assumed in the end point detector */
+    float snrThresholds;                /* The minimum snr value of speech to verify */
+    float forgettingFactorNoise;        /* The forgetting factor used for noise estimation */
+    uint32_t numFrameTransientFrame;    /* the number of frames in the beginning that are used for noise estimate(valid only for online mode) */
+    float minEnergyFrameRatio;          /* the number of frame are used for noise estimation = minenergyFrameRatio * #frames of input(valid only for batch mode) */
+    float minNoiseEnergy;
+
+    /* post processing parameters */
+    uint32_t numMinFramesInPhrase;      /* the minimum nubmer of samples for a speech phrase (targetted speech) */
+    uint32_t numMinFramesInSpeech;      /* the minimum number of samples for a speech intereval */
+    uint32_t numMaxFrameInSpeechGap;    /* the maximum allowable number of samples for a speech gap */
+    uint32_t numFramesInHead;           /* the speech head */
+    uint32_t numFramesInTail;           /* the speech tail */
+    int32_t preEmphasize;
+    int32_t numMaxFrames;
+    int32_t keyword_threshold;
+    int32_t[4] reserved;
+};
+
+struct ListenQualityCheckResult {
+    bool isEpdFilteredSegmentSet;
+    bool isLowSnrSet;
+    float epdSnr;
+    int32_t epdStart;   /* with guard frames */
+    int32_t epdEnd;     /* with guard frames */
+    int32_t exactEpdStart;
+    int32_t exactEpdEnd;
+    int16_t keywordConfidenceLevel;
+    float epdPeakLevel;
+    float epdRmsLevel;
+    uint32_t n_epdSamplesClipping;
+    float percentageEpdSamplesClipping;
+    int32_t keywordStart;
+    int32_t keywordEnd;
+};
+
+struct ListenEpdModule {
+    uint32_t indicator;
+    memory pTempData;
+    int32_t tempDataSize;
+    uint64_t pEPD;
+};
+
+struct ListenModelType {
+    memory data;
+    uint32_t size;
+};
+
+safe_union ListenSmlModel {
+    ListenEpdModule epdModule;
+    ListenModelType modelType;
+};

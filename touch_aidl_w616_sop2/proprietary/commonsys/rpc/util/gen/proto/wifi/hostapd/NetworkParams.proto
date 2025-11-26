@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wifi.hostapd;
+
+import "EncryptionType.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NetworkParams
+{
+    bytes ssid = 1;
+    bool isHidden = 2;
+    EncryptionType encryptionType = 3;
+    string passphrase = 4;
+    bool isMetered = 5;
+    bytes vendorElements = 6;
+}

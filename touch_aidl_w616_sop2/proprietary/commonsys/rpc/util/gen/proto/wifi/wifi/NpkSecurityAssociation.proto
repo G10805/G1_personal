@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanCipherSuiteType.proto";
+import "NanPairingAkm.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NpkSecurityAssociation
+{
+    bytes peerNanIdentityKey = 1;
+    bytes localNanIdentityKey = 2;
+    bytes npk = 3;
+    NanPairingAkm akm = 4;
+    wifi.ncst.NanCipherSuiteType cipherType = 5;
+}

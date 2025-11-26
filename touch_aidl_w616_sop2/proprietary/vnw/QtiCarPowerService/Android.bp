@@ -1,0 +1,25 @@
+android_app {
+    name: "QtiCarPowerService",
+    srcs: [
+        "src/**/*.java",
+    ],
+    privileged: true,
+    vendor: true,
+    libs: [
+        "android.car",
+    ],
+    required: ["allowed_privapp_carpowerservice"],
+    certificate: "platform",
+    sdk_version:"module_current",
+    min_sdk_version: "33",
+    owner: "qti",
+}
+
+prebuilt_etc {
+    name: "allowed_privapp_carpowerservice",
+    vendor: true,
+    sub_dir: "permissions",
+    src: "com.qti.carpowerservice.xml",
+    filename_from_src: true,
+}
+

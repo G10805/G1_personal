@@ -1,0 +1,56 @@
+# Copyright (c) 2022 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+SectionVerb {
+    EnableSequence [
+        cdev "agm"
+        cset "name='TDM-LPAIF-TX-PRIMARY rate ch fmt' 48000,8,2,1"
+        cset "name='PCM0c control' ZERO"
+        cset-tlv "name='PCM0c metadata' /etc/acdb-blob/record_Meta_stream.bin"
+        cset-tlv "name='TDM-LPAIF-TX-PRIMARY metadata' /etc/acdb-blob/record_Meta_device.bin"
+        cset "name='PCM0c connect' TDM-LPAIF-TX-PRIMARY"
+    ]
+    DisableSequence [
+    ]
+    value {
+        CapturePCM "agm:100,100"
+        CaptureRate "48000"
+    }
+}
+
+SectionDevice."Microphone" {
+    EnableSequence [
+
+    ]
+    DisableSequence [
+
+    ]
+    value {
+        CaptureChannels "1"
+    }
+}
+
+SectionModifier."Hifi" {
+    EnableSequence [
+
+    ]
+    DisableSequence [
+
+    ]
+    value {
+
+    }
+}
+
+SectionModifier."Navigation" {
+    EnableSequence [
+
+    ]
+    DisableSequence [
+
+    ]
+    value {
+
+    }
+}

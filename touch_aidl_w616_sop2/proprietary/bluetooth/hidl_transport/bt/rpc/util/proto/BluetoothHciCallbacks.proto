@@ -1,0 +1,41 @@
+/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+syntax = "proto3";
+
+package BluetoothHci;
+
+import "Status.proto";
+
+// need this if we are using libprotobuf-cpp-2.3.0-lite
+option optimize_for = LITE_RUNTIME;
+
+/* Bluetooth HCI indicator */
+
+message InitCompleteInd
+{
+    Status status = 1;
+}
+
+message AclDataInd
+{
+    bytes data = 1;
+}
+
+message EventInd
+{
+    bytes event = 1;
+}
+
+message IsoDataInd
+{
+    bytes data = 1;
+}
+
+message ScoDataInd
+{
+    bytes data = 1;
+}

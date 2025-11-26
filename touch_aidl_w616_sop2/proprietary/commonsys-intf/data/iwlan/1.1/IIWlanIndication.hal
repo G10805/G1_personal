@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.data.iwlan@1.1;
+
+import @1.0::IIWlanIndication;
+import android.hardware.radio@1.6::SetupDataCallResult;
+
+/**
+ * Interface declaring response functions for data service.
+ */
+interface IIWlanIndication extends @1.0::IIWlanIndication {
+
+  /**
+   * Indicates the apn is no longer throttled
+   *
+   * @param apn Apn to unthrottle
+   */
+  oneway unthrottleApn(string apn);
+
+  /**
+   * Setup a packet data connection response.
+   *
+   * @param dcList array of SetupDataCallResult identical to that
+   *        returned by IRadio.getDataCallList(). It is the complete list
+   *        of current data contexts including new contexts that have been
+   *        activated. A data call is only removed from this list when the
+   *        framework sends a IRadio.deactivateDataCall() or the radio
+   *        is powered off/on
+   */
+  oneway dataCallListChangeIndication_1_1(vec<SetupDataCallResult> dcResponse);
+};

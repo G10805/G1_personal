@@ -1,0 +1,125 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+SectionVerb {
+    EnableSequence [
+        cdev "agm"
+        cset "name='TDM-LPAIF_SDR-RX-TERTIARY rate ch fmt' 48000,8,2,1"
+        cset "name='HOSTLESS0p control' ZERO"
+        cset-tlv "name='HOSTLESS0p metadata' /etc/acdb-blob/hfp_wb_Meta_stream_downlink_rx.bin"
+        cset-tlv "name='TDM-LPAIF_SDR-RX-TERTIARY metadata' /etc/acdb-blob/hfp_wb_Meta_device_downlink_rx.bin"
+        cset "name='HOSTLESS0p connect' TDM-LPAIF_SDR-RX-TERTIARY"
+        cset "name='TDM-LPAIF_AUD-TX-PRIMARY rate ch fmt' 16000,8,2,1"
+        cset-tlv "name='TDM-LPAIF_AUD-TX-PRIMARY metadata' /etc/acdb-blob/hfp_wb_Meta_device_downlink_tx.bin"
+        cset-tlv "name='HOSTLESS0c metadata' /etc/acdb-blob/hfp_wb_Meta_stream_downlink_tx.bin"
+        cset "name='HOSTLESS0c connect' TDM-LPAIF_AUD-TX-PRIMARY"
+        cset "name='HOSTLESS0c loopback' HOSTLESS0p"
+        cset "name='TDM-LPAIF_AUD-RX-PRIMARY rate ch fmt' 16000,8,2,1"
+        cset "name='HOSTLESS1p control' ZERO"
+        cset-tlv "name='TDM-LPAIF_AUD-RX-PRIMARY metadata' /etc/acdb-blob/hfp_wb_Meta_device_uplink_rx.bin"
+        cset "name='HOSTLESS1p connect' TDM-LPAIF_AUD-RX-PRIMARY"
+        cset "name='TDM-LPAIF-TX-SECONDARY rate ch fmt' 48000,8,2,1"
+        cset-tlv "name='TDM-LPAIF-TX-SECONDARY metadata' /etc/acdb-blob/hfp_wb_Meta_device_uplink_tx.bin"
+        cset "name='HOSTLESS1c connect' TDM-LPAIF-TX-SECONDARY"
+        cset "name='HOSTLESS1c loopback' HOSTLESS1p"
+        ]
+    DisableSequence [
+    ]
+    value {
+        playbackPCM "agm:100,200"
+        CapturePCM "agm:100,300"
+        playbackPCM "agm:100,201"
+        CapturePCM "agm:100,301"
+    }
+}
+
+SectionDevice."Speaker" {
+    EnableSequence [
+
+    ]
+    DisableSequence [
+
+    ]
+    value {
+        PlaybackChannels "6"
+    }
+}
+
+SectionModifier."HiFi" {
+    EnableSequence [
+        cdev "agm"
+        cset "name='TDM-LPAIF_SDR-RX-TERTIARY rate ch fmt' 48000,8,2,1"
+        cset "name='PCM0p control' ZERO"
+        cset-tlv "name='PCM0p metadata' /etc/acdb-blob/hifi_Meta_stream.bin"
+        cset-tlv "name='TDM-LPAIF_SDR-RX-TERTIARY metadata' /etc/acdb-blob/hifi_Meta_device.bin"
+        cset "name='PCM0p control' TDM-LPAIF_SDR-RX-TERTIARY"
+        cset-tlv "name='PCM0p metadata' /etc/acdb-blob/hifi_Meta_streamdevice.bin"
+        cset "name='PCM0p connect' TDM-LPAIF_SDR-RX-TERTIARY"
+    ]
+    DisableSequence [
+
+    ]
+    value {
+        playbackPCM "agm:100,0"
+    }
+}
+
+SectionModifier."Record" {
+    EnableSequence [
+        cdev "agm"
+        cset "name='TDM-LPAIF-TX-SECONDARY rate ch fmt' 48000,8,2,1"
+        cset "name='PCM0c control' ZERO"
+        cset-tlv "name='PCM0c metadata' /etc/acdb-blob/record_Meta_stream.bin"
+        cset-tlv "name='TDM-LPAIF-TX-SECONDARY metadata' /etc/acdb-blob/record_Meta_device.bin"
+        cset "name='PCM0c connect' TDM-LPAIF-TX-SECONDARY"
+    ]
+    DisableSequence [
+
+    ]
+    value {
+        CapturePCM "agm:100,100"
+        CaptureRate "48000"
+    }
+}
+
+SectionModifier."Navigation" {
+    EnableSequence [
+        cdev "agm"
+        cset "name='TDM-LPAIF_SDR-RX-TERTIARY rate ch fmt' 48000,8,2,1"
+        cset "name='PCM1p control' ZERO"
+        cset-tlv "name='PCM1p metadata' /etc/acdb-blob/navi_Meta_stream.bin"
+        cset-tlv "name='TDM-LPAIF_SDR-RX-TERTIARY metadata' /etc/acdb-blob/navi_Meta_device.bin"
+        cset "name='PCM1p control' TDM-LPAIF_SDR-RX-TERTIARY"
+        cset-tlv "name='PCM1p metadata' /etc/acdb-blob/navi_Meta_streamdevice.bin"
+        cset "name='PCM1p connect' TDM-LPAIF_SDR-RX-TERTIARY"
+    ]
+    DisableSequence [
+
+    ]
+    value {
+        playbackPCM "agm:100,1"
+    }
+}
+
+SectionModifier."ICC" {
+    EnableSequence [
+        cdev "agm"
+        cset "name='TDM-LPAIF_SDR-RX-TERTIARY rate ch fmt' 48000,8,2,1"
+        cset "name='HOSTLESS0p control' ZERO"
+        cset-tlv "name='HOSTLESS0p metadata' /etc/acdb-blob/icc_Meta_stream.bin"
+        cset-tlv "name='TDM-LPAIF_SDR-RX-TERTIARY metadata' /etc/acdb-blob/icc_Meta_device_rx.bin"
+        cset "name='HOSTLESS0p connect' TDM-LPAIF_SDR-RX-TERTIARY"
+        cset "name='TDM-LPAIF-TX-PRIMARY rate ch fmt' 48000,8,2,1"
+        cset-tlv "name='TDM-LPAIF-TX-PRIMARY metadata' /etc/acdb-blob/icc_Meta_device_tx.bin"
+        cset "name='HOSTLESS0c connect' TDM-LPAIF-TX-PRIMARY"
+        cset "name='HOSTLESS0c loopback' HOSTLESS0p"
+    ]
+    DisableSequence [
+
+    ]
+    value {
+        playbackPCM "agm:100,200"
+        CapturePCM "agm:100,300"
+    }
+}

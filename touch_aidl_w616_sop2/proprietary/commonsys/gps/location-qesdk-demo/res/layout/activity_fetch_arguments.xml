@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+=============================================================================*-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".FetchArgumentsActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:drawablePadding="16dp"
+        android:padding="12dp"
+        android:text="Fetch API Arguments"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/minIntervalMillisLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/titleTextView"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="12dp"
+        android:text="Min Interval Milliseconds"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/minIntervalMillis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/minIntervalMillisLabel"
+        android:text="1000"/>
+
+    <CheckBox
+        android:id="@+id/ntripGGAConsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minIntervalMillis"
+        android:layout_marginTop="20dp"
+        android:text="NTRIP GGA Consent" />
+
+    <TextView
+        android:id="@+id/hostNameOrIpLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/ntripGGAConsent"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="Host Name or IP"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/hostNameOrIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hostNameOrIpLabel"
+        android:paddingLeft="12dp"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/mountPointLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/hostNameOrIp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="Mount Point"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/mountPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/mountPointLabel" />
+
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/mountPoint"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="Username"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/usernameLabel" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="Password"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/passwordLabel" />
+
+    <TextView
+        android:id="@+id/portLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="Port"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/portLabel" />
+
+    <CheckBox
+        android:id="@+id/requiresNmeaLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/port"
+        android:layout_marginTop="20dp"
+        android:text="Requires NMEA Location" />
+
+    <CheckBox
+        android:id="@+id/useSsl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/requiresNmeaLocation"
+        android:layout_marginTop="20dp"
+        android:text="Use SSL" />
+
+    <CheckBox
+        android:id="@+id/enableRtkEngine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/useSsl"
+        android:layout_marginTop="20dp"
+        android:text="Enable RTK Engine" />
+
+    <TextView
+        android:id="@+id/correctionDataTypeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/enableRtkEngine"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="Correction Data Type"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <Spinner
+        android:id="@+id/correctionDataType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/correctionDataTypeLabel"
+        android:layout_centerHorizontal="true"
+        android:padding="4dp" />
+
+    <CheckBox
+        android:id="@+id/appNtripClientEnabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/correctionDataType"
+        android:layout_marginTop="20dp"
+        android:text="App NTRIP Client Enabled" />
+
+    <CheckBox
+        android:id="@+id/appNtripUseNtrip2Version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appNtripClientEnabled"
+        android:layout_marginTop="20dp"
+        android:text="App NTRIP use NTRIP 2 version" />
+
+    <TextView
+        android:id="@+id/appNtripHostNameOrIpLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/appNtripUseNtrip2Version"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="App NTRIP Host Name or IP"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/appNtripHostNameOrIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/appNtripHostNameOrIpLabel"/>
+
+    <TextView
+        android:id="@+id/appNtripMountPointLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/appNtripHostNameOrIp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="App NTRIP Mount Point"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/appNtripMountPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/appNtripMountPointLabel"
+        android:text="AUTO"/>
+
+    <TextView
+        android:id="@+id/appNtripUsernamePwdBase64EncodedLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/appNtripMountPoint"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="App NTRIP Username Password Base64 Encoded"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/appNtripUsernamePwdBase64Encoded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/appNtripUsernamePwdBase64EncodedLabel"
+        android:text="username:password"/>
+
+    <TextView
+        android:id="@+id/appNtripPortLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/appNtripUsernamePwdBase64Encoded"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:text="App NTRIP Port"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/appNtripPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="12dp"
+        android:layout_below="@+id/appNtripPortLabel"/>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appNtripPort"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:text="Arguments updated, proceed." />
+
+</RelativeLayout>
+
+</ScrollView>

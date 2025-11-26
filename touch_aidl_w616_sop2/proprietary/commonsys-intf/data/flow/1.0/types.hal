@@ -1,0 +1,152 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.data.flow@1.0;
+
+/**
+ * Return values for IUplinkPriorityService requests.
+ */
+enum StatusCode : uint64_t {
+    OK,
+    INVALID_ARGUMENTS,
+    INVALID_STATE,
+    CALLBACK_NOT_SET,
+    UNKNOWN_ERROR
+};
+
+/**
+ * Possible Flow Status values.
+ */
+enum FlowStatus : uint64_t {
+    FLOW_INACTIVE,
+    FLOW_ACTIVE,
+    FLOW_INACTIVITY_TIMEOUT,
+    FLOW_DELETED,
+    ERROR_DUPLICATE_FLOW,
+    ERROR_FLOW_LIMIT_REACHED,
+    ERROR_INTERNAL,
+    ERROR_INVALID_ARGS,
+    ERROR_IP_TYPE_MISMATCH,
+    ERROR_INACTIVITY_TIMEOUT_INVALID,
+    ERROR_DST_PORT_INVALID,
+    ERROR_SRC_PORT_INVALID,
+    ERROR_DST_IP_INVALID,
+    ERROR_SRC_IP_INVALID,
+};
+
+/**
+ * IPv4/v6 address union.
+ */
+safe_union IpAddress {
+    /**
+     * 0.0.0.0 is invalid. should be ignored.
+     */
+    uint8_t[4] v4;
+
+    /**
+     * 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 is invalid. should be ignored.
+     */
+    uint8_t[16] v6;
+};
+
+/**
+ * IPv4 type of service value and mask.
+ */
+struct Tos {
+    uint8_t val;
+    uint8_t mask;
+};
+
+/**
+ * IPv6 traffic class struct for value and mask.
+ */
+struct TrafficClass {
+    uint8_t val;
+    uint8_t mask;
+};
+
+/**
+ * IPv6 flow marking for traffic class and flow label.
+ */
+struct V6Mark {
+    TrafficClass trafficClass;
+    uint32_t flowLabel;
+};
+
+/**
+ * Union so only IPv4 or IPv6 flow marking can be used per flow.
+ */
+safe_union FlowMark {
+    /**
+    * TOS is only for IPv4 flows.
+    */
+    Tos tos;
+
+    /**
+    * IPv6 can have traffic class and/or flow label.
+    */
+    V6Mark v6;
+};
+
+/**
+ * Enum values for Flow protocols.
+ */
+enum Protocol : uint64_t {
+    NONE,
+    ICMP,
+    TCP,
+    UDP,
+    ESP,
+    AH,
+    ICMP6,
+    TCPUDP
+};
+
+/**
+ * Possible values for Flow application type.
+ */
+enum AppType : int32_t {
+    UNSPECIFIED,
+    PRIORITY,
+    VOICE,
+    LOW_LATENCY_APP,
+    VIDEO
+};
+
+/**
+ * Data structure for Flow parameters.
+ *
+ * @field srcIp source IpAddress.
+ * @field srcPort source port.
+ * @field dstIp destination IpAddress.
+ * @field dstPort destination port.
+ * @field protocol Uplink queue size in bytes.
+ * @field appType specific application type to classify flow as.
+ * @field inactivityTimer length of time filter can be inactive before being removed.
+ * @field mark union for v4 or v6 marking.
+ */
+struct Flow {
+    IpAddress srcIp;
+    uint16_t srcPort;
+    IpAddress dstIp;
+    uint16_t dstPort;
+    Protocol protocol;
+    AppType appType;
+    uint32_t inactivityTimer;
+    FlowMark mark;
+};
+
+/**
+ * Data structure used by @1.0::IUplinkPriorityIndication.flowStatus() and
+ * @1.0::IUplinkPriorityService.getFlows().
+ *
+ * @field flowId Id associated with the given flow.
+ * @field status Current FlowStatus for the flow.
+ */
+struct FlowInfo {
+    uint32_t flowId;
+    FlowStatus status;
+};

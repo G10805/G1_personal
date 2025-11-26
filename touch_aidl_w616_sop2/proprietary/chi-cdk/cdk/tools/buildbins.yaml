@@ -1,0 +1,91 @@
+sensor_drivers:
+- com.qti.sensormodule.onsemi_max9296_0_ar0231:
+    - sensor/default/max9296_ar0231/max9296_0_ar0231.xml
+    - module/onsemi_max9296_0_ar0231_module.xml
+
+- com.qti.sensormodule.onsemi_max9296_1_ar0231:
+    - sensor/default/max9296_ar0231/max9296_1_ar0231.xml
+    - module/onsemi_max9296_1_ar0231_module.xml
+
+- com.qti.sensormodule.onsemi_max9296_2_ar0231:
+    - sensor/default/max9296_ar0231/max9296_2_ar0231.xml
+    - module/onsemi_max9296_2_ar0231_module.xml
+
+- com.qti.sensormodule.onsemi_max9296_3_ar0231:
+    - sensor/default/max9296_ar0231/max9296_3_ar0231.xml
+    - module/onsemi_max9296_3_ar0231_module.xml
+
+- com.qti.sensormodule.ov_ti960_0_ox03a10:
+    - sensor/default/ti960_ox03a10/ti960_0_ox03a10.xml
+    - module/ov_ti960_0_ox03a10_module.xml
+
+- com.qti.sensormodule.ov_ti960_1_ox03a10:
+    - sensor/default/ti960_ox03a10/ti960_1_ox03a10.xml
+    - module/ov_ti960_1_ox03a10_module.xml
+
+- com.qti.sensormodule.ov_ti960_2_ox03a10:
+    - sensor/default/ti960_ox03a10/ti960_2_ox03a10.xml
+    - module/ov_ti960_2_ox03a10_module.xml
+
+- com.qti.sensormodule.ov_ti960_3_ox03a10:
+    - sensor/default/ti960_ox03a10/ti960_3_ox03a10.xml
+    - module/ov_ti960_3_ox03a10_module.xml
+
+- com.qti.sensormodule.onsemi_max9296_ar0820:
+    - sensor/default/max9296_ar0820/max9296_ar0820.xml
+    - module/onsemi_max9296_ar0820_module.xml
+
+- com.qti.sensormodule.onsemi_max9296_ar0820rt:
+    - sensor/default/max9296_ar0820rt/max9296_ar0820rt.xml
+    - module/onsemi_max9296_ar0820rt_module.xml
+
+- com.qti.sensormodule.onsemi_max9296_ar0231rt:
+    - sensor/default/max9296_ar0231rt/max9296_ar0231rt.xml
+    - module/onsemi_max9296_ar0231rt_module.xml
+
+facedetection_binaries:
+- fdconfigvideo:
+    - fd/fdconfigdata.xml
+
+- fdconfigvideolite:
+    - fd/fdconfigdata.xml
+
+- fdconfigpreview:
+    - fd/fdconfigdata.xml
+
+- fdconfigpreviewlite:
+    - fd/fdconfigdata.xml
+
+chromatix_projects:
+- com.qti.tuned.default:
+    - tuning/default_c7project
+
+- com.qti.tuned.onsemi_max9296_0_ar0231:
+    - tuning/max9296_ar0231_c7project
+
+- com.qti.tuned.onsemi_max9296_1_ar0231:
+    - tuning/max9296_ar0231_c7project
+
+- com.qti.tuned.onsemi_max9296_2_ar0231:
+    - tuning/max9296_ar0231_c7project
+
+- com.qti.tuned.onsemi_max9296_3_ar0231:
+    - tuning/max9296_ar0231_c7project
+
+- com.qti.tuned.ov_ti960_0_ox03a10:
+    - tuning/ti960_ox03a10_c7project
+
+- com.qti.tuned.ov_ti960_1_ox03a10:
+    - tuning/ti960_ox03a10_c7project
+
+- com.qti.tuned.ov_ti960_2_ox03a10:
+    - tuning/ti960_ox03a10_c7project
+
+- com.qti.tuned.ov_ti960_3_ox03a10:
+    - tuning/ti960_ox03a10_c7project
+
+- com.qti.tuned.onsemi_max9296_ar0820:
+    - tuning/max9296_ar0820_c7project
+
+- com.qti.tuned.onsemi_max9296_ar0231rt:
+    - tuning/max9296_ar0231rt_c7project

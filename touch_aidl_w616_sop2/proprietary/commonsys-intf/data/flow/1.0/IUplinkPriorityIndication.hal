@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.hardware.data.flow@1.0;
+
+/**
+ * Interface declaring solicited and unsolicited flow indications updates.
+ */
+interface IUplinkPriorityIndication {
+    /**
+     * Indicates that a Flow has changed Status.
+     *
+     * This indication is sent whenever a Flow is updated.
+     *
+     * @param flow Struct tying the status and flow ID to the new flow.
+     */
+    oneway flowStatus(FlowInfo flow);
+};

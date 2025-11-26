@@ -1,0 +1,114 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "IfaceType.proto";
+import "MacAddress.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message ISupplicantP2pNetwork
+{
+    message GetBssidReq
+    {
+    }
+
+    message GetBssidCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetClientListReq
+    {
+    }
+
+    message GetClientListCfm
+    {
+        HalStatus status = 1;
+        repeated MacAddress result = 2;
+    }
+
+    message GetIdReq
+    {
+    }
+
+    message GetIdCfm
+    {
+        HalStatus status = 1;
+        int32 result = 2;
+    }
+
+    message GetInterfaceNameReq
+    {
+    }
+
+    message GetInterfaceNameCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    message GetSsidReq
+    {
+    }
+
+    message GetSsidCfm
+    {
+        HalStatus status = 1;
+        bytes result = 2;
+    }
+
+    message GetTypeReq
+    {
+    }
+
+    message GetTypeCfm
+    {
+        HalStatus status = 1;
+        wifi.supplicant.it.IfaceType result = 2;
+    }
+
+    message IsCurrentReq
+    {
+    }
+
+    message IsCurrentCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message IsGroupOwnerReq
+    {
+    }
+
+    message IsGroupOwnerCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message IsPersistentReq
+    {
+    }
+
+    message IsPersistentCfm
+    {
+        HalStatus status = 1;
+        bool result = 2;
+    }
+
+    message SetClientListReq
+    {
+        repeated MacAddress clients = 1;
+    }
+
+    message SetClientListCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

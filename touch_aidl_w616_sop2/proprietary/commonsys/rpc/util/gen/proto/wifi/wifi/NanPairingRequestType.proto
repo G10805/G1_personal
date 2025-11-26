@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wifi;
+
+option optimize_for = LITE_RUNTIME;
+
+enum NanPairingRequestType
+{
+    NAN_PAIRING_SETUP = 0;
+}

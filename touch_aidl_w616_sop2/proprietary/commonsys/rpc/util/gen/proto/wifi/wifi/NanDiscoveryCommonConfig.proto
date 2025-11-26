@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package wifi;
+
+import "NanDataPathSecurityConfig.proto";
+import "NanMatchAlg.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message NanDiscoveryCommonConfig
+{
+    uint32 sessionId = 1;
+    int32 ttlSec = 2;
+    int32 discoveryWindowPeriod = 3;
+    uint32 discoveryCount = 4;
+    bytes serviceName = 5;
+    NanMatchAlg discoveryMatchIndicator = 6;
+    bytes serviceSpecificInfo = 7;
+    bytes extendedServiceSpecificInfo = 8;
+    bytes rxMatchFilter = 9;
+    bytes txMatchFilter = 10;
+    bool useRssiThreshold = 11;
+    bool disableDiscoveryTerminationIndication = 12;
+    bool disableMatchExpirationIndication = 13;
+    bool disableFollowupReceivedIndication = 14;
+    NanDataPathSecurityConfig securityConfig = 15;
+    bool rangingRequired = 16;
+    int32 rangingIntervalMs = 17;
+    int32 configRangingIndications = 18;
+    int32 distanceIngressCm = 19;
+    int32 distanceEgressCm = 20;
+    bool enableSessionSuspendability = 21;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "KeyMgmtMask.proto";
+import "StaIfaceCallbackState.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message SupplicantStateChangeData
+{
+    StaIfaceCallbackState newState = 1;
+    int32 id = 2;
+    bytes ssid = 3;
+    bytes bssid = 4;
+    wifi.supplicant.kmm.KeyMgmtMask keyMgmtMask = 5;
+    int32 frequencyMhz = 6;
+    bool filsHlpSent = 7;
+}

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package bluetooth.handsfree.audio;
+
+import "HandsfreeAudioParameter.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IBluetoothHandsfreeAudio
+{
+    message StartReq
+    {
+        HandsfreeAudioParameter data = 1;
+    }
+
+    message StartCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message StopReq
+    {
+    }
+
+    message StopCfm
+    {
+        HalStatus status = 1;
+    }
+
+    int32 instanceId = 1;
+}

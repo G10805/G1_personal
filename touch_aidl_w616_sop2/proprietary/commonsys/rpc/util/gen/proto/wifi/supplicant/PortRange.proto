@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+option optimize_for = LITE_RUNTIME;
+
+message PortRange
+{
+    int32 startPort = 1;
+    int32 endPort = 2;
+}

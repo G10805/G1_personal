@@ -1,0 +1,33 @@
+<!--*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+=============================================================================*-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+    <TextView
+            android:id="@+id/textViewOem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set OEM User Consent"
+            android:textSize="20sp" />
+
+    <Button
+            android:id="@+id/btnOemConsentTrue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewOem"
+            android:text="True" />
+
+    <Button
+            android:id="@+id/btnOemConsentFalse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewOem"
+            android:layout_toRightOf="@id/btnOemConsentTrue"
+            android:text="False" />
+</RelativeLayout>

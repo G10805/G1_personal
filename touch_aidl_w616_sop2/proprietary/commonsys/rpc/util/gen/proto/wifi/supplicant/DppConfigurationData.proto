@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi.supplicant;
+
+import "DppAkm.proto";
+import "DppConnectionKeys.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message DppConfigurationData
+{
+    bytes ssid = 1;
+    string password = 2;
+    bytes psk = 3;
+    wifi.supplicant.da.DppAkm securityAkm = 4;
+    DppConnectionKeys dppConnectionKeys = 5;
+    bool connStatusRequested = 6;
+}

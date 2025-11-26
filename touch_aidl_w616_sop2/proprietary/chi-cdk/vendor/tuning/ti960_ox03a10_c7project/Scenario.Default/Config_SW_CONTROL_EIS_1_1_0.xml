@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<!--
+========================================================================
+    Copyright (c) 2021 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+========================================================================
+-->
+<EISConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./EISConfiguration.xsd">
+  <ShowHideDCViewer>true</ShowHideDCViewer>
+  <InputType>Semi_Planar</InputType>
+  <YuvType>YCbCr420</YuvType>
+  <Bpp>10</Bpp>
+  <Passes>4</Passes>
+  <Resolution>ROI</Resolution>
+  <ManualResolution_Width>0</ManualResolution_Width>
+  <ManualResolution_Height>0</ManualResolution_Height>
+  <ConfigurationFile></ConfigurationFile>
+	<FFMpegFile></FFMpegFile>
+	<AnalyseGyroLog></AnalyseGyroLog>
+	<CalibrateVideo></CalibrateVideo>
+	<CalibrateGyroLog></CalibrateGyroLog>
+	<FrameOffset>0</FrameOffset>
+	<FrameOffsetAutoDetect>true</FrameOffsetAutoDetect>
+	<NumOfFrames>800</NumOfFrames>
+	<ErrorThreshold>4</ErrorThreshold>
+	<BlurGyroLog></BlurGyroLog>
+</EISConfiguration>

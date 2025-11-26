@@ -1,0 +1,11 @@
+cc_library_headers {
+    name: "libnetmgr_headers",
+    export_include_dirs: [
+        "inc",
+        "src",
+        "src/plugins/inc",
+    ],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}

@@ -1,0 +1,23 @@
+cc_library {
+    name: "qcrilNr_aidl_IQtiRadioConfig",
+    defaults: ["qtiril_common_defaults"],
+    srcs: [
+        "src/*.cpp",
+    ],
+    header_libs: [
+        "qcrilInterfaces-headers",
+        "libqcrilNrLogger-headers",
+    ],
+    shared_libs: [
+        "liblog",
+        "vendor.qti.hardware.radio.qtiradioconfig-V2-ndk_platform",
+        "libbinder_ndk",
+        "libbase",
+        "libbinder",
+        "libqcrilNrFramework",
+        "libqcrilNrLogger",
+        "libqcrilNrQtiMutex",
+    ],
+    owner: "qti",
+    proprietary: true,
+}

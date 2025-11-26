@@ -1,0 +1,36 @@
+cc_library_shared {
+    name: "libqti_someip_util",
+    owner: "qti",
+    proprietary: true,
+
+    local_include_dirs: [
+        "api",
+    ],
+
+    srcs: [
+        "src/someip.cpp",
+        "src/someip_client.cpp",
+        "src/someip_server.cpp",
+        "src/someip_util.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-DENABLE_SOMEIP",
+        "-DCONFIG_SOMEIP_ENV",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libvsomeip3",
+        "libqti_log_util",
+        "libqti_rpc_common_util",
+    ],
+
+    export_include_dirs: [
+        "api",
+    ],
+}

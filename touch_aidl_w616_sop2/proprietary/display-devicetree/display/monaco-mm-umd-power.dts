@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+#include "monaco-mm-umd-power.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Monaco";
+	compatible = "qcom,monaco_auto";
+	qcom,msm-id = <606 0x10000>;
+	qcom,board-id = <0 0>;
+};

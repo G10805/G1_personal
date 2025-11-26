@@ -1,0 +1,35 @@
+cc_library_shared {
+
+    name: "libqti-net-nlinterceptor-message",
+
+    proprietary: true,
+
+    local_include_dirs: [
+        "include/",
+        "message/include/"
+    ],
+
+    srcs: [
+        "message/src/*.cpp"
+    ],
+
+    shared_libs: [
+        "android.hardware.net.nlinterceptor-V1-ndk",
+        "libbinder_ndk",
+        "libcutils",
+        "liblog",
+        "libprotobuf-cpp-lite",
+        "libqti_proto_util",
+        "libqti_rpc_common_util",
+        "libutils"
+    ],
+
+    static_libs: [
+        "libqti-net-nlinterceptor-proto"
+    ],
+
+    export_include_dirs: [
+        "include",
+        "message/include"
+    ],
+}

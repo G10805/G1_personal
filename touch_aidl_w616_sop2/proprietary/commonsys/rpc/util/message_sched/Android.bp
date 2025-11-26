@@ -1,0 +1,30 @@
+cc_library_shared {
+    name: "libqti_message_sched_util",
+    owner: "qti",
+    proprietary: true,
+
+    srcs: [
+        "src/message_loop_thread.cpp",
+        "src/message_sched.cpp"
+    ],
+
+    cflags:["-Wall", "-Werror", "-Wno-deprecated-builtins"],
+
+    shared_libs: [
+        "libbase",
+        "libchrome",
+        "liblog",
+        "libutils",
+    ],
+
+    export_include_dirs: [
+        "include",
+    ],
+
+    sanitize: {
+        integer_overflow: true,
+        misc_undefined: ["bounds"],
+    },
+
+    cpp_std: "c++17",
+}

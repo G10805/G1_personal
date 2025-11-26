@@ -1,0 +1,44 @@
+
+
+commonIncludes = [
+    "include",
+    "kernel",
+    "sock",
+]
+
+commonSrcfiles = [
+    "sock/bbuf.c",
+    "sock/minkipc.c",
+    "sock/minksocket.c",
+    "sock/msforwarder.c",
+    "sock/fdwrapper.c",
+    "sock/threadpool.c",
+]
+
+cc_library_shared {
+    name: "libminksocket_system",
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+    ],
+
+    export_include_dirs: [
+        "include",
+        "kernel",
+        "sock",
+    ],
+
+    local_include_dirs: commonIncludes,
+    srcs: commonSrcfiles,
+    owner: "qti",
+    shared_libs: ["libcutils","liblog"],
+    system_ext_specific: true,
+}
+
+cc_library_headers {
+    name: "commonsys_securemsm_smcinvoke_minksocke_headers",
+    vendor_available: true,
+    export_include_dirs: ["include/", "sock/"],
+}

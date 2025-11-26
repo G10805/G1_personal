@@ -1,0 +1,77 @@
+/*!
+ *
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.spu@2.0;
+
+import ISPComSharedBuffer;
+import ISPUNotifier;
+
+interface ISPComServer {
+
+    /**
+     * SPCom server register
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    registerServer() generates(int32_t error);
+
+     /**
+     * SPCom server unregister
+     *
+     * @return  error  Zero on success or non-zero error code on failure
+     */
+    unregisterServer() generates(int32_t error);
+
+    /**
+     * Wait for a request and get request buffer from SPU client
+     *
+     * @return  status   Number of request bytes on success or non-zero error
+     *                   code on failure
+     * @return  request  Request buffer
+     */
+    waitForRequest() generates(int32_t status, vec<uint8_t> request);
+
+    /**
+     * Send response to SPU client
+     *
+     * Must be called after getting a request
+     *
+     * @param   response  Response buffer
+     *
+     * @return  error     Zero on success or non-zero error code on failure
+     */
+    sendResponse(vec<uint8_t> response) generates(int32_t error);
+
+    /**
+     * Get an instance of SPU shared buffer object with direct access to
+     * shared buffer
+     *
+     * @param   sharedMemory  hidl_memory allocated and mapped by the caller
+     *
+     * @return  buffer        Pointer to a buffer on success and null pointer on
+     *                        failure
+     */
+    getSPComSharedBuffer(memory sharedMemory) generates(ISPComSharedBuffer buffer);
+
+    /**
+     * Send response to SPU client with shared buffer info
+     *
+     * @param   response  Response buffer
+     * @param   buffer    Shared buffer to share with SPCom server
+     * @param   offset    Offset in response buffer to store shared buffer
+     *                    info
+     *                    Note: Minimum buffer size is 8 bytes
+     *                          Max offset cannot exceed shared buffer size
+     *                          minus 8 bytes
+     *
+     * @return  error     Zero on success or non-zero error code on failure
+     */
+    sendModifiedResponse
+        (vec<uint8_t> response, ISPComSharedBuffer buffer, uint32_t offset)
+        generates(int32_t error);
+};

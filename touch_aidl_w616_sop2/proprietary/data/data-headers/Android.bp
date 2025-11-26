@@ -1,0 +1,64 @@
+cc_library_headers {
+    name: "libxml_headers",
+    export_include_dirs: ["xmllib"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+    host_supported: true,
+}
+
+cc_library_headers {
+    name: "libnlnetmgr_headers",
+    export_include_dirs: ["libnlnetmgr"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}
+
+cc_library_headers {
+    name: "libnetmgr_datapath_proxy_headers",
+    export_include_dirs: ["netmgr_ext/datapath_proxy"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}
+
+cc_library_headers {
+    name: "libnetmgr_sscm3_headers",
+    export_include_dirs: ["netmgr_ext/sscm3"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}
+
+cc_library_headers {
+    name: "libnetmgrmodemproxy_headers",
+    export_include_dirs: ["netmgr_ext/modem_proxy"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}
+
+cc_library_headers {
+    name: "libnetmgrportutils_headers",
+    export_include_dirs: ["netmgr_ext/port_utils"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}
+
+cc_library_headers {
+    name: "libnetmgrxfrmutils_headers",
+    export_include_dirs: ["netmgr_ext/xfrm_utils"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}
+
+cc_library_headers {
+    name: "libshsc_headers",
+    export_include_dirs: ["shsusrd"],
+    vendor: true,
+    owner: "qti",
+    proprietary: true,
+}

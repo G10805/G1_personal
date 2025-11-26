@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wifi;
+
+import "WifiChannelWidthInMhz.proto";
+import "WifiRateNss.proto";
+import "WifiRatePreamble.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message WifiRateInfo
+{
+    wifi.wrp.WifiRatePreamble preamble = 1;
+    WifiRateNss nss = 2;
+    WifiChannelWidthInMhz bw = 3;
+    uint32 rateMcsIdx = 4;
+    int32 bitRateInKbps = 5;
+}

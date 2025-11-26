@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package hostapd.vendor;
+
+import "IHostapdVendorCallback.proto";
+import "HalStatus.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message IHostapdVendor
+{
+    message ListVendorInterfacesReq
+    {
+    }
+
+    message ListVendorInterfacesCfm
+    {
+        HalStatus status = 1;
+        repeated string result = 2;
+    }
+
+    message RegisterHostapdVendorCallbackReq
+    {
+        optional IHostapdVendorCallback callback = 1;
+    }
+
+    message RegisterHostapdVendorCallbackCfm
+    {
+        HalStatus status = 1;
+    }
+
+    message DoDriverCmdReq
+    {
+        string iface = 1;
+        string cmd = 2;
+    }
+
+    message DoDriverCmdCfm
+    {
+        HalStatus status = 1;
+        string result = 2;
+    }
+
+    int32 instanceId = 1;
+}
