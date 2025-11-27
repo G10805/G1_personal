@@ -1,0 +1,1294 @@
+commit 6f204237f198d1695eec8a371446a3d881d3f3d5
+Author: DingXu <ding.xu@mediatek.com>
+Date:   Wed Sep 27 14:21:33 2023 +0800
+
+    GPS: Fix gps debuglog bug
+    
+    Description: Unable to save GPS debuglog file when repeatedly opening and closing YGPS.
+    
+    Solution: Create a new file each time the GPS debuglog thread is started.
+    
+    Test: Build pass
+    
+    Signed-off-by: DingXu <ding.xu@mediatek.com>
+    CR-Id: AUTO00279696
+    Change-Id: Ibe221b2aa05f0df14a646503e28afbcb24c8daa9
+
+commit 81f7c63e2a3d464b716808242dec420cb3632563
+Author: mtk22341 <Liuqin.Liu@mediatek.com>
+Date:   Tue Feb 7 09:43:27 2023 +0800
+
+    GPS: SYNC HEADER
+    
+    related patch : 7090895
+    
+    Test: build pass
+    
+    Signed-off-by: mtk22341 <Liuqin.Liu@mediatek.com>
+    CR-Id: AUTO00211459
+    Change-Id: I9857bb8d29c6ddb9b21a931e42161253b1c8a09c
+
+commit 04887169f0942d2eaefa8b0074c962454d76ef56
+Author: mtk22341 <Liuqin.Liu@mediatek.com>
+Date:   Fri Feb 3 13:29:08 2023 +0800
+
+    gps: QZSS support 196&197
+    
+    MNL_VER_23020301ALPS05_5.5U_25
+    
+    QZSS support 196&197
+    
+    Test: build pass
+    
+    Signed-off-by: mtk22341 <Liuqin.Liu@mediatek.com>
+    CR-Id: AUTO00211459
+    Change-Id: I558ce411ec0daf2003aed4001c8288bd8243e973
+
+commit d1c3a0ac37127adc0f0bce221da8808302380c65
+Author: mtk22341 <Liuqin.Liu@mediatek.com>
+Date:   Mon Sep 26 17:14:04 2022 +0800
+
+    gps: fix build fail
+    
+    car_mt2712_vp2-userdebug
+    
+    Test: build pass and bring up
+    
+    Signed-off-by: mtk22341 <Liuqin.Liu@mediatek.com>
+    CR-Id: AUTO00191200
+    Change-Id: I4ddb275f0d218161d003942090f23206801de4c3
+
+commit ec3bc157160659fa07521ed3f8229363fae570dd
+Author: mtk22341 <Liuqin.Liu@mediatek.com>
+Date:   Mon Sep 26 11:34:19 2022 +0800
+
+    gps: fix build error for car_mt2712-eng
+    
+    only build fail in car_mt2712-eng
+    
+    Test: build pass and bring up
+    
+    Signed-off-by: mtk22341 <Liuqin.Liu@mediatek.com>
+    CR-Id: AUTO00191201
+    Change-Id: Ib8e39692d408c42172d668881193e7a55db102e1
+
+commit 263ed508f0e87fa5cb252f15ebbc57b497116a8e
+Author: mtk22341 <Liuqin.Liu@mediatek.com>
+Date:   Wed Jul 27 21:12:46 2022 +0800
+
+    gps: support 64 bit
+    
+    MNL_VER_22072201ALPS05_5.5U_25
+    
+    Test: build pass and bring up
+    CR-Id: AUTO00191201
+    Signed-off-by: mtk22341 <Liuqin.Liu@mediatek.com>
+    Change-Id: I95cb13ab6d5b51d2ff7932d7d55d57f72a69c8f2
+
+commit 962f18713e266abf2cc2945f41e6babd0b9f34e4
+Author: Qin Liu <Liuqin.Liu@mediatek.com>
+Date:   Thu Oct 28 19:28:02 2021 +0800
+
+    gps: fix coverity issue
+    
+    CID 2392290 (#7 of 7): Calling risky function (DC.CUSTOM_MTK_ALPS_CHECKER)
+    CID 2392302 (#7 of 7): Calling risky function (DC.CUSTOM_MTK_ALPS_CHECKER)
+    CID 2392313 (#7 of 7): Calling risky function (DC.CUSTOM_MTK_ALPS_CHECKER)
+    CID 2392348 (#7 of 7): Calling risky function (DC.CUSTOM_MTK_ALPS_CHECKER)
+    CID 20029 (#15 of 15): Unchecked return value from library (CHECKED_RETURN)
+    CID 10583802 (#7 of 7): Unchecked return value from library (CHECKED_RETURN)
+    CID 10584586 (#7 of 7): Unchecked return value from library (CHECKED_RETURN)
+    CID 10595942 (#7 of 7): Unchecked return value from library (CHECKED_RETURN)
+    
+    Test: build pass and bring up
+    
+    Signed-off-by: Qin Liu <Liuqin.Liu@mediatek.com>
+    CR-Id: AUTO00143203
+    Change-Id: Ide815ac20e44aa60ccee4aca443e8b41a05bab72
+
+commit 05592032a2a0caab2169e906776364ef9fe2ebdf
+Author: Qin Liu <Liuqin.Liu@mediatek.com>
+Date:   Tue Dec 29 10:10:40 2020 +0800
+
+    gps: update beidou location mode(firmware)
+    
+    libmnl update beidou location mode Android_MNL_VER_20120701ALPS05_5.5U_25
+    Test: build pass and bring up
+    
+    Change-Id: Id94775ac60ddc2c4e02339fdb19f1a048756cce1
+    Signed-off-by: Qin Liu <Liuqin.Liu@mediatek.com>
+    CR-Id: AUTO00080969
+
+commit 0ca2e5d238299a7e0438b14829d56576bef37d2c
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Tue Sep 8 21:54:56 2020 +0800
+
+    gps: fix coverity issue
+    
+    CID 10655648  (#1 of 1): Logically dead code
+    CID 10656148 (#1 of 1): Untrusted value as argument
+    CID 5345693  (#1 of 1): Unchecked return value from library
+    CID 10655975 (#1 of 1): Wrong sizeof argument
+    CID 10656081  (#1 of 1): Explicit null dereferenced
+    
+    Test: build pass and evb bring up
+    
+    Change-Id: I5881738804d1e9d25bcf25aa40f0bd934e35b3ae
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00077113
+    (cherry picked from commit b821c0a2f0d5f42a3b179ba8ba694f833b80ec32)
+
+commit c9bfeb02f7a4bb1b3e7bbcaa665cc7a489947995
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Mon Sep 14 21:52:48 2020 +0800
+
+    gps: fix coverity issue
+    
+    nmea_reader_parse memcmp overrun
+    
+    Test: build pass and evb bring up
+    
+    Change-Id: I48ebdf4d22c4056e7c519c7bbedc271ab1342c7b
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00077113
+    (cherry picked from commit 40728559fe3021bf5e5882df4c6b45dbf4dfbcc9)
+
+commit 1080fe323a501690181655122beb92675beaeafa
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Thu Aug 27 21:11:40 2020 +0800
+
+    gps: fix coverity issue
+    
+    CID 5345944  (#1 of 1): Improper use of negative value
+    CID 10655824 (#1 of 1): Unchecked return value from library
+    CID 5346361  (#1 of 1): Improper use of negative value
+    CID 10656307 (#1 of 1): Unchecked return value from library
+    CID 5345638  (#1 of 1): Improper use of negative value
+    CID 10655591 (#1 of 1): Unchecked return value from library
+    CID 2283569  (#4 of 4): Uninitialized scalar variable
+    CID 2285466  (#4 of 4): Uninitialized scalar variable
+    CID 10656249 (#1 of 1): Buffer not null terminated
+    CID 2397417  (#1 of 1): Buffer not null terminated
+    CID 2287250  (#4 of 4): Uninitialized scalar variable
+    CID 4434312  (#5 of 5): Uninitialized scalar variable
+    CID 10655845 (#1 of 1): Uninitialized scalar variable
+    CID 4432981  (#4 of 4): Uninitialized scalar variable
+    CID 2287281  (#4 of 4): Uninitialized scalar variable
+    
+    Test: build pass and evb bring up
+    
+    Change-Id: I746f6948156f2cbf8de825b7ab71e5845022e8ab
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00077113
+    (cherry picked from commit c1cbbef0312073455730c9927647a7f0a0522edc)
+
+commit c59b11cc2ba6bf5f502c213168dbd522e298e08c
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Thu Mar 19 19:49:26 2020 +0800
+
+    gps: Fix GPS socket security issue
+    
+    GPS socket 7000 may cause security issue.Remove it on customer load.
+    Keep it only in META/Factory test.
+    Test: build pass and evb bring up
+    
+    Change-Id: Id4da9e2069b6c511056243ce23dbfe5ce6e78606
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00056398
+
+commit a1b89a91b6cc5119ca0141b3bba164a59c3a2eed
+Author: Meng Wang <Meng.Wang@mediatek.com>
+Date:   Wed May 22 18:01:22 2019 +0800
+
+    GNSS src: andorid Q bringup
+    
+    modify android.mk
+    Test: ok
+    
+    Change-Id: I1d181ee14fff912d0261535fb494bfb61600603b
+    Signed-off-by: Meng Wang <Meng.Wang@mediatek.com>
+    CR-Id: AUTO00000587
+    (cherry picked from commit bb210801190d5af51e5e2d2f603d133505b71d3f)
+
+commit e15e72f96c13d6245e07f8ecd190bbba9b98695e
+Author: mtk11588 <qiang.xiong@mediatek.com>
+Date:   Mon Sep 9 19:08:27 2019 +0800
+
+    trustzone: Rework feature option.
+    
+    Move logical code to Boadconfig.mk.
+    Change TRUSTONIC_TEE_SUPPORT to true.
+    Test: Build pass and bootup.
+    
+    Change-Id: Ia891544bc8bb65507022b71c25fc6b4e2881b790
+    Signed-off-by: mtk11588 <qiang.xiong@mediatek.com>
+    CR-Id: AUTO00041738
+
+commit 5346440e1355ae1e40361e5bb17b36bb05d36735
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Fri Aug 16 10:50:34 2019 +0800
+
+    gnss src: add position fix interval config
+    
+    use fix_interval in mnl_config to set NMEA output rate
+    Test: build pass and evb bring up
+    
+    Change-Id: I38ed1ac65196e5c827a9c59a1721698935a278f8
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00042433
+
+commit d1b47d815f6a8cb00a8e5d5f67d12e08eb31d84c
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Thu Aug 29 17:42:12 2019 +0800
+
+    3303 porting: update mt3303 firmware
+    
+    update firmware version AXN_5.10_3333_190829AB
+    Test: build pass and evb bring up
+    
+    Change-Id: I054ee07ee4d68e20a6b46a88edf25f3fb46e85fa
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00043539
+
+commit 576f66a21160faf32ebb0c96106a890aef28e924
+Author: Shuanglin Yu <shuanglin.yu@mediatek.com>
+Date:   Thu Aug 15 10:50:45 2019 +0800
+
+    3303 porting: add GNSS_MODE setting for mt3303
+    
+    use GNSS_MODE to configure GNSS search mode
+    Test: build pass and evb bring up
+    
+    Change-Id: I238a94f62f1cd7dd1ff860d1cffbdafad1174c52
+    Signed-off-by: Shuanglin Yu <shuanglin.yu@mediatek.com>
+    CR-Id: AUTO00042433
+
+commit c72a7229e8bff7d095d31e765a9589815534ecc0
+Author: darrenchen <darren.chen@mediatek.com>
+Date:   Thu May 16 17:25:17 2019 +0800
+
+    gnss src: fix build failure
+    
+    there is no libmnl.so at all, but it still
+    keep in the Makefile, thus results in failure
+    change this name to libmnl_gnss to fix
+    Test: ok
+    
+    Change-Id: I8b163975901915285b14cfd3f0a7aff1b01418a7
+    Signed-off-by: Darren Chen <Darren.Chen@mediatek.com>
+    CR-Id: AUTO00036620
+
+commit 4b6cb0a0ec363b211e2e61f763b7cfa24a3c33da
+Author: Meng Wang <Meng.Wang@mediatek.com>
+Date:   Thu May 16 11:41:55 2019 +0800
+
+    gnss src: fix acc error and rename libmnl.so
+    
+    fix acc error
+    because there is a lib having the same name with libmnl.so
+    the bb file name is libmnl.bb
+    so we need to change gnss libmnl name
+    Test: ok
+    
+    Change-Id: Ic2ac4d83f65df53dc3f07225995978d372351d1a
+    Signed-off-by: Meng Wang <Meng.Wang@mediatek.com>
+    CR-Id: AUTO00036620
+
+commit e3962c8916956c84ef6e0c885549b42583c7889f
+Author: Meng Wang <Meng.Wang@mediatek.com>
+Date:   Tue May 7 16:47:23 2019 +0800
+
+    3303 porting: source code
+    
+    upload another part source code
+    Test: ok
+    
+    Change-Id: I878eeae37c6c6b30ca86ddfd28a31389892f198e
+    Signed-off-by: Meng Wang <Meng.Wang@mediatek.com>
+    CR-Id: AUTO00036537
+
+commit 2064bb614f3377ccf752241adbe1e1f83fd0df41
+Author: Meng Wang <Meng.Wang@mediatek.com>
+Date:   Mon May 6 19:01:48 2019 +0800
+
+    3303 porting: source code
+    
+    GNSS source code
+    Test: ok
+    
+    Change-Id: I393706428148d82a6024d25f1a81ade76c00efd0
+    Signed-off-by: Meng Wang <Meng.Wang@mediatek.com>
+    CR-Id: AUTO00032389
+
+commit dd05e2126c9f15cf33c32f9d4fa397c984ee5695
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Mon Apr 29 19:31:08 2019 +0800
+
+    GNSS: fix load libmnl.so.x failed issue
+    
+    use SDK to build libmnl.so can result load libmnl.so.x failed, x means version
+    Test: ok
+    
+    Change-Id: Ia291e6c3240534bdad73d1076095b519fe91cd3d
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00036229
+
+commit f3cc33e670d72d4666b03350fc9ea7faa40e6b7f
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Thu Mar 14 11:17:19 2019 +0800
+
+    GNSS_HIDL: fix can not find variable
+    
+    fix can not find variable
+    Test: ok
+    
+    Change-Id: Ia4aba28eb1bbe10ed2a0df72743bdfea88c97485
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00031944
+
+commit f67d24327d2e935ad2299d4e4a65e12abd96791e
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Wed Mar 13 19:30:05 2019 +0800
+
+    GNSS_HIDL: GNSS HIDL service can not been compiled
+    
+    GNSS HIDL service can not been compiled
+    Test: ok
+    
+    Change-Id: Ib1645cbc439a7cb77a18de3400fa18a40d1135cc
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00031944
+
+commit ce7331a8048d77f5469ee2a496b5eee9bbe1ffd8
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Tue Feb 12 11:09:57 2019 +0800
+
+    GNSS_upgrade_2017: GNSS source code
+    
+    GNSS source code
+    Test: ok
+    
+    Change-Id: Icd2374db7f2200db12f309580c6062fe62f242c2
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00025964
+
+commit 03895469eac78b88311784e6114b2057deb6a1e2
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Fri Jan 4 19:43:38 2019 +0800
+
+    GNSS src: fix app can not run in backround
+    
+    ori app need input from console to end runing which resules app can not run in backgroud (SIGTTIN)
+    Test: ok
+    
+    Change-Id: If45294fe12c7e5c2f5039c1f9f8987346e6329e9
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit 93baf5ea9e27e50d36fe287fc1cdc3f1eab560ad
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Wed Jan 2 14:41:30 2019 +0800
+
+    GNSS src: fix load do not contains ADR, but GNSS still transfer data to ADR error
+    
+    fix load do not contains ADR, but GNSS still transfer data to ADR error
+    Test: ok
+    
+    Change-Id: Ib07ef1453334e03e5c3d2f5684ee48393af02a94
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00029385
+
+commit 66655b095c22f9ff42233a225f9b47ce8c480965
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Sun Dec 23 17:01:05 2018 +0800
+
+    mnld: modify log hide from 1 to 0
+    
+    default open record gpu debug log
+    Test: ok
+    
+    Change-Id: I2272d43685b31bb2199042a579e21e69a130162e
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit 80280967ec758ae99835cd32b0ad6c9e41b41b9b
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Tue Nov 6 14:26:56 2018 +0800
+
+    MNLD: mark COMBO_IOC_GET_GPS_LNA_PIN
+    
+    COMBO_IOC_GET_GPS_LNA_PIN is used in GLP(GPS Low Power) on new version Smartphone project
+    Howerver AUTO project is not used
+    
+    Test: ok
+    
+    Change-Id: Ibf9cf889aeee4333c9e2e4d4762ac85c105a148d
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit e646b4ac0e0f2e4da52b9a978e6bbc4f722764cc
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Mon Oct 29 16:48:20 2018 +0800
+
+    MNLD: update gps property id name
+    
+    update gps property id name
+    Test: ok
+    
+    Change-Id: I4a56ffd74ea2b0819d5b5fca24a26bda5abb9eb3
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00026144
+
+commit e1575bfd6d4a8f400032fe04a8079d9085d42937
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Tue Sep 11 11:41:37 2018 +0800
+
+    GNSS O CTS: reback to 2015 GNSS
+    
+    our GNSS is 2015
+    GPS_CAP_MEASUREMENTS in GNSS 2016 has some issue which smartphone is fixing
+    Test: ok
+    
+    Change-Id: I0a9d3fb41edd71a66de42fdbd4291535831b5c36
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00023939
+
+commit 66b16dd8460f0d3ef9ca5968d228c4a222f16a6c
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Mon Sep 3 17:09:13 2018 +0800
+
+    GNSS: Update GPS HAL capability and fix build error
+    
+    Update GPS HAL capability to fix CTS GNSS rate change test failed
+    fix eng load build error
+    Test: ok
+    
+    Change-Id: I31045149fb2e1268fffcd0835f720dc3fadcb11a
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00023023
+
+commit ba1f0aa0546ee6b815feae017c1925a4f0f0e099
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Wed Aug 29 15:13:20 2018 +0800
+
+    GNSS: communicate with ADR based on MTK_ADR_SUPPORT
+    
+    communicate with ADR based on MTK_ADR_SUPPORT and modify log level to L_DEBUG
+    Test: ok
+    
+    Change-Id: Icfa3f5de50b713d8b35791a9cf054cd8faec39aa
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit 643dc439326c6d9cf61f7d18d8ac3171cafdc944
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Mon Aug 20 14:55:54 2018 +0800
+
+    GNSS: modify log level
+    
+    modify log level
+    Test: ok
+    
+    Change-Id: Id5b81229985997392a41967650ab515d321be9d9
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00001102
+
+commit 6e853b9194c6485c9017f60d6842a141e1635b82
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Thu Jul 5 12:12:40 2018 +0800
+
+    GNSS: yocto code
+    
+    android and yocto share repo
+    Test: ok
+    
+    Change-Id: Ic4aad2795f08ae5848f83fb2a52066f1376d16d1
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000878
+
+commit 5f2127a0c702f431546f99e48e2b38c81696a904
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Thu May 3 17:02:49 2018 +0800
+
+    GNSS: Enlarge gps debug log size
+    
+    Set single file size to 25MB;
+    Set folder size to 3GB;
+    Test: GPS TTFF
+    
+    Change-Id: Ic97adc8713d4e9a3edfda077f2c2eadac7680877
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit 2e6e2503004189f8b407c0d2621b98d004f29e78
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Mar 30 12:16:35 2018 +0800
+
+    GNSS: remove device dependency
+    
+    -After=udev.service-After=udev.service
+    Test: mnld_test start
+    
+    Change-Id: I97ae02a52158e7becadd27514fe3ef6607dd2f95
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 442939ded9afcb9776f2b199141eb7ab41ae44cc
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Mar 30 12:12:17 2018 +0800
+
+    GNSS: update libmnl.so
+    
+    MNL_VER_18032901ALPS05_5.30_28
+    Test: mnld_test start
+    
+    Change-Id: I449d421b0cd2533c888cc1ceb64cad232cadb6fa
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 2a6b8712f46305584ea624a766abbcaaa1c439f8
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Dec 28 18:11:52 2017 +0800
+
+    GNSS: Add armv7vehf-neon-vfpv4 folder for MT2701 agl build
+    
+    set armv7vehf-neon-vfpv4 Symbolic to cortexa7hf-neon-vfpv4
+    Test: build pass
+    
+    Change-Id: Id16872ebfaab195e566284a854e2a5b4d76b86fa
+    Signed-off-by: jianping.jiang
+    CR-Id: AUTO00000197
+
+commit 1837ecffb0fd8ded226e3260da87a10dcd0805ea
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Dec 28 19:33:01 2017 +0800
+
+    GNSS: Location estimat error output
+    
+    $PMTK828,epx,epy,epv,climb,epd,eps,epc*CSM/r/n
+    MNL_VER_17122803ALPS05_5.30_25
+    Test: mnld_test
+    
+    Change-Id: I7fe42c45de7f6d9fb581add524f69e1ec27c56b1
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 3e56271d84d060a704c00301f570698a788445a2
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Dec 8 19:09:49 2017 +0800
+
+    GNSS: Move gnss_hal and  gnss_test out from mtk_mnld
+    
+    Test: mnld_test
+    
+    Change-Id: I2ee0249f7d412371e5880c3632b3fc318fcb0ac4
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00012614
+
+commit ea925595b03379b5f3bf7df762c4e55275c13aea
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Nov 29 17:36:09 2017 +0800
+
+    GNSS: Change GNSS update rate to 1Hz as default
+    
+    To meet better ADR performace.
+    Test: mnld_test start
+    
+    Change-Id: Id239b0d04bc552c123a08363ef1e3372f55f9924
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00012324
+
+commit 1c00bef7ba0959127328040001544c5876e2982f
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Nov 8 16:48:23 2017 +0800
+
+    GNSS: GNSS auto test fail
+    
+    It's a timing issue of gnss auto test
+    Add protection for the timing issue.
+    Test: fm_gnss
+    
+    Change-Id: I9016b05cb91dc35f690dfa2ebafceeab355a2bf4
+    CR-Id: AUTO00011680
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit 0bd940c46e23e22b903ca45d7083520053aa5c85
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Nov 1 16:14:54 2017 +0800
+
+    GNSS: [Azalea][MT2712][GPS][ATE][GGB] -165dBm Tracking fail
+    
+    Update libmnl.so for GNSS ATE performance issues.
+    MNL_VER_17103101ALPS05_5.30_25
+    Test: mnld_test start
+    
+    Change-Id: Ic3cd6f63e29ceed00c25a3eafc1b991994defbfb
+    CR-Id: AUTO00011320
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit 7d22cd1dba2e50e2e45010c2269407e0aef34f8d
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Mon Oct 16 14:22:43 2017 +0800
+
+    gps: export mtk_gps_type.h to sysroot
+    
+    export mtk_gps_type.h to sysroot
+    Test: build ok
+    
+    Change-Id: I2f2ddd61e2a978b44dabcf268435e7c3798e473d
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit 822a8ff6d3916270359cbf3982133c484197ba1b
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Oct 18 14:08:45 2017 +0800
+
+    GNSS: fm_gnss upgrate
+    
+    Show help message
+    Test: fm_gnss -h
+    
+    Change-Id: I2fce57f98de2708f3cbbae102c0e393bf215c1ce
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00002249
+
+commit 2f1da767bf08588023e3736efb099e744e46ea4f
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Oct 18 09:21:56 2017 +0800
+
+    GNSS: fm_gnss upgrate
+    
+    Add gnss callbacks for new GNSS HAL
+    Test: fm_gnss
+    
+    Change-Id: Ibcc6ac7215e3d3c087b410111c85acd9f915551c
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00002249
+
+commit 905856551bfe48ccf208553b670e609763716bc1
+Author: Meng Wang <meng.wang@mediatek.com>
+Date:   Fri Oct 13 10:07:31 2017 +0800
+
+    gps: export mnld_hal/inc/hal2mnl_interface.h to sysroot
+    
+    export mnld_hal/inc/hal2mnl_interface.h to sysroot
+    Test: test ok
+    
+    Change-Id: Iee432873f8d97e09f005cc7c6286e004d7a26b5f
+    Signed-off-by: Meng Wang <meng.wang@mediatek.com>
+    CR-Id: AUTO00000587
+
+commit ebe9c487c10c00272996671ede07511069c1202b
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Oct 12 15:55:37 2017 +0800
+
+    GNSS: GNSS HAL and MNLD upgrade
+    
+        libmnl: AXN3.7 -> AXN5.0
+        MNL_VER_17101102ALPS05_5.30_25
+    
+        MNLD+HAL: Android m0 -> Android n1
+        alps-mp-n1.mp16-V1.57
+    Test: mnld_test start
+    
+    Change-Id: Ia19a1fe84d2b9364dff8bd83e4178dba09a08deb
+    CR-Id: AUTO00002249
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit 40b36c93ff7f40ad9d4b79f739605fe382ba4dcd
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Sep 4 19:07:01 2017 +0800
+
+    GNSS: Update libmnl.so for -165dBm Tracking Sensitivity improve
+    
+    MNL_VER_17090401ALPS05_3.70_99
+    Test: mnld_test start
+    
+    Change-Id: I4ea08b99a0a2a186196bbfa4aea5d4a5cadccea1
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00006915
+
+commit c9c664babd1b7cd2af1988a0941ffe93810a7cd2
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Aug 25 17:12:05 2017 +0800
+
+    GNSS: Update libmnl.so for GNSS performace issue
+    
+    MNL_VER_17082501ALPS05_3.70_99
+    Test: mnld_test start
+    
+    Change-Id: I6bfa8450dcb633c611d8658e4bcd3ef15e05dac4
+    CR-Id: AUTO00006584
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit a6dc048ff1074b06c3e790e6314e498b37b600fe
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Aug 18 17:51:13 2017 +0800
+
+    GNSS: GPS restart automatically
+    
+    1. Reduce MNLD log;
+    2. Update libmnl.so for mnl exiting protection.
+    Test: mnld_test start
+    
+    Change-Id: Ib2c75bfbb154af83af494525cb1684e766b9362b
+    CR-Id: AUTO00006339
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit 17db7bc21e89b02f794edfd0194e4afe25e4c733
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Aug 9 21:28:36 2017 +0800
+
+    GNSS: update libmnl.so to fix GNSS performance issue
+    
+    1. Open sky hot start TTFF over 50~100m
+    2. GPS+GLO+BD Performance is bad: hot sensitivity can't reach -163dBm
+    Test: mnld_test start
+    
+    Change-Id: Ib25723ba6bdd7148b617aa8fccccecac2c9463e5
+    CR-Id: AUTO00006337
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit 0bf3c241a38c9886b74852f860c3af11b3b76650
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri May 12 11:43:41 2017 +0800
+
+    GNSS: Add MTK_GPS_DATA_PATH, add set path to "/usr/share/gps/"
+    
+    According to Yocto project common rule, change the GPS data path to "/usr/share/gps/"
+    Test: mnld_test
+    
+    Change-Id: I8483de98213eeb20eb91f8b51919e89b81dd2110
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 1b8f280da5227bdbbeec6327579b3c225887bbdb
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Mar 1 16:57:40 2017 +0800
+
+    GNSS: update libmnl.so for AXN5.0 performace merging
+    
+    Merge performace improvement from AXN5.0
+    Test: mnld_test
+    
+    Change-Id: Idff3467d151fb8ebf784a3a0fe8f5999474de142
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 0fee8a6c7e664a3b546d29538c2eed4dd3e1d436
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Feb 8 17:28:00 2017 +0800
+
+    GNSS: correct the PPM config
+    
+    correct the PPM config to 0.5 ppm
+    Test: mnld_test
+    
+    Change-Id: Ic36ab03b748600046973743aa895bbc1624a77dd
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit e88e85804dd25d4b4b9e75d4a8a65e881c3262b2
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Dec 7 16:15:01 2016 +0800
+
+    GNSS: Modify mnld code to support mnld_test & fm_gnss for MT2701(non-AGPS)
+    
+    Remove unnecessary return
+    Test: mnld_tes start
+    
+    Change-Id: I5102ed96f92ee0299ead911aa1aeb47209c2c260
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 5dd50898c4e9a2727c413a4f0276fbca34d1c0d5
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Oct 21 19:06:19 2016 +0800
+
+    GNSS: ATE Test TTFF and accuracy fail under weak signal
+    
+    update libmnl.so for ATE Fail issue
+    Test: mnld_test
+    
+    Change-Id: I05199d59cfade47e4521a6d37fed752a3095f4c8
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00001584
+
+commit 9134cb5f745dd1892d71a7b6084974ada3b0a96f
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Oct 14 10:02:20 2016 +0800
+
+    GNSS: update aarch64 libmnl.so
+    
+    update aarch64 libmnl.so
+    Test: build pass
+    
+    Change-Id: Idef2a43f4263f9389dec9ba748cf01f874108a93
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 46b18f7b384e1ca77b953b6ed6055de163cc5e14
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Sun Oct 9 14:49:00 2016 +0800
+
+    GNSS: ATE GGB Scenario TTFF accuracy over 200m
+    
+    update libmnl.so for ATE TTFF accuracy fail issue
+    Test: mnld_test start
+    
+    Change-Id: Id06f2469130c586f74fb7978be69de5b6789b5ae
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00001357
+
+commit 8bbfe31921f4148d73808a289a9b027f425e2acf
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Sep 29 16:54:52 2016 +0800
+
+    GNSS: GNSS performace test fail
+    
+    Fix performace issue: weak signal track under ATE test and Multipath exclusion method at 5 Hz operation is not handled properly
+    Test: mnld_test start
+    
+    Change-Id: I6dc58624e7530ee44425cc679e5814ad06f53756
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00001354
+
+commit d86135320dd484562f85e73f29e3c5a703727859
+Author: Richard Sun <richard.sun@mediatek.com>
+Date:   Wed Aug 31 09:58:52 2016 +0800
+
+    Genivi 11: fix mnld fail
+    
+    change package arch from cortexa7hf_vfp_vfpv4_neon to cortexa7hf_neon_vfpv4
+    Test: build and run on auto2701evb2
+    
+    Change-Id: Ifd315c744367b9ec9ac44f7e3936afc3b6f9cc3c
+    CR-Id: AUTO00001182
+    Signed-off-by: Richard Sun <richard.sun@mediatek.com>
+
+commit 50647f98f5815ef9d2288326a2721803b965fa48
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Aug 24 14:33:14 2016 +0800
+
+    GNSS: Correct the pass condition of fm_gnss
+    
+    The number of searched SV more than 2 regard as PASS, not care the stage
+    Test: fm_gnss
+    
+    Change-Id: I014057f45cf9fc1625879ac2722faf9cae6549a5
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 4d8ed22edfe6a6ad0352863b073549d48508ebd6
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Tue Aug 9 18:02:53 2016 +0800
+
+    GNSS: GNSS factory mode
+    
+    Correct the fail information of fm_gnss
+    Test: fm_gnss
+    
+    Change-Id: Id242112c532621cfac6d7cc1877b390142cefbd6
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 9c85f2616548f9b70a974416beaae43f7caa24dd
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Tue Aug 9 17:21:25 2016 +0800
+
+    GNSS: add fm_gnss for GNSS factory mode test and HW check
+    
+    Add GNSS factory mode test app fm_gnss
+    Test: fm_gnss
+    
+    Change-Id: I91bbd17723e4052b2b8080392e621ab00e8352c5
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 4a10a109f6e844dc8493c56f8fd626ee8455a03e
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Tue Aug 9 17:18:11 2016 +0800
+
+    GNSS: Add DSP input kernel time for ADR sensor time sync
+    
+    Add PMTKTIM to report DSP input kernel time
+    Test: mnld_test
+    
+    Change-Id: I687e68f495d3a5b08d67f7d192ba057508ad746c
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 1fc87e17261a1c92a5532573614389664fdd7db3
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Aug 1 17:52:38 2016 +0800
+
+    GNSS: RAW data output and keep heading value 3 digit after point
+    
+    RAW data always output and keep heading value 3 digit after point in RMC
+    Test: mnld_test
+    
+    Change-Id: Idb4a2f795dcecb283aed8a48eeed10b7c9efbeb5
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 395df3bb33a44eee4ce08d47cc3b5a3a3b5b344c
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Jul 22 18:07:28 2016 +0800
+
+    GNSS: set network status manually for EPO testing
+    
+    Complete the code to set network status
+    Test: mnld_test network wifi
+    
+    Change-Id: Ie3d9e2d4cdedae31cdd9acc88ef9b1b3c483e080
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit b2c3574a6dc1bfadf88c40526a525babe1f70365
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Jul 21 09:50:21 2016 +0800
+
+    GNSS: MNLD reboot abnormally
+    
+    Fix the mnld abnormal reboot issue, remove EPO download fail reboot, delete hotstill event and RAW data memory leakage
+    Test: mnld_test start
+    
+    Change-Id: I13da22a43feb988e4981f30c61a9b497322d5fad
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000695
+
+commit b7727a083e5dced60055d2bdeb3b18d7bbfde06c
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Tue Jul 12 10:35:17 2016 +0800
+
+    GNSS: optimize mnld_test
+    
+    Remove unnecessary code and start count TTFF from SESSION BIGEN
+    Test: mnld_test
+    
+    Change-Id: Ib960d7780f875b211e8ef4a7cabe45aa8def690b
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 8d9900b3f2bfa8448bda754284d8b51382b608da
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Jul 8 14:24:20 2016 +0800
+
+    GNSS: mnld reboot by stop timeout
+    
+    It caused by HS EVENT is deleted incorrectly
+    Test: mnld_test
+    
+    Change-Id: If8f5c367cc78594d036cdb7511532f7ee55ff28b
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000695
+
+commit b61ed17fe513e059126271cb2cc844a72d88cb6d
+Author: Nelson Liu <nelson.liu@mediatek.com>
+Date:   Fri Jun 24 14:10:51 2016 +0800
+
+    libgpshal: build libgpshal.so
+    
+    add libgpshal.so for other app use
+    Test: built and ran on mt2635
+    
+    Change-Id: I8caeb59734a13a0cc741781edd3f514f5398c91e
+    Signed-off-by: Nelson Liu <nelson.liu@mediatek.com>
+    CR-Id: AUTO00000589
+
+commit 7a35d6c6c03a7d5b17ec824ebf4cc58f8d57c98c
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Jul 6 10:28:43 2016 +0800
+
+    GNSS: update libmnl.so for 5hz update rate
+    
+    update libmnl.so for 5Hz
+    Test: mnld_test
+    
+    Change-Id: Ie05f0722b03c9c65a81ceee675aa84fcdef69bf3
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit a26f48b39e2db431e3c53a58998c7fdc0ece23a8
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Jul 1 14:56:35 2016 +0800
+
+    GNSS: config gps debug log file by cmd
+    
+    add the code to config gps debug log file path by cmd
+    Test: mnld_test
+    
+    Change-Id: If9b3ac538957b426576ba220691d27fb5adabeff
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 8d4028bb234648c2d3c65889052646bfb2d424ca
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Jul 1 10:35:05 2016 +0800
+
+    GNSS: mnld_test client
+    
+    Correct test restart count value
+    Test: mnld_test
+    
+    Change-Id: I0595e9de7c0b2dd843e4ac28368a2013e80e7182
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 4e504835ff9a39b0301ed13773dc36c2f44cdefb
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Jun 30 17:16:45 2016 +0800
+
+    GNSS: EPO download
+    
+    Update network status force at the start of GNSS
+    Test: mnld_test
+    
+    Change-Id: If8999766d064cc5fd6f0ab87dc63479b7020636d
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 88c1ca7cecfbb4d0e6245eca6a422bc8a039f5c7
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Jun 29 20:27:26 2016 +0800
+
+    GNSS: update for PMTK API and reduce log output
+    
+    RAW data output by callback and reduce the unnecessary socket and log output
+    Test: mnld_test
+    
+    Change-Id: I4f14a76cfdd04db727cebf33f0861274218fd558
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit b4a05adf032a895e3cfd0f99abbe22a0169762c8
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Jun 27 19:30:20 2016 +0800
+
+    GNSS: EPO download
+    
+    Add code for EPO/QEPO download
+    Test: mnld_test
+    
+    Change-Id: I2968be52b3bf0280aaf1d67e691fbb47bea1aee0
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 6acf7ecc677b4874def65d235df8acc983f81a0e
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Tue Jun 21 20:28:28 2016 +0800
+
+    GNSS: Add PMTK API
+    
+    Add PMTK API for HAL/APP call
+    Test: mnld_test -start
+    
+    Change-Id: Id22082345e0b55fa7ff7d3641534b3ab8252ef12
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit ff87761dc3fedc07222537aba639ff49109d8709
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Jun 20 14:10:49 2016 +0800
+
+    GNSS: update mnld_test
+    
+    Update the result show of mnld_test
+    Test: mnld_test -start
+    
+    Change-Id: I273fce84869bdd9feb2344ea4eea5ffc1507a421
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 77860cb5d24b91556e09fb53f86a6435ca8b06fb
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Jun 2 10:58:18 2016 +0800
+
+    GNSS: Add GPS HAL code
+    
+    Add gps HAL code to mnld test client
+    Test: mnld_test
+    
+    Change-Id: I31cdd6795e1affb8d2a5317ea92b2299bd2c7379
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 6bbf8676486c0eb9cfeb76c47c36074385d5e5bc
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Jun 2 12:30:00 2016 +0800
+
+    GNSS: modify agps2mnl socket name
+    
+    change agps2mnl/mnl2agps socket name
+    Test: mnld0
+    
+    Change-Id: I38711faf8773c4bfc9de7a5fc78150cb7fddf3fb
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 4b7ad3a0e06beef3bb69407574419594e92ce2ac
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Jun 2 10:38:46 2016 +0800
+
+    GNSS: Update mnl libs for tool chain change
+    
+    update libmnl.so/libsupl.a/libhotstill.a for tool chain change
+    Test: mnld_test
+    
+    Change-Id: I97aa2881a7e59fea5f4d630a4473547cd2503ab0
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+
+commit 479431a9b45172a2219fc435012be7fa636c610f
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri May 20 14:32:54 2016 +0800
+
+    GNSS: Add source code of new mnld
+    
+    Add source code of new MNLD
+    Test: mnld_test
+    
+    Change-Id: Ic6e474493b36be39a22883ebb81633159cee2bd8
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+    CR-Id: AUTO00000197
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit d8a78456f10aa01c4049619f00df571521e1d16c
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Tue Apr 26 10:10:10 2016 +0800
+
+    gnss: Yocto GNSS PR issue
+    
+    Resolve Pseude range error
+    Test: NONE
+    
+    Change-Id: I98df4dce9249d72cbbd3201a7aa21bc82d11650e
+    CR-Id: AUTO00000197
+    Signed-off-by: Jianping Jiang <jianping.jiang@mediatek.com>
+
+commit 0cd2de7200bd5d83933f9945b2376fcc1630e041
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Thu Mar 17 16:14:39 2016 +0800
+
+    [ALPS02403854]GPS: PMTK RAW data output
+    
+    [Detail]
+    update mnl libs and mnld.c for PMTK RAW output and 5Hz output
+    [Solution]
+    update mnl libs and modify mnld.c
+    
+    Change-Id: Ia1bfdaf0a585a6b14d356d29f8a82f16f03b47f3
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 41de033279754ce3edce49cc0996c5c6d7e9663d
+Merge: 3d7fac8 a88be08
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Mar 7 17:26:29 2016 +0800
+
+    Merge "[ALPS02403854]GPS: Add mnl lib for muti build"
+
+commit a88be087dbac952bd499bfa7e5bd7aaaebb52357
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Mar 7 17:19:11 2016 +0800
+
+    [ALPS02403854]GPS: Add mnl lib for muti build
+    
+    [Detail]
+    Add mnl lib files by multi tool chain folder
+    [Solution]
+    
+     #!!! There must be one blank line here !!!
+    
+    Change-Id: If5d9d95d332155b1cbd330e969468d2f4ddd002a
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 3d7fac8894751171370cfddb721d25ade9e4ba3b
+Author: Richard Sun <richard.sun@mediatek.com>
+Date:   Mon Mar 7 11:09:14 2016 +0800
+
+    mnld: seprate different arch
+    
+    Change-Id: I412afcf78f2fe7817c333fd0982420d7cff7e50b
+
+commit 305ae4cbf4e7cab7e9b985977e881b2b6318b649
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Mon Feb 22 11:20:57 2016 +0800
+
+    [ALPS02403854]GPS: Revert mnl prebuild for MT2701 build error
+    
+    [Detail]
+    libhotstill.a libmnl.so libsupl.a
+    [Solution]
+    Revert mnl lib files
+    
+    Change-Id: Ic16c7599952cdbb147dd4c98eb2caa196255ad8d
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 73ef498fdabef4390e10c306629c3357285bcd85
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Feb 19 11:27:05 2016 +0800
+
+    [ALPS02403854]GPS: MT2635 GNSS Bringup
+    
+    [Detail]
+    Update mnl libs for MT2635 tool chain
+    [Solution]
+    Update new mnl lib files
+    
+    Change-Id: I51c02d09c33b44f63dc1949bb0b2dcd9d5dafc2b
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 6cb890f1d1c41f8f727728a870db054d92cd1578
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Wed Feb 3 16:37:40 2016 +0800
+
+    [ALPS02403854]GPS:update libs for vfp tool chain
+    
+    [Detail]
+    update libhotstill.a libmnl.so libsupl.a
+    [Solution]
+    Build libs using new tool chain
+    
+    Change-Id: I2fba6fa7e642dc9c1bdc18e31a1fb1169a29c204
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 3981e667f80b337b87c2fd5423b84bf0208d7ccf
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Jan 15 18:06:18 2016 +0800
+
+    [ALPS02403854] remove supl for vfp build error
+    
+    [Detail]
+    
+    [Solution]
+    
+    Change-Id: Id66963da93e37c4bda52b0fbb22b6344bbac6799
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 7a662fc547c6ee5de300f1a7353ae184992ee9ae
+Author: Jianping Jiang <jianping.jiang@mediatek.com>
+Date:   Fri Dec 25 18:18:59 2015 +0800
+
+    [ALPS02403854] Add MNLD source code
+    
+    [Detail]
+    Add MNLD source code for GNSS driver.
+    Can 3D fix.
+    [Solution]
+    Porting from L1.MP6
+    
+    Change-Id: Ic57223751e0f3a2b5ca49320b4cccec499901a9c
+    CR-Id: ALPS02403854
+    Feature: GNSS for MT6630
+
+commit 422f87879f305c98ba0e2e2fa9e1bb37714c46e9
+Author: Richard Sun <richard.sun@mediatek.com>
+Date:   Wed Oct 28 15:03:27 2015 +0800
+
+    Initial empty repository

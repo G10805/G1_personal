@@ -1,0 +1,10 @@
+[Unit]
+Description=MNL Daemon
+
+[Service]
+ExecStart=/usr/bin/mnld0
+Restart=always
+#StandardOutput=kmsg+console
+
+[Install]
+WantedBy=basic.target

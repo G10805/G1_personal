@@ -1,0 +1,6 @@
+debug.dbg2file=0
+debug.mode=1
+RAWMeas=1
+debug.filename=/data/vendor/gps/gpsdebug.log
+DBGLOG_FILE_MAX=10000000
+DBGLOG_FOLDER_MAX=200000000

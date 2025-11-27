@@ -1,0 +1,10 @@
+[Unit]
+Description=ADR Daemon
+
+[Service]
+ExecStart=/usr/bin/adrd
+Restart=always
+Requires=mnld
+
+[Install]
+WantedBy=basic.target

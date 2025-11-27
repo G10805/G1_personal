@@ -1,0 +1,17 @@
+on post-fs-data
+    mkdir /data/vendor/adr 0770 root system
+	mkdir /data/mtk_adrd 0777 root root
+    start adrd_trigger    
+
+service adrd /vendor/bin/adrd 
+    class main
+    user root
+    group system
+
+service adrd_trigger /vendor/bin/adr_setup /data/mtk_adrd p f
+    class main
+    user root
+    group root
+    oneshot
+    disabled
+seclabel u:r:shell:s0
