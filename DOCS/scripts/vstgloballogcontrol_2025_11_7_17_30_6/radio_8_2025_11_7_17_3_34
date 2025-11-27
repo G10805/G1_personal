@@ -1,0 +1,1376 @@
+
+
+ --------- beginning of radio
+
+11-07 22:26:45.466   953   953 I mipc_lib: SEND MSGID=0061 [SYS_SET_THERMAL_RUNTIME_REQ], TXID=0000 [thermal_core], DUMP=841954240000000001006100000008000101010001000000
+11-07 22:26:45.466   953   953 D mipc_lib: write_bytes=-1
+11-07 22:26:45.466   953   953 E mipc_lib: write error
+11-07 22:26:58.655  1254  1254 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:26:59.101  1254  1254 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:26:59.473  1254  1413 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:26:59.888  1254  1254 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:26:59.936  1254  1414 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:26:59.980  1254  1254 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:27:00.004  1254  1278 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 22:27:00.087  1254  1254 D TelephonyRegistry: systemRunning register for intents
+11-07 22:27:00.212  1254  1288 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:27:00.455  1254  1274 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:27:01.683  1613  1613 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 22:27:01.744  1819  1819 D IccProvider: class = class com.mediatek.internal.telephony.phb.MtkIccProvider
+11-07 22:27:01.748  1819  1819 D IccProvider: constructor function = public com.mediatek.internal.telephony.phb.MtkIccProvider(android.content.UriMatcher,android.content.Context)
+11-07 22:27:01.758  1819  1819 I MtkIccProvider: MtkIccProvider URL_MATCHER android.content.UriMatcher@6a7e194
+11-07 22:27:01.829  1481  1481 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 22:27:01.883  1254  1910 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:27:02.078  1254  1652 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 22:27:02.736  1819  1819 W TelephonyComponentFactory: getValidatedPaths: com.mediatek.internal.telephony.MtkTelephonyComponentFactory ,/system/framework/mediatek-telephony-common.jar
+11-07 22:27:02.736  1819  1819 W TelephonyComponentFactory: StructStatVfs: 4101 ,1
+11-07 22:27:02.737  1819  1819 D TelephonyComponentFactory: validated paths: /system/framework/mediatek-telephony-common.jar
+11-07 22:27:02.903  1819  1819 D PersistAtomsStorage: created new PersistAtoms
+11-07 22:27:03.019  1819  1819 D MtkTelephonyComponentFactory: makeDefaultPhoneNotifier mtk
+11-07 22:27:03.019  1819  1819 D MtkPhoneNotifr: constructor
+11-07 22:27:03.019  1819  1819 D MtkTelephonyRegistryEx: publish: com.mediatek.internal.telephony.MtkTelephonyRegistryEx@3634254
+11-07 22:27:03.048  1819  1819 D CdmaSSM : subscriptionSource from settings: 0
+11-07 22:27:03.049  1819  1819 I PhoneFactory: Cdma Subscription set to 0
+11-07 22:27:03.049  1819  1819 I PhoneFactory: Network Mode set to 0
+11-07 22:27:03.080  1819  1819 D RILJ    : RIL: init allowedNetworkTypes=0 cdmaSubscription=0) [PHONEnull]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioProxy wait for MtkRIL
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 I MtkRILJ : getRadioServiceProxy wait for MtkRIL [PHONE0]
+11-07 22:27:03.214  1819  1819 D RILJ    : Radio HAL version: -1.-1 [PHONE0]
+11-07 22:27:03.216  1819  1819 D MtkRILJ : constructor: sub = 0
+11-07 22:27:03.298  1819  1819 D MtkRILJ : getMtkRadioExProxy:Not calling getService(): wifi-only [PHONE0]
+11-07 22:27:03.308  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.308  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.308  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.308  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.308  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.308  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.308  1819  1819 D MtkRILJ : getRilOp
+11-07 22:27:03.308  1819  1819 D MtkRILJ : mMtkRilOp init fail, because OM load
+11-07 22:27:03.599  1819  1819 D ImsManager: constructor function = private com.mediatek.ims.internal.MtkImsManager(android.content.Context,int)
+11-07 22:27:03.851  1819  1819 D MtkImsManager [-1]: createMtkImsService binder is null
+11-07 22:27:03.885  1819  1819 W FeatureConnector: [InstanceManager, -1] connect: not supported.
+11-07 22:27:03.895  1819  2505 I ImsManagerIM [-1]: connectionUnavailable, reason: 2
+11-07 22:27:03.902  1819  1819 D SubscriptionManager: [getSubId]- fail
+11-07 22:27:03.903  1819  1819 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 22:27:03.903  1819  1819 D SubscriptionManager: [getSubId]- fail
+11-07 22:27:03.904  1819  1819 D SubscriptionManager: [getSubId]- fail
+11-07 22:27:03.904  1819  1819 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 22:27:03.904  1819  1819 D ImsManagerIM [-1]: getWfcMode - setting=2
+11-07 22:27:03.905  1819  1819 D ImsManager: constructor function = private com.mediatek.ims.internal.MtkImsManager(android.content.Context,int)
+11-07 22:27:03.905  1819  1819 D MtkImsManager [0]: createMtkImsService binder is null
+11-07 22:27:03.907  1819  1819 W FeatureConnector: [InstanceManager, 0] connect: not supported.
+11-07 22:27:03.958  1819  1819 D ImsManagerIM [0]: ImsService not up yet - timeout waiting for connection.
+11-07 22:27:03.958  1819  1819 D RadioManager: [RadioManager] Initialize RadioManager under airplane mode:0 wifi only mode:2 wifi mode: falsephoneCount:1
+11-07 22:27:03.958  1819  1819 D RadioManager: [RadioManager] Convert phoneCount 1 into bitmap 1
+11-07 22:27:03.963  1819  1819 D ImsSwitchController: Initialize ImsSwitchController enter
+11-07 22:27:03.964  1819  1819 E MtkRILJ : getMtkRadioExServiceProxy: Not calling getService(): wifi-only
+11-07 22:27:03.964  1819  1819 D RadioManager: [RadioManager] Not BSP Package, register intent!!!
+11-07 22:27:04.039  1819  1819 D RatConfig: getMaxRat: initial no 0
+11-07 22:27:04.041  1819  1819 D RatConfig: getActiveRatConfig: 
+11-07 22:27:04.046  1819  2531 I RadioManager: PowerIdleState: enter
+11-07 22:27:04.159  1819  1819 D MtkTelephonyComponentFactory: makeUiccController mtk
+11-07 22:27:04.170  1819  1819 D UiccController: Creating UiccController
+11-07 22:27:04.170  1819  1819 D UiccController: config_num_physical_slots = 1
+11-07 22:27:04.341  1819  1819 D PinStorage: KeyStore: alias PinStorage_longTerm_always_key exists
+11-07 22:27:04.341  1819  1819 D PinStorage: onDeviceReady
+11-07 22:27:04.347  1819  1819 D PinStorage: KeyStore: alias PinStorage_shortTerm_key does not exist - Nothing to do
+11-07 22:27:04.358  1819  1819 D MtkUiccCtrl: Creating MtkUiccController
+11-07 22:27:04.509  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 22:27:04.509  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 22:27:04.509  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 22:27:04.509  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 22:27:04.509  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:13.182  1819  1819 D MtkSubCtrl: [SubscriptionController] init by Context
+11-07 16:57:13.183  1819  1819 D SubscriptionController: [getDefaultVoiceSubId] subId=-1
+11-07 16:57:13.183  1819  1819 D SubscriptionController: [getDefaultVoiceSubId] subId=-1
+11-07 16:57:13.183  1819  1819 D SubscriptionController: [getDefaultVoiceSubId] subId=-1
+11-07 16:57:13.183  1819  1819 D SubscriptionController: [getDefaultVoiceSubId] subId=-1
+11-07 16:57:13.183  1819  1819 D SubscriptionController: [getDefaultVoiceSubId] subId=-1
+11-07 16:57:13.183  1819  1819 D SubscriptionController: [getDefaultVoiceSubId] subId=-1
+11-07 16:57:13.183  1819  1819 D MtkSubCtrl: mtkInit, sInstance = com.mediatek.internal.telephony.MtkSubscriptionController@25320ee
+11-07 16:57:13.293  1819  1819 D MtkSubscriptionControllerEx: [MtkSubscriptionControllerEx] init by Context, this = com.mediatek.internal.telephony.MtkSubscriptionControllerEx@781b98f
+11-07 16:57:13.293  1819  1819 D MtkSubscriptionControllerEx: [MtkSubscriptionControllerEx] init by Context
+11-07 16:57:13.293  1819  1819 D MtkSubscriptionControllerEx: [MtkSubscriptionControllerEx] sInstance = com.mediatek.internal.telephony.MtkSubscriptionControllerEx@781b98f
+11-07 16:57:13.293  1819  1819 D MtkTelephonyComponentFactory: makeMultiSimSettingController mtk
+11-07 16:57:13.451  1819  2290 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:13.451  1819  2290 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:57:13.453  1819  2290 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:57:13.453  1819  2290 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:57:13.453  1819  2290 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:13.517  1819  1819 D DSSelector: DataSubSelector is created
+11-07 16:57:13.546  1819  2290 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:13.549  1613  1953 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 16:57:13.573  1819  1819 D MtkTelephonyManagerEx: simSwitchMode result = 3
+11-07 16:57:13.577  1819  1819 I PhoneFactory: Creating Phone with type = 1 phoneId = 0
+11-07 16:57:13.579  1819  1819 D TelephonyTester: register for intent action=com.mediatek.internal.telephony.action_detached
+11-07 16:57:13.579  1819  1819 D TelephonyTester: register for intent action=com.mediatek.internal.telephony.action_attached
+11-07 16:57:13.579  1819  1819 D TelephonyTester: register for intent action=com.android.internal.telephony.TestServiceState
+11-07 16:57:13.579  1819  1819 D TelephonyTester: register for intent action=com.android.internal.telephony.TestChangeNumber
+11-07 16:57:13.580  1819  1819 D Phone   : mDoesRilSendMultipleCallRing=true
+11-07 16:57:13.865  1819  1819 D GsmCdmaCallTkr: Reset mWaitForHoldToRedialRequest variables
+11-07 16:57:13.974  1819  1819 E WAP PUSH: bindService() for wappush manager failed
+11-07 16:57:13.976  1819  1819 D m.android.phone: created InboundSmsHandler
+11-07 16:57:14.071  1819  2806 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 16:57:14.071  1819  2806 D MtkSmsBroadcastUndelivered: scanning raw table for undelivered messages
+11-07 16:57:14.246  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:14.321  1819  1819 D CarrierActionAgent: [0]Creating CarrierActionAgent
+11-07 16:57:14.322  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierSignalAgent.loadCarrierConfig(CarrierSignalAgent.java:215)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierSignalAgent.<init>(CarrierSignalAgent.java:146)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.TelephonyComponentFactory.makeCarrierSignalAgent(TelephonyComponentFactory.java:372)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:323)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:14.331  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:14.341  1819  1819 D ANM-0   : operates in AP-assisted mode.
+11-07 16:57:14.403  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.RatRatcheter.resetRatFamilyMap(RatRatcheter.java:203)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.RatRatcheter.<init>(RatRatcheter.java:94)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.<init>(ServiceStateTracker.java:709)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.<init>(MtkServiceStateTracker.java:648)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeServiceStateTracker(MtkTelephonyComponentFactory.java:208)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:335)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:14.404  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:14.405  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:14.405  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:14.424  1254  1651 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 16:57:14.425  1819  1819 D NRM-C-0 : registerForNetworkRegistrationInfoChanged
+11-07 16:57:14.427  1819  1819 D NRM-I-0 : registerForNetworkRegistrationInfoChanged
+11-07 16:57:49.200  1819  1819 D MTKSST  : [GsmSST0] notifyVoiceRegStateRilRadioTechnologyChanged: vrs=1 rat=0
+11-07 16:57:49.200  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:49.200  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.<init>(CarrierServiceStateTracker.java:104)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.<init>(ServiceStateTracker.java:772)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.<init>(MtkServiceStateTracker.java:648)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeServiceStateTracker(MtkTelephonyComponentFactory.java:208)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:335)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:49.201  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:49.563  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:49.565  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:49.566  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:49.566  1819  1819 D SubscriptionController: com.android.internal.telephony.emergency.EmergencyNumberTracker.<init>(EmergencyNumberTracker.java:172)
+11-07 16:57:49.566  1819  1819 D SubscriptionController: com.android.internal.telephony.TelephonyComponentFactory.makeEmergencyNumberTracker(TelephonyComponentFactory.java:351)
+11-07 16:57:49.566  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:337)
+11-07 16:57:49.567  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:49.568  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:49.568  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:49.568  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:49.568  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:49.568  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:49.568  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:49.569  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:49.569  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:49.569  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:49.595  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:49.595  1819  1819 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 16:57:49.842  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:49.847  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:49.847  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:49.847  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:49.847  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.getDataServicePackageName(DataServiceManager.java:590)
+11-07 16:57:49.847  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.getDataServicePackageName(DataServiceManager.java:553)
+11-07 16:57:49.847  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.rebindDataService(DataServiceManager.java:518)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.<init>(DataServiceManager.java:425)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataNetworkController.<init>(DataNetworkController.java:781)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataNetworkController.<init>(MtkDataNetworkController.java:111)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeDataNetworkController(MtkTelephonyComponentFactory.java:504)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:354)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:49.871  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:49.881  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:49.881  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:49.886  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.revokePermissionsFromUnusedDataServices(DataServiceManager.java:195)
+11-07 16:57:49.886  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.unbindDataService(DataServiceManager.java:460)
+11-07 16:57:49.887  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataConfigManager.updateCarrierConfig(DataConfigManager.java:391)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataConfigManager.<init>(DataConfigManager.java:323)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataConfigManager.<init>(MtkDataConfigManager.java:78)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeDataConfigManager(MtkTelephonyComponentFactory.java:522)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataNetworkController.<init>(DataNetworkController.java:788)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataNetworkController.<init>(MtkDataNetworkController.java:111)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeDataNetworkController(MtkTelephonyComponentFactory.java:504)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:354)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:50.068  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:50.069  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:50.070  1819  1819 E DCM-0   : Invalid config "RCS:80"
+11-07 16:57:50.077  1819  1819 D MtkDCM  : DCM-0: updateRoamingConfigs: DomesticRoamingEnabled false, IntlRoamingEnabled false, UniqueSettingForRoaming 0
+11-07 16:57:50.077  1819  1819 D MtkDCM  : DCM-0: updateVolteIOTConfig: mVolteIotFirewall false
+11-07 16:57:50.077  1819  1819 D DCM-0   : Data config updated. Config is not carrier specific.
+11-07 16:57:50.079  1819  1819 D DSMGR-0 : DataSettingsManager created.
+11-07 16:57:50.079  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.<init>(DataSettingsManager.java:189)
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.android.internal.telephony.TelephonyComponentFactory.makeDataSettingsManager(TelephonyComponentFactory.java:691)
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataNetworkController.<init>(DataNetworkController.java:808)
+11-07 16:57:50.080  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataNetworkController.<init>(MtkDataNetworkController.java:111)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeDataNetworkController(MtkTelephonyComponentFactory.java:504)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:354)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:50.081  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:50.082  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:50.082  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:50.083  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:57:50.083  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:57:50.083  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:57:50.083  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:50.085  1819  1819 D MtkSubCtrl: Valid row not present in db
+11-07 16:57:50.094  1254  1651 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 16:57:50.096  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataProfileManager.registerFdnContentObserver(MtkDataProfileManager.java:832)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataProfileManager.<init>(MtkDataProfileManager.java:210)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeDataProfileManager(MtkTelephonyComponentFactory.java:530)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataNetworkController.<init>(DataNetworkController.java:853)
+11-07 16:57:50.103  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkDataNetworkController.<init>(MtkDataNetworkController.java:111)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeDataNetworkController(MtkTelephonyComponentFactory.java:504)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:354)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:50.104  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:50.113  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:50.113  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:50.113  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:50.113  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:50.125  1819  1819 D DSRM-0  : DataStallRecoveryManager created.
+11-07 16:57:17.045  1819  1819 D CarrierResolver: Creating CarrierResolver[0]
+11-07 16:57:17.115  1819  1819 D MTKSST  : [GsmSST0] notifyVoiceRegStateRilRadioTechnologyChanged: vrs=1 rat=0
+11-07 16:57:17.133  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.data.LinkBandwidthEstimator.<init>(LinkBandwidthEstimator.java:302)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.TelephonyComponentFactory.makeLinkBandwidthEstimator(TelephonyComponentFactory.java:644)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:391)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.android.internal.telephony.GsmCdmaPhone.<init>(GsmCdmaPhone.java:299)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:386)
+11-07 16:57:17.133  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkGsmCdmaPhone.<init>(MtkGsmCdmaPhone.java:424)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:196)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makePhone(MtkTelephonyComponentFactory.java:181)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.createPhone(PhoneFactory.java:356)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:215)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:17.134  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:17.185  1819  1819 I GsmCdmaPhone: [0] updateTtyMode ttyMode=0
+11-07 16:57:17.189  1819  1819 I GsmCdmaPhone: [0] updateUiTtyMode ttyMode=0
+11-07 16:57:17.190  1819  1819 D CallManager: registerPhone(GSM Handler (com.mediatek.internal.telephony.MtkGsmCdmaPhone) {2738058})
+11-07 16:57:17.267  1819  1819 D MtkSubscriptionInfoUpdater: MtkSubscriptionInfoUpdater created
+11-07 16:57:17.367  1819  1819 D MtkSuppServHelper: [0]MtkSuppServHelper init done.
+11-07 16:57:17.368  1819  1819 I SuppServConf: [0]MtkSuppServConf constructor.
+11-07 16:57:17.368  1819  1819 I SuppServConf: [0]MtkSuppServConf init.
+11-07 16:57:17.368  1819  1819 I SuppServConf: [0]initConfig start.
+11-07 16:57:17.368  1819  1819 I SuppServConf: [0]initConfig end.
+11-07 16:57:17.369  1819  1819 D SmartDataSwitch: SmartDataSwitchAssistant is created
+11-07 16:57:17.369  1819  1819 D SmartDataSwitch: registerEvents
+11-07 16:57:17.369  1819  1819 D SmartDataSwitch: init done
+11-07 16:57:17.369  1819  1819 D SmartDataSwitch: makeSDSA: X sSDSA =Handler (com.mediatek.internal.telephony.datasub.SmartDataSwitchAssistant) {ef0dbf7}
+11-07 16:57:17.370  1819  1819 D MtkTelephonyComponentFactory: not found VoData library
+11-07 16:57:17.373  1819  3134 D SuppServConf: [0]handleMessage msg: EVENT_ICC_CHANGED
+11-07 16:57:17.373  1819  3134 D SuppServConf: [0]handleMessage msg: EVENT_INIT
+11-07 16:57:17.373  1819  3134 I SuppServConf: [0]resetConfig start.
+11-07 16:57:17.374  1819  3134 I SuppServConf: [0]resetConfig end.
+11-07 16:57:17.374  1819  3134 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:17.374  1819  3134 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: com.mediatek.internal.telephony.MtkSuppServConf.loadCarrierConfig(MtkSuppServConf.java:383)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: com.mediatek.internal.telephony.MtkSuppServConf.-$$Nest$mloadCarrierConfig(Unknown Source:0)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: com.mediatek.internal.telephony.MtkSuppServConf$SSConfigHandler.handleMessage(MtkSuppServConf.java:297)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: android.os.HandlerThread.run(HandlerThread.java:67)
+11-07 16:57:17.374  1819  3134 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:17.377  1819  3134 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+11-07 16:57:17.377  1819  3134 D SuppServConf: [0]Config is null.
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]ENABLE_XCAP_HTTP_RESPONSE_409 -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NEED_CHECK_DATA_ENABLE -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NEED_CHECK_IMS_WHEN_ROAMING -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]RE_REGISTER_FOR_CF -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NOT_SUPPORT_CALL_IDENTITY -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NOT_SUPPORT_XCAP -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NEED_CHECK_DATA_ROAMING -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]SUPPORT_SAVE_CF_NUMBER -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NOT_SUPPORT_OCB -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]TRANSFER_XCAP_404 -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]NOT_SUPPORT_WFC_UT -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]GSM_UT_SUPPORT -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]TBCLIR -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]IMS_NW_CW -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.377  1819  3134 I SuppServConf: [0]QUERY_CFU_AGAIN_AFTER_SET -> bValue: false, sValue: , iValue: -1
+11-07 16:57:17.379  1819  1819 I PhoneFactory: IMS is not supported on this device, skipping ImsResolver.
+11-07 16:57:17.381  1819  1819 D DataHelper: makeMtkDataHelper: phones.length=1
+11-07 16:57:17.417  1819  1819 D DataHelper: registerEvents
+11-07 16:57:17.417  1819  1819 D DataHelper: registerImsEvents, phoneId = 0
+11-07 16:57:17.417  1819  1819 D DataHelper: Not register IMS phone calling state yet.
+11-07 16:57:17.424  1819  1819 D DataHelper: registered phone change event.
+11-07 16:57:17.424  1819  1819 D DataHelper: makesMtkDataHelper: X sMtkDataHelper =com.mediatek.internal.telephony.data.MtkDataHelper@946e4cd
+11-07 16:57:17.427  1819  1819 D MtkPhoneSwitcher: MtkPhoneSwitcher mtkMake
+11-07 16:57:17.431  1254  1275 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 16:57:17.452  1819  1819 D PhoneSwitcher: PhoneSwitcher started
+11-07 16:57:17.461  1819  1819 D ProxyController: Constructor - Enter
+11-07 16:57:17.473  1819  1819 D ProxyController: clearTransaction
+11-07 16:57:17.473  1819  1819 D ProxyController: clearTransaction: phoneId=0 status=IDLE
+11-07 16:57:17.473  1819  1819 D ProxyController: Constructor - Exit
+11-07 16:57:17.473  1819  1819 D MtkProxyController: Constructor - Enter, rild mode = 2
+11-07 16:57:17.512  1819  1819 D MtkProxyController: Constructor - Exit
+11-07 16:57:17.560  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.telephony.data.TelephonyNetworkFactory.makeNetworkFilter(TelephonyNetworkFactory.java:137)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.telephony.data.TelephonyNetworkFactory.<init>(TelephonyNetworkFactory.java:107)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.data.MtkTelephonyNetworkFactory.<init>(MtkTelephonyNetworkFactory.java:62)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkTelephonyComponentFactory.makeTelephonyNetworkFactories(MtkTelephonyComponentFactory.java:327)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhone(PhoneFactory.java:295)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.makeDefaultPhones(PhoneFactory.java:108)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.phone.PhoneGlobals.onCreate(PhoneGlobals.java:464)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.phone.PhoneApp.onCreate(PhoneApp.java:40)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.app.ActivityThread.handleBindApplication(ActivityThread.java:6822)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.app.ActivityThread$H.handleMessage(ActivityThread.java:2167)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:17.561  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:17.562  1254  1275 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 16:57:17.563  1819  1819 D TelephonyNetworkFactory[0]: Registering NetworkFactory
+11-07 16:57:17.568  1819  1819 D WORLDMODE: [WPP_UTIL]Factory World phone not support
+11-07 16:57:17.568  1819  1819 D MtkTelephonyComponentFactory: Creating CarrierExpress
+11-07 16:57:17.616  1819  2806 D MtkSmsBroadcastUndelivered: finished scanning raw table in 2059 ms
+11-07 16:57:17.617  1819  2806 D MtkSmsBroadcastUndelivered: scanning raw table for undelivered messages
+11-07 16:57:17.655  1819  2806 D MtkSmsBroadcastUndelivered: finished scanning raw table in 38 ms
+11-07 16:57:18.195  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1498)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.195  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.334  1819  1819 D MTKSST  : [GsmSST0] updateSpnDisplay: rawSpn = 
+11-07 16:57:18.334  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.notifySpnDisplayUpdate(MtkServiceStateTracker.java:3791)
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1737)
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:18.334  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:18.336  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.336  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.336  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.337  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.393  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierNameDisplayBitmask(ServiceStateTracker.java:4173)
+11-07 16:57:18.394  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.notifySpnDisplayUpdate(MtkServiceStateTracker.java:3803)
+11-07 16:57:18.394  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1737)
+11-07 16:57:18.394  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:18.394  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:18.395  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:18.395  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.395  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.395  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.399  1819  1819 D MTKSST  : [GsmSST0] updateSpnDisplay: updateSpnDisplay: changed sending intent, rule=2, showPlmn='true', plmn='No service', showSpn='false', spn='null', dataSpn='', subId='-1'
+11-07 16:57:18.399  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.399  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: android.telephony.SubscriptionManager.getSubId(SubscriptionManager.java:2167)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: android.telephony.SubscriptionManager.putPhoneIdAndSubIdExtra(SubscriptionManager.java:2474)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.notifySpnDisplayUpdate(MtkServiceStateTracker.java:3830)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1737)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:18.399  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.462  1819  1819 V MTKSST  : [GsmSST0] updateSpnDisplayLegacy-
+11-07 16:57:18.462  1819  2936 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.462  1819  2936 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker$MtkHandler.handleMessage(MtkServiceStateTracker.java:603)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.462  1819  2936 D SubscriptionController: android.os.HandlerThread.run(HandlerThread.java:67)
+11-07 16:57:18.462  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.462  1819  2936 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.462  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.462  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.462  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.463  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.getPackageName(NetworkRegistrationManager.java:336)
+11-07 16:57:18.463  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.rebindService(NetworkRegistrationManager.java:300)
+11-07 16:57:18.463  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.handleMessage(NetworkRegistrationManager.java:127)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.464  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.465  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.getClassName(NetworkRegistrationManager.java:370)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.bindService(NetworkRegistrationManager.java:273)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.rebindService(NetworkRegistrationManager.java:309)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.handleMessage(NetworkRegistrationManager.java:127)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.465  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.466  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.466  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.466  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.474  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.475  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.475  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.475  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.475  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.475  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.getPackageName(NetworkRegistrationManager.java:336)
+11-07 16:57:18.475  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.bindService(NetworkRegistrationManager.java:285)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.rebindService(NetworkRegistrationManager.java:309)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkRegistrationManager.handleMessage(NetworkRegistrationManager.java:127)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.476  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.477  1819  1819 D NRM-C-0 : Trying to bind com.android.phone for transport WWAN
+11-07 16:57:18.661  1819  1819 D MTKSST  : [GsmSST0] pollStateDone: hasRegistered = false hasDeregistered = false hasDataAttached = {1=false, 2=false} hasDataDetached = {1=false, 2=false} hasDataRegStateChanged = {1=false, 2=false} hasRilVoiceRadioTechnologyChanged = false hasRilDataRadioTechnologyChanged = {1=false, 2=false} hasDataTransportPreferenceChanged = false hasChanged = false hasVoiceRoamingOn = false hasVoiceRoamingOff = false hasDataRoamingOn =false hasDataRoamingOff = false hasLocationChanged = false has4gHandoff = false hasMultiApnSupport = false hasLostMultiApnSupport = false hasCssIndicatorChanged = false hasNrFrequencyRangeChanged = false hasNrStateChanged = false hasDataRoamingTypeChange = false hasBandwidthChanged = true hasAirplaneModeOnlChanged = false
+11-07 16:57:18.661  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.android.internal.telephony.DefaultPhoneNotifier.notifySignalStrength(DefaultPhoneNotifier.java:94)
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkPhoneNotifier.notifySignalStrength(MtkPhoneNotifier.java:93)
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.notifySignalStrength(Phone.java:2931)
+11-07 16:57:18.662  1819  1819 D SubscriptionController: com.android.internal.telephony.SignalStrengthController.notifySignalStrength(SignalStrengthController.java:608)
+11-07 16:57:18.663  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.663  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.663  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.731  1254  2291 D TelephonyRegistry: notifySignalStrengthForPhoneId: invalid phoneId=0
+11-07 16:57:18.759  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.759  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.759  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.759  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.760  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkPhoneNotifier.notifySignalStrength(MtkPhoneNotifier.java:94)
+11-07 16:57:18.760  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.notifySignalStrength(Phone.java:2931)
+11-07 16:57:18.760  1819  1819 D SubscriptionController: com.android.internal.telephony.SignalStrengthController.notifySignalStrength(SignalStrengthController.java:608)
+11-07 16:57:18.765  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.pollStateDone(MtkServiceStateTracker.java:2670)
+11-07 16:57:18.765  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.pollStateInternal(MtkServiceStateTracker.java:1987)
+11-07 16:57:18.765  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:981)
+11-07 16:57:18.765  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.765  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.766  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkPhoneNotifier.notifyMtkSignalStrength(MtkPhoneNotifier.java:128)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkPhoneNotifier.notifySignalStrength(MtkPhoneNotifier.java:95)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.notifySignalStrength(Phone.java:2931)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.telephony.SignalStrengthController.notifySignalStrength(SignalStrengthController.java:608)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.pollStateDone(MtkServiceStateTracker.java:2670)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.pollStateInternal(MtkServiceStateTracker.java:1987)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:981)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.766  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.798  1819  1819 D MtkPhoneNotifr: MtkPhoneNotifier notifyMtkSignalStrength phoneId:0 subId: 2147483646 signal: SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 level=0,mLte=CellSignalStrengthLte: rssi=2147483647 rsrp=2147483647 rsrq=2147483647 rssnr=2147483647 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 level=0 parametersUseForLevel=1,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 level = 0 parametersUseForLevel = 1 },primary=CellSignalStrengthLte}, phoneId=0, mMtkLevel=0, mMtkRsrpOnly=false, mMtkLteRsrpThreshold=null, mMtkLteRssnrThreshold=null
+11-07 16:57:18.800  1254  2147 D TelephonyRegistry: notifySignalStrengthForPhoneId: invalid phoneId=0
+11-07 16:57:18.803  1819  1819 V MTKSST  : [GsmSST0] received event 50
+11-07 16:57:18.803  1819  1819 D MTKSST  : [GsmSST0] handle EVENT_RADIO_STATE_CHANGED
+11-07 16:57:18.803  1819  1819 D RadioManager: [RadioManager] setRadioPower, power=true  phoneId=0
+11-07 16:57:18.804  1819  1819 D RatConfig: getActiveRatConfig: 
+11-07 16:57:18.804  1819  1819 D RadioManager: [RadioManager] wifi-only device, so return
+11-07 16:57:18.808  1819  1819 D MTKSST  : [GsmSST0] pollState: modemTriggered=true, mPollingContext=0, RadioState=2, connected=false, support_ap_iwlan=1
+11-07 16:57:18.808  1819  1819 D MTKSST  : [GsmSST0] pollState: modemTriggered=true, radioState=2
+11-07 16:57:18.808  1819  1819 D NitzStateMachineImpl: handleNetworkUnavailable: mLatestNitzSignal was already null. Nothing to do.
+11-07 16:57:18.808  1819  1819 D MTKSST  : [GsmSST0] useDataRegStateForDataOnlyDevice: VoiceRegState=1 DataRegState=1
+11-07 16:57:18.809  1819  1819 D MTKSST  : [GsmSST0] Could not set ServiceState channel number. CellIdentity null
+11-07 16:57:18.809  1819  1819 D MTKSST  : [GsmSST0] Poll ServiceState done: oldSS=[{mVoiceRegState=1(OUT_OF_SERVICE), mDataRegState=1(OUT_OF_SERVICE), mChannelNumber=-1, duplexMode()=0, mCellBandwidths=[], mOperatorAlphaLong=null, mOperatorAlphaShort=null, isManualNetworkSelection=false(automatic), getRilVoiceRadioTechnology=0(Unknown), getRilDataRadioTechnology=0(Unknown), mCssIndicator=unsupported, mNetworkId=-1, mSystemId=-1, mCdmaRoamingIndicator=-1, mCdmaDefaultRoamingIndicator=-1, mIsEmergencyOnly=false, isUsingCarrierAggregation=false, mArfcnRsrpBoost=0, mNetworkRegistrationInfos=[NetworkRegistrationInfo{ domain=CS transportType=WWAN registrationState=UNKNOWN roamingType=NOT_ROAMING accessNetworkTechnology=UNKNOWN rejectCause=0 emergencyEnabled=false availableServices=[] cellIdentity=null voiceSpecificInfo=null dataSpecificInfo=null nrState=NONE rRplmn= isUsingCarrierAggregation=false}, NetworkRegistrationInfo{ domain=PS transportType=WWAN registrationState=UNKNOWN roamingType=NOT_ROAMING accessNetworkTechnology=UNKNOWN rejectCause=0 emergencyEnabled=false availableServices=[] cellIdentity=null voiceSpecificInfo=null dataSpecificInfo=null nrState=NONE rRplmn= isUsingCarrierAggregation=false}, NetworkRegistrationInfo{ domain=PS transportType=WLAN registrationState=UNKNOWN roamingType=NOT_ROAMING accessNetworkTechnology=UNKNOWN rejectCause=0 emergencyEnabled=false availableServices=[] cellIdentity=null voiceSpecificInfo=null dataSpecificInfo=null nrState=NONE rRplmn= isUsingCarrierAggregation=false}], mNrFrequencyRange=0, mOperatorAlphaLongRaw=null, mOperatorAlphaShortRaw=null, mIsDataRoamingFromRegistration=false, mIsIwlanPreferred=false}]
+11-07 16:57:18.809  1819  1819 D MTKSST  : [GsmSST0] Poll ServiceState done: newSS=[{mVoiceRegState=1(OUT_OF_SERVICE), mDataRegState=1(OUT_OF_SERVICE), mChannelNumber=-1, duplexMode()=0, mCellBandwidths=[], mOperatorAlphaLong=null, mOperatorAlphaShort=null, isManualNetworkSelection=false(automatic), getRilVoiceRadioTechnology=0(Unknown), getRilDataRadioTechnology=0(Unknown), mCssIndicator=unsupported, mNetworkId=-1, mSystemId=-1, mCdmaRoamingIndicator=-1, mCdmaDefaultRoamingIndicator=-1, mIsEmergencyOnly=false, isUsingCarrierAggregation=false, mArfcnRsrpBoost=0, mNetworkRegistrationInfos=[NetworkRegistrationInfo{ domain=CS transportType=WWAN registrationState=UNKNOWN roamingType=NOT_ROAMING accessNetworkTechnology=UNKNOWN rejectCause=0 emergencyEnabled=false availableServices=[] cellIdentity=null voiceSpecificInfo=null dataSpecificInfo=null nrState=NONE rRplmn= isUsingCarrierAggregation=false}, NetworkRegistrationInfo{ domain=PS transportType=WWAN registrationState=UNKNOWN roamingType=NOT_ROAMING accessNetworkTechnology=UNKNOWN rejectCause=0 emergencyEnabled=false availableServices=[] cellIdentity=null voiceSpecificInfo=null dataSpecificInfo=null nrState=NONE rRplmn= isUsingCarrierAggregation=false}, NetworkRegistrationInfo{ domain=PS transportType=WLAN registrationState=UNKNOWN roamingType=NOT_ROAMING accessNetworkTechnology=UNKNOWN rejectCause=0 emergencyEnabled=false availableServices=[] cellIdentity=null voiceSpecificInfo=null dataSpecificInfo=null nrState=NONE rRplmn= isUsingCarrierAggregation=false}], mNrFrequencyRange=0, mOperatorAlphaLongRaw=null, mOperatorAlphaShortRaw=null, mIsDataRoamingFromRegistration=false, mIsIwlanPreferred=false}] oldMaxDataCalls=1 mNewMaxDataCalls=1 oldReasonDataDenied=-1 mNewReasonDataDenied=-1
+11-07 16:57:18.809  1819  1819 D MTKSST  : [GsmSST0] pollStateDone: hasRegistered = false hasDeregistered = false hasDataAttached = {1=false, 2=false} hasDataDetached = {1=false, 2=false} hasDataRegStateChanged = {1=false, 2=false} hasRilVoiceRadioTechnologyChanged = false hasRilDataRadioTechnologyChanged = {1=false, 2=false} hasDataTransportPreferenceChanged = false hasChanged = false hasVoiceRoamingOn = false hasVoiceRoamingOff = false hasDataRoamingOn =false hasDataRoamingOff = false hasLocationChanged = false has4gHandoff = false hasMultiApnSupport = false hasLostMultiApnSupport = false hasCssIndicatorChanged = false hasNrFrequencyRangeChanged = false hasNrStateChanged = false hasDataRoamingTypeChange = false hasBandwidthChanged = true hasAirplaneModeOnlChanged = false
+11-07 16:57:18.810  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getAllowedNetworkTypes(Phone.java:2433)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.calculatePreferredNetworkType(PhoneFactory.java:457)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:227)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.810  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.812  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.812  1819  1819 D Phone   : [0] SubId-1,get allowed network types user: value = GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|HSPA+|GSM
+11-07 16:57:18.840  1819  1819 D PhoneFactory: calculatePreferredNetworkType: phoneId = 0 networkType = 50055
+11-07 16:57:18.840  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:247)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.840  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.841  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isCarrierConfigEnableNr(CarrierServiceStateTracker.java:271)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:249)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.841  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.902  1819  1819 D SubscriptionController: StackTrace - [getSlotIndex] subId=-1
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSlotIndex(SubscriptionController.java:2625)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.telephony.SubscriptionManager$$ExternalSyntheticLambda7.applyOrThrow(Unknown Source:8)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.telephony.SubscriptionManager$IntegerPropertyInvalidatedCache.recompute(SubscriptionManager.java:241)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.telephony.SubscriptionManager$IntegerPropertyInvalidatedCache.recompute(SubscriptionManager.java:218)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.app.PropertyInvalidatedCache.query(PropertyInvalidatedCache.java:931)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.telephony.SubscriptionManager.getSlotIndex(SubscriptionManager.java:2140)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.telephony.TelephonyManager.getSlotIndex(TelephonyManager.java:7941)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.telephony.TelephonyManager.getSupportedRadioAccessFamily(TelephonyManager.java:13828)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:251)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.922  1819  1819 D SubscriptionController: [getSlotIndex]- subId invalid
+11-07 16:57:18.923  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getRadioAccessFamily(PhoneInterfaceManager.java:7262)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: android.telephony.TelephonyManager.getSupportedRadioAccessFamily(TelephonyManager.java:13828)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:251)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.923  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.957  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getRadioAccessFamily(PhoneInterfaceManager.java:7275)
+11-07 16:57:18.957  1819  1819 D SubscriptionController: android.telephony.TelephonyManager.getSupportedRadioAccessFamily(TelephonyManager.java:13828)
+11-07 16:57:18.958  1819  1837 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:18.962  1819  1837 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:18.962  1819  1837 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:18.962  1819  1837 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:18.962  1819  1837 D SubscriptionController: com.android.phone.PhoneInterfaceManager.isTetheringApnRequiredForSubscriber(PhoneInterfaceManager.java:6587)
+11-07 16:57:18.962  1819  1837 D SubscriptionController: com.android.internal.telephony.ITelephony$Stub.onTransact(ITelephony.java:5044)
+11-07 16:57:18.962  1819  1837 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1280)
+11-07 16:57:18.962  1819  1837 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:18.962  1819  1837 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:18.972  1819  1837 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:18.973  1819  1837 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:18.973  1819  1837 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:18.973  1819  1837 D SubscriptionController: com.android.phone.PhoneInterfaceManager.isTetheringApnRequiredForSubscriber(PhoneInterfaceManager.java:6587)
+11-07 16:57:18.973  1819  1837 D SubscriptionController: com.android.internal.telephony.ITelephony$Stub.onTransact(ITelephony.java:5044)
+11-07 16:57:18.973  1819  1837 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1280)
+11-07 16:57:18.973  1819  1837 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:18.973  1819  1837 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:251)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.975  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.976  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.976  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.976  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:18.982  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:18.983  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:57:18.983  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:57:18.983  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:57:18.983  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:18.983  1819  1819 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getDefaultPhone(PhoneInterfaceManager.java:2381)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhoneFromSubId(PhoneInterfaceManager.java:2404)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getAllowedNetworkTypesForReason(PhoneInterfaceManager.java:6463)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: android.telephony.TelephonyManager.getAllowedNetworkTypesForReason(TelephonyManager.java:9468)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:253)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.983  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.984  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.984  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.984  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.990  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:18.990  1819  1819 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:18.991  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getAllowedNetworkTypes(Phone.java:2433)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getAllowedNetworkTypesForReason(PhoneInterfaceManager.java:6463)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: android.telephony.TelephonyManager.getAllowedNetworkTypesForReason(TelephonyManager.java:9468)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:253)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:18.991  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:18.992  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:19.002  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:19.003  1819  1819 D Phone   : [0] SubId-1,get allowed network types carrier: value = GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|HSPA+|GSM
+11-07 16:57:19.003  1819  1819 I CSST    : isNrSupported:  carrierConfigEnabled: true, AccessFamilySupported: false, isNrNetworkTypeAllowed: false
+11-07 16:57:19.003  1819  1819 I CSST    : PrefNetworkNotification: sendMessage() w/values: ,false,-1,false,false
+11-07 16:57:19.003  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:19.003  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:19.003  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.getNotificationId(CarrierServiceStateTracker.java:480)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.cancelNotification(CarrierServiceStateTracker.java:394)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:314)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:19.014  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:19.015  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:19.015  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:19.015  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:19.015  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:19.024  1819  1819 I CSST    : canceling notifications: 1000
+11-07 16:57:19.024  1819  1819 D Phone   : isWifiCallingEnabled =false
+11-07 16:57:19.024  1819  1819 D CSST    : isPhoneRegisteredForWifiCalling: false
+11-07 16:57:19.024  1819  1819 D Phone   : isWifiCallingEnabled =false
+11-07 16:57:19.024  1819  1819 I CSST    : EmergencyNetworkNotification: sendMessage() w/values: ,-1,false,false
+11-07 16:57:19.024  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$EmergencyNetworkNotification.getNotificationId(CarrierServiceStateTracker.java:559)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.cancelNotification(CarrierServiceStateTracker.java:394)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:314)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:19.025  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:19.042  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:19.042  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:19.042  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:19.042  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:19.042  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:19.044  1819  1819 I CSST    : canceling notifications: 1001
+11-07 16:57:19.045  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:19.047  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:19.047  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:19.047  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:19.047  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getAllowedNetworkTypes(Phone.java:2433)
+11-07 16:57:19.047  1819  2290 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:19.048  1819  2290 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:19.048  1819  2290 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:19.048  1819  2290 D SubscriptionController: com.android.phone.PhoneInterfaceManager.isTetheringApnRequiredForSubscriber(PhoneInterfaceManager.java:6587)
+11-07 16:57:19.048  1819  2290 D SubscriptionController: com.android.internal.telephony.ITelephony$Stub.onTransact(ITelephony.java:5044)
+11-07 16:57:19.048  1819  2290 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1280)
+11-07 16:57:19.048  1819  2290 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:19.048  1819  2290 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.PhoneFactory.calculatePreferredNetworkType(PhoneFactory.java:457)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:227)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:19.048  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:19.049  1819  1819 D Phone   : [0] SubId-1,get allowed network types user: value = GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|HSPA+|GSM
+11-07 16:57:19.049  1819  1819 D PhoneFactory: calculatePreferredNetworkType: phoneId = 0 networkType = 50055
+11-07 16:57:19.049  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isNrSupported(CarrierServiceStateTracker.java:247)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.isGlobalMode(CarrierServiceStateTracker.java:234)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.-$$Nest$misGlobalMode(Unknown Source:0)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$PrefNetworkNotification.sendMessage(CarrierServiceStateTracker.java:492)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessage(CarrierServiceStateTracker.java:324)
+11-07 16:57:19.082  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:309)
+11-07 16:57:19.160  1819  1819 I CSST    : canceling notifications: 1000
+11-07 16:57:19.160  1819  1819 D Phone   : isWifiCallingEnabled =false
+11-07 16:57:19.160  1819  1819 D CSST    : isPhoneRegisteredForWifiCalling: false
+11-07 16:57:19.160  1819  1819 D Phone   : isWifiCallingEnabled =false
+11-07 16:57:19.160  1819  1819 I CSST    : EmergencyNetworkNotification: sendMessage() w/values: ,-1,false,false
+11-07 16:57:19.160  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker$EmergencyNetworkNotification.getNotificationId(CarrierServiceStateTracker.java:559)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.cancelNotification(CarrierServiceStateTracker.java:394)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.evaluateSendingMessageOrCancelNotification(CarrierServiceStateTracker.java:314)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleConfigChanges(CarrierServiceStateTracker.java:289)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierServiceStateTracker.handleMessage(CarrierServiceStateTracker.java:175)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:19.160  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:19.161  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:19.161  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:19.161  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:19.161  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:19.161  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:19.161  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:20.275  1819  2290 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:20.277  1819  2290 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:20.277  1819  2290 D SubscriptionController: com.android.internal.telephony.ISub$Stub.onTransact(ISub.java:1024)
+11-07 16:57:20.277  1819  2290 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1285)
+11-07 16:57:20.277  1819  2290 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:20.278  1819  2290 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:21.180  1819  1819 E RadioInterfaceCapabilityController: getRadioInterfaceCapabilities: Radio Capabilities not loaded in time
+11-07 16:57:21.183  1819  1819 D MtkNetworkTypeController: registerForAllEvents: register rat changed for TRANSPORT_TYPE_WLAN
+11-07 16:57:21.183  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkTypeController.parseCarrierConfigs(NetworkTypeController.java:284)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkTypeController.-$$Nest$mparseCarrierConfigs(Unknown Source:0)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkTypeController$DefaultState.processMessage(NetworkTypeController.java:575)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.StateMachine$SmHandler.processMsg(StateMachine.java:993)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.telephony.StateMachine$SmHandler.handleMessage(StateMachine.java:810)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.184  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.189  1819  1819 D NetworkTypeController: [0] mOverrideTimerRules: {connected={mState=connected, mOverrideType=NR_NSA, mPrimaryTimers={}, mSecondaryTimers={}}, not_restricted_rrc_con={mState=not_restricted_rrc_con, mOverrideType=NR_NSA, mPrimaryTimers={}, mSecondaryTimers={}}, legacy={mState=legacy, mOverrideType=NONE, mPrimaryTimers={}, mSecondaryTimers={}}, not_restricted_rrc_idle={mState=not_restricted_rrc_idle, mOverrideType=NR_NSA, mPrimaryTimers={}, mSecondaryTimers={}}, restricted={mState=restricted, mOverrideType=NONE, mPrimaryTimers={}, mSecondaryTimers={}}, connected_mmwave={mState=connected_mmwave, mOverrideType=NR_NSA, mPrimaryTimers={}, mSecondaryTimers={}}}
+11-07 16:57:21.189  1819  1819 D NetworkTypeController: [0] DefaultState: process EVENT_UPDATE
+11-07 16:57:21.189  1819  1819 D NetworkTypeController: [0] Reset timers since preferred network mode changed.
+11-07 16:57:21.194  1819  1819 D NetworkTypeController: [0] Entering LegacyState
+11-07 16:57:21.194  1819  1819 D NetworkTypeController: [0] Reset timers since NR is not allowed.
+11-07 16:57:21.194  1819  1819 D MtkNetworkTypeController: [Override]getCurrentOverrideNetworkType: 0
+11-07 16:57:21.195  1819  1819 D DIC-0   : TelephonyDisplayInfo changed from null to TelephonyDisplayInfo {network=UNKNOWN, override=NONE}, turboSS alive:false
+11-07 16:57:21.195  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.195  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.195  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.195  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.195  1819  1819 D SubscriptionController: com.android.internal.telephony.DefaultPhoneNotifier.notifyDisplayInfoChanged(DefaultPhoneNotifier.java:193)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.notifyDisplayInfoChanged(Phone.java:2927)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkDisplayInfoController.updateTelephonyDisplayInfo(MtkDisplayInfoController.java:78)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkTypeController.updateOverrideNetworkType(NetworkTypeController.java:450)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.telephony.NetworkTypeController$LegacyState.enter(NetworkTypeController.java:670)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.telephony.StateMachine$SmHandler.invokeEnterMethods(StateMachine.java:1038)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.telephony.StateMachine$SmHandler.performTransitions(StateMachine.java:880)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.telephony.StateMachine$SmHandler.handleMessage(StateMachine.java:820)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.196  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.202  1819  1819 D DataService: Data service created
+11-07 16:57:21.210  1254  3459 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 16:57:21.213  1819  1819 D SubscriptionController: [getActiveSubscriptionInfo]- subId=-1 subList=[] subInfo=null
+11-07 16:57:21.214  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:21.215  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataEnabledOverride.getCurrentConditions(DataEnabledOverride.java:393)
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataEnabledOverride.shouldOverrideDataEnabledSettings(DataEnabledOverride.java:426)
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.isDataEnabled(DataSettingsManager.java:424)
+11-07 16:57:21.215  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.updateDataEnabledAndNotify(DataSettingsManager.java:362)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.updateDataEnabledAndNotify(DataSettingsManager.java:356)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.onInitialize(DataSettingsManager.java:328)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.handleMessage(DataSettingsManager.java:291)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.216  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.217  1819  1819 D DSMGR-0 : mIsDataEnabled=true, prevDataEnabled=false
+11-07 16:57:21.217  1819  1819 D DSMGR-0 : notifyDataEnabledChanged: enabled=true, reason=UNKNOWN, callingPackage=com.android.phone
+11-07 16:57:21.218  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.DefaultPhoneNotifier.notifyDataEnabled(DefaultPhoneNotifier.java:248)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.notifyDataEnabled(Phone.java:3001)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.notifyDataEnabledChanged(DataSettingsManager.java:671)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.updateDataEnabledAndNotify(DataSettingsManager.java:366)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.updateDataEnabledAndNotify(DataSettingsManager.java:356)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.onInitialize(DataSettingsManager.java:328)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataSettingsManager.handleMessage(DataSettingsManager.java:291)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.218  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.219  1819  1819 D MtkDPM  : DPM-0: EVENT_ICC_CHANGED
+11-07 16:57:21.234  1254  3460 D TelephonyRegistry: listen oscl: mHasNotifySubscriptionInfoChangedOccurred==false no callback
+11-07 16:57:21.235  1819  1819 D CarrierResolver: handleMessage: 2
+11-07 16:57:21.235  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierPrivilegesTracker.handleInitializeTracker(CarrierPrivilegesTracker.java:639)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.telephony.CarrierPrivilegesTracker.handleMessage(CarrierPrivilegesTracker.java:431)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.235  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.236  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.476  1819  1819 D GsmCdmaPhone: [0] onVoiceRegStateOrRatChanged
+11-07 16:57:21.476  1819  1819 D GsmCdmaPhone: [0] getCsCallRadioTech, current vrs=1, vrat=0
+11-07 16:57:21.476  1819  1819 D GsmCdmaPhone: [0] getCsCallRadioTech, result calcVrat=0
+11-07 16:57:21.477  1819  1819 E GsmCdmaPhone: [0] EVENT_REQUEST_VOICE_RADIO_TECH_DONE: exception=com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE
+11-07 16:57:21.477  1819  1819 D MtkSubscriptionInfoUpdater: handleMessage : <EVENT_RADIO_UNAVAILABLE> SIM1
+11-07 16:57:21.477  1819  1819 D DataHelper: EVENT_PHONE0_RADIO_UNAVAILABLE
+11-07 16:57:21.481  1819  1819 D TelephonyNetworkFactory[0]: onActivePhoneSwitch
+11-07 16:57:21.482  1819  1819 D DebugService: DebugService DebugService:
+11-07 16:57:21.484  1819  1819 D MtkGsmCdmaPhone: EVENT_ICC_CHANGED, phone id = 0, result = 0
+11-07 16:57:21.484  1819  1819 E GsmCdmaPhone: [0] reapplyUiccAppsEnablementIfNeeded(), slot is null ,mUiccApplicationsEnabled = null
+11-07 16:57:21.485  1819  1819 D MtkGsmCdmaPhone: isPhoneTypeCdmaLte:false, phoneId: 0 isCdmaWithoutLteCard: false mNewVoiceTech: -1
+11-07 16:57:21.485  1819  1819 D MtkGsmSMSDispatcher: EVENT_ICC_CHANGED, PhoneId: 0 match exactly.
+11-07 16:57:21.485  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.gsm.GsmSMSDispatcher.getUiccCardApplication(GsmSMSDispatcher.java:212)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.gsm.GsmSMSDispatcher.onUpdateIccAvailability(GsmSMSDispatcher.java:226)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.gsm.MtkGsmSMSDispatcher.handleMessage(MtkGsmSMSDispatcher.java:189)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.485  1819  1819 D GsmSMSDispatcher: GsmSMSDispatcher: subId = -1 slotId = 0
+11-07 16:57:21.485  1819  1819 V MTKSST  : [GsmSST0] received event 42
+11-07 16:57:21.485  1819  1819 D MTKSST  : [GsmSST0] EVENT_ICC_CHANGED: SIM absent
+11-07 16:57:21.485  1819  1819 D MTKSST  : [GsmSST0] cancelAllNotifications: mPrevSubId=-1
+11-07 16:57:21.485  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.485  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierConfig(ServiceStateTracker.java:5945)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2910)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.486  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierConfig(ServiceStateTracker.java:5945)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierNameDisplayBitmask(ServiceStateTracker.java:4168)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1498)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.486  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.487  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierConfig(ServiceStateTracker.java:5945)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getServiceProviderName(ServiceStateTracker.java:4146)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierNameDisplayBitmask(ServiceStateTracker.java:4173)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1498)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.487  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.488  1819  1819 D MTKSST  : [GsmSST0] updateSpnDisplay: radio is on but out of service, set plmn='No service'
+11-07 16:57:21.488  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getCarrierConfig(ServiceStateTracker.java:5945)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.getServiceProviderName(ServiceStateTracker.java:4146)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1552)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.488  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.488  1819  1819 D MTKSST  : [GsmSST0] updateSpnDisplay: rawSpn = 
+11-07 16:57:21.488  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.notifySpnDisplayUpdate(MtkServiceStateTracker.java:3791)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.updateSpnDisplayLegacy(MtkServiceStateTracker.java:1737)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.updateSpnDisplay(ServiceStateTracker.java:2914)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.telephony.ServiceStateTracker.handleMessage(ServiceStateTracker.java:1290)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.mediatek.internal.telephony.MtkServiceStateTracker.handleMessage(MtkServiceStateTracker.java:1076)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.489  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.489  1819  1819 V MTKSST  : [GsmSST0] updateSpnDisplayLegacy-
+11-07 16:57:21.489  1819  1819 D MtkDPM  : DPM-0: EVENT_ICC_CHANGED
+11-07 16:57:21.489  1819  1819 D CarrierResolver: handleMessage: 2
+11-07 16:57:21.489  1819  1819 D GsmCallTkrHlpr: handle EVENT_POLL_CALLS_RESULT (slot 0)
+11-07 16:57:21.489  1819  1819 D GsmCdmaCallTracker: Event EVENT_POLL_CALLS_RESULT Received
+11-07 16:57:21.491  1819  1819 D ImsSmsDispatcher [0]: ImsManager: connection unavailable, reason=2
+11-07 16:57:21.492  1819  1819 D NetworkService: network service created
+11-07 16:57:21.493  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:21.493  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:57:21.494  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:57:21.494  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:57:21.494  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:21.494  1819  1819 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getDefaultPhone(PhoneInterfaceManager.java:2381)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.-$$Nest$mgetDefaultPhone(Unknown Source:0)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager$MainThreadHandler.handleMessage(PhoneInterfaceManager.java:555)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.494  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.494  1819  1819 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:21.494  1819  1819 D NetworkTypeController: [0] LegacyState: process EVENT_DATA_RAT_CHANGED
+11-07 16:57:21.494  1819  1819 D NetworkTypeController: [0] Reset timers since NR is not allowed.
+11-07 16:57:21.494  1819  1819 D NetworkTypeController: [0] Reset timers since 2G and 3G don't need NR timers.
+11-07 16:57:21.494  1819  1819 D MtkNetworkTypeController: [Override]getCurrentOverrideNetworkType: 0
+11-07 16:57:21.518  1819  1819 D NetworkTypeController: [0] LegacyState: process EVENT_DATA_RAT_CHANGED
+11-07 16:57:21.518  1819  1819 D NetworkTypeController: [0] Reset timers since NR is not allowed.
+11-07 16:57:21.518  1819  1819 D NetworkTypeController: [0] Reset timers since 2G and 3G don't need NR timers.
+11-07 16:57:21.519  1819  1819 D MtkNetworkTypeController: [Override]getCurrentOverrideNetworkType: 0
+11-07 16:57:21.519  1819  1819 D MtkNetworkTypeController: handleMessage: msg = 101
+11-07 16:57:21.519  1819  1819 D DSM-C-0 : onServiceConnected: ComponentInfo{com.android.phone/com.android.internal.telephony.data.CellularDataService}
+11-07 16:57:21.520  1819  1819 D SubscriptionController: StackTrace - [getSubId]+ slotIndex=0
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubId(SubscriptionController.java:2664)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSubIdUsingPhoneId(SubscriptionController.java:3079)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.telephony.Phone.getSubId(Phone.java:4167)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.getDataServicePackageName(DataServiceManager.java:590)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager.getDataServicePackageName(DataServiceManager.java:553)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.telephony.data.DataServiceManager$CellularDataServiceConnection.onServiceConnected(DataServiceManager.java:231)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.app.LoadedApk$ServiceDispatcher.doConnected(LoadedApk.java:2207)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.app.LoadedApk$ServiceDispatcher$RunConnection.run(LoadedApk.java:2240)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.os.Handler.handleCallback(Handler.java:942)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:99)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.520  1819  1819 D SubscriptionController: [getSubId]- sSlotIndexToSubIds.size == 0, return null slotIndex=0
+11-07 16:57:21.522  1819  3645 D CellularDataService: Cellular data service created for slot 0
+11-07 16:57:21.522  1819  1819 D DSRM-0  : onMobileDataEnabledChanged: DataEnabled:true,DataStalled:false
+11-07 16:57:21.523  1819  1819 D MtkDNC  : DNC-0: onDataEnabledChanged: enabled=true
+11-07 16:57:21.525  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-07 16:57:21.526  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=29, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ]
+11-07 16:57:21.526  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-07 16:57:21.527  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=30, [ Transports: CELLULAR|WIFI|ETHERNET Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.visteon.devicemanagement UnderlyingNetworks: Null] ]
+11-07 16:57:21.527  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ]
+11-07 16:57:21.527  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-07 16:57:21.528  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-07 16:57:21.528  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+11-07 16:57:21.528  1819  1819 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+11-07 16:57:21.533  1819  1819 D NRM-C-0 : service ComponentInfo{com.android.phone/com.android.internal.telephony.CellularNetworkService} for transport WWAN is now connected.
+11-07 16:57:21.534  1819  1819 D MtkDeviceStateMonitor: [phoneId0]isLowDataExpected mIsScreenOn = true mIsCharging = true mIsTetheringOn = true
+11-07 16:57:21.538  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:21.538  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:57:21.538  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:57:21.539  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:57:21.539  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:21.539  1819  1819 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:21.539  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:21.539  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:21.539  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getDefaultPhone(PhoneInterfaceManager.java:2381)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.-$$Nest$mgetDefaultPhone(Unknown Source:0)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager$MainThreadHandler.handleMessage(PhoneInterfaceManager.java:555)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:57:21.540  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:57:21.540  1819  1819 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:21.553  1819  3649 D ONSNetworkScanCtlr: init called
+11-07 16:57:21.568  1254  1340 D TelephonyRegistry: listen ooscl: hasNotifyOpptSubInfoChangedOccurred==false no callback
+11-07 16:57:21.568  1819  3649 D ONSProfileSelector: ONSProfileSelector init complete
+11-07 16:57:21.594  1819  3649 D ONS     : service is enable state true
+11-07 16:57:21.606  1819  1819 D MtkDNC  : DNC-0: onDataServiceBindingChanged: WWAN data service is bound.
+11-07 16:57:21.607  1819  1819 D MtkDNC  : DNC-0: Re-evaluating 0 unsatisfied network requests in 0 groups,  due to DATA_ENABLED_CHANGED
+11-07 16:57:21.615  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.607, evaluation result=null] shouldApply false
+11-07 16:57:21.619  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=29, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.617, evaluation result=null] shouldApply false
+11-07 16:57:21.620  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.619, evaluation result=null] shouldApply false
+11-07 16:57:21.629  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=30, [ Transports: CELLULAR|WIFI|ETHERNET Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.visteon.devicemanagement UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.628, evaluation result=null] shouldApply false
+11-07 16:57:21.629  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.629, evaluation result=null] shouldApply false
+11-07 16:57:21.630  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.629, evaluation result=null] shouldApply false
+11-07 16:57:21.630  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.630, evaluation result=null] shouldApply false
+11-07 16:57:21.633  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.631, evaluation result=null] shouldApply false
+11-07 16:57:21.634  1819  1819 D TelephonyNetworkFactory[0]: onNeedNetworkFor [NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:21.634, evaluation result=null] shouldApply false
+11-07 16:57:21.635  1819  1819 D NetworkTypeController: [0] LegacyState: process EVENT_PHYSICAL_CHANNEL_CONFIG_NOTIF_CHANGED
+11-07 16:57:21.635  1819  1819 D NetworkTypeController: [0] Reset timers since NR is not allowed.
+11-07 16:57:21.635  1819  1819 D NetworkTypeController: [0] DefaultState: process EVENT_PHYSICAL_CHANNEL_CONFIG_NOTIF_CHANGED
+11-07 16:57:21.635  1819  1819 D NetworkTypeController: [0] mIsPhysicalChannelConfigOn changed to: false
+11-07 16:57:21.635  1819  1819 D NetworkTypeController: [0] Reset timers since physical channel config indications are off.
+11-07 16:57:21.635  1819  1819 D MtkNetworkTypeController: [Override]getCurrentOverrideNetworkType: 0
+11-07 16:57:21.635  1819  1819 D MtkDRM  : DRM-0: Remove all retry and throttling entries, reason=DATA_SERVICE_BOUND
+11-07 16:57:34.707  1819  1836 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:57:34.707  1819  1836 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:57:34.707  1819  1836 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:57:34.707  1819  1836 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:57:34.707  1819  1836 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:57:34.711  1819  1836 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:34.711  1819  1836 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:34.711  1819  1836 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:57:34.711  1819  1836 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getSubscriptionCarrierId(PhoneInterfaceManager.java:3439)
+11-07 16:57:34.711  1819  1836 D SubscriptionController: com.android.internal.telephony.ITelephony$Stub.onTransact(ITelephony.java:5803)
+11-07 16:57:34.711  1819  1836 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1280)
+11-07 16:57:34.711  1819  1836 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:34.711  1819  1836 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:57:34.713  1819  1836 D SubscriptionController: StackTrace - [getSlotIndex] subId=-1
+11-07 16:57:34.713  1819  1836 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getSlotIndex(SubscriptionController.java:2625)
+11-07 16:57:34.713  1819  1836 D SubscriptionController: com.android.internal.telephony.ISub$Stub.onTransact(ISub.java:990)
+11-07 16:57:34.713  1819  1836 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1280)
+11-07 16:57:34.713  1819  1836 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:34.713  1819  1836 D SubscriptionController: [getSlotIndex]- subId invalid
+11-07 16:57:34.714  1819  1836 D SubscriptionController: getSimStateForSlotIndex:  simState=UNKNOWN ordinal=0 slotIndex=2147483647
+11-07 16:57:34.788  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.787, evaluation result=null] applied false
+11-07 16:57:34.789  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=29, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.789, evaluation result=null] applied false
+11-07 16:57:34.791  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.790, evaluation result=null] applied false
+11-07 16:57:34.791  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=30, [ Transports: CELLULAR|WIFI|ETHERNET Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.visteon.devicemanagement UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.791, evaluation result=null] applied false
+11-07 16:57:34.795  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.794, evaluation result=null] applied false
+11-07 16:57:34.796  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.795, evaluation result=null] applied false
+11-07 16:57:34.798  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.797, evaluation result=null] applied false
+11-07 16:57:34.799  1819  1819 D TelephonyNetworkFactory[0]: onReleaseNetworkFor [NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], mPriority=20, state=UNSATISFIED, mAttachedDataNetwork=null, isMetered=true, created time=16:57:34.798, evaluation result=null] applied false
+11-07 16:57:34.802  1819  1836 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:57:34.802  1819  1836 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:57:34.802  1819  1836 D SubscriptionController: com.android.phone.PhoneInterfaceManager.isDataEnabledForReason(PhoneInterfaceManager.java:6742)
+11-07 16:57:34.803  1819  1836 D SubscriptionController: com.android.internal.telephony.ITelephony$Stub.onTransact(ITelephony.java:5278)
+11-07 16:57:34.803  1819  1836 D SubscriptionController: android.os.Binder.execTransactInternal(Binder.java:1285)
+11-07 16:57:34.803  1819  1836 D SubscriptionController: android.os.Binder.execTransact(Binder.java:1244)
+11-07 16:57:34.803  1819  1836 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 17:03:11.133  1819  1819 D MtkDeviceStateMonitor: [phoneId0]isLowDataExpected mIsScreenOn = true mIsCharging = true mIsTetheringOn = false
+11-07 17:03:11.235  1819  1819 D MtkDeviceStateMonitor: [phoneId0]isLowDataExpected mIsScreenOn = false mIsCharging = true mIsTetheringOn = false
+11-07 17:03:11.341  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 17:03:11.341  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 17:03:11.341  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 17:03:11.341  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 17:03:11.341  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 17:03:11.342  1819  1819 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getDefaultPhone(PhoneInterfaceManager.java:2381)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager.-$$Nest$mgetDefaultPhone(Unknown Source:0)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.phone.PhoneInterfaceManager$MainThreadHandler.handleMessage(PhoneInterfaceManager.java:555)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 17:03:11.342  1819  1819 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 17:03:11.342  1819  1819 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 17:03:11.342  1819  1819 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 17:03:11.342  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 17:03:11.343  1819  1819 D MtkSubCtrl: [isActiveSubId]- false
+11-07 17:03:11.343  1819  1819 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 17:03:11.343  1819  1819 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 17:03:11.343  1819  1819 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 17:03:11.343  1819  1819 D SubscriptionController: com.android
