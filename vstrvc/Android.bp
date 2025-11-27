@@ -1,0 +1,134 @@
+
+/*cc_defaults {
+    name: "vstrvc_defaults",
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libexif",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libui",
+        "libdl",
+        "libjpeg",
+        "libcamera_metadata",
+        "libhardware",
+        "libhidltransport",
+        "libhidlbase",
+    ],
+
+    static_libs: [
+        "libdrm",
+        "libxml2",
+    ],
+
+    cflags: [
+        "-Wunreachable-code",
+        "-Wno-implicit-function-declaration",
+        "-Wno-int-conversion",
+        "-DFASTRVC_CAMERA_SUPPORT",
+        "-DNO_REPEAT",
+        "-DnBOOT_ANIM_TEST",
+    ],
+
+    include_dirs: [
+        "external/libxml2/include",
+        "hardware/libhardware/include",
+        "system/core/include/utils",
+        "system/core/libsync",
+        "system/core/include/utils",
+    ],
+    local_include_dirs: [
+        "service",
+        "libvstRvc",
+    ],
+    
+}
+
+cc_library_shared {
+    name: "libvstRvc",
+    vendor: true,
+
+    defaults: ["vstrvc_defaults"],
+    srcs: [
+        "libvstRvc/xml.c",
+        "libvstRvc/util.c",
+        "libvstRvc/module.c",
+        "libvstRvc/shm_buff.c",
+        "libvstRvc/queue.c",
+        "libvstRvc/module_file_input.c",
+        "libvstRvc/module_file_output.c",
+        "libvstRvc/module_v4l2.c",
+        "libvstRvc/module_v4l2_mdp.c",
+        "libvstRvc/module_v4l2_camera.c",
+        "libvstRvc/module_ppm_logo.c",
+        "libvstRvc/module_drm.c",
+        "libvstRvc/drm_display.c",
+        "libvstRvc/module_h264_logo.c",
+        "libvstRvc/module_v4l2_list2va.c",
+        "libvstRvc/module_v4l2_va2list.c",
+        "libvstRvc/module_v4l2_codec.c",
+        "libvstRvc/module_fourinone_camera.c",
+        "libvstRvc/module_v4l2_nr.c",
+        "libvstRvc/module_fake.c",
+        "service/IVSTRvcService.cpp",
+    ],
+}
+*/
+cc_binary {
+    name: "vstRvcService",
+    vendor: true,
+    relative_install_path: "hw",
+
+    init_rc: ["vstRvcService.rc"],
+
+    defaults: [
+	//"vstrvc_defaults",
+	"vhalclient_defaults",
+    ],
+
+    srcs: [
+        "service/VSTRvcService.cpp",
+        //"service/VST_rvc_impl.c",
+        "service/readVhalProp.cpp",
+        "service/IVSTRvcService.cpp",
+        "libvstRvc/xml.c",
+    ],
+
+    cflags: [
+         "-Werror",
+	 "-Wno-macro-redefined",
+	 "-Wno-unused-parameter",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libexif",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libui",
+        "libdl",
+        "libjpeg",
+        "libcamera_metadata",
+        "libhardware",
+        "libhidltransport",
+        "libhidlbase",
+        "libvhalclient",
+        "libbinder_ndk",
+        "libxml2",
+    ],
+     include_dirs: [
+        "external/libhevc/encoder",
+        "external/libxml2/include",
+        "hardware/libhardware/include",
+        "system/core/include/utils",
+        "system/core/libsync",
+        "vendor/visteon/system/vstrvc/libvstRvc",
+    ],
+    static_libs: [
+        "vendor.visteon.infocore.hardware.automotive.vehicle-V1-ndk",
+    ],
+
+
+}

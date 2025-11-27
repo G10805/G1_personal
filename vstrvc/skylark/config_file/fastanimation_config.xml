@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<animated_logo>h264_logo</animated_logo>
+
+	<h264_logo>
+		<module name="h264_logo">
+			<config name="name" type="string" value="/calibration/bootanim/anim.mp4"/>
+			<config name="frame_rate" type="int" value="30"/>
+		</module>
+		<module name="v4l2_codec" dev_name="mtk-vcodec-dec">
+			<config name="out_buff.count" type="int" value="5"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="H264"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="1920"/>
+			<config name="out_buff.height" type="int" value="720"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="10"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1920"/>
+			<config name="cap_buff.height" type="int" value="736"/>
+		</module>
+		<module name="v4l2_mdp" dev_name="mtk-mdp">
+			<config name="out_buff.count" type="int" value="3"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="1920"/>
+			<config name="out_buff.height" type="int" value="736"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="out_buff.crop.c.width" type="int" value="1920"/>
+			<config name="out_buff.crop.c.height" type="int" value="720"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="YUYV"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1920"/>
+			<config name="cap_buff.height" type="int" value="720"/>
+			<config name="cap_buff.crop.c.width" type="int" value="1920"/>
+			<config name="cap_buff.crop.c.height" type="int" value="720"/>
+		</module>
+		<module name="list2va">
+			<config name="width" type="int" value="1920"/>
+			<config name="height" type="int" value="720"/>
+			<config name="pix_format" type="V4L2" value="YUYV"/>
+		</module>
+		<module name="drm">
+			<config name="src_w" type="int" value="1920"/>
+			<config name="src_h" type="int" value="720"/>
+			<config name="dst_w" type="int" value="1920"/>
+			<config name="dst_h" type="int" value="720"/>
+			<config name="fourcc" type="DRM" value="YUYV"/>
+			<config name="plane_number" type="int" value="2"/>
+			<config name="null_pause" type="int" value="1"/>
+			<config name="disable_layer" type="int" value="0"/>
+		</module>
+	</h264_logo>
+
+	<setting>
+	        <log_level value="-1"/>
+		<home_daemon value="surfaceflinger"/>
+		<gpio_number_logo value="306"/>
+		<gpio_number value="507"/>
+		<gpio_level value="1"/>
+		<gpio_level_logo value="0"/>
+
+	</setting>
+</root>

@@ -1,0 +1,49 @@
+service vstRvcService /vendor/bin/hw/vstRvcService
+    user root
+    group shell system audio camera input drmrpc
+    priority -18
+    disabled
+    restart_period 5
+    seclabel u:r:vstRvcService:s0
+
+#on property:init.svc.vendor.vehicle-hal-visteon=restarting
+#    restart vstRvcService
+#on property:init.svc.vendor.vehicle-hal-2.2=running
+#    write /sys/bus/i2c/devices/4-0038/fts_irq 0
+
+#on property:vendor.fastrvc.exit=1
+#    write /sys/bus/i2c/devices/4-0038/fts_irq 1
+
+#Change gpio direction and unexport and insmod
+
+on property:vendor.rvc.home_ready=1
+    #write /sys/class/gpio/gpio322/direction "out"
+    #write /sys/class/gpio/unexport "345"
+    #exec /system/bin/insmod /vendor_dlkm/lib/modules/gpiocontroller.ko
+
+on post-fs
+    start vstRvcService
+    write /mnt/bootanim init
+    #setprop vendor.animation.done 1
+on early-init
+    #write /mnt/bootanim init
+    chown system  system /mnt/bootanim
+    chmod 0666 /mnt/bootanim
+#on post-fs
+#    chmod 0755 /calibration/bootanim/anim.mp4
+#    chown root graphics /calibration/bootanim/anim.mp4
+on property:S2R.sleep.animation=1
+    exec /system/bin/killall initfastrvc
+    exec /system/bin/killall initfastlogo
+    setprop vendor.fastrvc.exit 1
+    setprop vendor.vstsysui.ready 0
+    setprop vendor.app.ready 0
+    setprop vendor.rvc.home_ready 0
+    write /mnt/bootanim start
+    setprop S2R.sleep.animation 0
+
+service s2ranim /vendor/bin/initfastlogo /vendor/fastlogo_file/fastlogo_config_s2r.xml --logo
+    disabled
+    oneshot
+    seclabel u:r:s2ranim:s0
+
