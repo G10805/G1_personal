@@ -1,0 +1,1 @@
+adb push gps.conf /vendor/etc/gnss/gps.conf

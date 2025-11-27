@@ -1,0 +1,5 @@
+AC_INIT(main, 1.0)
+AM_INIT_AUTOMAKE(foreign)
+AM_MAINTAINER_MODE
+AC_PROG_CC
+AC_OUTPUT([Makefile])
