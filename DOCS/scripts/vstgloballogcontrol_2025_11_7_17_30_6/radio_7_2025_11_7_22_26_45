@@ -1,0 +1,36 @@
+11-07 16:56:29.347  1742  1742 D MtkDeviceStateMonitor: [phoneId0]isLowDataExpected mIsScreenOn = false mIsCharging = true mIsTetheringOn = true
+11-07 16:56:29.545  1742  1742 D MtkDeviceStateMonitor: [phoneId0]isLowDataExpected mIsScreenOn = false mIsCharging = true mIsTetheringOn = false
+11-07 16:56:32.923  1742  1742 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:56:32.923  1742  1742 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:56:32.923  1742  1742 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:56:32.923  1742  1742 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:56:32.924  1742  1742 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:56:32.924  1742  1742 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getDefaultPhone(PhoneInterfaceManager.java:2381)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager.-$$Nest$mgetDefaultPhone(Unknown Source:0)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager$MainThreadHandler.handleMessage(PhoneInterfaceManager.java:555)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: android.app.ActivityThread.main(ActivityThread.java:7937)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: java.lang.reflect.Method.invoke(Native Method)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+11-07 16:56:32.924  1742  1742 D SubscriptionController: com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1015)
+11-07 16:56:32.924  1742  1742 D MtkSubCtrl: [getPhoneId]- invalid subId return=-1
+11-07 16:56:32.925  1742  1742 D SubscriptionController: [getDefaultDataSubId] subId=-1
+11-07 16:56:32.925  1742  1742 D MtkSubCtrl: [getDefaultSubId] NOT VoiceCapable subId=-1
+11-07 16:56:32.925  1742  1742 D MtkSubCtrl: [isActiveSubId]- false
+11-07 16:56:32.925  1742  1742 D MtkSubCtrl: [getDefaultSubId] NOT active use fall back subId=-1
+11-07 16:56:32.925  1742  1742 V SubscriptionController: [getDefaultSubId]- value = -1
+11-07 16:56:32.925  1742  1742 D SubscriptionController: StackTrace - [getPhoneId] subId=-1
+11-07 16:56:32.925  1742  1742 D SubscriptionController: com.android.internal.telephony.SubscriptionController.getPhoneId(SubscriptionController.java:2712)
+11-07 16:56:32.925  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getPhone(PhoneInterfaceManager.java:2416)
+11-07 16:56:32.925  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager.getDefaultPhone(PhoneInterfaceManager.java:2381)
+11-07 16:56:32.926  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager.-$$Nest$mgetDefaultPhone(Unknown Source:0)
+11-07 16:56:32.926  1742  1742 D SubscriptionController: com.android.phone.PhoneInterfaceManager$MainThreadHandler.handleMessage(PhoneInterfaceManager.java:555)
+11-07 16:56:32.926  1742  1742 D SubscriptionController: android.os.Handler.dispatchMessage(Handler.java:106)
+11-07 16:56:32.926  1742  1742 D SubscriptionController: android.os.Looper.loopOnce(Looper.java:201)
+11-07 16:56:32.926  1742  1742 D SubscriptionController: android.os.Looper.loop(Looper.java:288)
+11-07 16:56:32.926  1742  1742 D SubscriptionController: android.app.ActivityThread.main(ActivityThread

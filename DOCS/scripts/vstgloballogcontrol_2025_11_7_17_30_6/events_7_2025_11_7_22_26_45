@@ -1,0 +1,367 @@
+11-07 16:55:42.624 13153 13153 I auditd  : type=1400 audit(0.0:21566): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:55:42.624 13153 13153 I auditd  : type=1400 audit(0.0:21567): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:55:42.624 13153 13153 I auditd  : type=1400 audit(0.0:21568): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:55:42.624 13153 13153 I auditd  : type=1400 audit(0.0:21569): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:55:42.780  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:43.511  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:43.759  1234  1255 I commit_sys_config_file: [notification-policy,3071689]
+11-07 16:55:43.785  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:44.756   633   633 I auditd  : type=1400 audit(0.0:21571): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:55:44.756   633   633 I auditd  : type=1400 audit(0.0:21572): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:55:44.798  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:45.515  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:45.764  1234  1255 I commit_sys_config_file: [notification-policy,3073694]
+11-07 16:55:45.797  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:46.801  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:47.529  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:47.780  1234  1255 I commit_sys_config_file: [notification-policy,3075709]
+11-07 16:55:47.805  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:48.208 13353 13353 I auditd  : type=1400 audit(0.0:21573): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:55:48.208 13353 13353 I auditd  : type=1400 audit(0.0:21574): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:55:48.500 13353 13353 I auditd  : type=1400 audit(0.0:21575): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:55:48.500 13353 13353 I auditd  : type=1400 audit(0.0:21576): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:55:48.780  2516  2516 I auditd  : type=1400 audit(0.0:21577): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:55:48.812  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:49.538  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:49.785  1234  1255 I commit_sys_config_file: [notification-policy,3077714]
+11-07 16:55:49.814  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:50.824  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:51.552  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:51.783  1234  1255 I commit_sys_config_file: [notification-policy,3079712]
+11-07 16:55:51.826  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:52.831  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:53.553  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:53.800   633   633 I auditd  : type=1400 audit(0.0:21578): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:55:53.800   633   633 I auditd  : type=1400 audit(0.0:21579): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:55:53.806  1234  1255 I commit_sys_config_file: [notification-policy,3081736]
+11-07 16:55:53.836  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:54.840  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:55.565  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:55.812  1234  1255 I commit_sys_config_file: [notification-policy,3083742]
+11-07 16:55:55.812  2516  2516 I auditd  : type=1400 audit(0.0:21580): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:55:55.854  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:56.848  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:57.567  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:57.815  1234  1255 I commit_sys_config_file: [notification-policy,3085745]
+11-07 16:55:57.853  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:58.856  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:55:59.336 13752 13752 I auditd  : type=1400 audit(0.0:21581): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:55:59.336 13752 13752 I auditd  : type=1400 audit(0.0:21582): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:55:59.336 13752 13752 I auditd  : type=1400 audit(0.0:21583): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:55:59.336 13752 13752 I auditd  : type=1400 audit(0.0:21584): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:55:59.584  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:55:59.835  1234  1255 I commit_sys_config_file: [notification-policy,3087764]
+11-07 16:55:59.840   633   633 I auditd  : type=1400 audit(0.0:21585): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:55:59.863  2516 13139 I binder_sample: [android.app.IActivityManager,27,10,com.visteon.skylarkTelematics,2]
+11-07 16:55:59.868  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:00.874  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:01.582  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:01.831  1234  1255 I commit_sys_config_file: [notification-policy,3089761]
+11-07 16:56:01.882  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:02.880  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:03.607  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:03.856  1234  1255 I commit_sys_config_file: [notification-policy,3091785]
+11-07 16:56:03.891  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:04.889  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:04.896 13940 13940 I auditd  : type=1400 audit(0.0:21587): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:04.900 13940 13940 I auditd  : type=1400 audit(0.0:21588): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:04.900 13940 13940 I auditd  : type=1400 audit(0.0:21589): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:04.900 13940 13940 I auditd  : type=1400 audit(0.0:21590): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:05.621  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:05.865  1234  1255 I commit_sys_config_file: [notification-policy,3093794]
+11-07 16:56:05.880  2516  2516 I auditd  : type=1400 audit(0.0:21591): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:05.898  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:06.896  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:07.616  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:07.857  1234  1255 I commit_sys_config_file: [notification-policy,3095787]
+11-07 16:56:07.900  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:08.912  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:09.631  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:09.876  1234  1255 I commit_sys_config_file: [notification-policy,3097805]
+11-07 16:56:09.919  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:10.472 14127 14127 I auditd  : type=1400 audit(0.0:21594): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:10.472 14127 14127 I auditd  : type=1400 audit(0.0:21595): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:10.472 14127 14127 I auditd  : type=1400 audit(0.0:21596): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:10.472 14127 14127 I auditd  : type=1400 audit(0.0:21597): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:10.884  2516  2516 I auditd  : type=1400 audit(0.0:21598): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:10.916  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:11.645  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:11.890  1234  1255 I commit_sys_config_file: [notification-policy,3099820]
+11-07 16:56:11.922  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:12.924  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:13.650  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:13.892   633   633 I auditd  : type=1400 audit(0.0:21599): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:13.892   633   633 I auditd  : type=1400 audit(0.0:21600): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:13.896  1234  1255 I commit_sys_config_file: [notification-policy,3101826]
+11-07 16:56:13.934  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:14.937  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:15.650  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:15.899  1234  1255 I commit_sys_config_file: [notification-policy,3103828]
+11-07 16:56:15.942  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:16.044 14312 14312 I auditd  : type=1400 audit(0.0:21601): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:16.044 14312 14312 I auditd  : type=1400 audit(0.0:21602): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:16.044 14312 14312 I auditd  : type=1400 audit(0.0:21603): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:16.044 14312 14312 I auditd  : type=1400 audit(0.0:21604): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:16.912  2516  2516 I auditd  : type=1400 audit(0.0:21605): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:16.912   633   633 I auditd  : type=1400 audit(0.0:21606): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:16.912   633   633 I auditd  : type=1400 audit(0.0:21607): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:16.947  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:17.678  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:17.823  4861  4902 I binder_sample: [android.visteon.vstlogger.IVSTGlobalLogControlService,15,43991,com.x4.etm,100]
+11-07 16:56:17.921  1234  1255 I commit_sys_config_file: [notification-policy,3105850]
+11-07 16:56:17.949  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:18.957  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:19.675  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:19.921  1234  1255 I commit_sys_config_file: [notification-policy,3107851]
+11-07 16:56:19.961  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:20.965  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:21.644 14497 14497 I auditd  : type=1400 audit(0.0:21608): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:21.644 14497 14497 I auditd  : type=1400 audit(0.0:21609): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:21.644 14497 14497 I auditd  : type=1400 audit(0.0:21610): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:21.644 14497 14497 I auditd  : type=1400 audit(0.0:21611): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:21.688  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:21.936  2516  2516 I auditd  : type=1400 audit(0.0:21612): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:21.945  1234  1255 I commit_sys_config_file: [notification-policy,3109874]
+11-07 16:56:21.969  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:22.357  1234  1325 I input_interaction: Interaction with: cb8b82b TopCarSystemBar (server), PointerEventDispatcher0 (server), 
+11-07 16:56:22.367  1234  1282 I sysui_multi_action: [757,1696,758,6,759,3]
+11-07 16:56:22.491  1234  2094 I wm_task_moved: [1,1,3]
+11-07 16:56:22.492  1234  2094 I wm_task_moved: [2,1,2147483647]
+11-07 16:56:22.492  1234  2094 I wm_task_to_front: [0,2]
+11-07 16:56:22.493  1234  2094 I wm_focused_root_task: [0,0,1,36,bringingFoundTaskToFront]
+11-07 16:56:22.493  4861  4861 I wm_on_top_resumed_lost_called: [65262377,com.x4.etm.presentation.view.activity.ETMLandingActivity,topStateChangedWhenResumed]
+11-07 16:56:22.495  1234  2094 I wm_set_resumed_activity: [0,com.skylark.launcher/.view.HomeScreenActivity,bringingFoundTaskToFront]
+11-07 16:56:22.495  1234  2094 I wm_new_intent: [0,163533195,2,com.skylark.launcher/.view.HomeScreenActivity,android.intent.action.MAIN,NULL,NULL,268435712]
+11-07 16:56:22.495  1234  2094 I wm_pause_activity: [0,65262377,com.x4.etm/.presentation.view.activity.ETMLandingActivity,userLeaving=true,pauseBackTasks]
+11-07 16:56:22.500  1234  2094 I wm_add_to_stopping: [0,65262377,com.x4.etm/.presentation.view.activity.ETMLandingActivity,makeInvisible]
+11-07 16:56:22.500  1234  1253 I sysui_multi_action: [757,803,799,window_time_0,802,1778]
+11-07 16:56:22.501  1234  2094 I wm_set_resumed_activity: [0,com.skylark.launcher/.view.HomeScreenActivity,resumeTopActivity]
+11-07 16:56:22.506  1234  2094 I wm_resume_activity: [0,163533195,2,com.skylark.launcher/.view.HomeScreenActivity]
+11-07 16:56:22.510  1589  1589 I wm_on_restart_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,performRestartActivity]
+11-07 16:56:22.512  1234  1257 I input_focus: [Requesting to set focus to null window,reason=UpdateInputWindows]
+11-07 16:56:22.518  1234  1325 I input_focus: [Focus leaving ccb8647 com.x4.etm/com.x4.etm.presentation.view.activity.ETMLandingActivity (server),reason=NO_WINDOW]
+11-07 16:56:22.520  4861  4861 I wm_on_paused_called: [65262377,com.x4.etm.presentation.view.activity.ETMLandingActivity,performPause]
+11-07 16:56:22.537  1234  1263 I am_pss  : [14851,10040,com.android.externalstorage,5771264,4042752,189440,78610432,0,19,9]
+11-07 16:56:22.550  1234  1263 I am_pss  : [3370,10039,android.process.media,6113280,4714496,185344,80572416,0,19,8]
+11-07 16:56:22.560  1234  1263 I am_pss  : [1523,10100,com.android.permissioncontroller,9552896,6537216,1741824,82731008,0,19,8]
+11-07 16:56:22.570  1234  1263 I am_pss  : [2608,10042,com.android.providers.calendar,6360064,3268608,1881088,78606336,0,19,8]
+11-07 16:56:22.582  1234  1263 I am_pss  : [3437,10032,android.process.acore,8031232,6512640,200704,83951616,0,19,9]
+11-07 16:56:22.590  1589  1589 I wm_on_start_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,handleStartActivity]
+11-07 16:56:22.591  1234  1263 I am_pss  : [4119,1000,com.visteon.vstlogger:logger_process,5308416,3837952,191488,76193792,0,10,8]
+11-07 16:56:22.595  1589  1589 I wm_on_resume_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,RESUME_ACTIVITY]
+11-07 16:56:22.602  1234  1263 I am_pss  : [4100,1000,com.visteon.vstlogger,5081088,3579904,200704,77062144,0,19,8]
+11-07 16:56:22.612  1234  1263 I am_pss  : [4075,10047,com.visteon.tunnelproxyservice,5286912,3989504,187392,78086144,0,4,9]
+11-07 16:56:22.624  1234  1263 I am_pss  : [3990,10091,com.mediatek.camera,6109184,4616192,186368,80949248,0,19,8]
+11-07 16:56:22.626  1234  1257 I input_focus: [Focus request 65e0dc2 com.skylark.launcher/com.skylark.launcher.view.HomeScreenActivity,reason=UpdateInputWindows]
+11-07 16:56:22.634  1234  1263 I am_pss  : [3972,2000,com.android.shell,4848640,3624960,187392,74833920,0,19,8]
+11-07 16:56:22.636  1589  1589 I wm_on_top_resumed_gained_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,topStateChangedWhenResumed]
+11-07 16:56:22.645  1234  1263 I am_pss  : [3954,10044,com.android.packageinstaller,4953088,3698688,204800,75640832,0,19,9]
+11-07 16:56:22.658  1234  1263 I am_pss  : [3782,1000,com.allgo.extendedaudioservice,5035008,3604480,367616,76881920,0,10,8]
+11-07 16:56:22.661  1234  1256 I wm_finish_activity: [0,65262377,36,com.x4.etm/.presentation.view.activity.ETMLandingActivity,stop-no-history]
+11-07 16:56:22.662  1234  1256 I wm_destroy_activity: [0,65262377,36,com.x4.etm/.presentation.view.activity.ETMLandingActivity,finish-imm:finishIfPossible]
+11-07 16:56:22.666  1234  1325 I input_focus: [Focus entering 65e0dc2 com.skylark.launcher/com.skylark.launcher.view.HomeScreenActivity (server),reason=Window became focusable. Previous reason: NOT_VISIBLE]
+11-07 16:56:22.669  1234  1253 I sysui_multi_action: [319,164,322,152,325,3129,757,761,758,9,759,2,806,com.skylark.launcher,871,com.skylark.launcher.view.HomeScreenActivity,905,0,1320,4,1321,23]
+11-07 16:56:22.679  1234  1263 I am_pss  : [2082,1000,com.visteon.location,9577472,5693440,2552832,83787776,0,4,9]
+11-07 16:56:22.696  4861  4861 I wm_on_stop_called: [65262377,com.x4.etm.presentation.view.activity.ETMLandingActivity,LIFECYCLER_STOP_ACTIVITY]
+11-07 16:56:22.699  1234  1263 I am_pss  : [1742,1001,com.android.phone,17094656,11071488,4228096,93233152,0,0,10]
+11-07 16:56:22.713  1234  1263 I am_pss  : [1650,1068,com.android.se,4711424,1720320,1932288,74194944,0,0,8]
+11-07 16:56:22.760  4861  4861 I wm_on_destroy_called: [65262377,com.x4.etm.presentation.view.activity.ETMLandingActivity,performDestroy]
+11-07 16:56:22.771  1234  2665 I wm_task_removed: [36,removeChild:removeChild last r=ActivityRecord{3e3d329 u0 com.x4.etm/.presentation.view.activity.ETMLandingActivity} t-1 f}} in t=Task{19cf73f #36 type=standard A=1000:com.x4.etm U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=0}]
+11-07 16:56:22.771  1234  2665 I wm_task_removed: [36,removeChild]
+11-07 16:56:22.801  1234  1325 I input_interaction: Interaction with: 65e0dc2 com.skylark.launcher/com.skylark.launcher.view.HomeScreenActivity (server), ae476bf com.android.systemui.ImageWallpaper (server), PointerEventDispatcher0 (server), 
+11-07 16:56:22.944   633   633 I auditd  : type=1400 audit(0.0:21613): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:22.944   633   633 I auditd  : type=1400 audit(0.0:21614): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:22.981  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:23.547  1234  1325 I input_interaction: Interaction with: cb8b82b TopCarSystemBar (server), PointerEventDispatcher0 (server), 
+11-07 16:56:23.705  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:23.766  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.systemui.action.status_bar_clicked from system 1429:com.android.systemui/u0a90 pkg com.android.systemui]
+11-07 16:56:23.774  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.systemui.action.status_bar_clicked from system 1429:com.android.systemui/u0a90 pkg com.android.systemui]
+11-07 16:56:23.938  1234  1255 I commit_sys_config_file: [notification-policy,3111867]
+11-07 16:56:23.980  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:24.673  1234  1325 I input_interaction: Interaction with: 6a9fa29 Source Draw (server), PointerEventDispatcher0 (server), 
+11-07 16:56:24.772  1234  1302 I wm_task_moved: [30,1,2]
+11-07 16:56:24.773  1234  1302 I wm_task_to_front: [0,30]
+11-07 16:56:24.774  1234  1302 I wm_focused_root_task: [0,0,30,1,bringingFoundTaskToFront]
+11-07 16:56:24.774  1589  1589 I wm_on_top_resumed_lost_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,topStateChangedWhenResumed]
+11-07 16:56:24.777  1234  1302 I wm_set_resumed_activity: [0,com.x4.settings/.SettingLandingActivity,bringingFoundTaskToFront]
+11-07 16:56:24.778  1234  1302 I wm_destroy_activity: [0,60472372,30,com.x4.settings/.SettingLandingActivity,finish-imm:clear-task-all]
+11-07 16:56:24.785  1234  1302 I wm_task_moved: [30,1,2]
+11-07 16:56:24.786  1234  1302 I wm_create_activity: [0,39464232,30,com.x4.settings/.SettingLandingActivity,NULL,NULL,NULL,272662528]
+11-07 16:56:24.786  1234  1302 I wm_pause_activity: [0,163533195,com.skylark.launcher/.view.HomeScreenActivity,userLeaving=true,pauseBackTasks]
+11-07 16:56:24.790  1234  1257 I input_focus: [Requesting to set focus to null window,reason=UpdateInputWindows]
+11-07 16:56:24.792  1589  1589 I wm_on_paused_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,performPause]
+11-07 16:56:24.794  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.systemui.action.status_bar_clicked from system 1429:com.android.systemui/u0a90 pkg com.android.systemui]
+11-07 16:56:24.795  3119  3119 I wm_on_destroy_called: [60472372,com.x4.settings.SettingLandingActivity,performDestroy]
+11-07 16:56:24.795  1234  1302 I wm_add_to_stopping: [0,163533195,com.skylark.launcher/.view.HomeScreenActivity,makeInvisible]
+11-07 16:56:24.797  1234  1302 I wm_restart_activity: [0,39464232,30,com.x4.settings/.SettingLandingActivity]
+11-07 16:56:24.801  1234  1325 I input_focus: [Focus leaving 65e0dc2 com.skylark.launcher/com.skylark.launcher.view.HomeScreenActivity (server),reason=Waiting for window because NOT_FOCUSABLE]
+11-07 16:56:24.799  1234  1302 I wm_set_resumed_activity: [0,com.x4.settings/.SettingLandingActivity,minimalResumeActivityLocked]
+11-07 16:56:24.804  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.systemui.action.status_bar_clicked from system 1429:com.android.systemui/u0a90 pkg com.android.systemui]
+11-07 16:56:24.804  1234  1253 I sysui_multi_action: [757,803,799,window_time_0,802,2]
+11-07 16:56:24.814  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.systemui.action.status_bar_clicked from system 1429:com.android.systemui/u0a90 pkg com.android.systemui]
+11-07 16:56:24.817  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.systemui.action.status_bar_clicked from system 1429:com.android.systemui/u0a90 pkg com.android.systemui]
+11-07 16:56:24.834  3119  3119 I wm_on_create_called: [39464232,com.x4.settings.SettingLandingActivity,performCreate]
+11-07 16:56:24.852  3119  3119 I wm_on_start_called: [39464232,com.x4.settings.SettingLandingActivity,handleStartActivity]
+11-07 16:56:24.853  3119  3119 I wm_on_resume_called: [39464232,com.x4.settings.SettingLandingActivity,RESUME_ACTIVITY]
+11-07 16:56:24.891  3119  3119 I wm_on_top_resumed_gained_called: [39464232,com.x4.settings.SettingLandingActivity,topStateChangedWhenResumed]
+11-07 16:56:24.931  1234  1257 I input_focus: [Focus request c55f72a com.x4.settings/com.x4.settings.SettingLandingActivity,reason=UpdateInputWindows]
+11-07 16:56:24.958  1234  1253 I sysui_multi_action: [319,188,322,187,325,3132,757,761,758,8,759,2,806,com.x4.settings,871,com.x4.settings.SettingLandingActivity,904,com.android.systemui,905,0,1320,4,1321,23]
+11-07 16:56:24.958  1234  1253 I wm_activity_launch_time: [0,39464232,com.x4.settings/.SettingLandingActivity,187]
+11-07 16:56:24.958  1234  1256 I wm_stop_activity: [0,163533195,com.skylark.launcher/.view.HomeScreenActivity]
+11-07 16:56:24.969  1234  1325 I input_focus: [Focus entering c55f72a com.x4.settings/com.x4.settings.SettingLandingActivity (server),reason=Window became focusable. Previous reason: NOT_VISIBLE]
+11-07 16:56:24.983  1589  1589 I wm_on_stop_called: [163533195,com.skylark.launcher.view.HomeScreenActivity,STOP_ACTIVITY_ITEM]
+11-07 16:56:24.992  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:25.565  1234  1325 I input_interaction: Interaction with: c55f72a com.x4.settings/com.x4.settings.SettingLandingActivity (server), ae476bf com.android.systemui.ImageWallpaper (server), PointerEventDispatcher0 (server), 
+11-07 16:56:25.712  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:25.953  1234  1255 I commit_sys_config_file: [notification-policy,3113882]
+11-07 16:56:25.988  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:26.993  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:27.180 14689 14689 I auditd  : type=1400 audit(0.0:21615): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:27.180 14689 14689 I auditd  : type=1400 audit(0.0:21616): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:27.180 14689 14689 I auditd  : type=1400 audit(0.0:21617): avc: denied { read } for comm="top" name="stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:27.180 14689 14689 I auditd  : type=1400 audit(0.0:21618): avc: denied { open } for comm="top" path="/proc/2048/stat" dev="proc" ino=559654 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=file permissive=1
+11-07 16:56:27.472 14689 14689 I auditd  : type=1400 audit(0.0:21619): avc: denied { getattr } for comm="top" path="/proc/2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:27.472 14689 14689 I auditd  : type=1400 audit(0.0:21620): avc: denied { search } for comm="top" name="2048" dev="proc" ino=559600 scontext=u:r:vstGlobalLogger:s0 tcontext=u:r:usb_error_detect:s0 tclass=dir permissive=1
+11-07 16:56:27.722  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:27.968  2516  2516 I auditd  : type=1400 audit(0.0:21621): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:27.968   633   633 I auditd  : type=1400 audit(0.0:21622): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:27.968   633   633 I auditd  : type=1400 audit(0.0:21623): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:27.976  1234  1255 I commit_sys_config_file: [notification-policy,3115905]
+11-07 16:56:28.002  1564  1826 I car_pwr_mgr_state_req: [0,0]
+11-07 16:56:28.034  1234  1325 I input_interaction: Interaction with: c3ded97 com.visteon.popupmanager (server), PointerEventDispatcher0 (server), 
+11-07 16:56:28.972   633   633 I auditd  : type=1400 audit(0.0:21624): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:28.972   633   633 I auditd  : type=1400 audit(0.0:21625): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:29.011  1564  1826 I car_pwr_mgr_state_req: [1,1]
+11-07 16:56:29.015  1564  1957 I car_pwr_mgr_state_change: 2
+11-07 16:56:29.031  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,sendPowerManagerEvent() Binder listener process name by PID: com.android.carPID: 1564]
+11-07 16:56:29.036  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,sendPowerManagerEvent() Binder listener process name by PID: com.allgo.ruiPID: 1823]
+11-07 16:56:29.042  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.android.car]
+11-07 16:56:29.049  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,removeListenerFromWaitingList() Binder listener process name by PID: com.allgo.ruiPID: 1823]
+11-07 16:56:29.052  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.allgo.rui]
+11-07 16:56:29.054  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,removeListenerFromWaitingList() Binder listener process name by PID: com.android.carPID: 1564]
+11-07 16:56:29.055  1564  1957 I car_pwr_mgr_state_change: 2
+11-07 16:56:29.057  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.android.car]
+11-07 16:56:29.064  1234  1302 I power_sleep_requested: 0
+11-07 16:56:29.069  1564  1957 I car_pwr_mgr_pwr_policy_change: system_power_policy_no_user_interaction
+11-07 16:56:29.100  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.android.car]
+11-07 16:56:29.118  1564  1858 I car_user_svc_pre_creation_requested: [0,0]
+11-07 16:56:29.121  1564  1858 I car_user_svc_pre_creation_status: [0,0,0,0,0,0,0]
+11-07 16:56:29.121  1564  1957 I car_pwr_mgr_state_change: 3
+11-07 16:56:29.148   502   502 I auditd  : type=1400 audit(0.0:21626): avc: denied { call } for comm="binder:502_4" scontext=u:r:vendor_visteon_hardware_vehicle_V1_service:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:29.152 14775 14775 I auditd  : type=1400 audit(0.0:21627): avc: denied { execute_no_trans } for comm="binder:747_3" path="/vendor/bin/sh" dev="dm-10" ino=515447 scontext=u:r:hal_vstusbmgr_default:s0 tcontext=u:object_r:vendor_shell_exec:s0 tclass=file permissive=1
+11-07 16:56:29.152 14776 14776 I auditd  : type=1400 audit(0.0:21628): avc: denied { execute } for comm="binder:2062_3" name="sh" dev="dm-8" ino=5261282 scontext=u:r:su:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+11-07 16:56:29.161  1234  1282 I sysui_multi_action: [757,1696,758,6,759,0]
+11-07 16:56:29.163  1564  1826 I car_pwr_mgr_state_req: [3,0]
+11-07 16:56:29.164  1564  1957 I car_pwr_mgr_state_change: 4
+11-07 16:56:29.189  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,sendPowerManagerEvent() Binder listener process name by PID: com.android.carPID: 1564]
+11-07 16:56:29.202  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,sendPowerManagerEvent() Binder listener process name by PID: com.allgo.ruiPID: 1823]
+11-07 16:56:29.215  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.android.car]
+11-07 16:56:29.223  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,removeListenerFromWaitingList() Binder listener process name by PID: com.android.carPID: 1564]
+11-07 16:56:29.225  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,removeListenerFromWaitingList() Binder listener process name by PID: com.allgo.ruiPID: 1823]
+11-07 16:56:29.225  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.allgo.rui]
+11-07 16:56:29.226  1234  1264 I am_wtf  : [0,1564,com.android.car,814235213,CarPowerManagementService,handleListenerCompletion() Binder listener process name by PID: com.android.car]
+11-07 16:56:29.275  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.btextendedvendor.action.bt_state_changed from system 12196:com.android.btextendedvendor/1000 pkg com.android.btextendedvendor]
+11-07 16:56:29.279  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast com.android.btextendedvendor.action.bt_state_changed from system 12196:com.android.btextendedvendor/1000 pkg com.android.btextendedvendor]
+11-07 16:56:29.291  1234  1234 I service_manager_slow: [13,backup]
+11-07 16:56:29.317  3119  3119 I wm_on_top_resumed_lost_called: [39464232,com.x4.settings.SettingLandingActivity,topStateChangedWhenResumed]
+11-07 16:56:29.317  1234  1282 I wm_pause_activity: [0,39464232,com.x4.settings/.SettingLandingActivity,userLeaving=false,sleep]
+11-07 16:56:29.340  3119  3119 I wm_on_paused_called: [39464232,com.x4.settings.SettingLandingActivity,performPause]
+11-07 16:56:29.340  1234 29837 I wm_add_to_stopping: [0,39464232,com.x4.settings/.SettingLandingActivity,completePauseLocked]
+11-07 16:56:29.344  1234  1253 I sysui_multi_action: [757,803,799,window_time_0,802,5]
+11-07 16:56:29.344  1234 29837 I wm_wallpaper_surface: [0,0]
+11-07 16:56:29.351  1762 28864 I binder_sample: [android.car.hardware.property.ICarProperty,2,44,com.skylark.parkassist,8]
+11-07 16:56:29.355  1234  1257 I input_focus: [Requesting to set focus to null window,reason=UpdateInputWindows]
+11-07 16:56:29.360  1234  1256 I wm_stop_activity: [0,39464232,com.x4.settings/.SettingLandingActivity]
+11-07 16:56:29.377  1234  1234 I sysui_multi_action: [757,198,758,2,759,2,1359,313,1695,0]
+11-07 16:56:29.377  1234  1234 I power_screen_state: [0,2,0,0,313]
+11-07 16:56:29.377  1234  1234 I screen_toggled: 0
+11-07 16:56:29.377  1234  1234 I sysui_multi_action: [757,804,799,screen_timeout,801,10,802,1]
+11-07 16:56:29.377  1234  1325 I input_focus: [Focus leaving c55f72a com.x4.settings/com.x4.settings.SettingLandingActivity (server),reason=Waiting for window because NOT_FOCUSABLE]
+11-07 16:56:29.378  1234  1234 I sysui_multi_action: [757,1594,758,4,759,-2147483648,1359,1833202]
+11-07 16:56:29.378  1234  1234 I power_screen_broadcast_send: 1
+11-07 16:56:29.400  3119  3119 I wm_on_stop_called: [39464232,com.x4.settings.SettingLandingActivity,STOP_ACTIVITY_ITEM]
+11-07 16:56:29.422  1715  1872 I binder_sample: [vendor.visteon.cluster.IClusterMedia,6,103,android.car.cluster.sample,20]
+11-07 16:56:29.443  1234  1234 I notification_cancel: [1000,1234,android,25,1003,0,0,0,8,NULL]
+11-07 16:56:29.445 12194 12225 I binder_sample: [android.app.IActivityManager,32,13,com.android.btautoconnect,2]
+11-07 16:56:29.486  1234  1315 I commit_sys_config_file: [settings-0-0,8]
+11-07 16:56:29.501  1234  2422 I am_proc_died: [0,12194,com.android.btautoconnect,-700,4]
+11-07 16:56:29.508  1234  2422 I am_schedule_service_restart: [0,com.android.btautoconnect/.BtAutoConnectService,1000]
+11-07 16:56:29.530  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast android.bluetooth.action.REMOTE_PROFILE_VERSION from system 12145:com.android.bluetooth/1002 pkg com.android.bluetooth]
+11-07 16:56:29.535  1234  1264 I am_wtf  : [0,1234,system_server,-1,ActivityManager,Sending non-protected broadcast android.bluetooth.action.REMOTE_PROFILE_VERSION from system 12145:com.android.bluetooth/1002 pkg com.android.bluetooth]
+11-07 16:56:29.547  1234  1234 I notification_cancel: [1073,1509,com.android.networkstack.tethering,1002,NULL,-1,0,1088,8,NULL]
+11-07 16:56:29.547  1234  1234 I notification_cancel: [1073,1509,com.android.networkstack.tethering,1003,NULL,-1,0,1088,8,NULL]
+11-07 16:56:29.551  1234  1234 I battery_saving_stats: [0,1,0,1833389,0,0,2908993,0,0]
+11-07 16:56:29.657  1234  1234 I notification_cancel: [1073,1509,com.android.networkstack.tethering,1002,NULL,-1,0,1088,8,NULL]
+11-07 16:56:29.666  1234  1351 I netstats_mobile_sample: [0,0,0,0,0,0,0,0,0,0,0,0,1762514793594]
+11-07 16:56:29.666  1234  1351 I netstats_wifi_sample: [0,0,0,0,0,0,0,0,0,0,0,0,1762514793594]
+11-07 16:56:29.725  1234  1234 I notification_enqueue: [1000,2516,com.visteon.skylarkTelematics,2001,NULL,0,Notification(channel=TG shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE),1]
+11-07 16:56:29.840  1234  1263 I am_meminfo: [545599488,445845504,112758784,511414272,670870528]
+11-07 16:56:29.854  1234  1263 I am_pss  : [3719,1000,com.x4.softwareupdate,60348416,56569856,205824,159465472,1,10,12]
+11-07 16:56:29.870  1234  1263 I am_pss  : [3892,1000,com.x4.telematics,42251264,39051264,318464,139399168,1,4,13]
+11-07 16:56:29.881  1234  1263 I am_pss  : [14851,10040,com.android.externalstorage,5822464,4014080,192512,78610432,1,19,9]
+11-07 16:56:29.893  1234  1263 I am_pss  : [2176,10102,com.android.providers.media.module,23244800,19927040,1282048,104517632,1,0,10]
+11-07 16:56:29.904  1234  1263 I am_pss  : [3255,1000,com.visteon.updater,7815168,6361088,192512,84619264,1,4,8]
+11-07 16:56:29.915  1234  1263 I am_pss  : [3370,10039,android.process.media,6131712,4714496,188416,80572416,1,19,8]
+11-07 16:56:29.926  1234  1263 I am_pss  : [1523,10100,com.android.permissioncontroller,9571328,6537216,1743872,82731008,1,19,8]
+11-07 16:56:29.936  1234  1263 I am_pss  : [2608,10042,com.android.providers.calendar,6377472,3268608,1884160,78606336,1,19,8]
+11-07 16:56:29.947  1234  1263 I am_pss  : [3437,10032,android.process.acore,8048640,6512640,202752,83951616,1,19,9]
+11-07 16:56:29.959  1234  1263 I am_pss  : [12145,1002,com.android.bluetooth,23436288,20987904,186368,106467328,1,0,10]
+11-07 16:56:29.970  1234  1263 I am_pss  : [2516,1000,com.visteon.skylarkTelematics,13032448,9715712,1228800,93175808,1,4,9]
+11-07 16:56:29.980  1234  1255 I commit_sys_config_file: [notification-policy,3117909]
+11-07 16:56:29.982  1234  1263 I am_pss  : [2490,1000,com.x4.climate,13006848,9752576,1955840,89190400,1,6,9]
+11-07 16:56:29.980  2516  2516 I auditd  : type=1400 audit(0.0:22183): avc: denied { call } for comm="ylarkTelematics" scontext=u:r:system_app:s0 tcontext=u:r:su:s0 tclass=binder permissive=1
+11-07 16:56:29.980   633   633 I auditd  : type=1400 audit(0.0:22184): avc: denied { write } for comm="binder:633_1" name="value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:29.980   633   633 I auditd  : type=1400 audit(0.0:22185): avc: denied { open } for comm="binder:633_1" path="/sys/devices/platform/10005000.pinctrl/gpiochip0/gpio/gpio349/value" dev="sysfs" ino=59158 scontext=u:r:su:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+11-07 16:56:29.992  1234  1263 I am_pss  : [2311,1000,com.visteon.usbvideo,16354304,12972032,1913856,95109120,1,4,10]
+11-07 16:56:30.002  1234  1263 I am_pss  : [4119,1000,com.visteon.vstlogger:logger_process,5327872,3837952,194560,76193792,1,10,8]
+11-07 16:56:30.011  1564  1826 I car_pwr_mgr_state_req: [1,1]
+11-07 16:56:30.012  1234  1263 I am_pss  : [4100,1000,com.visteon.vstlogger,5100544,3579904,203776,77062144,1,19,8]
+11-07 16:56:30.024  1234  1263 I am_pss  : [4075,10047,com.visteon.tunnelproxyservice,5306368,3989504,190464,78086144,1,4,11]
+11-07 16:56:30.037  1234  1263 I am_pss  : [3331,1000,com.visteon.serverinteractor,5227520,3952640,190464,77533184,1,4,9]
+11-07 16:56:30.068  1234  1263 I am_pss  : [2806,1000,com.visteon.tataskylark,248798208,229593088,17215488,318418944,1,6,27]
+11-07 16:56:30.079  1234  1263 I am_pss  : [3118,1000,com.visteon.picture,14397440,12795904,206848,93732864,1,6,10]
+11-07 16:56:30.095  1234  1263 I am_pss  : [2889,1000,com.visteon.devicemanagement,5967872,4509696,339968,78925824,1,4,11]
+11-07 16:56:30.106  1234  1263 I am_pss  : [2918,1000,com.visteon.mediabrowserservice,13780992,11616256,187392,94130176,1,4,9]
+11-07 16:56:30.119  1234  1263 I am_pss  : [4046,1000,com.visteon.eolhandlerservice,9221120,7704576,189440,86323200,1,10,10]
+11-07 16:56:30.132  1234  1263 I am_pss  : [2844,1000,com.visteon.companion,6454272,4632576,523264,83132416,1,6,10]
+11-07 16:56:30.142  1234  1263 I am_pss  : [3203,1000,com.visteon.dvrservice,5943296,4620288,189440,79179776,1,6,8]
+11-07 16:56:30.155  1234  1263 I am_pss  : [3666,1000,com.skylark.dvrapp,16473088,14716928,247808,97243136,1,10,11]
+11-07 16:56:30.166  1234  1263 I am_pss  : [3990,10091,com.mediatek.camera,6127616,4616192,189440,80949248,1,19,9]
+11-07 16:56:30.176  1234  1263 I am_pss  : [3972,2000,com.android.shell,4867072,3624960,190464,74833920,1,19,8]
+11-07 16:56:30.191  1234  1263 I am_pss  : [3954,10044,com.android.packageinstaller,4972544,3698688,207872,75640832,1,19,12]
+11-07 16:56:30.201  1234  1263 I am_pss  : [3869,1000,com.visteon.dmhucybersecclient,5567488,4177920,281600,78073856,1,10,8]
+11-07 16:56:30.211  1234  1263 I am_pss  : [3849,1000,com.visteon.dmhuclient,6011904,4612096,287744,78327808,1,10,8]
+11-07 16:56:30.227  1234  1263 I am_pss  : [3819,10045,com.rui.dmclient,13788160,11464704,448512,81768448,1,4,13]
+11-07 16:56:30.238  1234  1263 I am_pss  : [3782,1000,com.allgo.extendedaudioservice,5054464,3604480,370688,76881920,1,10,8]
+11-07 16:56:30.250  1234  1263 I am_pss  : [2384,1000,com.allgo.btmanager,6617088,2920448,2557952,77520896,1,6,9]
+11-07 16:56:30.263  1234  1263 I am_pss  : [2300,1000,com.x4.connectnext,12080128,8392704,2167808,89595904,1,0,11]
+11-07 16:56:30.274  1234  1263 I am_pss  : [2248,1000,com.visteon.connectivityui,11005952,7360512,2284544,87519232,1,0,9]
+11-07 16:56:30.289  1234  1263 I am_pss  : [2241,1000,com.allgo.wifimanager,6615040,3457024,2058240,76746752,1,0,11]
+11-07 16:56:30.301  1234  1263 I am_pss  : [2223,10066,com.x4.drivenext,12273664,9199616,1579008,89128960,1,0,9]
+11-07 16:56:30.304 14786 14786 I auditd  : type=1400 audit(0.0:22186): avc: denied { execute } for comm="quectel-ppp-kil" name="toybox" dev="dm-8" ino=5533291 scontext=u:r:su:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+11-07 16:56:30.304 14786 14786 I auditd  : type=1400 audit(0.0:22187): avc: denied { getattr } for comm="quectel-ppp-kil" path="/system/bin/toybox" dev="dm-8" ino=5533291 scontext=u:r:su:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+11-07 16:56:30.312  1234  1263 I am_pss  : [2082,1000,com.visteon.location,9593856,5693440,2555904,83787776,1,4,8]
+11-07 16:56:30.327  1234  1263 I am_pss  : [1784,10103,android.ext.services,9123840,6324224,1335296,83595264,1,5,12]
+11-07 16:56:30.337  1234  1263 I am_pss  : [2037,1000,com.android.btcarlistener,6529024,2928640,2483200,77549568,1,0,9]
+11-07 16:56:30.350  1234  1263 I am_pss  : [1993,10080,com.skylark.inputmethod.latin,7732224,3375104,2598912,87818240,1,7,10]
+11-07 16:56:30.363  1234  1263 I am_pss  : [1873,1000,com.visteon.btphone,11794432,7475200,3009536,86253568,1,6,10]
+11-07 16:56:30.384  1234  1263 I am_pss  : [1762,1000,com.skylark.parkassist,166451200,159637504,999424,273485824,1,0,17]
+11-07 16:56:30.399  1234  1263 I am_pss  : [1715,1000,android.car.cluster.sample,10564608,7696384,1512448,86269952,1,0,12]
+11-07 16:56:30.411  1234  1263 I am_pss  : [1742,1001,com.android.phone,17126400,11083776,4230144,93245440,1,0,10]
+11-07 16:56:30.426  1234  1263 I am_pss  : [1644,1000,com.allgo.devicecontrolmanager,7573504,4096000,2319360,78753792,1,0,11]
+11-07 16:56:30.436  1234  1263 I am_pss  : [1650,1068,com.android.se,4728832,1720320,1934336,74194944,1,0,8]
+11-07 16:56:30.455  1234  1263 I am_pss  : [1589,1000,com.skylark.launcher,87364608,73875456,8004608,187105280,1,0,16]
+11-07 16:56:30.467  1234  1263 I am_pss  : [1552,1000,com.visteon.loggerdiagclient,5276672,2043904,2122752,76025856,1,0,9]
+11-07 16:56:30.479  1234  1263 I am_pss  : [1564,1000,com.android.car,18275328,14573568,1628160,97992704,1,0,10]
+11-07 16:56:30.496  1234  1263 I am_pss  : [1532,10036,com.visteon.car.radio,9767936,6950912,1449984,84865024,1,0,12]
+11-07 16:56:30.509  1234  1263 I am_pss  : [1559,1000,com.skylark.mediaplayer,34414592,31416320,1456128,113635328,1,0,10]
+11-07 16:56:30.524  1234  1263 I am_pss  : [1542,1000,com.visteon.coremedia,27876352,24363008,1531904,109084672,1,0,12]
+11-07 16:56:30.535  1234  1263 I am_pss  : [1509,1073,com.android.networkstack.process,12158976,9072640,1496064,89976832,1,0,9]
+11-07 16:56:30.541  1234  1265 I am_proc_start: [0,14858,1000,com.android.btautoconnect,service,{com.android.btautoconnect/com.android.btautoconnect.BtAutoConnectService}]
+11-07 16:56:30.556  1234  1263 I am_pss  : [1429,10090,com.android.systemui,83654656,76886016,2917376,180711424,1,0,17]
+11-07 16:56:30.582  1234  1263 I am_pss  : [1234,1000,system,153800704,138199040,7166976,263110656,1,0,23]
+11-07 16:56:30.583  1234  1651 I am_proc_bound: [0,14858,com.android.btautoconnect]
+11-07 16:56:31.015  1564  1826 I car_pwr_mgr_state_req: [1,1]
+11-07 16:56:31.380 14786 14786 I auditd  : type=1400 audit(0.0:22546): avc: denied { execute } for comm="quectel-ppp-kil" name="toybox" dev="dm-8" ino=5533291 scontext=u:r:su:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+11-07 16:56:31.384 14920 14920 I auditd  : type=1400 audit(0.0:22548): avc: denied { read open } for comm="quectel-ppp-kil" path="/system/bin/toybox" dev="dm-8" ino=5533291 scontext=u:r:su:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+11-07 16:56:31.384 14920 14920 I auditd  : type=1400 audit(0.0:22549): avc: denied { execute_no_trans } for comm="quectel-ppp-kil" path="/system/bin/toybox" dev="dm-8" ino=5533291 scontext=u:r:su:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permis

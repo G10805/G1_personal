@@ -1,0 +1,81 @@
+,visteon/device/visteon/tata_x4,
+MR IID,URL,Title
+41,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/41,Integrating upgraded Sensor HAL to TATA_X4
+98,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/98,TAX430674-42732 - ADR TESTING - copy mnl.prop to dest
+100,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/100,Update file device.mk
+101,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/101,[TAX430674-42732 ] - revert mnl.prop
+150,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/150,copy animation vedio files to the target
+127,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/127,JIRA : Updating debug log path (temporary fix)
+130,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/130,JIRA : Updating debug log path (temporary fix)
+131,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/131,JIRA : Updating debug log path (temporary fix)
+132,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/132,TAX430674-48261   System goes to Android Recovery page after 06.11 Sec User Fastboot
+133,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/133,TAX430674-48261   System goes to Android Recovery page after 06.11 Sec User Fastboot
+134,https://git.visteon.com/visteon-android/visteon/device/visteon/tata_x4/-/merge_requests/134,TAX430674-48261   System goes to Android Recovery page after 06.11 Sec User Fastboot
+,,
+,,
+,mediatek/platform/hardware/enhanceposition/,
+MR IID,URL,Title
+1,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/1,TAX430674-33246 - Integration of Enhanceposition for GNSS FIX
+3,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/3,"GNSS CP CERT fix. (GNGGA, GNRMC, UTC time, Lat, Lon) in ADR"
+6,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/6,Update ADR config files
+10,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/10,[TAX430674-42732] - Update adrd.rc
+13,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/13,[TAX430674-42732] - adrconfig file update
+17,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/17,[TAX430674-42732] Modified adr.conf to remove extra MTK_ADR logs
+20,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/20,[TAX430674-42732] updated adr.conf with unix envt
+21,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/21,[TAX430674-42732] - Patch for GNSS Engine stop issue and S2R
+22,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/22,Disable deiniting of vhal
+23,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/23,[TAX430674-46231] applied update_track_angle.patch
+24,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/24,"Revert ""applied update_track_angle.patch"""
+5,https://git.visteon.com/visteon-android/mediatek/platform/hardware/enhanceposition/-/merge_requests/5,Task : gps service
+,,
+,mediatek/src/connectivity/gps,
+78,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/78,Changes considered from VW to TATA baseline without DR and trimble entries
+81,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/81,TAX430674-33247 - Implementation of Vhal Properties and feed it to ADR
+85,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/85,More traces are logged during NMEA parsing - to have only Minimal logs
+86,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/86,"GNSS CP CERT fix. (GNGGA, GNRMC, UTC time, Lat, Lon)"
+93,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/93,Updated GPS shared by MTK
+96,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/96,TAX430674-42732 - Added stacktrace and logs for GNRMC
+98,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/98,[TAX430674-42732] - NMEA regeneration
+99,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/99,updating RMC and GGA frames
+103,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/103,updated libmnl.so with change of mnl.prop to /vendor/etc/gnss
+107,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/107,Disable logs of RMC frames in nmea_parser.c
+109,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/109,[TAX430674-46883] Update latitude and longitude precision for CP Cert
+112,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/112,Angle correction in GNRMC frame
+113,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/113,"[TAX430674-43522] GNSS src: fix load do not contains ADR, but GNSS still transfer data to ADR error"
+115,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/115,[TAX430674-46176] - gnss crash issue on conversion of stof (altitude)
+116,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/116,[TAX430674-46176] - Change path of mtkgps.dat file and gpsdebug.log file
+117,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/117,[TAX430674-46176] - CP - Change path of mtkgps.dat file and gpsdebug.log file and gnss crash issue on...
+118,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/118,[TAX430674-46176] - AA - Change path of mtkgps.dat file and gpsdebug.log file and gnss crash issue
+128,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/128,[TAX430674-48785] - Disabling Gnss logs in mnl.prop
+129,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/129,[TAX430674-48785] - AA - Disabling Gnss logs in mnl.prop
+130,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/130,[TAX430674-48785] - CP - Disabling Gnss logs in mnl.prop
+131,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/131,[TAX430674-48888] - ADR Caliberation is sucess with mnl.prop in vendor partition
+132,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/132,[TAX430674-48888] - AA ADR Caliberation is sucess with mnl.prop in vendor partition
+133,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/133,[TAX430674-48888] - CP ADR Caliberation is sucess with mnl.prop in vendor partition
+92,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/92,JIRA : TAX430674-43525 :Tata X4 - Error : Not recommended Precision is displayed
+94,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/94,GPS data
+95,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/95,JIRA : TAX430674-43525   Tata X4 - Error : Not recommended Precision is displayed
+105,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/105,TAX430674-42732: uncommenting stop engine
+106,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/106,[JIRA ID]:TAX430674-42732 -ADR Testing
+110,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/110,[TAX430674-46883] Update latitude and longitude precision for CP Cert
+119,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/119,Adding monotonic time for gps utc time
+120,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/120,Adding monotonic time for gps utc time
+121,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/121,Adding monotonic time for gps utc time
+122,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/122,Adding monotonic time for gps utc time
+123,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/123,JIRA ID : TAX430674-42732 : ADR Testing : Adding monotonic time for gps utc time
+124,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/124,JIRA ID : TAX430674-42732 : ADR Testing : Adding monotonic time for gps utc time
+125,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/125,JIRA : Updating maximum size of gps log file
+126,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/126,JIRA : Updating maximum size of gps log file
+127,https://git.visteon.com/visteon-android/mediatek/src/connectivity/gps/-/merge_requests/127,JIRA : Updating maximum size of gps log file
+,,
+,,
+,mediatek/platform/hardware/adr,
+MR IID,URL,Title
+1,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/1,TAX430674-33246 - Integrating the ADR solution for GNSS Fix
+2,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/2,Update file adr.so V3
+3,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/3,adr.so for new GNRMC patch
+7,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/7,[TAX430674-46854] ADR lib patch for tuning heading and bearing information
+9,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/9,[TAX430674-46854] - Integrating updated adr.so V_15
+10,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/10,[TAX430674-46087] - integrating adr_v17 to mainline
+6,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/6,[JIRA ID]:TAX430674-42732 - ADR Testing
+11,https://git.visteon.com/visteon-android/mediatek/platform/hardware/adr/-/merge_requests/11,TAX430674-46176:Tata X4 - [Location Testing] -GPS fix lost after 10 mins in S2R
