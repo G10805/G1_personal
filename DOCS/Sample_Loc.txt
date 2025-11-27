@@ -1,0 +1,98 @@
+import android.content.Context;
+import android.location.GnssStatus;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.location.OnNmeaMessageListener;
+import android.os.Bundle;
+import android.util.Log;
+
+public class GpsMonitor {
+
+    private final LocationManager locationManager;
+
+    public GpsMonitor(Context context) {
+        locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+    }
+
+    public void startMonitoring() {
+        // Request location updates
+        locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                1000, // Minimum time interval (ms)
+                0,    // Minimum distance (meters)
+                new LocationListener() {
+                    @Override
+                    public void onLocationChanged(Location location) {
+                        double latitude = location.getLatitude();
+                        double longitude = location.getLongitude();
+                        double altitude = location.getAltitude();
+                        long utcTime = location.getTime();
+
+                        Log.d("GPS", "Lat: " + latitude + " Lon: " + longitude +
+                                " Alt: " + altitude + " UTC: " + utcTime);
+                    }
+
+                    @Override public void onStatusChanged(String provider, int status, Bundle extras) {}
+                    @Override public void onProviderEnabled(String provider) {}
+                    @Override public void onProviderDisabled(String provider) {}
+                }
+        );
+
+        // GNSS satellite status callback
+        locationManager.registerGnssStatusCallback(new GnssStatus.Callback() {
+            @Override
+            public void onSatelliteStatusChanged(GnssStatus status) {
+                int satelliteCount = status.getSatelliteCount();
+                for (int i = 0; i < satelliteCount; i++) {
+                    boolean usedInFix = status.usedInFix(i);
+                    float cn0DbHz = status.getCn0DbHz(i);
+                    float azimuth = status.getAzimuthDegrees(i);
+                    float elevation = status.getElevationDegrees(i);
+
+                    Log.d("GNSS", "Sat #" + i + " UsedInFix: " + usedInFix +
+                            " C/N0: " + cn0DbHz + " Azimuth: " + azimuth +
+                            " Elevation: " + elevation);
+                }
+            }
+        });
+
+        // NMEA listener for GSA and GGA frames
+        locationManager.addNmeaListener(new OnNmeaMessageListener() {
+            @Override
+            public void onNmeaMessage(String nmea, long timestamp) {
+                // GSA frame parsing
+                if (nmea.contains("GSA")) {
+                    String[] tokens = nmea.split(",");
+                    if (tokens.length >= 17) {
+                        String pdop = tokens[tokens.length - 3];
+                        String hdop = tokens[tokens.length - 2];
+                        String vdop = tokens[tokens.length - 1].split("\\*")[0];
+
+                        Log.d(" PDOP: " + pdop + " HDOP: " + hdop + " VDOP: " + vdop);
+                    }
+                }
+
+                // GGA frame parsing
+                if (nmea.contains("GGA")) {
+                    String[] tokens = nmea.split(",");
+                    if (tokens.length > 6) {
+                        String utcTime = tokens[1];
+                        String fixQuality = tokens[6]; // 0 = invalid, 1 = GPS fix, etc.
+
+                        String qualityDescription;
+                        switch (fixQuality) {
+                            case "0": qualityDescription = "Invalid"; break;
+                            case "1":
+                            case "2": qualityDescription = "3D Fix"; break;
+                            case "6": qualityDescription = "DR"; break;
+                            default:  qualityDescription = "Unknown"; break;
+                        }
+
+                        Log.d("NMEA-GGA", "UTC Time: " + utcTime + " Fix Quality: " + qualityDescription);
+                    }
+                }
+            }
+        });
+    }
+}
