@@ -1,0 +1,90 @@
+diff --git a/hal/Android.bp b/hal/Android.bp
+index a24756d..6b2ab80 100644
+--- a/hal/Android.bp
++++ b/hal/Android.bp
+@@ -27,7 +27,7 @@ cc_binary {
+     srcs: [
+         "Usb.cpp",
+     ],
+-
++    cppflags: ["-fexceptions"],
+     init_rc: ["android.hardware.usb@1.2-service-qti.rc"],
+     vintf_fragments: ["android.hardware.usb@1.2-service.xml"],
+ }
+diff --git a/hal/Usb.cpp b/hal/Usb.cpp
+index b8108b2..0d3a183 100644
+--- a/hal/Usb.cpp
++++ b/hal/Usb.cpp
+@@ -63,6 +63,7 @@ static int32_t readFile(const std::string &filename, std::string *contents) {
+   size_t len = 0;
+ 
+   fp = fopen(filename.c_str(), "r");
++  ALOGE("[%s] :: fopen is success and readFile %s, errno=%d",__func__, filename.c_str(), errno);
+   if (fp != NULL) {
+     if ((read = getline(&line, &len, fp)) != -1) {
+       char *pos;
+@@ -85,6 +86,7 @@ static int32_t writeFile(const std::string &filename,
+   int ret;
+ 
+   fp = fopen(filename.c_str(), "w");
++  ALOGE("[%s] :: fopen writing is success and writeFile %s, errno=%d",__func__, filename.c_str(), errno);
+   if (fp != NULL) {
+     ret = fputs(contents.c_str(), fp);
+     fclose(fp);
+@@ -106,10 +108,13 @@ std::string appendRoleNodeHelper(const std::string &portName,
+ 
+   switch (type) {
+     case PortRoleType::DATA_ROLE:
++    ALOGE("[%s] :: PortRoleType = %s + /data_role",__func__, node.c_str());
+       return node + "/data_role";
+     case PortRoleType::POWER_ROLE:
++    ALOGE("[%s] :: PortRoleType = %s + /power_role",__func__, node.c_str());
+       return node + "/power_role";
+     case PortRoleType::MODE:
++    ALOGE("[%s] :: PortRoleType = %s + /port_type",__func__, node.c_str());
+       return node + "/port_type";
+     default:
+       return "";
+@@ -972,11 +977,38 @@ static bool checkUsbInterfaceAutoSuspend(const std::string& devicePath,
+         const std::string &intf) {
+   std::string bInterfaceClass;
+   int interfaceClass, ret = -1;
+-
++  
++  
+   readFile(devicePath + "/" + intf + "/bInterfaceClass", &bInterfaceClass);
+-  interfaceClass = std::stoi(bInterfaceClass, 0, 16);
+-
+-  // allow autosuspend for certain class devices
++  
++  ALOGE("[%s] :: devicePath = %s, errno=%d",__func__, devicePath.c_str(), errno);
++  ALOGE("[%s] :: intf = %s, errno=%d",__func__, intf.c_str(), errno);
++  ALOGE("[%s] :: bInterfaceClass = %s, errno=%d",__func__, bInterfaceClass.c_str(), errno);
++  
++  //interfaceClass = std::stoi(bInterfaceClass, 0, 16);
++  //if(std::any_of (bInterfaceClass.begin(), bInterfaceClass.end(), ::isdigit))
++  try {
++        for( int i = 0; i < bInterfaceClass.length(); i++ ){ 
++        char ch = bInterfaceClass[i]; 
++        // Check if the character 
++        // is invalid 
++         if ((ch < '0' || ch > '9') && 
++            (ch < 'A' || ch > 'F')&& 
++            (ch < 'a' || ch > 'f')) 
++        { 
++            throw std::runtime_error(
++                "Not a valid value ");
++        }else{ 
++    int interfaceClass = std::stoi(bInterfaceClass, 0, 16); 
++            }
++        } 
++    }
++    // catch block to catch the thrown exception
++    catch (const std::exception& e) {
++        // print the exception
++        ALOGE("Exception " ,e.what());
++     }
++// allow autosuspend for certain class devices
+   switch (interfaceClass) {
+     case USB_CLASS_AUDIO:
+     case USB_CLASS_HUB:
