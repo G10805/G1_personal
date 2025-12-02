@@ -1,0 +1,12 @@
+on post-fs-data
+    mkdir /data/vendor/airoha 0771 gps system
+    mkdir /data/vendor/airoha/ota 0771 gps system
+    chmod 660 /dev/airoha_gps
+    chown gps gps /dev/airoha_gps 
+service airoha.anld-1-0 /vendor/bin/hw/airoha.hardware.anld
+    class main
+    user gps
+    group gps inet sdcard_r sdcard_rw misc system wakelock
+    socket app_anld stream 660 gps system
+    capabilities BLOCK_SUSPEND
+    capabilities WAKE_ALARM

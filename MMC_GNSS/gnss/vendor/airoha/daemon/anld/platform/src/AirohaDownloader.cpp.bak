@@ -1,0 +1,1001 @@
+/* Copyright Statement:
+ *
+ * (C) 2020  Airoha Technology Corp. All rights reserved.
+ *
+ * This software/firmware and related documentation ("Airoha Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to Airoha Technology Corp. ("Airoha") and/or its licensors.
+ * Without the prior written permission of Airoha and/or its licensors,
+ * any reproduction, modification, use or disclosure of Airoha Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ * You may only use, reproduce, modify, or distribute (as applicable) Airoha Software
+ * if you have agreed to and been bound by the applicable license agreement with
+ * Airoha ("License Agreement") and been granted explicit permission to do so within
+ * the License Agreement ("Permitted User").  If you are not a Permitted User,
+ * please cease any access or use of Airoha Software immediately.
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT AIROHA SOFTWARE RECEIVED FROM AIROHA AND/OR ITS REPRESENTATIVES
+ * ARE PROVIDED TO RECEIVER ON AN "AS-IS" BASIS ONLY. AIROHA EXPRESSLY DISCLAIMS ANY AND ALL
+ * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES AIROHA PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH AIROHA SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN AIROHA SOFTWARE. AIROHA SHALL ALSO NOT BE RESPONSIBLE FOR ANY AIROHA
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND AIROHA'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO AIROHA SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT AIROHA'S OPTION, TO REVISE OR REPLACE AIROHA SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * AIROHA FOR SUCH AIROHA SOFTWARE AT ISSUE.
+ */
+
+//TODO: allow user to set a data connection interface
+#define LOG_TAG "ANLD_DL"
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include "AirohaDownloader.h"
+
+#ifdef DOWNLOAD_ON_PC 
+
+#include <windows.h>
+#include <string>
+#else
+
+#include <fcntl.h>
+#include <errno.h>
+#include <error.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <sys/time.h>
+#include <sys/ioctl.h>
+#include "simulation.h"
+#include <mutex>
+#include <poll.h>
+#include <inttypes.h>
+#include <condition_variable>
+#include <list>
+#include <mutex>
+#endif
+#ifdef DOWNLOAD_ON_PC
+#define DOWNLOAD_TTY "COM20"
+#else
+#define DOWNLOAD_TTY "/dev/ttyUSB0"
+#endif
+//#define QCOM_UART_CLOCK_FUNC
+using Airoha::Downloader::AirohaDownloader; 
+using Airoha::Downloader::flashInfo;
+using Airoha::Downloader::ImageInfo;
+using Airoha::Downloader::DownloadConfig;
+using namespace Airoha::Downloader;
+using Airoha::Downloader::DownloadStatus;
+using Airoha::Downloader::DownloadMessage;
+int AirohaDownloader::state = 0;
+int AirohaDownloader::ttyFd = -1;
+int AirohaDownloader::running = 0;
+int AirohaDownloader::returnErr = 0;
+bool AirohaDownloader::allowComRuning = true;
+pthread_mutex_t AirohaDownloader::syncLock = PTHREAD_MUTEX_INITIALIZER;
+//pthread_t AirohaDownloader::downloadThread = 0;
+std::vector<CallbackItem> AirohaDownloader::callbackList;
+std::recursive_mutex AirohaDownloader::configMutex;
+std::list<uint8_t> AirohaDownloader::downloadMessageQueue;
+std::mutex AirohaDownloader::queueLock;
+std::condition_variable_any AirohaDownloader::queueNotEmpty;
+std::condition_variable_any AirohaDownloader::queueNotFull;
+FILE *AirohaDownloader::recordFile = NULL;
+int64_t AirohaDownloader::previousHandShakeTime = 0;
+struct DownloadConfig s_old_config_list[] = {
+        {
+        .fileName = IMAGE_PARTITION_PATH,
+        .backupfileName = IMAGE_PARTITION_BACKUP_PATH,
+        .isBootLoader = false,
+        .beginAddress = 0x08000000,
+    },
+            {
+        .fileName = IMAGE_GNSS_DEMO_PATH,
+        .backupfileName = IMAGE_GNSS_DEMO_BACKUP_PATH,
+        .isBootLoader = false,
+        .beginAddress = 0x08013000,
+    },
+        {
+        .fileName = IMAGE_BOOTLOADER_PATH,
+        .backupfileName = IMAGE_BOOTLOADER_BACKUP_PATH,
+        .isBootLoader = true,
+        .beginAddress = 0x08003000,
+    },
+
+        {
+        .fileName = IMAGE_GNSS_CONFIG_PATH,
+        .backupfileName = IMAGE_GNSS_CONFIG_BACKUP_PATH,
+        .isBootLoader = false,
+        .beginAddress = 0x083FF000,
+    },
+
+};
+struct flashInfo AG3335_Flash_Info = {
+    .formatAddress = 0x08000000,
+    .formatSize = 400000,
+
+};
+void *AirohaDownloader::receiveThread(void *argv){
+    (void)argv;
+    return NULL;
+}
+
+#define CLOSE_AND_RETURN_IN_CODE(fd,ret){ \
+    fclose(recordFile); \
+    close(fd); \
+    return(ret); \
+}
+DownloadStatus AirohaDownloader::start(){
+    struct  timeval tv_start;
+    struct  timeval tv_end;
+    unlink("/data/vendor/airoha/download_record.log");
+    recordFile = fopen("/data/vendor/airoha/download_record.log", "wb+");
+    sendDownloadMessage(DownloadMessage::DL_MSG_DOWNLOAD_START);
+    ttyFd = AirohaDownloader::openTTY(
+        DOWNLOAD_TTY,O_RDWR|O_NONBLOCK, DOWNLOAD_HAND_BAUD);
+    if(ttyFd < 0){
+        LOG_E("open tty false");
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_START);
+    }
+    sendDownloadMessage(DownloadMessage::DL_MSG_OPEN_TTY_SUCCESSFUL);
+    pthread_mutex_init(&syncLock,NULL);
+    running = 1;
+    LOG_D("start handshake...\n");
+    if(!handShake()){
+        sendDownloadMessage(DownloadMessage::DL_MSG_HANDSHAKE_FAILED);
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_HANDSHAKE);
+    }
+    LOG_D("handshake finish\n");
+    gettimeofday(&tv_start,NULL);
+    //disable WDT
+    if(!disableWDT()){
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_WDT_DISABLE);
+    }
+    //
+    if(!sendDA()){
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_SEND_DA);
+    }
+    if(!jumpToDA()){
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_JUMP_DA);
+    }
+
+    if(!syncWithDA()){
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_SYNC_DA);
+    }
+    if(!formatFlash()){
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_FORMAT_FLASH);
+    }
+
+    if(!downloadChip(s_old_config_list,sizeof(s_old_config_list)/sizeof(struct DownloadConfig))){
+        CLOSE_AND_RETURN_IN_CODE(ttyFd, DownloadStatus::DOWNLOAD_BIN_DL);
+    }
+#ifdef QCOM_UART_CLOCK_FUNC
+    ioctl(ttyFd, 0x544E, 0);
+#endif
+    close(ttyFd);
+    //statusNotify(DL_FINISH,1);
+    gettimeofday(&tv_end,NULL);
+    int64_t diff = 1000000 * (tv_end.tv_sec-tv_start.tv_sec)+ tv_end.tv_usec-tv_start.tv_usec;
+    LOG_D("process us :%" PRId64,diff);
+    sendDownloadMessage(DownloadMessage::DL_MSG_DOWNLOAD_FINISH);
+    fclose(recordFile);
+    return DownloadStatus::DOWNLOAD_ALL_PASS;
+}
+int AirohaDownloader::openTTY(const char *name,int flag,int baud){
+#ifdef DOWNLOAD_ON_PC
+
+#else
+    struct termios tty_config;
+    int result;
+    int fd = open(name,flag);
+#ifdef QCOM_UART_CLOCK_FUNC
+    ioctl(fd, 0x544D, 0);
+#endif
+    if(fd  < 0){
+        LOG_D("open %s error: %s",name,strerror(errno));
+        return -1;
+    }
+    LOG_D("open tty successful");
+    // int flags = fcntl(fd, F_GETFL,0);
+    // flags &= ~(O_NONBLOCK);
+    // if (fcntl (fd, F_SETFL, flag) < 0){
+    //     return false;
+    // }
+    result = tcgetattr(fd,&tty_config);
+    if(result != 0){
+        LOG_E("get attr failed!!%d,%s",result,strerror(errno));
+        return -1;
+    }
+    cfsetispeed(&tty_config,baud);
+    cfsetospeed(&tty_config,baud);
+    tty_config.c_lflag &= ~(ICANON|ECHO|ECHOE|ECHOK|ECHONL|NOFLSH|ISIG);
+    tty_config.c_oflag &= ~(ONLCR|OPOST);
+    tty_config.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP
+                       | INLCR | IGNCR | ICRNL | IXON);
+    //tty_config.c_cc[VTIME] = 1;
+    //tty_config.c_cc[VMIN] = 0;
+
+
+    result = tcsetattr(fd, TCSANOW, &tty_config);
+    if(result != 0){
+        return -1;
+    }
+    return fd;
+#endif
+} 
+bool AirohaDownloader::setBaudrate(int fd,int baud){
+    struct termios tty_config;
+    int result;
+    result = tcgetattr(fd,&tty_config);
+    if(result < 0){
+        LOG_E("Get tty attr error");
+        return false;
+    }
+    cfsetispeed(&tty_config,baud);
+    cfsetospeed(&tty_config,baud);
+    result = tcsetattr(fd, TCSADRAIN, &tty_config);
+    if(result <0){
+        return false;
+    }
+    return true;
+    
+}
+//timeout for 1 sec
+uint8_t AirohaDownloader::COMGetUint8(int try_count, int sleep_gap,uint8_t *result){
+    char buf[1]={0};
+    //int count = 0;
+    //uint8_t ret = 0xFF;
+    do{
+        
+        if(try_count == -1){
+            try_count = 0;
+        }
+        try_count--;
+        int res = 0;
+
+        struct pollfd poll_fd;
+        poll_fd.fd = ttyFd;
+        poll_fd.events = POLLIN;
+        int poll_ret = poll(&poll_fd,1,100);
+        if(poll_ret <= 0){
+            continue;
+        }
+
+        res = read(ttyFd,buf,1);
+        if( res == 1){
+            //LOG_D("%s,0x%x",__FUNCTION__,buf[0]);
+            *result = buf[0];
+            return READ_SUCCESS;
+        }else if(res == 0){
+            LOG_E("read timeout..%d",res);
+        }
+        if(sleep_gap > 0){
+            usleep(sleep_gap);
+        }
+
+    }while((try_count > 0 || (try_count == -1) ) && allowComRuning);
+    if(!allowComRuning){
+        return READ_USER_TERMINATE;
+    }
+    LOG_E("COMGetUint8 timeout..%d",try_count);
+    return READ_TIMEOUT;
+}
+uint8_t AirohaDownloader::COMGetCharBlock(){
+    uint8_t result;
+    uint8_t ret = COMGetUint8(0,0,&result);
+    if(ret == READ_SUCCESS){
+        return result;
+    }
+    return 0xFF;
+}
+uint8_t AirohaDownloader::COMGetCharNonBlock(int sleep){
+    uint8_t result;
+    uint8_t ret = COMGetUint8(1,sleep,&result);
+    if(ret == READ_SUCCESS){
+        return result;
+    }
+    return 0xFF;
+}
+//block
+uint16_t AirohaDownloader::COMGetUint16(){ 
+    uint16_t tmp = 0;
+    uint8_t ret = READ_SUCCESS;
+    uint8_t result;
+    for(int i=0;i<2;i++){
+        ret = COMGetUint8(0,0,&result);
+        if(ret == READ_TIMEOUT){
+            return 0;
+        }else{
+            tmp |= (result << (8-8*i));
+        }
+    }
+    return tmp;
+}
+
+//blocking
+uint32_t AirohaDownloader::COMGetUint32(){
+    //char buf[4] = {0};
+    uint32_t tmp = 0;
+    uint8_t ret = READ_SUCCESS;
+    uint8_t result;
+    for(int i=0;i<4;i++){
+        ret = COMGetUint8(0,0,&result);
+        if(ret == READ_TIMEOUT){
+            return 0;
+        }else{
+            tmp |= (result << (24-8*i));
+        }
+    }
+    return tmp;
+
+}
+bool AirohaDownloader::COMWriteUint8(uint8_t a){
+    int retry = 100;
+    while(retry > 0){
+        int ret = write(ttyFd,(uint8_t*)&a,1);
+        if(ret == 1){
+            //LOG_D("write Uint8 0x%02x success",a);
+            return true;
+        }
+        LOG_D("send uint8_t false,retry:%x,%d",retry,ret); 
+        usleep(1000);
+        retry--;
+    }
+    
+
+    return false;
+}
+bool AirohaDownloader::COMWriteUint16(uint16_t a){
+    uint8_t tmp8 = 0; 
+    for(int i=0;i < 2;i++){
+        tmp8 = (a >> (8-8*i)) & 0xFF;
+        COMWriteUint8(tmp8); 
+    }
+    return true;
+
+}
+bool AirohaDownloader::COMWriteUint32(uint32_t a){
+    uint8_t tmp8 = 0;
+    for(int i=0;i < 4;i++){
+        tmp8 = (a >> (24-8*i)) & 0xFF;
+       COMWriteUint8(tmp8); 
+    }
+    return true;
+
+}
+bool AirohaDownloader::handShake(){
+    int r;
+    int count = 5;
+    int retryCount = 3;
+    previousHandShakeTime = getCurrentBootTimeSecond();
+    sendDownloadMessage(DownloadMessage::DL_MSG_POWER_ON_AFTER_1S);
+    do{
+        int64_t currentTime = getCurrentBootTimeSecond();
+        if (currentTime - previousHandShakeTime > 6) {
+            if (retryCount > 0) {
+                sendDownloadMessage(DownloadMessage::DL_MSG_HANDSHAKE_RETRY);
+                previousHandShakeTime = currentTime;
+                retryCount--;
+            }
+            else {
+                return false;
+            }
+
+        }
+        COMWriteUint8(HDL_START_CMD1);
+        r = COMGetCharNonBlock(0);
+        usleep(100);
+        LOG_D("handshake 1 response:%x",r);
+
+    }while(r != HDL_START_CMD1_R && allowComRuning);
+    count--;
+    LOG_D("handshake:0x%x",r);
+    LOG_D("HDL_START_CMD1 finish");
+    state++;
+    COMWriteUint8(HDL_START_CMD2);
+    r = COMGetCharBlock();
+    if(r != HDL_START_CMD2_R){
+
+        LOG_E("error state = %d,r=%x",state,r);
+
+        return false;
+    }
+    LOG_D("HDL_START_CMD2 finish");
+    state++;
+    COMWriteUint8(HDL_START_CMD3);
+    r = COMGetCharBlock();
+    if(r != HDL_START_CMD3_R){
+        LOG_E("error state = %d",state);
+        return false;
+    }
+    LOG_D("HDL_START_CMD3 finish");
+    state++;
+    COMWriteUint8(HDL_START_CMD4);
+    r = COMGetCharBlock();
+    if(r != HDL_START_CMD4_R){
+        LOG_E("error state = %d",state);
+        return false;
+    }
+    LOG_D("HDL_START_CMD4 finish");
+    state++;
+    return true;
+}
+bool AirohaDownloader::disableWDT(){
+    int r;
+    if(echoUint8(0xD2) == false){
+        return false;
+    }
+    LOG_D("brom_cmd1 finish");
+    state++;
+    if(echoUint32(HDL_WDT_REG) == false){
+        return false;
+    }
+    LOG_D("WDT_REG finish");
+    state++;
+    if(echoUint32(1) == false){
+        return false;
+    }
+    LOG_D("set num finish");
+    r = COMGetUint16();
+    if(r >= BROM_ERROR){
+        LOG_E("error state = %d,%x",state,r);
+        return false;
+    }
+
+    LOG_D("get status finish");
+    if(echoUint16(HDL_WDT_VAL) == false){
+        return false;
+    }
+    LOG_D("WDT_VAL finish");
+    r = COMGetUint16();
+    if(r >= BROM_ERROR){
+        LOG_E("error state = %d",state);
+        return false;
+    }
+    LOG_D("SET WDT finish");
+    return true;
+}
+bool AirohaDownloader::echoUint8(uint8_t a){
+    COMWriteUint8(a);
+    int r = COMGetCharBlock();
+    if( r != a){
+        LOG_E("%s,%x",__FUNCTION__,r);
+        return false;
+    }
+    return true;
+}
+bool AirohaDownloader::echoUint16(uint16_t a){
+    COMWriteUint16(a);
+    if(COMGetUint16() != a){
+        return false;
+    }
+    return true;
+}
+
+
+bool AirohaDownloader::echoUint32(uint32_t a){
+    uint32_t r;
+    COMWriteUint32(a);
+    r = COMGetUint32();
+    LOG_D("%s,%x,%x",__FUNCTION__,a,r);
+    if(r != a){
+        return false;
+    }
+    return true;
+}
+bool AirohaDownloader::sendDA(){
+    LOG_D("Send DA..."); 
+    FILE *fda = NULL;
+    fda = fopen(DA_PATH,"rb");
+    if(fda == NULL){
+        LOG_E("open da file %s,error",DA_PATH);
+        return false;
+    }
+    //len--;
+    int len = getFileSize(DA_PATH);
+    //len;
+    LOG_D("DATA len:%d",len);
+    echoUint8(0xD7);
+    echoUint32(HDL_DA_RUN_ADDR);
+    echoUint32(len);
+    echoUint32(0);
+    uint16_t status = COMGetUint16();
+    if(status > BROM_ERROR){
+        LOG_E("status error");
+        return false;
+    }
+    LOG_D("status = %hx",status);
+    LOG_D("send da data>>>"); 
+    //COMGetUint16();
+    char buffer[UART_SEND_STEP];
+    int total = 0;
+    int checksum = 0;
+    int readStep = UART_SEND_STEP; 
+    bool readExit = false;
+    //for test
+    //int send_len = 0;
+    //int packet_len = 1024;
+
+    while(1){
+        fread(buffer,readStep,1,fda);
+        sendPacket((uint8_t*)buffer, readStep);
+        usleep(20000);
+        //total += readStep;
+        LOG_D("SEND %d bytes OK,total %d,checksum %x",readStep,total,checksum);
+        checksum ^=computeChecksum((uint8_t*)buffer,readStep);
+        total += readStep;
+        if(readExit){
+            break;
+        }
+        if(len-total < readStep){
+            readStep = len-total;
+            readExit = true;
+        }
+        
+    }
+    
+    LOG_D("checksum ...");
+    
+    uint16_t checksumR = COMGetUint16();
+
+    if(checksumR != checksum){
+        LOG_E("checksum: %x,%x",checksum,checksumR);
+        return false;
+    }
+    LOG_D("checksum: %x,%x",checksum,checksumR);
+    status = COMGetUint16();
+    if(status > BROM_ERROR){
+        LOG_E("status error");
+        return false;
+    }
+    LOG_D("send DA successful");
+    fclose(fda);
+    return true;
+
+}    
+bool AirohaDownloader::jumpToDA(){
+    echoUint8(0xD5);
+    LOG_D("jump to DA");
+    if(echoUint32(HDL_DA_RUN_ADDR) == false){
+        return false;
+    }
+    LOG_D("set address");
+    uint16_t status = COMGetUint16();
+    if(status >= BROM_ERROR){
+        return false;
+    }
+    LOG_D("Jump to DA OK");
+
+    return true;
+}
+bool AirohaDownloader::syncWithDA(){
+
+    if(receiveAndSendUint8(0xC0,0x3F) == false) return false;
+    LOG_D("handshake step 1");
+    if(receiveAndSendUint8(0x0C,0xF3) == false) return false;
+    LOG_D("handshake step 2");
+    if(receiveAndSendUint8(0x3F,0xC0) == false) return false;
+    LOG_D("handshake step 3");
+    if(receiveAndSendUint8(0xF3,0x0C) == false) return false;
+    LOG_D("handshake with da!");
+	uint8_t r = COMGetCharBlock();
+	if(r != 0x5A){
+        LOG_E("wrong sync 1 %x",r);
+        return false;
+    }
+    COMWriteUint8(0);
+    if(COMGetCharBlock() != 0x69){
+        LOG_E("wrong sync 2");
+        return false;
+    }
+	
+	LOG_D("Log Init OK");
+	if(COMGetCharBlock() != 0x69){
+        LOG_E("Power Latch Error 2");
+        return false;
+    }
+	COMWriteUint8(0x5A);
+    LOG_D("Power latch OK");
+
+    COMWriteUint8(0);
+    if(COMGetCharBlock() != 0x69){
+        return false;
+    }
+    COMWriteUint8(0x5A);
+	LOG_D("PMU Key Disable OK");
+    if(COMGetCharBlock() != 0x69){
+        return false;
+    }
+    COMWriteUint8(0x5A);
+	LOG_D("DA Raise MCU OK");
+    usleep(100000); //wait for transmit
+    
+    bool res = setBaudrate(ttyFd,B921600);
+    if(res == false){
+        LOG_E("change baud error");
+    }
+    
+    for(int i=0;i<20;i++){
+        COMWriteUint8(0xC0);
+        r = COMGetCharBlock();
+        if(r == 0xC0){
+           break;
+        }
+        LOG_E("WAIT for sync..");
+    }
+    LOG_D("change baud OK");
+    if(echoUint8(0x5A) == false){
+        return false;
+    }
+    r = COMGetCharBlock(); 
+    if(r != 0x69){
+        LOG_E("sync error %x",r);
+        return false;
+    }
+    if(COMWriteUint8(0x5A) == false){
+        return false;
+    }
+    LOG_D("resync with da SUCCESS");
+    //get DA report
+    int id = COMGetUint16();
+    LOG_D("manufacturer id =%x",id);
+    id = COMGetUint16();
+    LOG_D("flash device id1 =%x",id);
+    id = COMGetUint16();
+    LOG_D("flash device id2 =%x",id);
+    id = COMGetUint32();
+    LOG_D("mount status =%x",id);
+    AG3335_Flash_Info.formatAddress = COMGetUint32();
+    LOG_D("base addr =%x",id);
+    AG3335_Flash_Info.formatSize = COMGetUint32();
+    LOG_D("flash size=%x",id);
+    if(receiveAndSendUint8(0x5A,0x5A) == false)
+    {
+        return false;
+    }
+    LOG_D("HOST SYNC DA SUCCESSFUL!!");
+    return true;
+}
+bool AirohaDownloader::formatFlash(){
+    COMWriteUint8(0xD4);
+    COMWriteUint8(0);
+    COMWriteUint32(AG3335_Flash_Info.formatAddress);
+    COMWriteUint32(AG3335_Flash_Info.formatSize);
+    do{
+        
+    }while(COMGetCharBlock() != 0x5A);
+
+    LOG_D("check format range success");
+    if(COMGetCharBlock() != 0x5A){
+        return false;
+    }
+    LOG_D("check begin address success");
+    while(1){
+        uint32_t formatStatus = COMGetUint32();
+        if(formatStatus == 0x00){
+            uint8_t progress = COMGetCharBlock();
+            LOG_D("Progress = %d",progress);
+            COMWriteUint8(0x5A);
+            break;
+        }else if(formatStatus == 3021){
+            uint8_t progress = COMGetCharBlock();
+            COMWriteUint8(0x5A);
+
+            LOG_D("format progress = %d",progress);
+            
+        }
+    }
+    if(COMGetCharBlock() != 0x5A){
+        return false;
+    }
+    LOG_D("format flash OK!!");
+    return true;
+}
+
+bool AirohaDownloader::downloadImage(struct ImageInfo img){
+    
+    const uint32_t imageLen = img.image_len;
+    
+    uint32_t img4K = (((imageLen-1) / 4096)+1)*4096;
+    LOG_D("Download image...%d 4k %d", imageLen, img4K);
+    COMWriteUint8(0xB2);
+    COMWriteUint32(img.slaveAddress);
+    COMWriteUint32(img4K);
+    COMWriteUint32(DA_SEND_PACKET_LEN); 
+    int ret;
+    ret = COMGetCharBlock();
+    if(ret != 0x5A){
+        return false;
+    }
+    LOG_D("range OK %x",ret);
+    if(COMGetCharBlock() != 0x5A){
+        LOG_E("check argument fail..2");
+        return false;
+    }
+    LOG_D("erase OK");
+    fseek(img.imagefile,0L,SEEK_SET);
+    uint32_t sent_len = 0;
+    uint8_t sendBuffer[DA_SEND_PACKET_LEN];
+    uint32_t image_checksum = 0;
+    uint32_t checksum = 0;
+    bool padding = false;
+    while(sent_len < img4K){
+        if(padding == false){
+            LOG_D("Packet parser,sent:%d",sent_len);
+            uint32_t remain_len = imageLen - sent_len ;
+            if(remain_len <= DA_SEND_PACKET_LEN){
+                //the last packet
+                fread(sendBuffer,remain_len,1,img.imagefile);
+                memset(sendBuffer+remain_len,0xFF,DA_SEND_PACKET_LEN-remain_len);
+                sent_len += DA_SEND_PACKET_LEN;
+                padding = true;
+            }else{
+                fread(sendBuffer,DA_SEND_PACKET_LEN,1,img.imagefile);
+                sent_len += DA_SEND_PACKET_LEN;
+            }
+            checksum = simpleChecksum(sendBuffer,DA_SEND_PACKET_LEN); 
+            image_checksum += checksum;
+        }else{
+            memset(sendBuffer,0xFF,DA_SEND_PACKET_LEN);
+            sent_len += DA_SEND_PACKET_LEN;
+            checksum = simpleChecksum(sendBuffer,DA_SEND_PACKET_LEN);
+            image_checksum += checksum;
+        }
+        //usleep(50000);
+        sendPacket(sendBuffer,DA_SEND_PACKET_LEN);
+        LOG_D("Packet parser,sent:%d finish",sent_len);
+        LOG_D("sendPacket OK");
+        //usleep(50000);
+        COMWriteUint32(checksum);
+        LOG_D("wait respond..");
+        int k;
+        char a;
+        int count = 0;
+        if(COMGetCharBlock() != 0x69){
+            do{
+                sendPacket(sendBuffer,DA_SEND_PACKET_LEN);
+                count += DA_SEND_PACKET_LEN;
+                k = read(ttyFd,&a,1);
+                LOG_D("write %d ",count);
+            }while(k == 0);
+            LOG_D("wait chip one error ");
+            return false;
+        }
+    }
+    LOG_D("download full image ok..check");
+    if(COMGetCharBlock() != 0x5A){
+        LOG_D("ACK error");
+        return false;
+    }
+    COMWriteUint32(image_checksum);
+    if(COMGetCharBlock() != 0x5A){
+        uint32_t checksumF = COMGetUint32();
+        LOG_D("image checksum failed!!! %x,%x",checksumF,image_checksum);
+        return false;
+    }
+    LOG_D("image checksum OK");
+    if(img.is_bootloader){
+        COMWriteUint8(0x5A);
+    }else{
+        COMWriteUint8(0xA5);
+    }
+    if(COMGetCharBlock() != 0x5A){
+        LOG_D("set bootloader error");
+        return false;
+    }
+    LOG_D("image download OK");
+    return true;
+}
+bool AirohaDownloader::checkUint8(uint8_t a,uint8_t b){
+    COMWriteUint8(a);
+    if(COMGetCharBlock() != b){
+        return false;
+    }
+    return true;
+}
+bool AirohaDownloader::receiveAndSendUint8(uint8_t a,uint8_t b){
+
+    if(COMGetCharBlock() == a){
+        COMWriteUint8(b);
+        return true;
+    }
+    return false;
+}
+uint16_t AirohaDownloader::computeChecksum(uint8_t* buf,uint32_t buf_len){
+    uint16_t checksum = 0;
+    if(buf == NULL || buf_len == 0){
+        return false;
+    }
+    uint32_t i = 0;
+    for(i=0;i<buf_len/2;i++){
+        checksum ^= *(uint16_t *)(buf + i*2);
+    }
+    if((buf_len %2) == 1){
+        checksum ^= buf[i*2];
+    }
+    return checksum;
+
+}
+uint32_t AirohaDownloader::simpleChecksum(uint8_t *buf,uint32_t len){
+    uint32_t checksum = 0;
+    if(buf == NULL || len == 0){
+        LOG_E("simpleChecksum error");
+        return 0;
+    }
+    uint32_t i = 0;
+    for(i = 0; i < len; i++){
+        checksum += *(buf + i);
+    }
+    return checksum;
+
+}
+
+bool AirohaDownloader::sendPacket(uint8_t *buf,size_t len){
+
+    size_t sent_len = 0;
+    size_t step = 4096;
+    //char a = 0;
+    while(sent_len < len){
+        int to_send = (len - sent_len) > step?step:(len-sent_len);
+        int send = write(ttyFd,buf+sent_len,to_send);
+        if(send > 0){
+            sent_len += send;
+        }else{
+            usleep(1000);//wait for transmit
+        }
+        
+    }
+    return true;
+}
+uint32_t AirohaDownloader::getFileSize(const char* name){
+    struct stat statInfo;
+    stat(name,&statInfo);
+    return statInfo.st_size;
+}
+bool AirohaDownloader::downloadChip(struct DownloadConfig list[],uint32_t size){
+
+    LOG_D("%s...",__FUNCTION__);
+    uint32_t i;
+    for(i=0; i < size; i++){
+        FILE *p = NULL;
+        p = fopen(list[i].fileName,"rb");
+        if(p == NULL){
+            LOG_E("can not open %s",list[i].fileName);
+            return false;
+        }
+        struct ImageInfo imginfo;
+        memset(&imginfo,0,sizeof(imginfo));
+        imginfo.imagefile = p;
+        imginfo.image_len = getFileSize(list[i].fileName);
+        imginfo.is_bootloader = list[i].isBootLoader;
+        imginfo.slaveAddress = list[i].beginAddress;
+        bool ret = downloadImage(imginfo);
+        if(ret == false){
+            LOG_D("download %s FAILED",list[i].fileName);
+            fclose(p);
+            return false;
+        }
+        LOG_D("download %s SUCCESS",list[i].fileName);
+        statusNotify(DL_FINISH,0);
+        fclose(p);
+        backUpBinFile(list[i].fileName,list[i].backupfileName);
+
+    }
+    return true;
+}
+
+
+
+void AirohaDownloader::backUpBinFile(const char *sourcefile,const char * destfile){
+    LOG_D("%s...",__FUNCTION__);
+    char buff[4096];
+    int len;
+    FILE*read,*write;
+    read=fopen(sourcefile,"rb");
+    write=fopen(destfile,"wb+");
+    if(read==NULL)
+    {
+        LOG_D("open sourcefile error ");
+        return;
+    }
+     if(write==NULL)
+    {
+        LOG_D("open backupfile error ");
+        return;
+    }
+    while(0!=(len=fread(buff,1,sizeof(buff),read)))
+    {
+        fwrite(buff,1,len,write);
+    }
+    fseek(read,0L,SEEK_SET);
+    fseek(write,0L,SEEK_SET);
+    if(getFileSize(sourcefile)!=getFileSize(destfile))
+    {
+        LOG_E("%s file backup error,need check!!!!",sourcefile);
+    }
+    else
+    {
+        LOG_D("%s file backup OK !!",sourcefile);
+    }
+    LOG_D("sourcefile size %d  destfile size %d !!",getFileSize(sourcefile),getFileSize(destfile));
+    fclose(read);
+    fclose(write);
+}
+
+bool AirohaDownloader::registerStatusCallback(statusCallback callback, void* userdata){
+    std::lock_guard<std::recursive_mutex> locker(configMutex);
+    CallbackItem item;
+    item.callback = callback;
+    item.userdata = userdata;
+    callbackList.push_back(item);
+    return true;
+}
+void AirohaDownloader::statusNotify(dl_status_code_t code,int progress){
+    std::lock_guard<std::recursive_mutex> locker(configMutex);
+    std::vector<CallbackItem>::iterator it;
+    for(it = callbackList.begin();it != callbackList.end(); it++){
+        CallbackItem item = *it;
+        item.callback(code,progress,item.userdata);
+    }
+}
+uint8_t AirohaDownloader::downloadMessageTake() {
+    uint8_t x;
+    std::lock_guard<std::mutex> locker(queueLock);
+    while (downloadMessageQueue.size() == 0) {
+        queueNotEmpty.wait(queueLock);
+    }
+    x = downloadMessageQueue.front();
+    downloadMessageQueue.pop_front();
+    queueNotFull.notify_one();
+    return x;
+}
+void AirohaDownloader::downloadMessagePut(uint8_t msg) {
+    std::lock_guard<std::mutex> locker(queueLock);
+    while (downloadMessageQueue.size() >= 20) {
+        queueNotFull.wait(queueLock);
+    }
+    downloadMessageQueue.push_back(msg);
+    queueNotEmpty.notify_one();
+    return;
+}
+int64_t AirohaDownloader::getCurrentBootTimeSecond() {
+    struct timespec ts;
+    clock_gettime(CLOCK_BOOTTIME, &ts);
+    return ts.tv_sec;
+}
+void AirohaDownloader::sendDownloadMessage(DownloadMessage msg) {
+    if (recordFile) {
+        char tmp[100] = { 0 };
+        snprintf(tmp,100,"BootTime:%" PRId64 ",Msg:%s \r\n",getCurrentBootTimeSecond(), getMessageStr(msg));
+        fwrite(tmp, 1, strlen(tmp), recordFile);
+        fflush(recordFile);
+    }
+    downloadMessagePut(msg);
+}
+#define ANLD_DL_MSG_ENUM(x) case x: return #x;
+
+
+const char *AirohaDownloader::getMessageStr(DownloadMessage msg) {
+    switch (msg) {
+        ANLD_DL_MSG_ENUM(DL_MSG_DOWNLOAD_START);
+        ANLD_DL_MSG_ENUM(DL_MSG_OPEN_TTY_SUCCESSFUL);
+        ANLD_DL_MSG_ENUM(DL_MSG_POWER_ON_AFTER_1S);
+        ANLD_DL_MSG_ENUM(DL_MSG_HANDSHAKE_RETRY);
+        ANLD_DL_MSG_ENUM(DL_MSG_HANDSHAKE_FAILED);
+        ANLD_DL_MSG_ENUM(DL_MSG_HANDSHAKE_CMD1_FINISH);
+        ANLD_DL_MSG_ENUM(DL_MSG_HANDSHAKE_CMD2_FINISH);
+        ANLD_DL_MSG_ENUM(DL_MSG_HANDSHAKE_CMD3_FINISH);
+        ANLD_DL_MSG_ENUM(DL_MSG_HANDSHAKE_CMD4_FINISH);
+        ANLD_DL_MSG_ENUM(DL_MSG_DOWNLOAD_FINISH);
+    default:
+        break;
+    }
+    return "UNKNOWN";
+}

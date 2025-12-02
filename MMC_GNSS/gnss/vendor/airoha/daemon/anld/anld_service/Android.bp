@@ -1,0 +1,46 @@
+cc_prebuilt_library_static {
+        name: "libanldservice",
+        arch:{
+                arm:{
+                        srcs:["arm/libanldservice.a"], 
+                },
+                arm64:{
+                        srcs:["arm64/libanldservice.a"],
+                },
+        },
+        export_include_dirs:[
+                ".",
+        ],
+
+    vendor: true
+}
+
+cc_prebuilt_library_static {
+        name: "libc++_static-airoha",
+        arch:{
+                arm:{
+                        srcs:["arm/libc++_static.a"], 
+                },
+                arm64:{
+                        srcs:["arm64/libc++_static.a"],
+                },
+        },
+        export_include_dirs:[
+                ".",
+        ],
+
+    vendor: true
+}
+cc_prebuilt_library_static {
+        name: "libairoha_prop",
+        arch:{
+                arm:{
+                        srcs:["arm/libairoha_prop.a"], 
+                },
+                arm64:{
+                        srcs:["arm64/libairoha_prop.a"],
+                },
+        },
+    vendor: true
+}
+

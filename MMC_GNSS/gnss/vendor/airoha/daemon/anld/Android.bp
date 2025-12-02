@@ -1,0 +1,158 @@
+cc_binary{
+    name : "airoha.hardware.anld",
+    relative_install_path:"hw",
+    vendor:true,
+    //for debug
+    init_rc : ["airoha.hardware.anld.rc"],
+    srcs: [
+        "anld_service/anld_service_interface.cpp",
+        "main/main.cpp",
+        "platform/src/ConfigLoader.cpp",
+        "platform/src/default_platform.cpp",
+        "platform/src/platform_command.cpp",
+        "platform/src/download_manager.cpp",
+        "platform/src/download_interface.cpp",
+        "platform/src/platform_virtual_driver.cpp",
+        "driver/comm/uart_driver.cpp",
+        "driver/comm/spi_driver.cpp",
+        "driver/gpio/GPIOControl.cpp",
+        "component/src/PairUtil.cpp",
+        "component/src/SocketBase.cpp",
+        "driver/comm/AirohaDriver.cpp",
+        "driver/timer/system_timer.cpp",
+        "platform/src/linux_transfer.cpp",
+        "platform/src/super_transfer.cpp",
+        "platform/src/platform_event.cpp",
+        "platform/src/network_util.cpp",
+        "main/mini_loader.cpp",
+        "main/environment.cpp",
+        "component/src/EpoBase.cpp",
+        "driver/sensor/sensor.cpp",
+        "driver/wakelock/air_wakelock.cpp"
+    ],
+    shared_libs: [
+        "liblog",
+        "libcurl",
+        "libcutils",
+        "libhardware_legacy",
+        // Comment if not use sensor
+        // "libsensorndkbridge",
+    ],
+    static_libs: [
+        "libairohacommon",
+        "libairoha_prop",
+        "libanldservice",
+        "libc++_static-airoha"
+    ],
+    local_include_dirs: [
+        "./utility/inc",
+        "anld_service/",
+        "driver/comm",
+        "driver/gpio",
+        "driver/time",
+        "driver/timer",
+        "driver",
+        "platform/inc",
+        "component/inc",
+    ],
+    cflags:[
+        "-Werror",
+        "-Wall",
+        "-g3",
+        "-DFLOW_CONTROL=1",
+        "-UNDEBUG",
+        "-D__ANDROID_OS__",
+        // "-DLOW_BAUD",
+        // for memory check
+        // "-fsanitize=address",
+        // "-fno-omit-frame-pointer",
+        // "-O0"
+        // "-DSUPPORT_SENSOR_FEATURE",
+    ],
+    //sanitize: { 
+    //    hwaddress: true,
+    //},
+    defaults:[
+        "anld_property_control"
+    ],
+    required:[
+        "anld_user_setting.xml", 
+        "gnss_config.bin",
+        "nfore_nav.bin",
+        "partition_table.bin",
+        "ag3335_da.bin",
+        "bootloader.bin",
+        "flash_download.cfg",
+    ],
+
+}
+xml_include {
+    name: "anld_user_setting.xml",
+    filename: "anld_user_setting.xml",
+    sub_dir: "gnss",
+    vendor:true,
+    filename_from_src: false
+}
+prebuilt_etc {
+    name: "gnss_config.bin",
+    src: "gnss_demo/gnss_config.bin",
+    sub_dir: "gnss",
+    vendor:true,
+}
+prebuilt_etc {
+    name: "nfore_nav.bin",
+    src: "gnss_demo/nfore_nav.bin",
+    sub_dir: "gnss",
+    vendor:true,
+}
+prebuilt_etc {
+    name: "partition_table.bin",
+    src: "gnss_demo/partition_table.bin",
+    sub_dir: "gnss",
+    vendor:true,
+}
+prebuilt_etc {
+    name: "ag3335_da.bin",
+    src: "gnss_demo/ag3335_da.bin",
+    sub_dir: "gnss",
+    vendor:true,
+}
+prebuilt_etc {
+    name: "bootloader.bin",
+    src: "gnss_demo/bootloader.bin",
+    sub_dir: "gnss",
+    vendor:true,
+}
+prebuilt_etc {
+    name: "flash_download.cfg",
+    src: "gnss_demo/flash_download.cfg",
+    sub_dir: "gnss",
+    vendor:true,
+}
+bootstrap_go_package {
+    name: "snoog-anld_property_control",
+    pkgPath: "android/soong/anld_property/control",
+    deps: [
+        "soong-android",
+        "soong-cc",
+    ],
+    srcs :[
+        "property_parser.go",
+    ],
+    pluginFor: ["soong_build"]
+}
+anld_property_control {
+    name : "anld_property_control"
+}
+
+
+extgnss_cc_static_default {
+    name: "airoha_extgnss_static_default",
+}
+extgnss_cc_binary_default {
+    name: "airoha_extgnss_binary_default",
+}
+extgnss_cc_service_default {
+    name: "airoha_extgnss_xml_default",
+}
+
