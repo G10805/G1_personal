@@ -1,0 +1,476 @@
+/* Copyright Statement:
+ *
+ * (C) 2020  Airoha Technology Corp. All rights reserved.
+ *
+ * This software/firmware and related documentation ("Airoha Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to Airoha Technology Corp. ("Airoha") and/or its licensors.
+ * Without the prior written permission of Airoha and/or its licensors,
+ * any reproduction, modification, use or disclosure of Airoha Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ * You may only use, reproduce, modify, or distribute (as applicable) Airoha Software
+ * if you have agreed to and been bound by the applicable license agreement with
+ * Airoha ("License Agreement") and been granted explicit permission to do so within
+ * the License Agreement ("Permitted User").  If you are not a Permitted User,
+ * please cease any access or use of Airoha Software immediately.
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT AIROHA SOFTWARE RECEIVED FROM AIROHA AND/OR ITS REPRESENTATIVES
+ * ARE PROVIDED TO RECEIVER ON AN "AS-IS" BASIS ONLY. AIROHA EXPRESSLY DISCLAIMS ANY AND ALL
+ * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES AIROHA PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH AIROHA SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN AIROHA SOFTWARE. AIROHA SHALL ALSO NOT BE RESPONSIBLE FOR ANY AIROHA
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND AIROHA'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO AIROHA SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT AIROHA'S OPTION, TO REVISE OR REPLACE AIROHA SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * AIROHA FOR SUCH AIROHA SOFTWARE AT ISSUE.
+ */
+
+/*
+ * @Author: Rain Luo
+ * @Date: 2020-07-28 19:39:43
+ * @LastEditTime: 2020-08-14 15:26:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \anld\middleware\comm\Communicator.cpp
+ */ 
+
+#define LOG_TAG "ANLD_COMM"
+#include "Communicator.h"
+
+#include <sys/epoll.h> 
+#include "string.h"
+#include "simulation.h"
+#include <fcntl.h>
+#include <unistd.h>
+#include <assert.h>
+#include "default_platform.h"
+#include <sys/ioctl.h>
+#include <poll.h>
+#include <sys/signalfd.h>
+#include <signal.h>
+using namespace Airoha::Communicator;
+using namespace Airoha;
+
+void *UartPort::uartPthreadRx(void *vp){
+    UartPort *p = (UartPort *)vp;
+    struct pollfd poll_fd[2];
+
+    sigset_t set;
+    sigemptyset(&set);
+    sigaddset(&set, SIGUSR1);
+    sigprocmask(SIG_BLOCK, &set, nullptr);
+    int f_socket = signalfd(-1, &set, SFD_NONBLOCK | SFD_CLOEXEC);
+    LOG_D("uart rx run, %s",p->portName);
+    uint8_t buffer[1024];
+    while(1){
+        if(!(p->isRunning)){
+            break;
+        }
+        poll_fd[0].fd = p->uartFd;
+        poll_fd[0].events = POLLIN;
+        poll_fd[1].fd = f_socket;
+        poll_fd[1].events = POLLIN;
+        int poll_ret = poll(poll_fd,2,-1);
+        if(poll_ret <= 0){
+            continue;
+        }
+        int k = read(p->uartFd,buffer,1023);
+        if(k>0){
+            buffer[k] = 0;
+            //ALOGD("%s",buffer);
+            //callback to user
+            p->rxCallback(buffer,k, p->extra);
+        }else{
+            // usleep(1000);
+            continue;
+        }
+    }
+    LOG_D("close signal fd");
+    close(f_socket);
+    LOG_D("uart rx end, %s",p->portName);
+    return NULL;
+}
+void UartPort::uartTx(UartPort *p){
+    //LOG_D("uart tx run, %s",p->portName);
+    
+    while(p->isRunning){
+        //LOG_D("uart is running test...");
+        //workround
+        //std::unique_lock<std::mutex> locker(p->m_mutex);
+        if(p->tx_buffer.size() > 0){
+            LOG_D("tx send:%s",p->tx_buffer.c_str());
+            uint8_t *sendBuffer= (uint8_t *)malloc(p->tx_buffer.size());
+            //sendBuffer[255] = 0; // c string
+            size_t read_len = p->tx_buffer.size();
+            memcpy(sendBuffer, p->tx_buffer.data(), read_len);
+            size_t i = 0;
+            //p->tx_buffer.readBytesBlock(sendBuffer,255,read_len);
+            //make sure send all
+            int retry_count = 0;
+            while(read_len > 0){
+                int ret = write(p->uartFd,sendBuffer+i,read_len);
+                if(ret > 0){
+                read_len -= ret;
+                    i += ret;
+                }
+                else{
+                    usleep(1000);
+                    retry_count++;
+                    if(retry_count > 1000){
+                        LOG_E("can not send data!!");
+                        break;
+                    }
+                }
+            }
+            p->tx_buffer = "";
+            free(sendBuffer);
+        }else{
+            //workround,NEED FIX!
+            usleep(1000);
+            //p->m_notEmpty.wait(p->m_mutex);
+        }
+        
+    }
+    LOG_D("uart tx end, %s",p->portName);
+}
+//TODO: EPOLL main
+/**
+void UartPort::uartEpollMain(UartPort *p){
+    
+
+    while(isEpollRun){
+        struct epoll_event gnss_event[10];
+        int epoll_res =  epoll_wait(gnssHandler->epollFd, gnss_event, 10, 50);
+        if(epoll_res == 0){
+            //ALOGE("epoll_res Timeout??");
+            continue;
+        }
+    }
+
+    
+}
+**/
+UartPort::UartPort() : CommPort(){
+    isRunning = false;
+    uartFd = -1;
+}
+UartPort::UartPort(RxCallback callback, size_t size) : CommPort(){
+    isRunning = false;
+    rxCallback = callback;
+    uartFd = -1;
+    (void)size;
+}
+
+UartPort::UartPort(RxCallback callback, void *userData) : CommPort(){
+    isRunning = false;
+    rxCallback = callback;
+    uartFd = -1;
+    extra = userData;
+}
+
+bool UartPort::openCOMM(PortNum pnum){
+    std::unique_lock<std::mutex> locker(m_mutex);
+    if(isRunning){
+        return false;
+    }
+    configMutex.lock();
+    UartConfig *pConfig = (UartConfig *)Config::customerGetConfig(pnum);
+    uartFd = open(pConfig->devName, O_RDWR|O_NOCTTY|O_NONBLOCK);
+    if(uartFd  < 0){
+        LOG_D("openUart %s error: %s",pConfig->devName,strerror(errno));
+        configMutex.unlock();
+        return -1;
+    }
+    LOG_D("openUart %s successful", pConfig->devName);
+    struct termios tty_config;
+    int result = tcgetattr(uartFd,&tty_config);
+    if(result != 0){
+        LOG_E("get attr failed!!%d,%s",result,strerror(errno));
+        configMutex.unlock();
+        return -1;
+    }
+    this->config = pConfig;
+    tty_config.c_cflag = 0;
+    tty_config.c_lflag = 0;
+    tty_config.c_oflag = 0;
+    cfsetispeed(&tty_config,baudrateMapping(pConfig->baudrate,baudrateInt));
+    cfsetospeed(&tty_config,baudrateMapping(pConfig->baudrate,baudrateInt));
+    tty_config.c_cflag |= CS8;
+    //no echo, raw mode
+    tty_config.c_lflag &= ~(ICANON|ECHO|ECHOE|ECHOK|ECHONL|NOFLSH|ISIG);
+    tty_config.c_oflag &= ~(ONLCR|OPOST);
+    tty_config.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP
+                       | INLCR | IGNCR | ICRNL | IXON | IXOFF | IXANY);
+#if (FLOW_CONTROL == 1) 
+    LOG_D("software control enable");
+    tty_config.c_iflag |= IXON | IXOFF;
+    tty_config.c_cc[VSTART] = 0x11;
+    tty_config.c_cc[VSTOP] = 0x13; 
+#elif (FLOW_CONTROL == 2)
+    tty_config.c_cflag |= CRTSCTS;
+#else
+    LOG_D("no flow control");
+#endif
+    result = tcsetattr(uartFd, TCSANOW, &tty_config);
+    if(result != 0){
+        assert(0);
+        configMutex.unlock();
+        return false;
+    }
+    isRunning = true;
+    memset(portName,0,UART_DEV_NAME_LEN);
+    memcpy(portName,pConfig->devName,strlen(pConfig->devName) > (UART_DEV_NAME_LEN-1) ? (UART_DEV_NAME_LEN-1) : strlen(pConfig->devName));
+    //uartReadThread = std::thread(uartRx,this);
+    pthread_create(&uartReadThread, NULL, uartPthreadRx, this);
+    //uartWriteThread = std::thread(uartTx,this);
+
+    configMutex.unlock();
+    return true;
+}
+/**
+bool UartPort::openUart(bool toEpoll){
+    if(!toEpoll){
+        openUart();
+    }
+    else{
+        addToEpoll(this);
+    }
+    return true;
+}
+**/
+bool UartPort::closeCOMM(){
+    configMutex.lock();
+    //TODO: support EPOLL
+    //removeFromEpoll(this);
+    std::unique_lock<std::mutex> locker(m_mutex);
+    if(uartFd > 0){
+        isRunning = false;
+        pthread_kill(uartReadThread, SIGUSR1);
+        LOG_D("get lock, notify...");
+        LOG_D("get lock, notify end...");
+        pthread_join(uartReadThread,NULL);
+        LOG_D("read thread exit");
+        // while(uartWriteThread.joinable() == false){
+        //     LOG_E("not joinable , try to wake up");
+        //     m_notEmpty.notify_one();
+        // }
+        // LOG_D("uartWriteThread joinable !");
+        // uartWriteThread.join();
+        //make sure all message is send when close uart
+        tcdrain(uartFd);
+        close(uartFd);
+        LOG_D("Close uartfd (%d) finish",uartFd);
+        uartFd = 0;
+    }
+    configMutex.unlock();
+    return true;
+}
+size_t UartPort::sendData(const uint8_t* buffer, size_t len){
+    std::lock_guard<std::mutex> locker(m_mutex);
+    if(len == 0){
+        return 0;
+    }
+    if(!isRunning){
+        return 0;
+    }
+    if(uartFd <= 0){
+        return 0;
+    }
+    return safeSend(buffer, len);
+    // std::string a((char*)buffer,len);
+    // LOG_D("send data %s",a.c_str());
+    // tx_buffer += std::string((char *)buffer,len);
+    // m_notEmpty.notify_one();
+    // return len;
+
+}
+size_t UartPort::safeSend(const void * buffer, size_t length){
+    std::string bufferStr((const char*)buffer, length);
+    LOG_D("uart send data: content:%s,length:%zu", bufferStr.c_str(),length);
+    size_t i = 0;
+    if(length == 0){
+        return 0;
+    }
+    char hex[401] = { 0 };
+    const char *hexPat = "%02X";
+    char hexSingel[3] = { 0 };
+    for (size_t j = 0;j < length && j < 200; j++) {
+        snprintf(hexSingel, 3, hexPat, ((uint8_t*)buffer)[j]);
+        strcat(hex, hexSingel);
+    }
+    LOG_D("uart write data: %s", hex);
+    while(length > 0){
+        int ret = write(uartFd,((const char*)buffer)+i,length);
+        LOG_D("uart send data:ret %d, length %zu", ret, length);
+        if(ret > 0){
+            length -= ret;
+            i += ret;
+        }
+        else{
+            usleep(1000);
+        }
+    }
+
+    LOG_D("safesend data end");
+    return length;
+}
+UartPort::~UartPort(){
+    configMutex.lock();
+    if(isRunning){
+        closeCOMM();
+    }
+    configMutex.unlock();
+
+}
+bool UartPort::isPortRunning(){
+    return isRunning;
+}
+bool UartPort::setRTSPinStatus(bool enable){
+    if(uartFd < 0){
+        LOG_E("setRTSPinStatus failed because uart not open");
+        return false;
+    }
+    if(enable){
+        int bits;
+        if(ioctl(uartFd,TIOCMGET,&bits) < 0){
+            LOG_E("IOCTL get error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+        bits |= TIOCM_RTS;
+        if(ioctl(uartFd,TIOCMSET,&bits) < 0){
+            LOG_E("IOCTL set error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+    }else{
+        int bits;
+        if(ioctl(uartFd,TIOCMGET,&bits) < 0){
+            LOG_E("IOCTL get error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+        bits &= (~TIOCM_RTS);
+        if(ioctl(uartFd,TIOCMSET,&bits) < 0){
+            LOG_E("IOCTL set error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+    }
+    return true;
+}
+bool UartPort::setDTRPinStatus(bool enable){
+    if(uartFd < 0){
+        LOG_E("setCTSPinStatus failed because uart not open");
+        return false;
+    }
+    if(enable){
+        int bits;
+        if(ioctl(uartFd,TIOCMGET,&bits) < 0){
+            LOG_E("IOCTL get error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+        bits |= TIOCM_DTR;
+        if(ioctl(uartFd,TIOCMSET,&bits) < 0){
+            LOG_E("IOCTL set error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+    }else{
+        int bits;
+        if(ioctl(uartFd,TIOCMGET,&bits) < 0){
+            LOG_E("IOCTL get error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+        bits &= (~TIOCM_DTR);
+        if(ioctl(uartFd,TIOCMSET,&bits) < 0){
+            LOG_E("IOCTL set error, %d, %s\n",errno,strerror(errno));
+            return false;
+        }
+    }
+    return true;
+}
+int UartPort::getFileDescriptor() {
+    return uartFd;
+}
+//TODO: Support epoll add/remove
+/**
+void UartPort::addToEpoll(UartPort *){
+    epollMutex.lock();
+    if(isEpollRun == false){
+        epollFd = epoll_create(MAX_EPOLL_NUM);
+        struct epoll_event e_event;
+        memset(&e_event,0,sizeof(e_event));
+        e_event.data.fd = msgHandler->messageFd;
+        if(op & HANDLE_READ){
+            ALOGE("add handler :HANDLE_READ\n");
+            e_event.events |= EPOLLIN;
+        }
+        if(op & HANDLE_WRITE){
+            ALOGE("add handler:HANDLE_WRITE\n");
+            e_event.events |= EPOLLOUT;
+        }
+        int ret = epoll_ctl(this->epollFd, EPOLL_CTL_ADD, msgHandler->messageFd, &e_event);
+            epollThread(uartEpollMain,this);
+        }
+}
+**/
+/**
+void UartPort::removeFromEpoll(UartPort *){
+
+}
+**/
+
+
+PollingPort::PollingPort(){
+    endian = PortEndian::PORT_LITTLE_ENDIAN;
+}
+PollingPort::~PollingPort(){
+
+}
+UartConfig::UartConfig(const char* dev, UartBaudrate rate){
+    this->devName = dev;
+    this-> baudrate = rate;
+}
+SPIConfig::SPIConfig(const char* dev, uint32_t set_speed){
+    this->devName = dev;
+    this->speed = set_speed;
+}
+
+int Airoha::Communicator::baudrateMapping(UartBaudrate baud, int& baudrateInt){
+    //add mode baudrate in the future, here just a framework
+    switch (baud)
+    {
+        case UartBaudrate::UART_BAUD_9600:
+        {
+            baudrateInt = 9600;
+            return B9600;
+        }   
+        case UartBaudrate::UART_BAUD_921600:
+        {
+            baudrateInt = 921600;
+            return B921600;
+        }
+        case UartBaudrate::UART_BAUD_3M:
+        {    
+            baudrateInt = 3000000;
+            return B3000000;
+        }
+        case UartBaudrate::UART_BAUD_460800:
+        {
+            baudrateInt = 460800;
+            return B460800;
+        }
+            
+        default:
+        {
+            LOG_E("not support baudrate");
+            assert(0);
+            break;  
+        }
+    
+    }
+
+}

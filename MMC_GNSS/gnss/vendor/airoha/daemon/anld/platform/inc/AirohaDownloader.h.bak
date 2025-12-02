@@ -1,0 +1,226 @@
+/* Copyright Statement:
+ *
+ * (C) 2020  Airoha Technology Corp. All rights reserved.
+ *
+ * This software/firmware and related documentation ("Airoha Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to Airoha Technology Corp. ("Airoha") and/or its licensors.
+ * Without the prior written permission of Airoha and/or its licensors,
+ * any reproduction, modification, use or disclosure of Airoha Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ * You may only use, reproduce, modify, or distribute (as applicable) Airoha Software
+ * if you have agreed to and been bound by the applicable license agreement with
+ * Airoha ("License Agreement") and been granted explicit permission to do so within
+ * the License Agreement ("Permitted User").  If you are not a Permitted User,
+ * please cease any access or use of Airoha Software immediately.
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT AIROHA SOFTWARE RECEIVED FROM AIROHA AND/OR ITS REPRESENTATIVES
+ * ARE PROVIDED TO RECEIVER ON AN "AS-IS" BASIS ONLY. AIROHA EXPRESSLY DISCLAIMS ANY AND ALL
+ * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES AIROHA PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH AIROHA SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN AIROHA SOFTWARE. AIROHA SHALL ALSO NOT BE RESPONSIBLE FOR ANY AIROHA
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND AIROHA'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO AIROHA SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT AIROHA'S OPTION, TO REVISE OR REPLACE AIROHA SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * AIROHA FOR SUCH AIROHA SOFTWARE AT ISSUE.
+ */
+ 
+#ifndef AIROHA_DOWNLOADER_H
+#define AIROHA_DOWNLOADER_H
+
+#include <pthread.h>
+#include <termios.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <mutex>
+#include <vector>
+#include <list>
+#include <condition_variable>
+#define AIROHA_ERR "[ERROR]"
+#define LF "\n"
+
+
+#define DOWNLOAD_HAND_BAUD B115200
+#define DOWNLOAD_DA_BAUD   B921600
+//#define DOWNLOAD_ON_PC
+namespace Airoha{
+namespace Downloader{
+
+#define DA_PATH "/vendor/etc/gnss/slave_da_UART.bin"
+#define IMAGE_PARTITION_PATH "/vendor/etc/gnss/partition_table.bin"
+#define IMAGE_BOOTLOADER_PATH "/vendor/etc/gnss/ag3335_bootloader.bin"
+#define IMAGE_GNSS_DEMO_PATH  "/vendor/etc/gnss/gnss_demo.bin"
+#define IMAGE_GNSS_CONFIG_PATH     "/vendor/etc/gnss/gnss_config.bin"
+
+#define IMAGE_PARTITION_BACKUP_PATH "/data/vendor/airoha/partition_table_backup.bin"
+#define IMAGE_BOOTLOADER_BACKUP_PATH "/data/vendor/airoha/ag3335_bootloader_backup.bin"
+#define IMAGE_GNSS_DEMO_BACKUP_PATH  "/data/vendor/airoha/gnss_demo_backup.bin"
+#define IMAGE_GNSS_CONFIG_BACKUP_PATH     "/data/vendor/airoha/gnss_config_backup.bin"
+
+
+//register
+#define HDL_WDT_REG   0xA2080000
+#define HDL_WDT_VAL   0x0010
+#define HDL_DA_RUN_ADDR  0x04204000
+//cmd
+#define CMD_T 1
+#define CMD_R 2
+
+#define HDL_START_CMD1 0xA0
+#define HDL_START_CMD1_R 0x5F
+#define HDL_START_CMD2 0x0A
+#define HDL_START_CMD2_R 0xF5
+#define HDL_START_CMD3 0x50
+#define HDL_START_CMD3_R 0xAF
+#define HDL_START_CMD4 0x05
+#define HDL_START_CMD4_R 0xFA
+//
+#define DA_SEND_PACKET_LEN 4096
+#define BROM_ERROR 0x1000
+//send buffer
+#define UART_SEND_STEP 1024
+#define READ_SUCCESS    0x00
+#define READ_TIMEOUT    0x01
+#define READ_USER_TERMINATE 0x02
+
+struct HDLCmdInfo{
+    uint8_t cmd;
+    uint8_t direction;
+    uint8_t repeat;
+    uint8_t stepBy;
+};
+struct flashInfo{
+    uint32_t formatAddress;
+    uint32_t formatSize;
+};
+struct ImageInfo{
+    FILE *imagefile;
+    uint32_t slaveAddress;
+    uint32_t image_len;
+    bool is_bootloader;
+};
+struct DownloadConfig{
+    const char *fileName;
+    const char *backupfileName;
+    bool isBootLoader;
+    uint32_t beginAddress;
+};
+typedef enum DL_STATUS_CODE{
+    DL_HANDSHAKE_SUCCESS,
+    // this status means download finish, progress: 0 for success, 1 for failed, 2 for user terminate
+    DL_FINISH,
+}dl_status_code_t;
+
+
+//healthy check code
+#define DL_HEALTHY_CHECK(x) \
+{ \
+    if(x == 0){ \
+        return; \
+    }           \
+}
+
+
+typedef void(*statusCallback)(dl_status_code_t,int progress,void*);
+struct CallbackItem{
+    statusCallback callback;
+    void *userdata;
+};
+enum DownloadStatus : uint8_t{
+    DOWNLOAD_START,
+    DOWNLOAD_HANDSHAKE,
+    DOWNLOAD_WDT_DISABLE,
+    DOWNLOAD_SEND_DA,
+    DOWNLOAD_JUMP_DA,
+    DOWNLOAD_SYNC_DA,
+    DOWNLOAD_FORMAT_FLASH,
+    DOWNLOAD_BIN_DL,
+    DOWNLOAD_IMAGE_PASS,
+    DOWNLOAD_ALL_PASS,
+    
+};
+enum DownloadMessage :uint8_t {
+    DL_MSG_DOWNLOAD_START,
+    DL_MSG_OPEN_TTY_SUCCESSFUL,
+    DL_MSG_POWER_ON_AFTER_1S,
+    DL_MSG_HANDSHAKE_RETRY,// when hanshake 10s and no receive handshake
+    DL_MSG_HANDSHAKE_FAILED,
+    DL_MSG_HANDSHAKE_CMD1_FINISH,
+    DL_MSG_HANDSHAKE_CMD2_FINISH,
+    DL_MSG_HANDSHAKE_CMD3_FINISH,
+    DL_MSG_HANDSHAKE_CMD4_FINISH,
+    DL_MSG_DOWNLOAD_FINISH,
+};
+class AirohaDownloader{
+public:
+    static bool registerStatusCallback(statusCallback callback,void* userdata);
+    static DownloadStatus start();
+    static void *transmitThread(void *argv);
+    static void *receiveThread(void *argv);
+    static void *superThread(void *argv);
+    
+    static uint8_t downloadMessageTake();
+    static void downloadMessagePut(uint8_t msg);
+    static void sendDownloadMessage(DownloadMessage msg);
+    
+private:
+    static int openTTY(const char *name,int flag,int baud);
+    static bool setBaudrate(int fd,int baud);
+    static int state;
+    static int ttyFd;
+    static int running;
+    static int returnErr;
+    static pthread_mutex_t syncLock;
+    static uint8_t COMGetUint8(int try_count, int sleep_gap,uint8_t *result);
+    static uint8_t COMGetCharBlock();
+    static uint8_t COMGetCharNonBlock(int sleep);
+    static uint16_t COMGetUint16();
+    static uint32_t COMGetUint32();
+    static bool COMWriteUint8(uint8_t);
+    static bool COMWriteUint16(uint16_t);
+    static bool COMWriteUint32(uint32_t);
+    //echo
+    static bool echoUint8(uint8_t);
+    static bool checkUint8(uint8_t,uint8_t);
+    static bool echoUint16(uint16_t);
+    static bool echoUint32(uint32_t);
+    static bool receiveAndSendUint8(uint8_t a,uint8_t b);
+    //process
+    static bool handShake();
+    static bool disableWDT();
+    static bool sendDA();
+    static bool jumpToDA();
+    static bool syncWithDA();
+    static bool formatFlash();
+    static bool downloadChip(struct DownloadConfig[],uint32_t size);
+    static bool downloadImage(struct ImageInfo);
+    static void backUpBinFile(const char *courcefile,const char * destfile);
+    static uint16_t computeChecksum(uint8_t* buf,uint32_t buf_len);
+    static uint32_t simpleChecksum(uint8_t* buf,uint32_t buf_len);
+    static bool sendPacket(uint8_t *buf,size_t len);
+    static uint32_t getFileSize(const char *name);
+    static bool allowComRuning;
+    static std::vector<CallbackItem> callbackList;
+    static void statusNotify(dl_status_code_t,int progress);
+    static std::recursive_mutex configMutex;
+    static std::list<uint8_t> downloadMessageQueue;
+    static std::mutex queueLock;
+    static std::condition_variable_any queueNotEmpty;
+    static std::condition_variable_any queueNotFull;
+    static int64_t previousHandShakeTime;
+    static int64_t getCurrentBootTimeSecond();
+    static FILE *recordFile;
+    static const char *getMessageStr(DownloadMessage msg);
+};
+
+
+}
+}
+#endif
