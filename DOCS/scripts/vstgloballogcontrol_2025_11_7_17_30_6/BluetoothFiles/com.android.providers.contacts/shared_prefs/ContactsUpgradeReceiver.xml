@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <int name="db_version" value="1604" />
+    <string name="os_version">R03.23_PUNICG_G3S2I_UF0000U071125A</string>
+    <string name="icu_version">70.1.0.0</string>
+</map>
