@@ -1,0 +1,282 @@
+/* Copyright Statement:
+ *
+ * (C) 2020  Airoha Technology Corp. All rights reserved.
+ *
+ * This software/firmware and related documentation ("Airoha Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to Airoha Technology Corp. ("Airoha") and/or its licensors.
+ * Without the prior written permission of Airoha and/or its licensors,
+ * any reproduction, modification, use or disclosure of Airoha Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ * You may only use, reproduce, modify, or distribute (as applicable) Airoha Software
+ * if you have agreed to and been bound by the applicable license agreement with
+ * Airoha ("License Agreement") and been granted explicit permission to do so within
+ * the License Agreement ("Permitted User").  If you are not a Permitted User,
+ * please cease any access or use of Airoha Software immediately.
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT AIROHA SOFTWARE RECEIVED FROM AIROHA AND/OR ITS REPRESENTATIVES
+ * ARE PROVIDED TO RECEIVER ON AN "AS-IS" BASIS ONLY. AIROHA EXPRESSLY DISCLAIMS ANY AND ALL
+ * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES AIROHA PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH AIROHA SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN AIROHA SOFTWARE. AIROHA SHALL ALSO NOT BE RESPONSIBLE FOR ANY AIROHA
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND AIROHA'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO AIROHA SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT AIROHA'S OPTION, TO REVISE OR REPLACE AIROHA SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * AIROHA FOR SUCH AIROHA SOFTWARE AT ISSUE.
+ */
+
+/*
+ * @Author: Rain Luo
+ * @Date: 2020-07-28 19:39:50
+ * @LastEditTime: 2020-08-14 15:25:24
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \anld\middleware\comm\Communicator.h
+ */ 
+
+
+#ifndef _COMMUNICATOR_H
+#define _COMMUNICATOR_H
+#include <list>
+#include <stdint.h> 
+#include <string>
+
+#include <thread>
+#include <termios.h>
+#include <pthread.h>
+#include <mutex>
+#include <condition_variable>
+#define UART_DEFAULT_TX_LEN  (1024 *4)
+
+namespace Airoha{
+namespace Communicator{
+
+
+enum PortStatus : uint8_t{
+    PORT_STATUS_OK,
+    PORT_STATUS_ERROR,
+    PORT_STATUS_ERROR_OPEN_FAILED,
+    PORT_STATUS_ERROR_CONFIG_FAILED,
+    PORT_STATUS_ERROR_NOT_INIT,
+    PORT_STATUS_ERROR_TIMEOUT,
+    PORT_STATUS_ERROR_USER_TERMINATE,
+    PORT_STATUS_ERROR_INVALID_PARAMETER,
+    PORT_STATUS_ERROR_UNEXPECTED,
+    
+};
+enum PortNum : uint8_t{
+    PORT_BEGIN,
+    PORT_UART_BEGIN,
+    PORT_UART_0 = PORT_UART_BEGIN,
+    PORT_UART_END,
+    PORT_SPI_BEGIN,
+    PORT_SPI_0 = PORT_SPI_BEGIN,
+    PORT_SPI_END,
+    PORT_END,
+};
+enum PortType : uint8_t{
+    PORT_TYPE_UART,
+    PORT_TYPE_SPI,
+    PORT_TYPE_I2C,
+};
+struct PortConfig{
+    uint8_t configData[30];
+};
+enum PortEndian{
+    PORT_BIG_ENDIAN,
+    PORT_LITTLE_ENDIAN,
+};
+// ==== Uart Setting =======
+#define UART_FLAG_BLOCK 0 
+#define UART_FLAG_NONBLOCK 1
+enum UartBaudrate{
+    UART_BAUD_9600,
+    UART_BAUD_460800,
+    UART_BAUD_921600,
+    UART_BAUD_3M,
+};
+struct UartConfig:public PortConfig{
+    UartConfig(const char*, UartBaudrate);
+    const char *devName;
+    UartBaudrate baudrate;
+    //uint8_t isBlocking; 
+};
+int baudrateMapping(UartBaudrate ub, int &baudrateInt);
+// ==== Uart Setting End=======
+// ==== SPI Setting ======
+struct SPIConfig:public PortConfig{
+    SPIConfig(const char*, uint32_t);
+    const char *devName;
+    uint32_t speed;
+};
+// ==== SPI Setting End =====
+typedef enum COMM_PORT_CONFIRM_STATUS{
+    PORT_CONFIRM_ALLOWED,
+    PORT_CONFIRM_STORE_IN_BUFFER,
+}port_confirm_status_t;
+/**
+ * @brief Return true if operation success
+ * 
+ */
+typedef bool(*openCallback)();
+typedef bool(*closeCallback)();
+/**
+ * @brief This function is call by communication controller when message arrive
+ * 
+ */
+typedef void(*RxCallback)(uint8_t *buffer, size_t len, void *userData);
+/**
+ * @brief This function is call by communication controller when app message need to be sent
+ * 
+ */
+typedef void(*TxCallback)(uint8_t *buffer, size_t len);
+/**
+ * @brief if data can be send currently
+ * return true if can be send, false then TxConfirmFail will call
+ */
+typedef port_confirm_status_t(*TxConfirm)(uint8_t *buffer, size_t len);
+typedef bool(*TxConfirmFail)(uint8_t *buffer, size_t len);
+typedef bool(*TxFinish)(uint8_t *buffer, size_t len);
+
+/**
+ * @brief CommPort skeleton
+ * 
+ */
+class CommPort{
+public:
+    /**
+     * @brief openUart port
+     * 
+     * @return true Operation SUCCESS
+     * @return false Operation FAILED
+     */
+    virtual bool openCOMM(PortNum portnum) = 0;
+    /**
+     * @brief close port
+     * 
+     * @return true Operation SUCCESS
+     * @return false Operation
+     */
+    virtual bool closeCOMM() = 0;
+    /**
+     * @brief call this function to send data, this function will call txCallback
+     * 
+     * @param buffer 
+     * @param len 
+     * @return true 
+     * @return false 
+     */
+    virtual size_t sendData(const uint8_t *buffer, size_t len) = 0;
+    CommPort(){};
+    virtual ~CommPort(){};
+    
+};
+
+/**
+ * @brief Polling Port will block in send and receive function,so need a single thread to run
+ * TODO:
+ */
+class PollingPort{
+public:
+
+    PollingPort();
+    virtual ~PollingPort();
+
+    virtual PortStatus portOpen(PortNum number) = 0;
+    virtual PortStatus portClose() = 0;
+    virtual PortStatus portSendPolling(const uint8_t* buffer, size_t length) = 0;
+    virtual PortStatus portReceivePolling(uint8_t* buffer, size_t length) = 0;
+    //the following function for 1/2/4 butes function
+    virtual PortStatus portPutUint8(uint8_t) = 0;
+    virtual PortStatus portPutUint16(uint16_t) = 0;
+    virtual PortStatus portPutUint32(uint32_t) = 0;
+    virtual PortStatus portGetUint8(uint8_t &) = 0;
+    virtual PortStatus portGetUint16(uint16_t &) = 0;
+    virtual PortStatus portGetUint32(uint32_t &) = 0;
+    /**
+     * @brief Because the port is open in polling mode, so we need a function to interrupt it
+     * 
+     * @return true 
+     * @return false 
+     */
+    virtual bool portStop(uint8_t) = 0; 
+private:
+    //POLLING_PORT_XXX_ENDIAN
+    PortEndian endian;
+};
+
+#define MAX_EPOLL_NUM   5
+#define UART_TX_SIZE   (1024 * 6)
+#define UART_DEV_NAME_LEN 20
+class UartPort : public CommPort{
+public:
+    UartPort();
+    UartPort(RxCallback, void* userdata);
+    UartPort(RxCallback,size_t);
+    ~UartPort();
+    /**
+     * @brief 
+     * 
+     * @param num 
+     * @return true 
+     * @return false 
+     */
+    bool openCOMM(PortNum num) override;
+    bool closeCOMM() override;
+    size_t sendData(const uint8_t *buffer, size_t len) override;
+    static void uartEpollMain();
+    bool isPortRunning();
+    /**
+     * @brief Use to control RTS pin, do not call this function when HW flowcontrol enable
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool setRTSPinStatus(bool enable);
+    bool setDTRPinStatus(bool enable);
+    int getFileDescriptor();
+
+private:
+    RxCallback rxCallback;
+    int uartFd;
+    std::string tx_buffer;
+    std::thread uartWriteThread;
+    pthread_t uartReadThread;
+    std::thread epollThread;
+    bool isRunning;
+    //for epoll
+    static bool isEpollRun;
+    static int epollFd;
+
+    //TODO: Currently prohibit these function
+    static void addToEpoll(UartPort *) = delete;
+    static void removeFromEpoll(UartPort *) = delete;
+    std::recursive_mutex configMutex;
+    UartConfig *config;
+    //thread function
+    static void *uartPthreadRx(void *vp);
+    static void uartTx(UartPort *);
+    char portName[UART_DEV_NAME_LEN];
+    std::mutex m_mutex;
+    
+	std::condition_variable_any m_notEmpty;
+    std::condition_variable_any m_tx_is_running;
+    std::condition_variable_any m_rx_is_running;
+    size_t safeSend(const void * buffer, size_t length);
+    int baudrateInt;
+    void *extra;
+
+};
+
+
+};    
+};
+
+#endif // !_COMMUNICATOR_H

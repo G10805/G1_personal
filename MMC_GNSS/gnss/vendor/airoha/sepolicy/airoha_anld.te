@@ -1,0 +1,39 @@
+type airoha_anld, domain;
+type airoha_anld_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(airoha_anld)
+net_domain(airoha_anld)
+wakelock_use(airoha_anld)
+allow airoha_anld tty_device:chr_file { ioctl read write open };
+allow airoha_anld airoha_mock_gps:chr_file { ioctl read write open };
+allow airoha_anld airoha_gps_spi:chr_file { ioctl read write open };
+# allow airoha_anld vendor_data_file:dir { write add_name };
+# allow airoha_anld vendor_data_file:file { create read write open getattr };
+allow airoha_anld gps_device:chr_file { ioctl read write open };
+allow airoha_anld airoha_data_file_gps:dir create_dir_perms;
+allow airoha_anld airoha_data_file_gps:file create_file_perms;
+allow airoha_anld airoha_data_file_airoha:dir create_dir_perms;
+allow airoha_anld airoha_data_file_airoha:file create_file_perms;
+allow airoha_anld sdcard_type:dir create_dir_perms;
+allow airoha_anld sdcard_type:file create_file_perms;
+
+# allow airoha_anld mnt_user_file:dir create_dir_perms;
+# allow airoha_anld mnt_vendor_file:dir create_dir_perms;
+# allow airoha_anld mnt_vendor_file:file create_file_perms;
+
+binder_call(airoha_anld, system_server)
+binder_call(system_server, airoha_anld)
+get_prop(airoha_anld, hwservicemanager_prop)
+binder_call(airoha_anld, hwservicemanager)
+allow airoha_anld fwk_sensor_hwservice:hwservice_manager find;
+allow airoha_anld sensorservice_service:service_manager find;
+# Access symbolic link files like /etc and /sdcard
+allow airoha_anld tmpfs:lnk_file create_file_perms;
+# allow airoha_anld mnt_user_file:lnk_file create_file_perms;
+allow airoha_anld storage_file:dir create_dir_perms;
+allow airoha_anld storage_file:file create_file_perms;
+
+# for app
+allow airoha_anld anld_socket_file:sock_file create_file_perms;
+allow airoha_anld airoha_gnss_hal:unix_dgram_socket sendto;
+allow airoha_anld self:capability2 wake_alarm;
+

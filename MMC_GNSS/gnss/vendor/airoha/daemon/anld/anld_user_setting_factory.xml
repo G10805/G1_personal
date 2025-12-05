@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config version="1.0.0">
+  <CommonSetting>
+    <!-- Output_debug_log must be set to true and should not be changed -->
+    <output_debug_log>true</output_debug_log>
+    <!-- OutputBinary must be set to true and should not be changed -->
+    <output_binary_log>true</output_binary_log>
+    <epo_vendor_id>xxx</epo_vendor_id>
+    <epo_project_name>xxx</epo_project_name>
+    <epo_device_id>xxx</epo_device_id>
+    <!-- Set to -1 means disable -->
+    <debug_port>3335</debug_port>
+    <powergps_port>21121</powergps_port>
+    <raw_measurement_support>true</raw_measurement_support>
+    <!-- the uart log will be store at /data/vendor/airoha/-->
+    <uart_log_record>true</uart_log_record>
+    <!-- the trace log will be store at /data/vendor/airoha/-->
+    <trace_log_record>true</trace_log_record>
+    <!-- If this is change, 3335 must be reboot to ensure this configuration takes effect -->
+    <auto_lock_sleep>false</auto_lock_sleep>
+    <auto_download_epo>false</auto_download_epo>
+    <!-- If true, anld will close uart when no data, and wait for interrupt-->
+    <wake_duration>1000</wake_duration>
+    <need_wakeup_before_send_data>true</need_wakeup_before_send_data>
+    <!-- log level: debug, info, warning, error, none -->
+    <log_level>debug</log_level>
+    <data_path>/data/vendor/airoha/</data_path>
+    <uart>
+      <name>/dev/ttyUSB0</name>
+      <!-- Uart Flow Control: none/software/hardware/software_ext -->
+      <flow_control>none</flow_control>
+    </uart>
+  </CommonSetting>
+  <AdvanceSetting>
+    <suspend_implement>0</suspend_implement>
+    <!-- If true, anld will support high fix rate (default 1Hz), please don't modify this config -->
+    <support_high_fix_rate>false</support_high_fix_rate>
+    <!-- Customized NMEA output talker, default:"GGA","RMC","GSV","GSA","ZDA","GNS","VTG","GLL","PSAIRCLK" -->
+    <nmea_filter enable="true">NFCAL|NFATT|NFIMU|NFWEL</nmea_filter>
+    <firmware_download
+      trigger_method="or"
+      chip_firmware_change="false"
+      backup_file_change="true" retry_times="5">true</firmware_download>
+    <rf_pass_loss_ap>0</rf_pass_loss_ap>
+    <rf_pass_loss_cp>0</rf_pass_loss_cp>
+    <dump_satellite_info>false</dump_satellite_info>
+    <support_qc_platform>false</support_qc_platform>
+    <support_m_platform>false</support_m_platform>
+    <query_customer_version>true</query_customer_version>
+    <compatible_customer_algorithm>true</compatible_customer_algorithm>
+    <customer_suffix>NFORE</customer_suffix>
+    <dump_epoch_data>true</dump_epoch_data>
+    <dump_nmea_when_location_invalid>true</dump_nmea_when_location_invalid>
+    <max_uart_log_num>20</max_uart_log_num>
+    <!-- single size in bytes -->
+    <max_uart_log_single_size>31457280</max_uart_log_single_size>
+    <max_trace_log_num>10</max_trace_log_num>
+    <!-- single size in bytes -->
+    <max_trace_log_single_size>20971520</max_trace_log_single_size>
+    <event_log enable="true" num="5" size="1024000"/>
+    <init_location enable="false">
+      <latitude>0.0</latitude>
+      <longitude>0.0</longitude>
+      <altitude>0.0</altitude>
+    </init_location>
+    <data_io>
+      <port_type>0</port_type>
+      <port_index>0</port_index>
+    </data_io>
+    <auto_set_io>false</auto_set_io>
+    <kernel_node>
+      <!-- Node name should not be longer than 127 -->
+      <power>
+        <value type="node_name">/dev/airoha_gps</value>
+        <!-- value should not be longer than 9 -->
+        <value type="open">OPEN</value>
+        <value type="close">CLOSE</value>
+      </power>
+    </kernel_node>
+    <lte_filter>false</lte_filter>
+    <vdr_enable>false</vdr_enable>
+  </AdvanceSetting>
+</Config>

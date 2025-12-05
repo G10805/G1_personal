@@ -1,0 +1,45 @@
+cc_library {
+    name:"libairohacommon",
+    cflags: [
+        "-g",
+        "-Wall",
+        "-Werror",
+        "-DANDROID_NDK",
+        "-D__ANDROID_OS__",
+    ],
+    vendor_available: true, 
+    target: {
+        android:{
+            shared:{
+                enabled: false,
+            },
+        },
+
+    },
+    export_include_dirs:[
+        ".",
+        "inc",
+        "std",
+        "third_party/tinyxml/",
+        "transport/",
+        "udp_protocol/",
+    ],
+    srcs:[
+        "src/hal_anld_message.cpp",
+        "src/AdvancedLogger.cpp",
+        "src/LogRelayer.cpp",
+        "third_party/tinyxml/tinyxml2.cpp",
+        "transport/air_parcel.cpp",
+        "src/native_time.cpp",
+        "src/native_call.cpp",
+        "src/timer_util.cpp",
+        "src/counter.cpp",
+        "udp_protocol/udp_protocol.cpp",
+        "src/IHidlTransportInterface.cpp",
+        "src/bufferable.cpp",
+    ],
+    shared_libs:[
+        "liblog",
+    ]
+
+}
