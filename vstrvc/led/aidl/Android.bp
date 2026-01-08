@@ -1,0 +1,27 @@
+// This is the expected build file, but it may not be right in all cases
+
+aidl_interface {
+    name: "vendor.visteon.led",
+    vendor_available: true,
+    srcs: ["vendor/visteon/led/ILedService.aidl"],
+    stability: "vintf",
+    owner: "visteon",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}
