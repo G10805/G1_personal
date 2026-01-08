@@ -1,0 +1,11 @@
+on post-fs-data
+    start led_service
+
+service led_service /vendor/bin/vendor.visteon.led-service
+    class hal
+    user root
+    group system
+    #seclabel u:r:hal_led_default:s0
+	seclabel u:r:su:s0
+
+
