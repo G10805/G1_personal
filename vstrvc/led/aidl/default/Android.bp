@@ -1,0 +1,31 @@
+cc_binary {
+    name: "vendor.visteon.led-service",
+    vendor: true,
+    init_rc: ["vendor.visteon.led-service.rc"],
+    vintf_fragments: ["vendor.visteon.led.xml"],
+    srcs: [
+        "*.cpp"
+    ],
+    shared_libs: [
+	      "liblog",
+        "libsysutils",
+        "libutils",
+        "libcutils",
+        "libbase",
+        "libbinder",
+        "libhardware",
+        "libbinder_ndk",
+        "vendor.visteon.led-V1-ndk",
+        //"android.hardware.led-ndk_platform",
+    ],
+       cflags: [
+        "-DLOG_NDEBUG=1",
+        "-DLOG_TAG=\"LED_Service\"",
+        "-Wall",
+        "-Wextra",
+        "-Wno-error",
+        "-Wno-unused-parameter",
+        "-fexceptions",
+    ],
+
+}
