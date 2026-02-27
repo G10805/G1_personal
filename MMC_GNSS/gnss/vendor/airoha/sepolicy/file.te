@@ -1,0 +1,4 @@
+type airoha_data_file_gps, file_type, data_file_type;
+type airoha_data_file_airoha, file_type, data_file_type;
+type anld_socket_file, file_type;
+

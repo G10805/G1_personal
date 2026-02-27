@@ -1,0 +1,11 @@
+/vendor/bin/hw/android\.hardware\.gnss@2\.1-service-airoha           u:object_r:airoha_gnss_hal_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@2\.0-service-airoha           u:object_r:airoha_gnss_hal_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@1\.0-service-airoha           u:object_r:airoha_gnss_hal_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss-service\.airoha           u:object_r:airoha_gnss_hal_exec:s0
+/vendor/bin/hw/airoha\.hardware\.anld                     u:object_r:airoha_anld_exec:s0
+/dev/airoha_gps         u:object_r:gps_device:s0
+/data/vendor/gps(/.*)?    u:object_r:airoha_data_file_gps:s0
+/data/vendor/airoha(/.*)?    u:object_r:airoha_data_file_airoha:s0
+/dev/socket/app_anld(/.*)? u:object_r:anld_socket_file:s0
+/dev/ttyUSB0         u:object_r:airoha_mock_gps:s0
+/dev/spidev1.0       u:object_r:airoha_gps_spi:s0  

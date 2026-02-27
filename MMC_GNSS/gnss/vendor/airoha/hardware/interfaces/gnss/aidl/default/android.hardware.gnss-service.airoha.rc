@@ -1,0 +1,4 @@
+service vendor.gnss.airoha /vendor/bin/hw/android.hardware.gnss-service.airoha
+    class hal
+    user gps
+    group system gps
